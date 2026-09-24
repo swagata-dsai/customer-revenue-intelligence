@@ -1,0 +1,17 @@
+# Customer Revenue Intelligence - Streamlit configuration (STEP 12)
+# The base theme is set here so the app looks right from the first paint, before
+# assets/css/style.css is injected. The colours match the Step 11 Power BI theme.
+
+[theme]
+base = "dark"
+primaryColor = "#3987E5"
+backgroundColor = "#0B111C"
+secondaryBackgroundColor = "#141C2B"
+textColor = "#E6EDF7"
+font = "sans serif"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false

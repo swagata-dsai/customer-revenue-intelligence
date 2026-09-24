@@ -1,0 +1,39 @@
+area,check,result,status,detail
+Model artefacts,revenue_prediction_model.pkl loads,"Pipeline, 0.01 MB",PASS,
+Model artefacts,revenue_prediction_preprocessor.pkl loads,"ColumnTransformer, 0.01 MB",PASS,
+Model artefacts,forecasting_model.pkl loads,"dict, 0.00 MB",PASS,
+Model artefacts,kmeans_customer_segmentation.pkl loads,"KMeans, 0.01 MB",PASS,
+Model artefacts,rfm_scaler.pkl loads,"Pipeline, 0.00 MB",PASS,
+Model artefacts,pca_rfm.pkl loads,"PCA, 0.00 MB",PASS,
+Model artefacts,clv_model.pkl loads,"RandomForestRegressor, 5.33 MB",PASS,
+Model artefacts,clv_preprocessor.pkl loads,"Pipeline, 0.00 MB",PASS,
+Model artefacts,scikit-learn version recorded vs installed,"recorded 1.8.0, installed 1.8.0",PASS,
+Reproducibility,Reloaded model reproduces the saved test predictions,"2,913 rows, max |diff| ₹0.3528",PASS,"Sub-rupee differences are float/BLAS ordering, not a different model."
+Model artefacts,Feature schema size matches the metadata,24 features,PASS,
+Reproducibility,Reloaded forecasting model reproduces the saved forecast,"6 months, max |diff| ₹0.0033",PASS,
+Reproducibility,Reloaded K-Means reproduces the saved cluster assignment,"100.00% of 1,984 customers identical",PASS,
+Reproducibility,Saved scaled features match the preprocessing pipeline,max |diff| 5.00e-06,PASS,
+Leakage audit,Rev_3M uses only pre-cutoff data,400/400 sampled rows match a fresh recomputation,PASS,
+Leakage audit,Orders_12M uses only pre-cutoff data,400/400 sampled rows match a fresh recomputation,PASS,
+Leakage audit,Recency_Days is measured at the cutoff,400/400 sampled rows match a fresh recomputation,PASS,
+Leakage audit,Target is revenue in the 3 months from the cutoff,400/400 sampled rows match a fresh recomputation,PASS,
+Leakage audit,Train / validation / test periods do not overlap,test: 2025-Q3..2025-Q4; train: 2024-Q1..2024-Q4; validation: 2025-Q1..2025-Q2,PASS,
+Leakage audit,No duplicated customer-quarter rows,0 duplicates,PASS,
+Leakage audit,Forecast split is chronological,train 2023-01..2024-12 | validation 2025-01..2025-06 | test 2025-07..2025-12,PASS,
+Documentation,₹6.01 Cr (total revenue),"computed 6.0057, quoted in 11 document(s)",PASS,"README.md, clv_analysis_report.md, eda_summary.md, forecasting_methodology.md, kmeans_model_report.md, powerbi_dashboard_documentation.md, powerbi_user_guide.md, project_audit.md"
+Documentation,₹1.40 Cr (total profit),"computed 1.4023, quoted in 7 document(s)",PASS,"README.md, clv_analysis_report.md, eda_summary.md, powerbi_user_guide.md, project_audit.md, sql_analysis_methodology.md, streamlit_testing_report.md"
+Documentation,23.35% (profit margin),"computed 23.3489, quoted in 4 document(s)",PASS,"README.md, powerbi_dashboard_documentation.md, project_audit.md, sql_analysis_methodology.md"
+Documentation,"12,212 (orders)","computed 12,212.0000, quoted in 8 document(s)",PASS,"README.md, clv_analysis_report.md, eda_summary.md, powerbi_dashboard_documentation.md, powerbi_user_guide.md, project_audit.md, sql_analysis_methodology.md, streamlit_testing_report.md"
+Documentation,"1,984 (purchasing customers)","computed 1,984.0000, quoted in 10 document(s)",PASS,"README.md, clv_analysis_report.md, eda_summary.md, kmeans_model_report.md, powerbi_dashboard_documentation.md, powerbi_user_guide.md, project_audit.md, rfm_methodology.md"
+Documentation,"₹4,918 (AOV)","computed 4,917.8324, quoted in 5 document(s)",PASS,"eda_summary.md, powerbi_user_guide.md, project_audit.md, sql_analysis_methodology.md, streamlit_testing_report.md"
+Documentation,"18,670 (cleaned order lines)","computed 18,670.0000, quoted in 5 document(s)",PASS,"README.md, eda_summary.md, project_audit.md, raw_data_validation_report.md, rfm_methodology.md"
+Documentation,"2,000 (registered customers)","computed 2,000.0000, quoted in 6 document(s)",PASS,"README.md, eda_summary.md, powerbi_dashboard_documentation.md, project_audit.md, raw_data_validation_report.md, rfm_methodology.md"
+Documentation,64.33% (top-20% revenue share),"computed 64.3300, quoted in 3 document(s)",PASS,"README.md, project_audit.md, sql_analysis_methodology.md"
+Documentation,53.83% (Champions revenue share),"computed 53.8330, quoted in 2 document(s)",PASS,"README.md, project_audit.md"
+Documentation,52 (at-risk high-value),"computed 52.0000, quoted in 10 document(s)",PASS,"README.md, clv_analysis_report.md, eda_summary.md, forecasting_methodology.md, kmeans_model_report.md, project_audit.md, revenue_prediction_report.md, rfm_methodology.md"
+Documentation,"1,288 (active customers)","computed 1,288.0000, quoted in 2 document(s)",PASS,"powerbi_user_guide.md, project_audit.md"
+Documentation,7.77% (forecast test MAPE),"computed 7.7680, quoted in 4 document(s)",PASS,"powerbi_dashboard_documentation.md, powerbi_user_guide.md, project_audit.md, streamlit_testing_report.md"
+Documentation,0.056 (prediction test R²),"computed 0.0557, quoted in 5 document(s)",PASS,"powerbi_dashboard_documentation.md, powerbi_user_guide.md, project_audit.md, revenue_prediction_report.md, streamlit_testing_report.md"
+Documentation,"₹5,658 (prediction test MAE)","computed 5,657.5669, quoted in 5 document(s)",PASS,"README.md, powerbi_dashboard_documentation.md, project_audit.md, revenue_prediction_report.md, streamlit_testing_report.md"
+Documentation,No document asserts churn (the project has no churn label),0 suspect lines,PASS,
+Documentation,Every document states the data is synthetic,14/14 documents,PASS,

@@ -1,0 +1,21 @@
+﻿estimate_rank,customer_id,rfm_segment,cluster_label,estimated_12m_profit,historical_profit,recency_days,frequency_orders
+1,CUST-0543,Loyal Customers,"High-Value, Active",15593.22,40075.77,130,22
+2,CUST-1825,Can't Lose Them,"Mid-Value, Lapsing",15135.66,10402.73,225,7
+3,CUST-0970,Loyal Customers,"Mid-Value, Lapsing",13413.91,7411.89,61,8
+4,CUST-0178,Can't Lose Them,"Mid-Value, Lapsing",12990.34,11407.9,208,10
+5,CUST-1780,At Risk,"Mid-Value, Lapsing",12557.88,11266.65,255,9
+6,CUST-0768,Loyal Customers,"Mid-Value, Lapsing",12116.02,10678.86,111,6
+7,CUST-1031,At Risk,"Mid-Value, Lapsing",11835.56,9261.63,178,7
+8,CUST-0954,Loyal Customers,"Mid-Value, Lapsing",11744.83,13406.86,86,10
+9,CUST-1887,Loyal Customers,"Mid-Value, Lapsing",11713.1,13276.83,153,7
+10,CUST-0322,Loyal Customers,"Mid-Value, Lapsing",11507.71,9805.19,154,9
+11,CUST-1842,Can't Lose Them,"Mid-Value, Lapsing",11430.12,13247.55,211,10
+12,CUST-1327,Loyal Customers,"Mid-Value, Lapsing",11217.54,14434.99,157,7
+13,CUST-1920,Needs Attention,"Mid-Value, Lapsing",11183.79,6309.68,134,6
+14,CUST-1226,Loyal Customers,"Mid-Value, Lapsing",11052.58,10706.25,119,7
+15,CUST-1862,Can't Lose Them,"Mid-Value, Lapsing",10561.02,11366.38,254,12
+16,CUST-1689,Loyal Customers,"Mid-Value, Lapsing",10042.3,12576.9,56,8
+17,CUST-1814,Loyal Customers,"Mid-Value, Lapsing",9858.57,7912.58,150,6
+18,CUST-0266,Potential Loyalists,"Mid-Value, Lapsing",9811.01,6313.26,38,6
+19,CUST-1659,At Risk,"Mid-Value, Lapsing",9254.32,8347.33,208,8
+20,CUST-1174,Loyal Customers,"Mid-Value, Lapsing",8745.99,10067.72,102,7

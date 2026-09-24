@@ -1,0 +1,11 @@
+﻿Characteristic,Groups,Kruskal_H,p_value,Significant_at_5%,Highest_Median_Group,Lowest_Median_Group
+Age_Band,4.0,101.85503165408045,6.20290267363516e-22,True,"35-49 (₹22,012)","18-24 (₹9,023)"
+Gender,3.0,0.42440804894431494,0.8087996658069161,False,"Other (₹18,816)","Male (₹13,227)"
+Region,5.0,3.8702516702242065,0.4238500640649646,False,"North (₹16,263)","Central (₹11,060)"
+Preferred_Payment,5.0,2.719992634493792,0.6057207191078697,False,"COD (₹15,853)","Wallet (₹10,620)"
+Customer_Age (continuous),,,8.945878919358772e-25,True,Spearman rho = 0.228,
+Total_Orders (behavioural),,,0.0,True,Spearman rho = 0.842,
+Average_Order_Value (behavioural),,,0.0,True,Spearman rho = 0.808,
+Categories_Bought (behavioural),,,0.0,True,Spearman rho = 0.772,
+Average_Discount (behavioural),,,1.1042074995901758e-43,True,Spearman rho = -0.304,
+Return_Rate (behavioural),,,3.292610778637026e-16,True,Spearman rho = 0.182,

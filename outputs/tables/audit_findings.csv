@@ -1,0 +1,1076 @@
+part,category,item,detail,severity
+A,Inventory,(root),"6 files, 0.04 MB",INFO
+A,Inventory,.streamlit,"1 file, 0.00 MB",INFO
+A,Inventory,FINAL_SUBMISSION,"551 files, 97.95 MB",INFO
+A,Inventory,assets,"4 files, 1.58 MB",INFO
+A,Inventory,data,"16 files, 21.18 MB",INFO
+A,Inventory,docs,"4 files, 0.10 MB",INFO
+A,Inventory,models,"12 files, 5.37 MB",INFO
+A,Inventory,notebooks,"9 files, 29.82 MB",INFO
+A,Inventory,outputs,"542 files, 54.33 MB",INFO
+A,Inventory,pages,"12 files, 0.15 MB",INFO
+A,Inventory,powerbi,"40 files, 3.77 MB",INFO
+A,Inventory,scripts,"13 files, 0.86 MB",INFO
+A,Inventory,sql,"5 files, 0.09 MB",INFO
+A,Inventory,src,"14 files, 0.92 MB",INFO
+A,Inventory,tests,"1 file, 0.02 MB",INFO
+A,Duplicate content,.gitignore = FINAL_SUBMISSION/10_DOCUMENTATION/gitignore.txt,Identical bytes in two locations.,REVIEW
+A,Duplicate content,.streamlit/config.toml = FINAL_SUBMISSION/03_SOURCE_CODE/.streamlit/config.toml,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/01_REPORT/Final_Internship_Report.docx = outputs/reports/Customer_Revenue_Intelligence_Summer_Internship_Report.docx,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/01_REPORT/Final_Internship_Report.pdf = outputs/reports/Customer_Revenue_Intelligence_Summer_Internship_Report.pdf,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/01_REPORT/report_validation_checklist.md = outputs/reports/report_validation_checklist.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/02_PRESENTATION/Final_Internship_Presentation.pdf = outputs/presentation/Customer_Revenue_Intelligence_Summer_Internship_Presentation.pdf,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/02_PRESENTATION/Final_Internship_Presentation.pptx = outputs/presentation/Customer_Revenue_Intelligence_Summer_Internship_Presentation.pptx,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/app.py = app.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/assets/css/style.css = assets/css/style.css,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/config.py = config.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/notebooks/01_data_cleaning.ipynb = notebooks/01_data_cleaning.ipynb,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/notebooks/02_exploratory_data_analysis.ipynb = notebooks/02_exploratory_data_analysis.ipynb,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/notebooks/03_rfm_customer_analysis.ipynb = notebooks/03_rfm_customer_analysis.ipynb,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/notebooks/04_kmeans_customer_segmentation.ipynb = notebooks/04_kmeans_customer_segmentation.ipynb,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/notebooks/05_customer_lifetime_value.ipynb = notebooks/05_customer_lifetime_value.ipynb,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/notebooks/06_revenue_prediction.ipynb = notebooks/06_revenue_prediction.ipynb,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/notebooks/07_sales_forecasting.ipynb = notebooks/07_sales_forecasting.ipynb,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/notebooks/08_sql_business_analysis.ipynb = notebooks/08_sql_business_analysis.ipynb,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/notebooks/09_powerbi_data_model.ipynb = notebooks/09_powerbi_data_model.ipynb,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/pages/about.py = pages/about.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/pages/customers.py = pages/customers.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/pages/data_explorer.py = pages/data_explorer.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/pages/executive.py = pages/executive.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/pages/forecasting.py = pages/forecasting.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/pages/home.py = pages/home.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/pages/prediction.py = pages/prediction.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/pages/products.py = pages/products.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/pages/recommendations.py = pages/recommendations.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/pages/regional.py = pages/regional.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/pages/revenue.py = pages/revenue.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/pages/segmentation.py = pages/segmentation.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/scripts/audit_cleaning.py = scripts/audit_cleaning.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/scripts/audit_project.py = scripts/audit_project.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/scripts/build_demo.py = scripts/build_demo.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/scripts/build_packaging.py = scripts/build_packaging.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/scripts/build_presentation.py = scripts/build_presentation.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/scripts/build_report.py = scripts/build_report.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/scripts/build_submission.py = scripts/build_submission.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/scripts/build_viva.py = scripts/build_viva.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/scripts/generate_dataset.py = scripts/generate_dataset.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/scripts/report_builder.py = scripts/report_builder.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/scripts/report_diagrams.py = scripts/report_diagrams.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/scripts/report_facts.py = scripts/report_facts.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/scripts/validate_dataset.py = scripts/validate_dataset.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/src/__init__.py = src/__init__.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/src/clv.py = src/clv.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/src/dashboard_utils.py = src/dashboard_utils.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/src/data_cleaning.py = src/data_cleaning.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/src/data_loader.py = src/data_loader.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/src/database.py = src/database.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/src/eda.py = src/eda.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/src/forecasting.py = src/forecasting.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/src/powerbi_dax.py = src/powerbi_dax.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/src/powerbi_prep.py = src/powerbi_prep.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/src/prediction.py = src/prediction.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/src/rfm.py = src/rfm.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/src/segmentation.py = src/segmentation.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/src/sql_analytics.py = src/sql_analytics.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/03_SOURCE_CODE/tests/test_streamlit_app.py = tests/test_streamlit_app.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/04_DATA/customer_revenue_intelligence.db = data/customer_revenue_intelligence.db,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/04_DATA/processed/clv_modeling_dataset.csv = data/processed/clv_modeling_dataset.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/04_DATA/processed/customer_clv.csv = data/processed/customer_clv.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/04_DATA/processed/customer_level_features.csv = data/processed/customer_level_features.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/04_DATA/processed/customer_ml_segments.csv = data/processed/customer_ml_segments.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/04_DATA/processed/customer_rfm.csv = data/processed/customer_rfm.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/04_DATA/processed/customer_rfm_metadata.json = data/processed/customer_rfm_metadata.json,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/04_DATA/processed/customer_rfm_segments.csv = data/processed/customer_rfm_segments.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/04_DATA/processed/customer_sales_cleaned.csv = data/processed/customer_sales_cleaned.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/04_DATA/processed/customer_value_history.csv = data/processed/customer_value_history.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/04_DATA/processed/monthly_sales_timeseries.csv = data/processed/monthly_sales_timeseries.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/04_DATA/processed/revenue_forecast.csv = data/processed/revenue_forecast.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/04_DATA/processed/revenue_modeling_dataset.csv = data/processed/revenue_modeling_dataset.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/04_DATA/raw/customer_sales_raw.csv = data/raw/customer_sales_raw.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/04_DATA/raw/data_quality_injection_log.json = data/raw/data_quality_injection_log.json,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/05_SQL/analysis_queries.sql = sql/analysis_queries.sql,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/05_SQL/business_queries.sql = sql/business_queries.sql,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/05_SQL/load_database.py = sql/load_database.py,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/05_SQL/powerbi_views.sql = sql/powerbi_views.sql,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/05_SQL/schema.sql = sql/schema.sql,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/06_MODELS/clv_model.pkl = models/clv_model.pkl,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/06_MODELS/clv_model_metadata.json = models/clv_model_metadata.json,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/06_MODELS/clv_preprocessor.pkl = models/clv_preprocessor.pkl,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/06_MODELS/forecasting_metadata.json = models/forecasting_metadata.json,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/06_MODELS/forecasting_model.pkl = models/forecasting_model.pkl,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/06_MODELS/kmeans_customer_segmentation.pkl = models/kmeans_customer_segmentation.pkl,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/06_MODELS/pca_rfm.pkl = models/pca_rfm.pkl,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/06_MODELS/revenue_model_metadata.json = models/revenue_model_metadata.json,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/06_MODELS/revenue_prediction_model.pkl = models/revenue_prediction_model.pkl,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/06_MODELS/revenue_prediction_preprocessor.pkl = models/revenue_prediction_preprocessor.pkl,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/06_MODELS/rfm_scaler.pkl = models/rfm_scaler.pkl,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/06_MODELS/segmentation_model_metadata.json = models/segmentation_model_metadata.json,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/POWERBI_BUILD_GUIDE.md = powerbi/POWERBI_BUILD_GUIDE.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/data/DimCluster.csv = powerbi/data/DimCluster.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/data/DimCustomer.csv = powerbi/data/DimCustomer.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/data/DimDate.csv = powerbi/data/DimDate.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/data/DimGeography.csv = powerbi/data/DimGeography.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/data/DimProduct.csv = powerbi/data/DimProduct.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/data/DimRFMSegment.csv = powerbi/data/DimRFMSegment.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/data/FactForecast.csv = powerbi/data/FactForecast.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/data/FactRevenuePrediction.csv = powerbi/data/FactRevenuePrediction.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/data/FactSales.csv = powerbi/data/FactSales.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/data/ModelInfo.csv = powerbi/data/ModelInfo.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/data/ModelMetrics.csv = powerbi/data/ModelMetrics.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/data/PredictionQuarterly.csv = powerbi/data/PredictionQuarterly.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/data/Recommendations.csv = powerbi/data/Recommendations.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/dax/measure_catalog.csv = FINAL_SUBMISSION/11_OUTPUT_TABLES/powerbi_measure_catalog.csv = outputs/tables/powerbi_measure_catalog.csv = powerbi/dax/measure_catalog.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/dax/measures.dax = powerbi/dax/measures.dax,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/dax/validation_query.dax = powerbi/dax/validation_query.dax,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/page_design_mockups/00_home_mockup.png = FINAL_SUBMISSION/08_SCREENSHOTS/57_powerbi_home_MOCKUP.png = outputs/figures/powerbi/mockups/00_home_mockup.png = outputs/screenshots/57_powerbi_home_MOCKUP.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/page_design_mockups/01_executive_overview_mockup.png = FINAL_SUBMISSION/08_SCREENSHOTS/58_powerbi_executive_overview_MOCKUP.png = outputs/figures/powerbi/mockups/01_executive_overview_mockup.png = outputs/screenshots/58_powerbi_executive_overview_MOCKUP.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/page_design_mockups/02_revenue_intelligence_mockup.png = FINAL_SUBMISSION/08_SCREENSHOTS/59_powerbi_revenue_intelligence_MOCKUP.png = outputs/figures/powerbi/mockups/02_revenue_intelligence_mockup.png = outputs/screenshots/59_powerbi_revenue_intelligence_MOCKUP.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/page_design_mockups/03_customer_intelligence_mockup.png = FINAL_SUBMISSION/08_SCREENSHOTS/60_powerbi_customer_intelligence_MOCKUP.png = outputs/figures/powerbi/mockups/03_customer_intelligence_mockup.png = outputs/screenshots/60_powerbi_customer_intelligence_MOCKUP.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/page_design_mockups/04_customer_segmentation_mockup.png = FINAL_SUBMISSION/08_SCREENSHOTS/61_powerbi_customer_segmentation_MOCKUP.png = outputs/figures/powerbi/mockups/04_customer_segmentation_mockup.png = outputs/screenshots/61_powerbi_customer_segmentation_MOCKUP.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/page_design_mockups/05_product_analytics_mockup.png = FINAL_SUBMISSION/08_SCREENSHOTS/62_powerbi_product_analytics_MOCKUP.png = outputs/figures/powerbi/mockups/05_product_analytics_mockup.png = outputs/screenshots/62_powerbi_product_analytics_MOCKUP.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/page_design_mockups/06_regional_analytics_mockup.png = FINAL_SUBMISSION/08_SCREENSHOTS/63_powerbi_regional_analytics_MOCKUP.png = outputs/figures/powerbi/mockups/06_regional_analytics_mockup.png = outputs/screenshots/63_powerbi_regional_analytics_MOCKUP.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/page_design_mockups/07_prediction_forecast_mockup.png = FINAL_SUBMISSION/08_SCREENSHOTS/64_powerbi_prediction_forecast_MOCKUP.png = outputs/figures/powerbi/mockups/07_prediction_forecast_mockup.png = outputs/screenshots/64_powerbi_prediction_forecast_MOCKUP.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/page_design_mockups/08_business_recommendations_mockup.png = FINAL_SUBMISSION/08_SCREENSHOTS/65_powerbi_recommendations_MOCKUP.png = outputs/figures/powerbi/mockups/08_business_recommendations_mockup.png = outputs/screenshots/65_powerbi_recommendations_MOCKUP.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/page_design_mockups/09_customer_detail_drillthrough_mockup.png = FINAL_SUBMISSION/08_SCREENSHOTS/66_powerbi_drillthrough_MOCKUP.png = outputs/figures/powerbi/mockups/09_customer_detail_drillthrough_mockup.png = outputs/screenshots/66_powerbi_drillthrough_MOCKUP.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerbi_dashboard_documentation.md = outputs/reports/powerbi_dashboard_documentation.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerbi_user_guide.md = outputs/reports/powerbi_user_guide.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerquery/00_DataFolder_parameter.m = powerbi/powerquery/00_DataFolder_parameter.m,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerquery/DimCluster.m = powerbi/powerquery/DimCluster.m,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerquery/DimCustomer.m = powerbi/powerquery/DimCustomer.m,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerquery/DimDate.m = powerbi/powerquery/DimDate.m,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerquery/DimGeography.m = powerbi/powerquery/DimGeography.m,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerquery/DimProduct.m = powerbi/powerquery/DimProduct.m,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerquery/DimRFMSegment.m = powerbi/powerquery/DimRFMSegment.m,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerquery/FactForecast.m = powerbi/powerquery/FactForecast.m,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerquery/FactRevenuePrediction.m = powerbi/powerquery/FactRevenuePrediction.m,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerquery/FactSales.m = powerbi/powerquery/FactSales.m,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerquery/ModelInfo.m = powerbi/powerquery/ModelInfo.m,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerquery/ModelMetrics.m = powerbi/powerquery/ModelMetrics.m,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerquery/PredictionQuarterly.m = powerbi/powerquery/PredictionQuarterly.m,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerquery/Recommendations.m = powerbi/powerquery/Recommendations.m,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/relationships.csv = FINAL_SUBMISSION/11_OUTPUT_TABLES/powerbi_relationships.csv = outputs/tables/powerbi_relationships.csv = powerbi/relationships.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/table_catalog.csv = FINAL_SUBMISSION/11_OUTPUT_TABLES/powerbi_table_catalog.csv = outputs/tables/powerbi_table_catalog.csv = powerbi/table_catalog.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/theme/crm_dark_theme.json = powerbi/theme/crm_dark_theme.json,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/theme/page_background.png = powerbi/theme/page_background.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/theme/palette_reference.md = powerbi/theme/palette_reference.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/validation/cross_step_consistency.csv = FINAL_SUBMISSION/11_OUTPUT_TABLES/powerbi_cross_step_consistency.csv = outputs/tables/powerbi_cross_step_consistency.csv = powerbi/validation/cross_step_consistency.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/validation/customer_state_validation_targets.csv = powerbi/validation/customer_state_validation_targets.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/validation/measure_validation_targets.csv = FINAL_SUBMISSION/11_OUTPUT_TABLES/powerbi_measure_validation.csv = outputs/tables/powerbi_measure_validation.csv = powerbi/validation/measure_validation_targets.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/validation_checklist.csv = FINAL_SUBMISSION/11_OUTPUT_TABLES/powerbi_validation_checklist.csv = outputs/tables/powerbi_validation_checklist.csv = powerbi/validation_checklist.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/Streamlit/screenshots/01_home.png = FINAL_SUBMISSION/08_SCREENSHOTS/67_streamlit_home.png = outputs/figures/streamlit/01_home.png = outputs/screenshots/67_streamlit_home.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/Streamlit/screenshots/02_executive_overview.png = FINAL_SUBMISSION/08_SCREENSHOTS/68_streamlit_executive_overview.png = outputs/figures/streamlit/02_executive_overview.png = outputs/screenshots/68_streamlit_executive_overview.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/Streamlit/screenshots/03_revenue_intelligence.png = FINAL_SUBMISSION/08_SCREENSHOTS/69_streamlit_revenue_intelligence.png = outputs/figures/streamlit/03_revenue_intelligence.png = outputs/screenshots/69_streamlit_revenue_intelligence.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/Streamlit/screenshots/04_customer_intelligence.png = FINAL_SUBMISSION/08_SCREENSHOTS/70_streamlit_customer_intelligence.png = outputs/figures/streamlit/04_customer_intelligence.png = outputs/screenshots/70_streamlit_customer_intelligence.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/Streamlit/screenshots/05_customer_segmentation.png = FINAL_SUBMISSION/08_SCREENSHOTS/71_streamlit_customer_segmentation.png = outputs/figures/streamlit/05_customer_segmentation.png = outputs/screenshots/71_streamlit_customer_segmentation.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/Streamlit/screenshots/06_product_analytics.png = FINAL_SUBMISSION/08_SCREENSHOTS/72_streamlit_product_analytics.png = outputs/figures/streamlit/06_product_analytics.png = outputs/screenshots/72_streamlit_product_analytics.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/Streamlit/screenshots/07_regional_analytics.png = FINAL_SUBMISSION/08_SCREENSHOTS/73_streamlit_regional_analytics.png = outputs/figures/streamlit/07_regional_analytics.png = outputs/screenshots/73_streamlit_regional_analytics.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/Streamlit/screenshots/08_revenue_prediction.png = FINAL_SUBMISSION/08_SCREENSHOTS/74_streamlit_revenue_prediction.png = outputs/figures/streamlit/08_revenue_prediction.png = outputs/screenshots/74_streamlit_revenue_prediction.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/Streamlit/screenshots/09_sales_forecast.png = FINAL_SUBMISSION/08_SCREENSHOTS/75_streamlit_sales_forecast.png = outputs/figures/streamlit/09_sales_forecast.png = outputs/screenshots/75_streamlit_sales_forecast.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/Streamlit/screenshots/10_business_recommendations.png = FINAL_SUBMISSION/08_SCREENSHOTS/76_streamlit_recommendations.png = outputs/figures/streamlit/10_business_recommendations.png = outputs/screenshots/76_streamlit_recommendations.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/Streamlit/screenshots/11_data_explorer.png = FINAL_SUBMISSION/08_SCREENSHOTS/77_streamlit_data_explorer.png = outputs/figures/streamlit/11_data_explorer.png = outputs/screenshots/77_streamlit_data_explorer.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/Streamlit/screenshots/12_about_project.png = FINAL_SUBMISSION/08_SCREENSHOTS/78_streamlit_about.png = outputs/figures/streamlit/12_about_project.png = outputs/screenshots/78_streamlit_about.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/Streamlit/streamlit_documentation.md = FINAL_SUBMISSION/09_VIVA/streamlit_demo_script.md = outputs/viva/streamlit_demo_script.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/07_DASHBOARDS/Streamlit/streamlit_testing_report.md = outputs/reports/streamlit_testing_report.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/01_raw_dataset_preview.png = outputs/screenshots/01_raw_dataset_preview.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/02_clean_dataset_preview.png = outputs/screenshots/02_clean_dataset_preview.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/03_data_quality_missing_before.png = outputs/figures/data_quality/01_missing_values_before.png = outputs/screenshots/03_data_quality_missing_before.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/04_data_quality_missing_after.png = outputs/figures/data_quality/02_missing_values_after.png = outputs/screenshots/04_data_quality_missing_after.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/05_data_quality_issue_summary.png = outputs/figures/data_quality/04_data_quality_issue_summary.png = outputs/screenshots/05_data_quality_issue_summary.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/06_outlier_distribution.png = outputs/figures/data_quality/03_outlier_distribution.png = outputs/screenshots/06_outlier_distribution.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/07_revenue_trend_monthly.png = outputs/figures/monthly_revenue_trend.png = outputs/screenshots/07_revenue_trend_monthly.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/08_profit_trend_monthly.png = outputs/figures/monthly_profit_trend.png = outputs/screenshots/08_profit_trend_monthly.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/09_revenue_growth_mom.png = outputs/figures/mom_revenue_growth.png = outputs/screenshots/09_revenue_growth_mom.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/10_customer_concentration.png = outputs/figures/revenue_concentration_curve.png = outputs/screenshots/10_customer_concentration.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/11_customer_revenue_distribution.png = outputs/figures/customer_revenue_distribution.png = outputs/screenshots/11_customer_revenue_distribution.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/12_purchase_frequency.png = outputs/figures/purchase_frequency.png = outputs/screenshots/12_purchase_frequency.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/13_category_revenue_vs_profit.png = outputs/figures/category_revenue_vs_profit.png = outputs/screenshots/13_category_revenue_vs_profit.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/14_product_quadrant.png = outputs/figures/product_revenue_profit_quadrant.png = outputs/screenshots/14_product_quadrant.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/15_regional_revenue.png = outputs/figures/regional_revenue.png = outputs/screenshots/15_regional_revenue.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/16_correlation_heatmap.png = outputs/figures/correlation_heatmap.png = outputs/screenshots/16_correlation_heatmap.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/17_discount_margin.png = outputs/figures/discount_profit_relationship.png = outputs/screenshots/17_discount_margin.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/18_order_status_value.png = outputs/figures/order_status_value.png = outputs/screenshots/18_order_status_value.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/19_rfm_recency_distribution.png = outputs/figures/rfm_recency_distribution.png = outputs/screenshots/19_rfm_recency_distribution.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/20_rfm_frequency_distribution.png = outputs/figures/rfm_frequency_distribution.png = outputs/screenshots/20_rfm_frequency_distribution.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/21_rfm_monetary_distribution.png = outputs/figures/rfm_monetary_distribution.png = outputs/screenshots/21_rfm_monetary_distribution.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/22_rfm_segment_distribution.png = outputs/figures/rfm_segment_distribution.png = outputs/screenshots/22_rfm_segment_distribution.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/23_rfm_revenue_contribution.png = outputs/figures/rfm_revenue_contribution.png = outputs/screenshots/23_rfm_revenue_contribution.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/24_rfm_segment_matrix.png = outputs/figures/rfm_segment_matrix.png = outputs/screenshots/24_rfm_segment_matrix.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/25_kmeans_feature_transformation.png = outputs/figures/kmeans_feature_transformation.png = outputs/screenshots/25_kmeans_feature_transformation.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/26_kmeans_elbow_curve.png = outputs/figures/kmeans_elbow_curve.png = outputs/screenshots/26_kmeans_elbow_curve.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/27_kmeans_silhouette_scores.png = outputs/figures/kmeans_silhouette_scores.png = outputs/screenshots/27_kmeans_silhouette_scores.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/28_kmeans_silhouette_diagram.png = outputs/figures/kmeans_silhouette_diagram.png = outputs/screenshots/28_kmeans_silhouette_diagram.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/29_kmeans_cluster_pca.png = outputs/figures/cluster_pca_visualization.png = outputs/screenshots/29_kmeans_cluster_pca.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/30_kmeans_cluster_profile.png = outputs/figures/cluster_centroid_profile.png = outputs/screenshots/30_kmeans_cluster_profile.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/31_kmeans_cluster_revenue.png = outputs/figures/cluster_revenue.png = outputs/screenshots/31_kmeans_cluster_revenue.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/32_rfm_vs_cluster_agreement.png = outputs/figures/rfm_vs_ml_cluster_heatmap.png = outputs/screenshots/32_rfm_vs_cluster_agreement.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/33_clv_distribution.png = outputs/figures/clv_distribution.png = outputs/screenshots/33_clv_distribution.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/34_clv_value_concentration.png = outputs/figures/clv_value_concentration.png = outputs/screenshots/34_clv_value_concentration.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/35_clv_model_comparison.png = outputs/figures/clv_model_comparison.png = outputs/screenshots/35_clv_model_comparison.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/36_clv_actual_vs_predicted.png = outputs/figures/clv_actual_vs_predicted.png = outputs/screenshots/36_clv_actual_vs_predicted.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/37_clv_by_rfm_segment.png = outputs/figures/clv_by_rfm_segment.png = outputs/screenshots/37_clv_by_rfm_segment.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/38_clv_feature_importance.png = outputs/figures/clv_feature_importance.png = outputs/screenshots/38_clv_feature_importance.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/39_prediction_actual_vs_predicted.png = outputs/figures/actual_vs_predicted_revenue.png = outputs/screenshots/39_prediction_actual_vs_predicted.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/40_prediction_model_comparison.png = outputs/figures/revenue_model_comparison.png = outputs/screenshots/40_prediction_model_comparison.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/41_prediction_feature_importance.png = outputs/figures/revenue_feature_importance.png = outputs/screenshots/41_prediction_feature_importance.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/42_prediction_error_distribution.png = outputs/figures/prediction_error_distribution.png = outputs/screenshots/42_prediction_error_distribution.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/43_prediction_error_by_revenue_range.png = outputs/figures/prediction_error_by_revenue_range.png = outputs/screenshots/43_prediction_error_by_revenue_range.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/44_prediction_timeline.png = outputs/figures/revenue_prediction_timeline.png = outputs/screenshots/44_prediction_timeline.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/45_forecast_historical_revenue.png = outputs/figures/forecasting/historical_revenue_trend.png = outputs/screenshots/45_forecast_historical_revenue.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/46_forecast_acf_pacf.png = outputs/figures/forecasting/acf_pacf.png = outputs/screenshots/46_forecast_acf_pacf.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/47_forecast_model_comparison.png = outputs/figures/forecasting/forecast_model_comparison.png = outputs/screenshots/47_forecast_model_comparison.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/48_forecast_backtest.png = outputs/figures/forecasting/backtest_results.png = outputs/screenshots/48_forecast_backtest.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/49_forecast_actual_vs_forecast.png = outputs/figures/forecasting/actual_vs_forecast.png = outputs/screenshots/49_forecast_actual_vs_forecast.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/50_forecast_seasonal_pattern.png = outputs/figures/forecasting/seasonal_pattern.png = outputs/screenshots/50_forecast_seasonal_pattern.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/51_sql_er_diagram.png = outputs/figures/sql/er_diagram.png = outputs/screenshots/51_sql_er_diagram.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/52_sql_top10_customers.png = outputs/figures/sql/sql_top10_customers.png = outputs/screenshots/52_sql_top10_customers.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/53_sql_customer_concentration.png = outputs/figures/sql/sql_customer_concentration.png = outputs/screenshots/53_sql_customer_concentration.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/54_sql_revenue_by_rfm_segment.png = outputs/figures/sql/sql_revenue_by_rfm_segment.png = outputs/screenshots/54_sql_revenue_by_rfm_segment.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/55_sql_monthly_revenue_growth.png = outputs/figures/sql/sql_monthly_revenue_growth.png = outputs/screenshots/55_sql_monthly_revenue_growth.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/56_sql_region_category_margin.png = outputs/figures/sql/sql_region_category_margin.png = outputs/screenshots/56_sql_region_category_margin.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/79_architecture.png = outputs/figures/report/architecture.png = outputs/screenshots/79_architecture.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/80_implementation_flowchart.png = outputs/figures/report/flowchart.png = outputs/screenshots/80_implementation_flowchart.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/08_SCREENSHOTS/81_graphical_abstract.png = outputs/figures/report/graphical_abstract.png = outputs/screenshots/81_graphical_abstract.png,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/09_VIVA/01_basic_viva_questions.md = outputs/viva/01_basic_viva_questions.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/09_VIVA/02_intermediate_technical_questions.md = outputs/viva/02_intermediate_technical_questions.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/09_VIVA/03_advanced_data_science_questions.md = outputs/viva/03_advanced_data_science_questions.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/09_VIVA/04_sql_viva.md = outputs/viva/04_sql_viva.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/09_VIVA/05_powerbi_viva.md = outputs/viva/05_powerbi_viva.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/09_VIVA/06_streamlit_viva.md = outputs/viva/06_streamlit_viva.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/09_VIVA/07_business_questions.md = outputs/viva/07_business_questions.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/09_VIVA/08_challenging_questions.md = outputs/viva/08_challenging_questions.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/09_VIVA/09_trick_questions.md = outputs/viva/09_trick_questions.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/09_VIVA/10_mock_viva_easy.md = outputs/viva/10_mock_viva_easy.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/09_VIVA/11_mock_viva_medium.md = outputs/viva/11_mock_viva_medium.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/09_VIVA/12_mock_viva_difficult.md = outputs/viva/12_mock_viva_difficult.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/09_VIVA/business_viva.md = outputs/viva/business_viva.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/09_VIVA/difficult_professor_questions.md = outputs/viva/difficult_professor_questions.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/09_VIVA/final_demo_order.md = outputs/viva/final_demo_order.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/09_VIVA/final_revision_sheet.md = outputs/viva/final_revision_sheet.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/09_VIVA/last_minute_revision.md = outputs/viva/last_minute_revision.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/09_VIVA/live_demo_script.md = outputs/viva/live_demo_script.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/09_VIVA/live_failure_handling.md = outputs/viva/live_failure_handling.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/09_VIVA/ml_live_viva.md = outputs/viva/ml_live_viva.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/09_VIVA/one_line_answers.md = outputs/viva/one_line_answers.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/09_VIVA/powerbi_demo_script.md = outputs/viva/powerbi_demo_script.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/09_VIVA/presentation_speaking_script.md = outputs/viva/presentation_speaking_script.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/09_VIVA/professor_presentation_questions.md = outputs/viva/professor_presentation_questions.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/09_VIVA/project_master_summary.md = outputs/viva/project_master_summary.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/09_VIVA/rapid_fire_questions.md = outputs/viva/rapid_fire_questions.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/09_VIVA/rapid_fire_viva.md = outputs/viva/rapid_fire_viva.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/09_VIVA/sql_demo_script.md = outputs/viva/sql_demo_script.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/09_VIVA/top_20_viva_questions.md = outputs/viva/top_20_viva_questions.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/09_VIVA/trick_questions.md = outputs/viva/trick_questions.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/09_VIVA/why_questions.md = outputs/viva/why_questions.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/LICENSE = LICENSE,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/README.md = README.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/STEP2_Dataset_Design.md = docs/STEP2_Dataset_Design.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/STEP3_Data_Cleaning_Methodology.md = docs/STEP3_Data_Cleaning_Methodology.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/methodology_reports/clv_analysis_report.md = outputs/reports/clv_analysis_report.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/methodology_reports/eda_summary.md = outputs/reports/eda_summary.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/methodology_reports/forecasting_methodology.md = outputs/reports/forecasting_methodology.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/methodology_reports/kmeans_model_report.md = outputs/reports/kmeans_model_report.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/methodology_reports/project_audit.md = outputs/reports/project_audit.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/methodology_reports/raw_data_validation_report.md = outputs/reports/raw_data_validation_report.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/methodology_reports/revenue_prediction_report.md = outputs/reports/revenue_prediction_report.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/methodology_reports/rfm_methodology.md = outputs/reports/rfm_methodology.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/methodology_reports/sql_analysis_methodology.md = outputs/reports/sql_analysis_methodology.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/project_audits/cross_document_consistency.md = outputs/final_audit/cross_document_consistency.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/project_audits/final_file_inventory.md = outputs/final_audit/final_file_inventory.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/project_audits/final_submission_checklist.md = outputs/final_audit/final_submission_checklist.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/project_audits/github_readiness_checklist.md = outputs/final_audit/github_readiness_checklist.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/project_audits/live_demo_plan.md = outputs/final_audit/live_demo_plan.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/project_audits/project_audit.md = outputs/final_audit/project_audit.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/project_audits/project_handover.md = outputs/final_audit/project_handover.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/project_audits/screenshot_checklist.md = outputs/final_audit/screenshot_checklist.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/project_build_log.md = docs/project_build_log.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/reproducibility_guide.md = docs/reproducibility_guide.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/requirements.txt = requirements.txt,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/submission_documents/FINAL_HANDOVER.md = outputs/final_submission/FINAL_HANDOVER.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/submission_documents/MASTER_SUBMISSION_CHECKLIST.md = outputs/final_submission/MASTER_SUBMISSION_CHECKLIST.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/submission_documents/backup_manifest.md = outputs/final_submission/backup_manifest.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/submission_documents/data_ethics_check.md = outputs/final_submission/data_ethics_check.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/submission_documents/declaration_check.md = outputs/final_submission/declaration_check.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/submission_documents/final_consistency_check.md = outputs/final_submission/final_consistency_check.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/submission_documents/final_project_inventory.md = outputs/final_submission/final_project_inventory.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/submission_documents/final_status.md = outputs/final_submission/final_status.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/submission_documents/github_final_check.md = outputs/final_submission/github_final_check.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/submission_documents/presentation_final_check.md = outputs/final_submission/presentation_final_check.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/submission_documents/report_final_check.md = outputs/final_submission/report_final_check.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/submission_documents/reproducibility_final_check.md = outputs/final_submission/reproducibility_final_check.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/submission_documents/student_manual_actions.md = outputs/final_submission/student_manual_actions.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/submission_documents/submission_cover_page.md = outputs/final_submission/submission_cover_page.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/10_DOCUMENTATION/submission_documents/zip_contents.md = outputs/final_submission/zip_contents.md,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/audit_data_consistency.csv = outputs/tables/audit_data_consistency.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/audit_findings.csv = outputs/tables/audit_findings.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/audit_integration.csv = outputs/tables/audit_integration.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/audit_models.csv = outputs/tables/audit_models.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/audit_pipeline.csv = outputs/tables/audit_pipeline.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/audit_structure.csv = outputs/tables/audit_structure.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/audit_summary.csv = outputs/tables/audit_summary.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/business_insights.csv = outputs/tables/business_insights.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/business_questions.csv = outputs/tables/business_questions.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/category_summary.csv = outputs/tables/category_summary.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/city_summary.csv = outputs/tables/city_summary.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/cleaning_accuracy_vs_ground_truth.csv = outputs/tables/cleaning_accuracy_vs_ground_truth.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/cleaning_category_standardisation.csv = outputs/tables/cleaning_category_standardisation.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/cleaning_corrections_applied.csv = outputs/tables/cleaning_corrections_applied.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/cleaning_missing_value_log.csv = outputs/tables/cleaning_missing_value_log.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/cleaning_rule_checks_before_after.csv = outputs/tables/cleaning_rule_checks_before_after.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_annual_repeat_rates.csv = outputs/tables/clv_annual_repeat_rates.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_assumptions.csv = outputs/tables/clv_assumptions.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_bgnbd_evaluation.csv = outputs/tables/clv_bgnbd_evaluation.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_business_insights.csv = outputs/tables/clv_business_insights.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_business_questions.csv = outputs/tables/clv_business_questions.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_by_ml_cluster.csv = outputs/tables/clv_by_ml_cluster.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_by_rfm_segment.csv = outputs/tables/clv_by_rfm_segment.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_calibration_by_decile.csv = outputs/tables/clv_calibration_by_decile.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_data_readiness.csv = outputs/tables/clv_data_readiness.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_feature_importance.csv = outputs/tables/clv_feature_importance.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_feature_selection.csv = outputs/tables/clv_feature_selection.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_future_value_correlations.csv = outputs/tables/clv_future_value_correlations.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_high_value_groups.csv = outputs/tables/clv_high_value_groups.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_horizon_sensitivity.csv = outputs/tables/clv_horizon_sensitivity.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_inactivity_threshold_sensitivity.csv = outputs/tables/clv_inactivity_threshold_sensitivity.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_interpurchase_gaps.csv = outputs/tables/clv_interpurchase_gaps.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_model_comparison.csv = outputs/tables/clv_model_comparison.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_model_cv_selection.csv = outputs/tables/clv_model_cv_selection.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_profit_decomposition.csv = outputs/tables/clv_profit_decomposition.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_single_purchase_customers.csv = outputs/tables/clv_single_purchase_customers.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_test_predictions.csv = outputs/tables/clv_test_predictions.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_validation_checks.csv = outputs/tables/clv_validation_checks.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_value_concentration.csv = outputs/tables/clv_value_concentration.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_value_distribution.csv = outputs/tables/clv_value_distribution.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_value_drivers.csv = outputs/tables/clv_value_drivers.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_value_percentiles.csv = outputs/tables/clv_value_percentiles.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/correlation_pairs.csv = outputs/tables/correlation_pairs.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/customer_characteristic_tests.csv = outputs/tables/customer_characteristic_tests.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/customer_revenue_by_attribute.csv = outputs/tables/customer_revenue_by_attribute.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/customer_revenue_concentration.csv = FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/cust_revenue_concentration.csv = outputs/tables/customer_revenue_concentration.csv = outputs/tables/sql/cust_revenue_concentration.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/customer_segment_sql_analysis.csv = outputs/tables/customer_segment_sql_analysis.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/customer_summary.csv = outputs/tables/customer_summary.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/customer_validation_stats.csv = outputs/tables/customer_validation_stats.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/day_of_week_summary.csv = outputs/tables/day_of_week_summary.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/discount_correlations.csv = outputs/tables/discount_correlations.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/discount_margin_by_category.csv = outputs/tables/discount_margin_by_category.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/discount_summary.csv = outputs/tables/discount_summary.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/eda_descriptive_statistics.csv = outputs/tables/eda_descriptive_statistics.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/eda_kpis.csv = outputs/tables/eda_kpis.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/eda_order_definition_checks.csv = outputs/tables/eda_order_definition_checks.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/eda_outlier_classes.csv = outputs/tables/eda_outlier_classes.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/eda_outlier_summary.csv = outputs/tables/eda_outlier_summary.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/eda_quality_checks.csv = outputs/tables/eda_quality_checks.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/feature_usage_leakage_check.csv = outputs/tables/feature_usage_leakage_check.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_acf_pacf.csv = outputs/tables/forecast_acf_pacf.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_adf_tests.csv = outputs/tables/forecast_adf_tests.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_backtest_by_horizon.csv = outputs/tables/forecast_backtest_by_horizon.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_backtest_folds.csv = outputs/tables/forecast_backtest_folds.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_backtest_summary.csv = outputs/tables/forecast_backtest_summary.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_business_interpretation.csv = outputs/tables/forecast_business_interpretation.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_by_dimension.csv = outputs/tables/forecast_by_dimension.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_by_dimension_evaluation.csv = outputs/tables/forecast_by_dimension_evaluation.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_data_quality.csv = outputs/tables/forecast_data_quality.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_future.csv = outputs/tables/forecast_future.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_model_comparison.csv = outputs/tables/forecast_model_comparison.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_model_selection.csv = outputs/tables/forecast_model_selection.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_quality_checklist.csv = outputs/tables/forecast_quality_checklist.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_rolling_statistics.csv = outputs/tables/forecast_rolling_statistics.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_seasonal_index.csv = outputs/tables/forecast_seasonal_index.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_split_summary.csv = outputs/tables/forecast_split_summary.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_stl_decomposition.csv = outputs/tables/forecast_stl_decomposition.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_validation_tuning.csv = outputs/tables/forecast_validation_tuning.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_yearly_summary.csv = outputs/tables/forecast_yearly_summary.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/ml_business_questions.csv = outputs/tables/ml_business_questions.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/ml_cluster_centroids.csv = outputs/tables/ml_cluster_centroids.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/ml_cluster_insights.csv = outputs/tables/ml_cluster_insights.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/ml_cluster_label_mapping.csv = outputs/tables/ml_cluster_label_mapping.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/ml_cluster_summary.csv = outputs/tables/ml_cluster_summary.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/ml_data_quality_checks.csv = outputs/tables/ml_data_quality_checks.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/ml_feature_distribution_check.csv = outputs/tables/ml_feature_distribution_check.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/ml_feature_selection.csv = outputs/tables/ml_feature_selection.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/ml_feature_set_comparison.csv = outputs/tables/ml_feature_set_comparison.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/ml_final_model_metrics.csv = outputs/tables/ml_final_model_metrics.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/ml_k_evaluation.csv = outputs/tables/ml_k_evaluation.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/ml_pca_summary.csv = outputs/tables/ml_pca_summary.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/ml_silhouette_by_cluster.csv = outputs/tables/ml_silhouette_by_cluster.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/ml_validation_checks.csv = outputs/tables/ml_validation_checks.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/monthly_summary.csv = outputs/tables/monthly_summary.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/order_status_summary.csv = outputs/tables/order_status_summary.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/outlier_interpretation.csv = outputs/tables/outlier_interpretation.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/outlier_summary.csv = outputs/tables/outlier_summary.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/payment_summary.csv = outputs/tables/payment_summary.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/product_profitability.csv = outputs/tables/product_profitability.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/product_revenue_profit_quadrants.csv = outputs/tables/product_revenue_profit_quadrants.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/product_summary.csv = outputs/tables/product_summary.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/purchase_frequency.csv = outputs/tables/purchase_frequency.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/quarterly_summary.csv = outputs/tables/quarterly_summary.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/regional_summary.csv = outputs/tables/regional_summary.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/report_facts.json = outputs/tables/report_facts.json,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_business_questions.csv = outputs/tables/revenue_business_questions.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_categorical_drivers.csv = outputs/tables/revenue_categorical_drivers.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_concentration.csv = outputs/tables/revenue_concentration.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_cutoff_timing.csv = outputs/tables/revenue_cutoff_timing.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_data_checks.csv = outputs/tables/revenue_data_checks.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_driver_analysis.csv = outputs/tables/revenue_driver_analysis.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_error_by_category.csv = outputs/tables/revenue_error_by_category.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_error_by_quarter.csv = outputs/tables/revenue_error_by_quarter.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_error_by_region.csv = outputs/tables/revenue_error_by_region.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_error_by_revenue_range.csv = outputs/tables/revenue_error_by_revenue_range.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_feature_catalog.csv = outputs/tables/revenue_feature_catalog.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_feature_importance.csv = outputs/tables/revenue_feature_importance.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_feature_selection.csv = outputs/tables/revenue_feature_selection.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_leakage_audit.csv = outputs/tables/revenue_leakage_audit.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_level_feature_check.csv = outputs/tables/revenue_level_feature_check.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_linear_coefficients.csv = outputs/tables/revenue_linear_coefficients.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_model_comparison.csv = outputs/tables/revenue_model_comparison.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_model_selection.csv = outputs/tables/revenue_model_selection.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_model_validation_results.csv = outputs/tables/revenue_model_validation_results.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_prediction_by_cluster.csv = outputs/tables/revenue_prediction_by_cluster.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_prediction_by_rfm.csv = outputs/tables/revenue_prediction_by_rfm.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_prediction_design.csv = outputs/tables/revenue_prediction_design.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_predictions.csv = outputs/tables/revenue_predictions.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_quarterly_totals.csv = outputs/tables/revenue_quarterly_totals.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_scenarios.csv = outputs/tables/revenue_scenarios.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_split_summary.csv = outputs/tables/revenue_split_summary.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_tuning_results.csv = outputs/tables/revenue_tuning_results.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_validation_checks.csv = outputs/tables/revenue_validation_checks.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_business_insights.csv = outputs/tables/rfm_business_insights.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_business_questions.csv = outputs/tables/rfm_business_questions.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_concentration_stats.csv = outputs/tables/rfm_concentration_stats.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_descriptive_statistics.csv = outputs/tables/rfm_descriptive_statistics.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_excluded_customers.csv = outputs/tables/rfm_excluded_customers.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_headline_metrics.csv = outputs/tables/rfm_headline_metrics.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_high_value_at_risk.csv = outputs/tables/rfm_high_value_at_risk.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_high_value_at_risk_rule.csv = outputs/tables/rfm_high_value_at_risk_rule.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_log_transform_check.csv = outputs/tables/rfm_log_transform_check.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_most_recent_customers.csv = outputs/tables/rfm_most_recent_customers.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_qcut_feasibility.csv = outputs/tables/rfm_qcut_feasibility.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_revenue_concentration.csv = outputs/tables/rfm_revenue_concentration.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_score_bins.csv = outputs/tables/rfm_score_bins.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_score_grid_R_by_F.csv = outputs/tables/rfm_score_grid_R_by_F.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_segment_profile.csv = outputs/tables/rfm_segment_profile.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_segment_rules.csv = outputs/tables/rfm_segment_rules.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_segment_summary.csv = outputs/tables/rfm_segment_summary.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_top_customers_frequency.csv = outputs/tables/rfm_top_customers_frequency.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_top_customers_monetary.csv = outputs/tables/rfm_top_customers_monetary.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_validation_checks.csv = outputs/tables/rfm_validation_checks.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_value_activity_groups.csv = outputs/tables/rfm_value_activity_groups.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_vs_ml_agreement.csv = outputs/tables/rfm_vs_ml_agreement.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_vs_ml_by_cluster.csv = outputs/tables/rfm_vs_ml_by_cluster.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_vs_ml_by_segment.csv = outputs/tables/rfm_vs_ml_by_segment.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_vs_ml_cluster.csv = outputs/tables/rfm_vs_ml_cluster.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_vs_ml_cluster_col_pct.csv = outputs/tables/rfm_vs_ml_cluster_col_pct.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_vs_ml_cluster_row_pct.csv = outputs/tables/rfm_vs_ml_cluster_row_pct.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/seasonal_index.csv = outputs/tables/seasonal_index.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ01.csv = outputs/tables/sql/BQ01.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ02.csv = outputs/tables/sql/BQ02.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ03.csv = outputs/tables/sql/BQ03.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ04.csv = outputs/tables/sql/BQ04.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ05.csv = outputs/tables/sql/BQ05.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ06.csv = outputs/tables/sql/BQ06.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ07.csv = outputs/tables/sql/BQ07.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ08.csv = outputs/tables/sql/BQ08.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ09.csv = outputs/tables/sql/BQ09.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ10.csv = outputs/tables/sql/BQ10.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ11.csv = outputs/tables/sql/BQ11.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ12.csv = outputs/tables/sql/BQ12.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ13.csv = outputs/tables/sql/BQ13.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ14.csv = outputs/tables/sql/BQ14.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ15.csv = outputs/tables/sql/BQ15.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ16.csv = outputs/tables/sql/BQ16.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ17.csv = outputs/tables/sql/BQ17.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ18.csv = outputs/tables/sql/BQ18.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ19.csv = outputs/tables/sql/BQ19.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ20.csv = outputs/tables/sql/BQ20.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/cust_acquired_by_year.csv = outputs/tables/sql/cust_acquired_by_year.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/cust_concentration_summary.csv = outputs/tables/sql/cust_concentration_summary.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/cust_frequency_distribution.csv = outputs/tables/sql/cust_frequency_distribution.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/cust_highest_aov.csv = outputs/tables/sql/cust_highest_aov.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/cust_inactive.csv = outputs/tables/sql/cust_inactive.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/cust_most_frequent.csv = outputs/tables/sql/cust_most_frequent.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/cust_new_vs_existing.csv = outputs/tables/sql/cust_new_vs_existing.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/cust_top_profit.csv = outputs/tables/sql/cust_top_profit.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/cust_top_revenue.csv = outputs/tables/sql/cust_top_revenue.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/prod_avg_selling_price.csv = outputs/tables/sql/prod_avg_selling_price.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/prod_category_performance.csv = outputs/tables/sql/prod_category_performance.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/prod_discount_bands.csv = outputs/tables/sql/prod_discount_bands.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/prod_investigate.csv = outputs/tables/sql/prod_investigate.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/prod_profitability.csv = outputs/tables/sql/prod_profitability.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/prod_subcategory_performance.csv = outputs/tables/sql/prod_subcategory_performance.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/prod_top_profit.csv = outputs/tables/sql/prod_top_profit.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/prod_top_quantity.csv = outputs/tables/sql/prod_top_quantity.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/prod_top_revenue.csv = outputs/tables/sql/prod_top_revenue.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/reg_category_matrix.csv = outputs/tables/sql/reg_category_matrix.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/reg_customers_without_orders.csv = outputs/tables/sql/reg_customers_without_orders.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/reg_performance.csv = outputs/tables/sql/reg_performance.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/reg_top_states.csv = outputs/tables/sql/reg_top_states.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/rev_by_quarter.csv = outputs/tables/sql/rev_by_quarter.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/rev_by_year.csv = outputs/tables/sql/rev_by_year.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/rev_kpi_summary.csv = outputs/tables/sql/rev_kpi_summary.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/rev_margin_by_year_category.csv = outputs/tables/sql/rev_margin_by_year_category.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/rev_order_status.csv = outputs/tables/sql/rev_order_status.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/seg_ml_cluster_summary.csv = outputs/tables/sql/seg_ml_cluster_summary.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/seg_rfm_summary.csv = outputs/tables/sql/seg_rfm_summary.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/seg_rfm_vs_cluster.csv = outputs/tables/sql/seg_rfm_vs_cluster.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/seg_value_activity_groups.csv = outputs/tables/sql/seg_value_activity_groups.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/seg_value_by_cluster.csv = outputs/tables/sql/seg_value_by_cluster.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/time_best_worst_months.csv = outputs/tables/sql/time_best_worst_months.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/time_month_of_year.csv = outputs/tables/sql/time_month_of_year.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/time_monthly.csv = outputs/tables/sql/time_monthly.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/time_ytd_running_total.csv = outputs/tables/sql/time_ytd_running_total.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql_key_findings.csv = outputs/tables/sql_key_findings.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql_quality_checklist.csv = outputs/tables/sql_quality_checklist.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql_query_catalog.csv = outputs/tables/sql_query_catalog.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql_table_catalog.csv = outputs/tables/sql_table_catalog.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql_technique_coverage.csv = outputs/tables/sql_technique_coverage.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/sql_validation_checks.csv = outputs/tables/sql_validation_checks.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/state_summary.csv = outputs/tables/state_summary.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/streamlit_page_load_times.csv = outputs/tables/streamlit_page_load_times.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/streamlit_quality_checklist.csv = outputs/tables/streamlit_quality_checklist.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/streamlit_test_results.csv = outputs/tables/streamlit_test_results.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/subcategory_summary.csv = outputs/tables/subcategory_summary.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/top_customers_profit.csv = outputs/tables/top_customers_profit.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/top_customers_revenue.csv = outputs/tables/top_customers_revenue.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/unusual_customers.csv = outputs/tables/unusual_customers.csv,Identical bytes in two locations.,REVIEW
+A,Duplicate content,FINAL_SUBMISSION/11_OUTPUT_TABLES/yearly_summary.csv = outputs/tables/yearly_summary.csv,Identical bytes in two locations.,REVIEW
+A,Repeated filename,config.toml,".streamlit/config.toml, FINAL_SUBMISSION/03_SOURCE_CODE/.streamlit/config.toml",REVIEW
+A,Repeated filename,report_validation_checklist.md,"FINAL_SUBMISSION/01_REPORT/report_validation_checklist.md, outputs/reports/report_validation_checklist.md",REVIEW
+A,Repeated filename,app.py,"FINAL_SUBMISSION/03_SOURCE_CODE/app.py, app.py",REVIEW
+A,Repeated filename,style.css,"FINAL_SUBMISSION/03_SOURCE_CODE/assets/css/style.css, assets/css/style.css",REVIEW
+A,Repeated filename,config.py,"FINAL_SUBMISSION/03_SOURCE_CODE/config.py, config.py",REVIEW
+A,Repeated filename,01_data_cleaning.ipynb,"FINAL_SUBMISSION/03_SOURCE_CODE/notebooks/01_data_cleaning.ipynb, notebooks/01_data_cleaning.ipynb",REVIEW
+A,Repeated filename,02_exploratory_data_analysis.ipynb,"FINAL_SUBMISSION/03_SOURCE_CODE/notebooks/02_exploratory_data_analysis.ipynb, notebooks/02_exploratory_data_analysis.ipynb",REVIEW
+A,Repeated filename,03_rfm_customer_analysis.ipynb,"FINAL_SUBMISSION/03_SOURCE_CODE/notebooks/03_rfm_customer_analysis.ipynb, notebooks/03_rfm_customer_analysis.ipynb",REVIEW
+A,Repeated filename,04_kmeans_customer_segmentation.ipynb,"FINAL_SUBMISSION/03_SOURCE_CODE/notebooks/04_kmeans_customer_segmentation.ipynb, notebooks/04_kmeans_customer_segmentation.ipynb",REVIEW
+A,Repeated filename,05_customer_lifetime_value.ipynb,"FINAL_SUBMISSION/03_SOURCE_CODE/notebooks/05_customer_lifetime_value.ipynb, notebooks/05_customer_lifetime_value.ipynb",REVIEW
+A,Repeated filename,06_revenue_prediction.ipynb,"FINAL_SUBMISSION/03_SOURCE_CODE/notebooks/06_revenue_prediction.ipynb, notebooks/06_revenue_prediction.ipynb",REVIEW
+A,Repeated filename,07_sales_forecasting.ipynb,"FINAL_SUBMISSION/03_SOURCE_CODE/notebooks/07_sales_forecasting.ipynb, notebooks/07_sales_forecasting.ipynb",REVIEW
+A,Repeated filename,08_sql_business_analysis.ipynb,"FINAL_SUBMISSION/03_SOURCE_CODE/notebooks/08_sql_business_analysis.ipynb, notebooks/08_sql_business_analysis.ipynb",REVIEW
+A,Repeated filename,09_powerbi_data_model.ipynb,"FINAL_SUBMISSION/03_SOURCE_CODE/notebooks/09_powerbi_data_model.ipynb, notebooks/09_powerbi_data_model.ipynb",REVIEW
+A,Repeated filename,about.py,"FINAL_SUBMISSION/03_SOURCE_CODE/pages/about.py, pages/about.py",REVIEW
+A,Repeated filename,customers.py,"FINAL_SUBMISSION/03_SOURCE_CODE/pages/customers.py, pages/customers.py",REVIEW
+A,Repeated filename,data_explorer.py,"FINAL_SUBMISSION/03_SOURCE_CODE/pages/data_explorer.py, pages/data_explorer.py",REVIEW
+A,Repeated filename,executive.py,"FINAL_SUBMISSION/03_SOURCE_CODE/pages/executive.py, pages/executive.py",REVIEW
+A,Repeated filename,forecasting.py,"FINAL_SUBMISSION/03_SOURCE_CODE/pages/forecasting.py, FINAL_SUBMISSION/03_SOURCE_CODE/src/forecasting.py, pages/forecasting.py, src/forecasting.py",REVIEW
+A,Repeated filename,home.py,"FINAL_SUBMISSION/03_SOURCE_CODE/pages/home.py, pages/home.py",REVIEW
+A,Repeated filename,prediction.py,"FINAL_SUBMISSION/03_SOURCE_CODE/pages/prediction.py, FINAL_SUBMISSION/03_SOURCE_CODE/src/prediction.py, pages/prediction.py, src/prediction.py",REVIEW
+A,Repeated filename,products.py,"FINAL_SUBMISSION/03_SOURCE_CODE/pages/products.py, pages/products.py",REVIEW
+A,Repeated filename,recommendations.py,"FINAL_SUBMISSION/03_SOURCE_CODE/pages/recommendations.py, pages/recommendations.py",REVIEW
+A,Repeated filename,regional.py,"FINAL_SUBMISSION/03_SOURCE_CODE/pages/regional.py, pages/regional.py",REVIEW
+A,Repeated filename,revenue.py,"FINAL_SUBMISSION/03_SOURCE_CODE/pages/revenue.py, pages/revenue.py",REVIEW
+A,Repeated filename,segmentation.py,"FINAL_SUBMISSION/03_SOURCE_CODE/pages/segmentation.py, FINAL_SUBMISSION/03_SOURCE_CODE/src/segmentation.py, pages/segmentation.py, src/segmentation.py",REVIEW
+A,Repeated filename,audit_cleaning.py,"FINAL_SUBMISSION/03_SOURCE_CODE/scripts/audit_cleaning.py, scripts/audit_cleaning.py",REVIEW
+A,Repeated filename,audit_project.py,"FINAL_SUBMISSION/03_SOURCE_CODE/scripts/audit_project.py, scripts/audit_project.py",REVIEW
+A,Repeated filename,build_demo.py,"FINAL_SUBMISSION/03_SOURCE_CODE/scripts/build_demo.py, scripts/build_demo.py",REVIEW
+A,Repeated filename,build_packaging.py,"FINAL_SUBMISSION/03_SOURCE_CODE/scripts/build_packaging.py, scripts/build_packaging.py",REVIEW
+A,Repeated filename,build_presentation.py,"FINAL_SUBMISSION/03_SOURCE_CODE/scripts/build_presentation.py, scripts/build_presentation.py",REVIEW
+A,Repeated filename,build_report.py,"FINAL_SUBMISSION/03_SOURCE_CODE/scripts/build_report.py, scripts/build_report.py",REVIEW
+A,Repeated filename,build_submission.py,"FINAL_SUBMISSION/03_SOURCE_CODE/scripts/build_submission.py, scripts/build_submission.py",REVIEW
+A,Repeated filename,build_viva.py,"FINAL_SUBMISSION/03_SOURCE_CODE/scripts/build_viva.py, scripts/build_viva.py",REVIEW
+A,Repeated filename,generate_dataset.py,"FINAL_SUBMISSION/03_SOURCE_CODE/scripts/generate_dataset.py, scripts/generate_dataset.py",REVIEW
+A,Repeated filename,report_builder.py,"FINAL_SUBMISSION/03_SOURCE_CODE/scripts/report_builder.py, scripts/report_builder.py",REVIEW
+A,Repeated filename,report_diagrams.py,"FINAL_SUBMISSION/03_SOURCE_CODE/scripts/report_diagrams.py, scripts/report_diagrams.py",REVIEW
+A,Repeated filename,report_facts.py,"FINAL_SUBMISSION/03_SOURCE_CODE/scripts/report_facts.py, scripts/report_facts.py",REVIEW
+A,Repeated filename,validate_dataset.py,"FINAL_SUBMISSION/03_SOURCE_CODE/scripts/validate_dataset.py, scripts/validate_dataset.py",REVIEW
+A,Repeated filename,__init__.py,"FINAL_SUBMISSION/03_SOURCE_CODE/src/__init__.py, src/__init__.py",REVIEW
+A,Repeated filename,clv.py,"FINAL_SUBMISSION/03_SOURCE_CODE/src/clv.py, src/clv.py",REVIEW
+A,Repeated filename,dashboard_utils.py,"FINAL_SUBMISSION/03_SOURCE_CODE/src/dashboard_utils.py, src/dashboard_utils.py",REVIEW
+A,Repeated filename,data_cleaning.py,"FINAL_SUBMISSION/03_SOURCE_CODE/src/data_cleaning.py, src/data_cleaning.py",REVIEW
+A,Repeated filename,data_loader.py,"FINAL_SUBMISSION/03_SOURCE_CODE/src/data_loader.py, src/data_loader.py",REVIEW
+A,Repeated filename,database.py,"FINAL_SUBMISSION/03_SOURCE_CODE/src/database.py, src/database.py",REVIEW
+A,Repeated filename,eda.py,"FINAL_SUBMISSION/03_SOURCE_CODE/src/eda.py, src/eda.py",REVIEW
+A,Repeated filename,powerbi_dax.py,"FINAL_SUBMISSION/03_SOURCE_CODE/src/powerbi_dax.py, src/powerbi_dax.py",REVIEW
+A,Repeated filename,powerbi_prep.py,"FINAL_SUBMISSION/03_SOURCE_CODE/src/powerbi_prep.py, src/powerbi_prep.py",REVIEW
+A,Repeated filename,rfm.py,"FINAL_SUBMISSION/03_SOURCE_CODE/src/rfm.py, src/rfm.py",REVIEW
+A,Repeated filename,sql_analytics.py,"FINAL_SUBMISSION/03_SOURCE_CODE/src/sql_analytics.py, src/sql_analytics.py",REVIEW
+A,Repeated filename,test_streamlit_app.py,"FINAL_SUBMISSION/03_SOURCE_CODE/tests/test_streamlit_app.py, tests/test_streamlit_app.py",REVIEW
+A,Repeated filename,customer_revenue_intelligence.db,"FINAL_SUBMISSION/04_DATA/customer_revenue_intelligence.db, data/customer_revenue_intelligence.db",REVIEW
+A,Repeated filename,.gitkeep,"FINAL_SUBMISSION/04_DATA/processed/.gitkeep, assets/images/.gitkeep, data/processed/.gitkeep",REVIEW
+A,Repeated filename,clv_modeling_dataset.csv,"FINAL_SUBMISSION/04_DATA/processed/clv_modeling_dataset.csv, data/processed/clv_modeling_dataset.csv",REVIEW
+A,Repeated filename,customer_clv.csv,"FINAL_SUBMISSION/04_DATA/processed/customer_clv.csv, data/processed/customer_clv.csv",REVIEW
+A,Repeated filename,customer_level_features.csv,"FINAL_SUBMISSION/04_DATA/processed/customer_level_features.csv, data/processed/customer_level_features.csv",REVIEW
+A,Repeated filename,customer_ml_segments.csv,"FINAL_SUBMISSION/04_DATA/processed/customer_ml_segments.csv, data/processed/customer_ml_segments.csv",REVIEW
+A,Repeated filename,customer_rfm.csv,"FINAL_SUBMISSION/04_DATA/processed/customer_rfm.csv, data/processed/customer_rfm.csv",REVIEW
+A,Repeated filename,customer_rfm_metadata.json,"FINAL_SUBMISSION/04_DATA/processed/customer_rfm_metadata.json, data/processed/customer_rfm_metadata.json",REVIEW
+A,Repeated filename,customer_rfm_segments.csv,"FINAL_SUBMISSION/04_DATA/processed/customer_rfm_segments.csv, data/processed/customer_rfm_segments.csv",REVIEW
+A,Repeated filename,customer_sales_cleaned.csv,"FINAL_SUBMISSION/04_DATA/processed/customer_sales_cleaned.csv, data/processed/customer_sales_cleaned.csv",REVIEW
+A,Repeated filename,customer_value_history.csv,"FINAL_SUBMISSION/04_DATA/processed/customer_value_history.csv, data/processed/customer_value_history.csv",REVIEW
+A,Repeated filename,monthly_sales_timeseries.csv,"FINAL_SUBMISSION/04_DATA/processed/monthly_sales_timeseries.csv, data/processed/monthly_sales_timeseries.csv",REVIEW
+A,Repeated filename,revenue_forecast.csv,"FINAL_SUBMISSION/04_DATA/processed/revenue_forecast.csv, data/processed/revenue_forecast.csv",REVIEW
+A,Repeated filename,revenue_modeling_dataset.csv,"FINAL_SUBMISSION/04_DATA/processed/revenue_modeling_dataset.csv, data/processed/revenue_modeling_dataset.csv",REVIEW
+A,Repeated filename,customer_sales_raw.csv,"FINAL_SUBMISSION/04_DATA/raw/customer_sales_raw.csv, data/raw/customer_sales_raw.csv",REVIEW
+A,Repeated filename,data_quality_injection_log.json,"FINAL_SUBMISSION/04_DATA/raw/data_quality_injection_log.json, data/raw/data_quality_injection_log.json",REVIEW
+A,Repeated filename,analysis_queries.sql,"FINAL_SUBMISSION/05_SQL/analysis_queries.sql, sql/analysis_queries.sql",REVIEW
+A,Repeated filename,business_queries.sql,"FINAL_SUBMISSION/05_SQL/business_queries.sql, sql/business_queries.sql",REVIEW
+A,Repeated filename,load_database.py,"FINAL_SUBMISSION/05_SQL/load_database.py, sql/load_database.py",REVIEW
+A,Repeated filename,powerbi_views.sql,"FINAL_SUBMISSION/05_SQL/powerbi_views.sql, sql/powerbi_views.sql",REVIEW
+A,Repeated filename,schema.sql,"FINAL_SUBMISSION/05_SQL/schema.sql, sql/schema.sql",REVIEW
+A,Repeated filename,clv_model.pkl,"FINAL_SUBMISSION/06_MODELS/clv_model.pkl, models/clv_model.pkl",REVIEW
+A,Repeated filename,clv_model_metadata.json,"FINAL_SUBMISSION/06_MODELS/clv_model_metadata.json, models/clv_model_metadata.json",REVIEW
+A,Repeated filename,clv_preprocessor.pkl,"FINAL_SUBMISSION/06_MODELS/clv_preprocessor.pkl, models/clv_preprocessor.pkl",REVIEW
+A,Repeated filename,forecasting_metadata.json,"FINAL_SUBMISSION/06_MODELS/forecasting_metadata.json, models/forecasting_metadata.json",REVIEW
+A,Repeated filename,forecasting_model.pkl,"FINAL_SUBMISSION/06_MODELS/forecasting_model.pkl, models/forecasting_model.pkl",REVIEW
+A,Repeated filename,kmeans_customer_segmentation.pkl,"FINAL_SUBMISSION/06_MODELS/kmeans_customer_segmentation.pkl, models/kmeans_customer_segmentation.pkl",REVIEW
+A,Repeated filename,pca_rfm.pkl,"FINAL_SUBMISSION/06_MODELS/pca_rfm.pkl, models/pca_rfm.pkl",REVIEW
+A,Repeated filename,revenue_model_metadata.json,"FINAL_SUBMISSION/06_MODELS/revenue_model_metadata.json, models/revenue_model_metadata.json",REVIEW
+A,Repeated filename,revenue_prediction_model.pkl,"FINAL_SUBMISSION/06_MODELS/revenue_prediction_model.pkl, models/revenue_prediction_model.pkl",REVIEW
+A,Repeated filename,revenue_prediction_preprocessor.pkl,"FINAL_SUBMISSION/06_MODELS/revenue_prediction_preprocessor.pkl, models/revenue_prediction_preprocessor.pkl",REVIEW
+A,Repeated filename,rfm_scaler.pkl,"FINAL_SUBMISSION/06_MODELS/rfm_scaler.pkl, models/rfm_scaler.pkl",REVIEW
+A,Repeated filename,segmentation_model_metadata.json,"FINAL_SUBMISSION/06_MODELS/segmentation_model_metadata.json, models/segmentation_model_metadata.json",REVIEW
+A,Repeated filename,POWERBI_BUILD_GUIDE.md,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/POWERBI_BUILD_GUIDE.md, powerbi/POWERBI_BUILD_GUIDE.md",REVIEW
+A,Repeated filename,DimCluster.csv,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/data/DimCluster.csv, powerbi/data/DimCluster.csv",REVIEW
+A,Repeated filename,DimCustomer.csv,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/data/DimCustomer.csv, powerbi/data/DimCustomer.csv",REVIEW
+A,Repeated filename,DimDate.csv,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/data/DimDate.csv, powerbi/data/DimDate.csv",REVIEW
+A,Repeated filename,DimGeography.csv,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/data/DimGeography.csv, powerbi/data/DimGeography.csv",REVIEW
+A,Repeated filename,DimProduct.csv,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/data/DimProduct.csv, powerbi/data/DimProduct.csv",REVIEW
+A,Repeated filename,DimRFMSegment.csv,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/data/DimRFMSegment.csv, powerbi/data/DimRFMSegment.csv",REVIEW
+A,Repeated filename,FactForecast.csv,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/data/FactForecast.csv, powerbi/data/FactForecast.csv",REVIEW
+A,Repeated filename,FactRevenuePrediction.csv,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/data/FactRevenuePrediction.csv, powerbi/data/FactRevenuePrediction.csv",REVIEW
+A,Repeated filename,FactSales.csv,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/data/FactSales.csv, powerbi/data/FactSales.csv",REVIEW
+A,Repeated filename,ModelInfo.csv,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/data/ModelInfo.csv, powerbi/data/ModelInfo.csv",REVIEW
+A,Repeated filename,ModelMetrics.csv,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/data/ModelMetrics.csv, powerbi/data/ModelMetrics.csv",REVIEW
+A,Repeated filename,PredictionQuarterly.csv,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/data/PredictionQuarterly.csv, powerbi/data/PredictionQuarterly.csv",REVIEW
+A,Repeated filename,Recommendations.csv,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/data/Recommendations.csv, powerbi/data/Recommendations.csv",REVIEW
+A,Repeated filename,measure_catalog.csv,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/dax/measure_catalog.csv, powerbi/dax/measure_catalog.csv",REVIEW
+A,Repeated filename,measures.dax,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/dax/measures.dax, powerbi/dax/measures.dax",REVIEW
+A,Repeated filename,validation_query.dax,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/dax/validation_query.dax, powerbi/dax/validation_query.dax",REVIEW
+A,Repeated filename,00_home_mockup.png,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/page_design_mockups/00_home_mockup.png, outputs/figures/powerbi/mockups/00_home_mockup.png",REVIEW
+A,Repeated filename,01_executive_overview_mockup.png,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/page_design_mockups/01_executive_overview_mockup.png, outputs/figures/powerbi/mockups/01_executive_overview_mockup.png",REVIEW
+A,Repeated filename,02_revenue_intelligence_mockup.png,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/page_design_mockups/02_revenue_intelligence_mockup.png, outputs/figures/powerbi/mockups/02_revenue_intelligence_mockup.png",REVIEW
+A,Repeated filename,03_customer_intelligence_mockup.png,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/page_design_mockups/03_customer_intelligence_mockup.png, outputs/figures/powerbi/mockups/03_customer_intelligence_mockup.png",REVIEW
+A,Repeated filename,04_customer_segmentation_mockup.png,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/page_design_mockups/04_customer_segmentation_mockup.png, outputs/figures/powerbi/mockups/04_customer_segmentation_mockup.png",REVIEW
+A,Repeated filename,05_product_analytics_mockup.png,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/page_design_mockups/05_product_analytics_mockup.png, outputs/figures/powerbi/mockups/05_product_analytics_mockup.png",REVIEW
+A,Repeated filename,06_regional_analytics_mockup.png,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/page_design_mockups/06_regional_analytics_mockup.png, outputs/figures/powerbi/mockups/06_regional_analytics_mockup.png",REVIEW
+A,Repeated filename,07_prediction_forecast_mockup.png,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/page_design_mockups/07_prediction_forecast_mockup.png, outputs/figures/powerbi/mockups/07_prediction_forecast_mockup.png",REVIEW
+A,Repeated filename,08_business_recommendations_mockup.png,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/page_design_mockups/08_business_recommendations_mockup.png, outputs/figures/powerbi/mockups/08_business_recommendations_mockup.png",REVIEW
+A,Repeated filename,09_customer_detail_drillthrough_mockup.png,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/page_design_mockups/09_customer_detail_drillthrough_mockup.png, outputs/figures/powerbi/mockups/09_customer_detail_drillthrough_mockup.png",REVIEW
+A,Repeated filename,powerbi_dashboard_documentation.md,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerbi_dashboard_documentation.md, outputs/reports/powerbi_dashboard_documentation.md",REVIEW
+A,Repeated filename,powerbi_user_guide.md,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerbi_user_guide.md, outputs/reports/powerbi_user_guide.md",REVIEW
+A,Repeated filename,00_DataFolder_parameter.m,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerquery/00_DataFolder_parameter.m, powerbi/powerquery/00_DataFolder_parameter.m",REVIEW
+A,Repeated filename,DimCluster.m,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerquery/DimCluster.m, powerbi/powerquery/DimCluster.m",REVIEW
+A,Repeated filename,DimCustomer.m,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerquery/DimCustomer.m, powerbi/powerquery/DimCustomer.m",REVIEW
+A,Repeated filename,DimDate.m,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerquery/DimDate.m, powerbi/powerquery/DimDate.m",REVIEW
+A,Repeated filename,DimGeography.m,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerquery/DimGeography.m, powerbi/powerquery/DimGeography.m",REVIEW
+A,Repeated filename,DimProduct.m,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerquery/DimProduct.m, powerbi/powerquery/DimProduct.m",REVIEW
+A,Repeated filename,DimRFMSegment.m,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerquery/DimRFMSegment.m, powerbi/powerquery/DimRFMSegment.m",REVIEW
+A,Repeated filename,FactForecast.m,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerquery/FactForecast.m, powerbi/powerquery/FactForecast.m",REVIEW
+A,Repeated filename,FactRevenuePrediction.m,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerquery/FactRevenuePrediction.m, powerbi/powerquery/FactRevenuePrediction.m",REVIEW
+A,Repeated filename,FactSales.m,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerquery/FactSales.m, powerbi/powerquery/FactSales.m",REVIEW
+A,Repeated filename,ModelInfo.m,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerquery/ModelInfo.m, powerbi/powerquery/ModelInfo.m",REVIEW
+A,Repeated filename,ModelMetrics.m,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerquery/ModelMetrics.m, powerbi/powerquery/ModelMetrics.m",REVIEW
+A,Repeated filename,PredictionQuarterly.m,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerquery/PredictionQuarterly.m, powerbi/powerquery/PredictionQuarterly.m",REVIEW
+A,Repeated filename,Recommendations.m,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/powerquery/Recommendations.m, powerbi/powerquery/Recommendations.m",REVIEW
+A,Repeated filename,relationships.csv,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/relationships.csv, powerbi/relationships.csv",REVIEW
+A,Repeated filename,table_catalog.csv,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/table_catalog.csv, powerbi/table_catalog.csv",REVIEW
+A,Repeated filename,crm_dark_theme.json,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/theme/crm_dark_theme.json, powerbi/theme/crm_dark_theme.json",REVIEW
+A,Repeated filename,page_background.png,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/theme/page_background.png, powerbi/theme/page_background.png",REVIEW
+A,Repeated filename,palette_reference.md,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/theme/palette_reference.md, powerbi/theme/palette_reference.md",REVIEW
+A,Repeated filename,cross_step_consistency.csv,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/validation/cross_step_consistency.csv, powerbi/validation/cross_step_consistency.csv",REVIEW
+A,Repeated filename,customer_state_validation_targets.csv,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/validation/customer_state_validation_targets.csv, powerbi/validation/customer_state_validation_targets.csv",REVIEW
+A,Repeated filename,measure_validation_targets.csv,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/validation/measure_validation_targets.csv, powerbi/validation/measure_validation_targets.csv",REVIEW
+A,Repeated filename,validation_checklist.csv,"FINAL_SUBMISSION/07_DASHBOARDS/PowerBI/validation_checklist.csv, powerbi/validation_checklist.csv",REVIEW
+A,Repeated filename,01_home.png,"FINAL_SUBMISSION/07_DASHBOARDS/Streamlit/screenshots/01_home.png, outputs/figures/streamlit/01_home.png",REVIEW
+A,Repeated filename,02_executive_overview.png,"FINAL_SUBMISSION/07_DASHBOARDS/Streamlit/screenshots/02_executive_overview.png, outputs/figures/streamlit/02_executive_overview.png",REVIEW
+A,Repeated filename,03_revenue_intelligence.png,"FINAL_SUBMISSION/07_DASHBOARDS/Streamlit/screenshots/03_revenue_intelligence.png, outputs/figures/streamlit/03_revenue_intelligence.png",REVIEW
+A,Repeated filename,04_customer_intelligence.png,"FINAL_SUBMISSION/07_DASHBOARDS/Streamlit/screenshots/04_customer_intelligence.png, outputs/figures/streamlit/04_customer_intelligence.png",REVIEW
+A,Repeated filename,05_customer_segmentation.png,"FINAL_SUBMISSION/07_DASHBOARDS/Streamlit/screenshots/05_customer_segmentation.png, outputs/figures/streamlit/05_customer_segmentation.png",REVIEW
+A,Repeated filename,06_product_analytics.png,"FINAL_SUBMISSION/07_DASHBOARDS/Streamlit/screenshots/06_product_analytics.png, outputs/figures/streamlit/06_product_analytics.png",REVIEW
+A,Repeated filename,07_regional_analytics.png,"FINAL_SUBMISSION/07_DASHBOARDS/Streamlit/screenshots/07_regional_analytics.png, outputs/figures/streamlit/07_regional_analytics.png",REVIEW
+A,Repeated filename,08_revenue_prediction.png,"FINAL_SUBMISSION/07_DASHBOARDS/Streamlit/screenshots/08_revenue_prediction.png, outputs/figures/streamlit/08_revenue_prediction.png",REVIEW
+A,Repeated filename,09_sales_forecast.png,"FINAL_SUBMISSION/07_DASHBOARDS/Streamlit/screenshots/09_sales_forecast.png, outputs/figures/streamlit/09_sales_forecast.png",REVIEW
+A,Repeated filename,10_business_recommendations.png,"FINAL_SUBMISSION/07_DASHBOARDS/Streamlit/screenshots/10_business_recommendations.png, outputs/figures/streamlit/10_business_recommendations.png",REVIEW
+A,Repeated filename,11_data_explorer.png,"FINAL_SUBMISSION/07_DASHBOARDS/Streamlit/screenshots/11_data_explorer.png, outputs/figures/streamlit/11_data_explorer.png",REVIEW
+A,Repeated filename,12_about_project.png,"FINAL_SUBMISSION/07_DASHBOARDS/Streamlit/screenshots/12_about_project.png, outputs/figures/streamlit/12_about_project.png",REVIEW
+A,Repeated filename,streamlit_testing_report.md,"FINAL_SUBMISSION/07_DASHBOARDS/Streamlit/streamlit_testing_report.md, outputs/reports/streamlit_testing_report.md",REVIEW
+A,Repeated filename,01_raw_dataset_preview.png,"FINAL_SUBMISSION/08_SCREENSHOTS/01_raw_dataset_preview.png, outputs/screenshots/01_raw_dataset_preview.png",REVIEW
+A,Repeated filename,02_clean_dataset_preview.png,"FINAL_SUBMISSION/08_SCREENSHOTS/02_clean_dataset_preview.png, outputs/screenshots/02_clean_dataset_preview.png",REVIEW
+A,Repeated filename,03_data_quality_missing_before.png,"FINAL_SUBMISSION/08_SCREENSHOTS/03_data_quality_missing_before.png, outputs/screenshots/03_data_quality_missing_before.png",REVIEW
+A,Repeated filename,04_data_quality_missing_after.png,"FINAL_SUBMISSION/08_SCREENSHOTS/04_data_quality_missing_after.png, outputs/screenshots/04_data_quality_missing_after.png",REVIEW
+A,Repeated filename,05_data_quality_issue_summary.png,"FINAL_SUBMISSION/08_SCREENSHOTS/05_data_quality_issue_summary.png, outputs/screenshots/05_data_quality_issue_summary.png",REVIEW
+A,Repeated filename,06_outlier_distribution.png,"FINAL_SUBMISSION/08_SCREENSHOTS/06_outlier_distribution.png, outputs/screenshots/06_outlier_distribution.png",REVIEW
+A,Repeated filename,07_revenue_trend_monthly.png,"FINAL_SUBMISSION/08_SCREENSHOTS/07_revenue_trend_monthly.png, outputs/screenshots/07_revenue_trend_monthly.png",REVIEW
+A,Repeated filename,08_profit_trend_monthly.png,"FINAL_SUBMISSION/08_SCREENSHOTS/08_profit_trend_monthly.png, outputs/screenshots/08_profit_trend_monthly.png",REVIEW
+A,Repeated filename,09_revenue_growth_mom.png,"FINAL_SUBMISSION/08_SCREENSHOTS/09_revenue_growth_mom.png, outputs/screenshots/09_revenue_growth_mom.png",REVIEW
+A,Repeated filename,10_customer_concentration.png,"FINAL_SUBMISSION/08_SCREENSHOTS/10_customer_concentration.png, outputs/screenshots/10_customer_concentration.png",REVIEW
+A,Repeated filename,11_customer_revenue_distribution.png,"FINAL_SUBMISSION/08_SCREENSHOTS/11_customer_revenue_distribution.png, outputs/screenshots/11_customer_revenue_distribution.png",REVIEW
+A,Repeated filename,12_purchase_frequency.png,"FINAL_SUBMISSION/08_SCREENSHOTS/12_purchase_frequency.png, outputs/screenshots/12_purchase_frequency.png",REVIEW
+A,Repeated filename,13_category_revenue_vs_profit.png,"FINAL_SUBMISSION/08_SCREENSHOTS/13_category_revenue_vs_profit.png, outputs/screenshots/13_category_revenue_vs_profit.png",REVIEW
+A,Repeated filename,14_product_quadrant.png,"FINAL_SUBMISSION/08_SCREENSHOTS/14_product_quadrant.png, outputs/screenshots/14_product_quadrant.png",REVIEW
+A,Repeated filename,15_regional_revenue.png,"FINAL_SUBMISSION/08_SCREENSHOTS/15_regional_revenue.png, outputs/screenshots/15_regional_revenue.png",REVIEW
+A,Repeated filename,16_correlation_heatmap.png,"FINAL_SUBMISSION/08_SCREENSHOTS/16_correlation_heatmap.png, outputs/screenshots/16_correlation_heatmap.png",REVIEW
+A,Repeated filename,17_discount_margin.png,"FINAL_SUBMISSION/08_SCREENSHOTS/17_discount_margin.png, outputs/screenshots/17_discount_margin.png",REVIEW
+A,Repeated filename,18_order_status_value.png,"FINAL_SUBMISSION/08_SCREENSHOTS/18_order_status_value.png, outputs/screenshots/18_order_status_value.png",REVIEW
+A,Repeated filename,19_rfm_recency_distribution.png,"FINAL_SUBMISSION/08_SCREENSHOTS/19_rfm_recency_distribution.png, outputs/screenshots/19_rfm_recency_distribution.png",REVIEW
+A,Repeated filename,20_rfm_frequency_distribution.png,"FINAL_SUBMISSION/08_SCREENSHOTS/20_rfm_frequency_distribution.png, outputs/screenshots/20_rfm_frequency_distribution.png",REVIEW
+A,Repeated filename,21_rfm_monetary_distribution.png,"FINAL_SUBMISSION/08_SCREENSHOTS/21_rfm_monetary_distribution.png, outputs/screenshots/21_rfm_monetary_distribution.png",REVIEW
+A,Repeated filename,22_rfm_segment_distribution.png,"FINAL_SUBMISSION/08_SCREENSHOTS/22_rfm_segment_distribution.png, outputs/screenshots/22_rfm_segment_distribution.png",REVIEW
+A,Repeated filename,23_rfm_revenue_contribution.png,"FINAL_SUBMISSION/08_SCREENSHOTS/23_rfm_revenue_contribution.png, outputs/screenshots/23_rfm_revenue_contribution.png",REVIEW
+A,Repeated filename,24_rfm_segment_matrix.png,"FINAL_SUBMISSION/08_SCREENSHOTS/24_rfm_segment_matrix.png, outputs/screenshots/24_rfm_segment_matrix.png",REVIEW
+A,Repeated filename,25_kmeans_feature_transformation.png,"FINAL_SUBMISSION/08_SCREENSHOTS/25_kmeans_feature_transformation.png, outputs/screenshots/25_kmeans_feature_transformation.png",REVIEW
+A,Repeated filename,26_kmeans_elbow_curve.png,"FINAL_SUBMISSION/08_SCREENSHOTS/26_kmeans_elbow_curve.png, outputs/screenshots/26_kmeans_elbow_curve.png",REVIEW
+A,Repeated filename,27_kmeans_silhouette_scores.png,"FINAL_SUBMISSION/08_SCREENSHOTS/27_kmeans_silhouette_scores.png, outputs/screenshots/27_kmeans_silhouette_scores.png",REVIEW
+A,Repeated filename,28_kmeans_silhouette_diagram.png,"FINAL_SUBMISSION/08_SCREENSHOTS/28_kmeans_silhouette_diagram.png, outputs/screenshots/28_kmeans_silhouette_diagram.png",REVIEW
+A,Repeated filename,29_kmeans_cluster_pca.png,"FINAL_SUBMISSION/08_SCREENSHOTS/29_kmeans_cluster_pca.png, outputs/screenshots/29_kmeans_cluster_pca.png",REVIEW
+A,Repeated filename,30_kmeans_cluster_profile.png,"FINAL_SUBMISSION/08_SCREENSHOTS/30_kmeans_cluster_profile.png, outputs/screenshots/30_kmeans_cluster_profile.png",REVIEW
+A,Repeated filename,31_kmeans_cluster_revenue.png,"FINAL_SUBMISSION/08_SCREENSHOTS/31_kmeans_cluster_revenue.png, outputs/screenshots/31_kmeans_cluster_revenue.png",REVIEW
+A,Repeated filename,32_rfm_vs_cluster_agreement.png,"FINAL_SUBMISSION/08_SCREENSHOTS/32_rfm_vs_cluster_agreement.png, outputs/screenshots/32_rfm_vs_cluster_agreement.png",REVIEW
+A,Repeated filename,33_clv_distribution.png,"FINAL_SUBMISSION/08_SCREENSHOTS/33_clv_distribution.png, outputs/screenshots/33_clv_distribution.png",REVIEW
+A,Repeated filename,34_clv_value_concentration.png,"FINAL_SUBMISSION/08_SCREENSHOTS/34_clv_value_concentration.png, outputs/screenshots/34_clv_value_concentration.png",REVIEW
+A,Repeated filename,35_clv_model_comparison.png,"FINAL_SUBMISSION/08_SCREENSHOTS/35_clv_model_comparison.png, outputs/screenshots/35_clv_model_comparison.png",REVIEW
+A,Repeated filename,36_clv_actual_vs_predicted.png,"FINAL_SUBMISSION/08_SCREENSHOTS/36_clv_actual_vs_predicted.png, outputs/screenshots/36_clv_actual_vs_predicted.png",REVIEW
+A,Repeated filename,37_clv_by_rfm_segment.png,"FINAL_SUBMISSION/08_SCREENSHOTS/37_clv_by_rfm_segment.png, outputs/screenshots/37_clv_by_rfm_segment.png",REVIEW
+A,Repeated filename,38_clv_feature_importance.png,"FINAL_SUBMISSION/08_SCREENSHOTS/38_clv_feature_importance.png, outputs/screenshots/38_clv_feature_importance.png",REVIEW
+A,Repeated filename,39_prediction_actual_vs_predicted.png,"FINAL_SUBMISSION/08_SCREENSHOTS/39_prediction_actual_vs_predicted.png, outputs/screenshots/39_prediction_actual_vs_predicted.png",REVIEW
+A,Repeated filename,40_prediction_model_comparison.png,"FINAL_SUBMISSION/08_SCREENSHOTS/40_prediction_model_comparison.png, outputs/screenshots/40_prediction_model_comparison.png",REVIEW
+A,Repeated filename,41_prediction_feature_importance.png,"FINAL_SUBMISSION/08_SCREENSHOTS/41_prediction_feature_importance.png, outputs/screenshots/41_prediction_feature_importance.png",REVIEW
+A,Repeated filename,42_prediction_error_distribution.png,"FINAL_SUBMISSION/08_SCREENSHOTS/42_prediction_error_distribution.png, outputs/screenshots/42_prediction_error_distribution.png",REVIEW
+A,Repeated filename,43_prediction_error_by_revenue_range.png,"FINAL_SUBMISSION/08_SCREENSHOTS/43_prediction_error_by_revenue_range.png, outputs/screenshots/43_prediction_error_by_revenue_range.png",REVIEW
+A,Repeated filename,44_prediction_timeline.png,"FINAL_SUBMISSION/08_SCREENSHOTS/44_prediction_timeline.png, outputs/screenshots/44_prediction_timeline.png",REVIEW
+A,Repeated filename,45_forecast_historical_revenue.png,"FINAL_SUBMISSION/08_SCREENSHOTS/45_forecast_historical_revenue.png, outputs/screenshots/45_forecast_historical_revenue.png",REVIEW
+A,Repeated filename,46_forecast_acf_pacf.png,"FINAL_SUBMISSION/08_SCREENSHOTS/46_forecast_acf_pacf.png, outputs/screenshots/46_forecast_acf_pacf.png",REVIEW
+A,Repeated filename,47_forecast_model_comparison.png,"FINAL_SUBMISSION/08_SCREENSHOTS/47_forecast_model_comparison.png, outputs/screenshots/47_forecast_model_comparison.png",REVIEW
+A,Repeated filename,48_forecast_backtest.png,"FINAL_SUBMISSION/08_SCREENSHOTS/48_forecast_backtest.png, outputs/screenshots/48_forecast_backtest.png",REVIEW
+A,Repeated filename,49_forecast_actual_vs_forecast.png,"FINAL_SUBMISSION/08_SCREENSHOTS/49_forecast_actual_vs_forecast.png, outputs/screenshots/49_forecast_actual_vs_forecast.png",REVIEW
+A,Repeated filename,50_forecast_seasonal_pattern.png,"FINAL_SUBMISSION/08_SCREENSHOTS/50_forecast_seasonal_pattern.png, outputs/screenshots/50_forecast_seasonal_pattern.png",REVIEW
+A,Repeated filename,51_sql_er_diagram.png,"FINAL_SUBMISSION/08_SCREENSHOTS/51_sql_er_diagram.png, outputs/screenshots/51_sql_er_diagram.png",REVIEW
+A,Repeated filename,52_sql_top10_customers.png,"FINAL_SUBMISSION/08_SCREENSHOTS/52_sql_top10_customers.png, outputs/screenshots/52_sql_top10_customers.png",REVIEW
+A,Repeated filename,53_sql_customer_concentration.png,"FINAL_SUBMISSION/08_SCREENSHOTS/53_sql_customer_concentration.png, outputs/screenshots/53_sql_customer_concentration.png",REVIEW
+A,Repeated filename,54_sql_revenue_by_rfm_segment.png,"FINAL_SUBMISSION/08_SCREENSHOTS/54_sql_revenue_by_rfm_segment.png, outputs/screenshots/54_sql_revenue_by_rfm_segment.png",REVIEW
+A,Repeated filename,55_sql_monthly_revenue_growth.png,"FINAL_SUBMISSION/08_SCREENSHOTS/55_sql_monthly_revenue_growth.png, outputs/screenshots/55_sql_monthly_revenue_growth.png",REVIEW
+A,Repeated filename,56_sql_region_category_margin.png,"FINAL_SUBMISSION/08_SCREENSHOTS/56_sql_region_category_margin.png, outputs/screenshots/56_sql_region_category_margin.png",REVIEW
+A,Repeated filename,57_powerbi_home_MOCKUP.png,"FINAL_SUBMISSION/08_SCREENSHOTS/57_powerbi_home_MOCKUP.png, outputs/screenshots/57_powerbi_home_MOCKUP.png",REVIEW
+A,Repeated filename,58_powerbi_executive_overview_MOCKUP.png,"FINAL_SUBMISSION/08_SCREENSHOTS/58_powerbi_executive_overview_MOCKUP.png, outputs/screenshots/58_powerbi_executive_overview_MOCKUP.png",REVIEW
+A,Repeated filename,59_powerbi_revenue_intelligence_MOCKUP.png,"FINAL_SUBMISSION/08_SCREENSHOTS/59_powerbi_revenue_intelligence_MOCKUP.png, outputs/screenshots/59_powerbi_revenue_intelligence_MOCKUP.png",REVIEW
+A,Repeated filename,60_powerbi_customer_intelligence_MOCKUP.png,"FINAL_SUBMISSION/08_SCREENSHOTS/60_powerbi_customer_intelligence_MOCKUP.png, outputs/screenshots/60_powerbi_customer_intelligence_MOCKUP.png",REVIEW
+A,Repeated filename,61_powerbi_customer_segmentation_MOCKUP.png,"FINAL_SUBMISSION/08_SCREENSHOTS/61_powerbi_customer_segmentation_MOCKUP.png, outputs/screenshots/61_powerbi_customer_segmentation_MOCKUP.png",REVIEW
+A,Repeated filename,62_powerbi_product_analytics_MOCKUP.png,"FINAL_SUBMISSION/08_SCREENSHOTS/62_powerbi_product_analytics_MOCKUP.png, outputs/screenshots/62_powerbi_product_analytics_MOCKUP.png",REVIEW
+A,Repeated filename,63_powerbi_regional_analytics_MOCKUP.png,"FINAL_SUBMISSION/08_SCREENSHOTS/63_powerbi_regional_analytics_MOCKUP.png, outputs/screenshots/63_powerbi_regional_analytics_MOCKUP.png",REVIEW
+A,Repeated filename,64_powerbi_prediction_forecast_MOCKUP.png,"FINAL_SUBMISSION/08_SCREENSHOTS/64_powerbi_prediction_forecast_MOCKUP.png, outputs/screenshots/64_powerbi_prediction_forecast_MOCKUP.png",REVIEW
+A,Repeated filename,65_powerbi_recommendations_MOCKUP.png,"FINAL_SUBMISSION/08_SCREENSHOTS/65_powerbi_recommendations_MOCKUP.png, outputs/screenshots/65_powerbi_recommendations_MOCKUP.png",REVIEW
+A,Repeated filename,66_powerbi_drillthrough_MOCKUP.png,"FINAL_SUBMISSION/08_SCREENSHOTS/66_powerbi_drillthrough_MOCKUP.png, outputs/screenshots/66_powerbi_drillthrough_MOCKUP.png",REVIEW
+A,Repeated filename,67_streamlit_home.png,"FINAL_SUBMISSION/08_SCREENSHOTS/67_streamlit_home.png, outputs/screenshots/67_streamlit_home.png",REVIEW
+A,Repeated filename,68_streamlit_executive_overview.png,"FINAL_SUBMISSION/08_SCREENSHOTS/68_streamlit_executive_overview.png, outputs/screenshots/68_streamlit_executive_overview.png",REVIEW
+A,Repeated filename,69_streamlit_revenue_intelligence.png,"FINAL_SUBMISSION/08_SCREENSHOTS/69_streamlit_revenue_intelligence.png, outputs/screenshots/69_streamlit_revenue_intelligence.png",REVIEW
+A,Repeated filename,70_streamlit_customer_intelligence.png,"FINAL_SUBMISSION/08_SCREENSHOTS/70_streamlit_customer_intelligence.png, outputs/screenshots/70_streamlit_customer_intelligence.png",REVIEW
+A,Repeated filename,71_streamlit_customer_segmentation.png,"FINAL_SUBMISSION/08_SCREENSHOTS/71_streamlit_customer_segmentation.png, outputs/screenshots/71_streamlit_customer_segmentation.png",REVIEW
+A,Repeated filename,72_streamlit_product_analytics.png,"FINAL_SUBMISSION/08_SCREENSHOTS/72_streamlit_product_analytics.png, outputs/screenshots/72_streamlit_product_analytics.png",REVIEW
+A,Repeated filename,73_streamlit_regional_analytics.png,"FINAL_SUBMISSION/08_SCREENSHOTS/73_streamlit_regional_analytics.png, outputs/screenshots/73_streamlit_regional_analytics.png",REVIEW
+A,Repeated filename,74_streamlit_revenue_prediction.png,"FINAL_SUBMISSION/08_SCREENSHOTS/74_streamlit_revenue_prediction.png, outputs/screenshots/74_streamlit_revenue_prediction.png",REVIEW
+A,Repeated filename,75_streamlit_sales_forecast.png,"FINAL_SUBMISSION/08_SCREENSHOTS/75_streamlit_sales_forecast.png, outputs/screenshots/75_streamlit_sales_forecast.png",REVIEW
+A,Repeated filename,76_streamlit_recommendations.png,"FINAL_SUBMISSION/08_SCREENSHOTS/76_streamlit_recommendations.png, outputs/screenshots/76_streamlit_recommendations.png",REVIEW
+A,Repeated filename,77_streamlit_data_explorer.png,"FINAL_SUBMISSION/08_SCREENSHOTS/77_streamlit_data_explorer.png, outputs/screenshots/77_streamlit_data_explorer.png",REVIEW
+A,Repeated filename,78_streamlit_about.png,"FINAL_SUBMISSION/08_SCREENSHOTS/78_streamlit_about.png, outputs/screenshots/78_streamlit_about.png",REVIEW
+A,Repeated filename,79_architecture.png,"FINAL_SUBMISSION/08_SCREENSHOTS/79_architecture.png, outputs/screenshots/79_architecture.png",REVIEW
+A,Repeated filename,80_implementation_flowchart.png,"FINAL_SUBMISSION/08_SCREENSHOTS/80_implementation_flowchart.png, outputs/screenshots/80_implementation_flowchart.png",REVIEW
+A,Repeated filename,81_graphical_abstract.png,"FINAL_SUBMISSION/08_SCREENSHOTS/81_graphical_abstract.png, outputs/screenshots/81_graphical_abstract.png",REVIEW
+A,Repeated filename,01_basic_viva_questions.md,"FINAL_SUBMISSION/09_VIVA/01_basic_viva_questions.md, outputs/viva/01_basic_viva_questions.md",REVIEW
+A,Repeated filename,02_intermediate_technical_questions.md,"FINAL_SUBMISSION/09_VIVA/02_intermediate_technical_questions.md, outputs/viva/02_intermediate_technical_questions.md",REVIEW
+A,Repeated filename,03_advanced_data_science_questions.md,"FINAL_SUBMISSION/09_VIVA/03_advanced_data_science_questions.md, outputs/viva/03_advanced_data_science_questions.md",REVIEW
+A,Repeated filename,04_sql_viva.md,"FINAL_SUBMISSION/09_VIVA/04_sql_viva.md, outputs/viva/04_sql_viva.md",REVIEW
+A,Repeated filename,05_powerbi_viva.md,"FINAL_SUBMISSION/09_VIVA/05_powerbi_viva.md, outputs/viva/05_powerbi_viva.md",REVIEW
+A,Repeated filename,06_streamlit_viva.md,"FINAL_SUBMISSION/09_VIVA/06_streamlit_viva.md, outputs/viva/06_streamlit_viva.md",REVIEW
+A,Repeated filename,07_business_questions.md,"FINAL_SUBMISSION/09_VIVA/07_business_questions.md, outputs/viva/07_business_questions.md",REVIEW
+A,Repeated filename,08_challenging_questions.md,"FINAL_SUBMISSION/09_VIVA/08_challenging_questions.md, outputs/viva/08_challenging_questions.md",REVIEW
+A,Repeated filename,09_trick_questions.md,"FINAL_SUBMISSION/09_VIVA/09_trick_questions.md, outputs/viva/09_trick_questions.md",REVIEW
+A,Repeated filename,10_mock_viva_easy.md,"FINAL_SUBMISSION/09_VIVA/10_mock_viva_easy.md, outputs/viva/10_mock_viva_easy.md",REVIEW
+A,Repeated filename,11_mock_viva_medium.md,"FINAL_SUBMISSION/09_VIVA/11_mock_viva_medium.md, outputs/viva/11_mock_viva_medium.md",REVIEW
+A,Repeated filename,12_mock_viva_difficult.md,"FINAL_SUBMISSION/09_VIVA/12_mock_viva_difficult.md, outputs/viva/12_mock_viva_difficult.md",REVIEW
+A,Repeated filename,business_viva.md,"FINAL_SUBMISSION/09_VIVA/business_viva.md, outputs/viva/business_viva.md",REVIEW
+A,Repeated filename,difficult_professor_questions.md,"FINAL_SUBMISSION/09_VIVA/difficult_professor_questions.md, outputs/viva/difficult_professor_questions.md",REVIEW
+A,Repeated filename,final_demo_order.md,"FINAL_SUBMISSION/09_VIVA/final_demo_order.md, outputs/viva/final_demo_order.md",REVIEW
+A,Repeated filename,final_revision_sheet.md,"FINAL_SUBMISSION/09_VIVA/final_revision_sheet.md, outputs/viva/final_revision_sheet.md",REVIEW
+A,Repeated filename,last_minute_revision.md,"FINAL_SUBMISSION/09_VIVA/last_minute_revision.md, outputs/viva/last_minute_revision.md",REVIEW
+A,Repeated filename,live_demo_script.md,"FINAL_SUBMISSION/09_VIVA/live_demo_script.md, outputs/viva/live_demo_script.md",REVIEW
+A,Repeated filename,live_failure_handling.md,"FINAL_SUBMISSION/09_VIVA/live_failure_handling.md, outputs/viva/live_failure_handling.md",REVIEW
+A,Repeated filename,ml_live_viva.md,"FINAL_SUBMISSION/09_VIVA/ml_live_viva.md, outputs/viva/ml_live_viva.md",REVIEW
+A,Repeated filename,one_line_answers.md,"FINAL_SUBMISSION/09_VIVA/one_line_answers.md, outputs/viva/one_line_answers.md",REVIEW
+A,Repeated filename,powerbi_demo_script.md,"FINAL_SUBMISSION/09_VIVA/powerbi_demo_script.md, outputs/viva/powerbi_demo_script.md",REVIEW
+A,Repeated filename,presentation_speaking_script.md,"FINAL_SUBMISSION/09_VIVA/presentation_speaking_script.md, outputs/viva/presentation_speaking_script.md",REVIEW
+A,Repeated filename,professor_presentation_questions.md,"FINAL_SUBMISSION/09_VIVA/professor_presentation_questions.md, outputs/viva/professor_presentation_questions.md",REVIEW
+A,Repeated filename,project_master_summary.md,"FINAL_SUBMISSION/09_VIVA/project_master_summary.md, outputs/viva/project_master_summary.md",REVIEW
+A,Repeated filename,rapid_fire_questions.md,"FINAL_SUBMISSION/09_VIVA/rapid_fire_questions.md, outputs/viva/rapid_fire_questions.md",REVIEW
+A,Repeated filename,rapid_fire_viva.md,"FINAL_SUBMISSION/09_VIVA/rapid_fire_viva.md, outputs/viva/rapid_fire_viva.md",REVIEW
+A,Repeated filename,sql_demo_script.md,"FINAL_SUBMISSION/09_VIVA/sql_demo_script.md, outputs/viva/sql_demo_script.md",REVIEW
+A,Repeated filename,streamlit_demo_script.md,"FINAL_SUBMISSION/09_VIVA/streamlit_demo_script.md, outputs/viva/streamlit_demo_script.md",REVIEW
+A,Repeated filename,top_20_viva_questions.md,"FINAL_SUBMISSION/09_VIVA/top_20_viva_questions.md, outputs/viva/top_20_viva_questions.md",REVIEW
+A,Repeated filename,trick_questions.md,"FINAL_SUBMISSION/09_VIVA/trick_questions.md, outputs/viva/trick_questions.md",REVIEW
+A,Repeated filename,why_questions.md,"FINAL_SUBMISSION/09_VIVA/why_questions.md, outputs/viva/why_questions.md",REVIEW
+A,Repeated filename,LICENSE,"FINAL_SUBMISSION/10_DOCUMENTATION/LICENSE, LICENSE",REVIEW
+A,Repeated filename,README.md,"FINAL_SUBMISSION/10_DOCUMENTATION/README.md, README.md, outputs/figures/powerbi/README.md",REVIEW
+A,Repeated filename,STEP2_Dataset_Design.md,"FINAL_SUBMISSION/10_DOCUMENTATION/STEP2_Dataset_Design.md, docs/STEP2_Dataset_Design.md",REVIEW
+A,Repeated filename,STEP3_Data_Cleaning_Methodology.md,"FINAL_SUBMISSION/10_DOCUMENTATION/STEP3_Data_Cleaning_Methodology.md, docs/STEP3_Data_Cleaning_Methodology.md",REVIEW
+A,Repeated filename,clv_analysis_report.md,"FINAL_SUBMISSION/10_DOCUMENTATION/methodology_reports/clv_analysis_report.md, outputs/reports/clv_analysis_report.md",REVIEW
+A,Repeated filename,eda_summary.md,"FINAL_SUBMISSION/10_DOCUMENTATION/methodology_reports/eda_summary.md, outputs/reports/eda_summary.md",REVIEW
+A,Repeated filename,forecasting_methodology.md,"FINAL_SUBMISSION/10_DOCUMENTATION/methodology_reports/forecasting_methodology.md, outputs/reports/forecasting_methodology.md",REVIEW
+A,Repeated filename,kmeans_model_report.md,"FINAL_SUBMISSION/10_DOCUMENTATION/methodology_reports/kmeans_model_report.md, outputs/reports/kmeans_model_report.md",REVIEW
+A,Repeated filename,project_audit.md,"FINAL_SUBMISSION/10_DOCUMENTATION/methodology_reports/project_audit.md, FINAL_SUBMISSION/10_DOCUMENTATION/project_audits/project_audit.md, outputs/final_audit/project_audit.md, outputs/reports/project_audit.md",REVIEW
+A,Repeated filename,raw_data_validation_report.md,"FINAL_SUBMISSION/10_DOCUMENTATION/methodology_reports/raw_data_validation_report.md, outputs/reports/raw_data_validation_report.md",REVIEW
+A,Repeated filename,revenue_prediction_report.md,"FINAL_SUBMISSION/10_DOCUMENTATION/methodology_reports/revenue_prediction_report.md, outputs/reports/revenue_prediction_report.md",REVIEW
+A,Repeated filename,rfm_methodology.md,"FINAL_SUBMISSION/10_DOCUMENTATION/methodology_reports/rfm_methodology.md, outputs/reports/rfm_methodology.md",REVIEW
+A,Repeated filename,sql_analysis_methodology.md,"FINAL_SUBMISSION/10_DOCUMENTATION/methodology_reports/sql_analysis_methodology.md, outputs/reports/sql_analysis_methodology.md",REVIEW
+A,Repeated filename,cross_document_consistency.md,"FINAL_SUBMISSION/10_DOCUMENTATION/project_audits/cross_document_consistency.md, outputs/final_audit/cross_document_consistency.md",REVIEW
+A,Repeated filename,final_file_inventory.md,"FINAL_SUBMISSION/10_DOCUMENTATION/project_audits/final_file_inventory.md, outputs/final_audit/final_file_inventory.md",REVIEW
+A,Repeated filename,final_submission_checklist.md,"FINAL_SUBMISSION/10_DOCUMENTATION/project_audits/final_submission_checklist.md, outputs/final_audit/final_submission_checklist.md",REVIEW
+A,Repeated filename,github_readiness_checklist.md,"FINAL_SUBMISSION/10_DOCUMENTATION/project_audits/github_readiness_checklist.md, outputs/final_audit/github_readiness_checklist.md",REVIEW
+A,Repeated filename,live_demo_plan.md,"FINAL_SUBMISSION/10_DOCUMENTATION/project_audits/live_demo_plan.md, outputs/final_audit/live_demo_plan.md",REVIEW
+A,Repeated filename,project_handover.md,"FINAL_SUBMISSION/10_DOCUMENTATION/project_audits/project_handover.md, outputs/final_audit/project_handover.md",REVIEW
+A,Repeated filename,screenshot_checklist.md,"FINAL_SUBMISSION/10_DOCUMENTATION/project_audits/screenshot_checklist.md, outputs/final_audit/screenshot_checklist.md",REVIEW
+A,Repeated filename,project_build_log.md,"FINAL_SUBMISSION/10_DOCUMENTATION/project_build_log.md, docs/project_build_log.md",REVIEW
+A,Repeated filename,reproducibility_guide.md,"FINAL_SUBMISSION/10_DOCUMENTATION/reproducibility_guide.md, docs/reproducibility_guide.md",REVIEW
+A,Repeated filename,requirements.txt,"FINAL_SUBMISSION/10_DOCUMENTATION/requirements.txt, requirements.txt",REVIEW
+A,Repeated filename,FINAL_HANDOVER.md,"FINAL_SUBMISSION/10_DOCUMENTATION/submission_documents/FINAL_HANDOVER.md, outputs/final_submission/FINAL_HANDOVER.md",REVIEW
+A,Repeated filename,MASTER_SUBMISSION_CHECKLIST.md,"FINAL_SUBMISSION/10_DOCUMENTATION/submission_documents/MASTER_SUBMISSION_CHECKLIST.md, outputs/final_submission/MASTER_SUBMISSION_CHECKLIST.md",REVIEW
+A,Repeated filename,backup_manifest.md,"FINAL_SUBMISSION/10_DOCUMENTATION/submission_documents/backup_manifest.md, outputs/final_submission/backup_manifest.md",REVIEW
+A,Repeated filename,data_ethics_check.md,"FINAL_SUBMISSION/10_DOCUMENTATION/submission_documents/data_ethics_check.md, outputs/final_submission/data_ethics_check.md",REVIEW
+A,Repeated filename,declaration_check.md,"FINAL_SUBMISSION/10_DOCUMENTATION/submission_documents/declaration_check.md, outputs/final_submission/declaration_check.md",REVIEW
+A,Repeated filename,final_consistency_check.md,"FINAL_SUBMISSION/10_DOCUMENTATION/submission_documents/final_consistency_check.md, outputs/final_submission/final_consistency_check.md",REVIEW
+A,Repeated filename,final_project_inventory.md,"FINAL_SUBMISSION/10_DOCUMENTATION/submission_documents/final_project_inventory.md, outputs/final_submission/final_project_inventory.md",REVIEW
+A,Repeated filename,final_status.md,"FINAL_SUBMISSION/10_DOCUMENTATION/submission_documents/final_status.md, outputs/final_submission/final_status.md",REVIEW
+A,Repeated filename,github_final_check.md,"FINAL_SUBMISSION/10_DOCUMENTATION/submission_documents/github_final_check.md, outputs/final_submission/github_final_check.md",REVIEW
+A,Repeated filename,presentation_final_check.md,"FINAL_SUBMISSION/10_DOCUMENTATION/submission_documents/presentation_final_check.md, outputs/final_submission/presentation_final_check.md",REVIEW
+A,Repeated filename,report_final_check.md,"FINAL_SUBMISSION/10_DOCUMENTATION/submission_documents/report_final_check.md, outputs/final_submission/report_final_check.md",REVIEW
+A,Repeated filename,reproducibility_final_check.md,"FINAL_SUBMISSION/10_DOCUMENTATION/submission_documents/reproducibility_final_check.md, outputs/final_submission/reproducibility_final_check.md",REVIEW
+A,Repeated filename,student_manual_actions.md,"FINAL_SUBMISSION/10_DOCUMENTATION/submission_documents/student_manual_actions.md, outputs/final_submission/student_manual_actions.md",REVIEW
+A,Repeated filename,submission_cover_page.md,"FINAL_SUBMISSION/10_DOCUMENTATION/submission_documents/submission_cover_page.md, outputs/final_submission/submission_cover_page.md",REVIEW
+A,Repeated filename,zip_contents.md,"FINAL_SUBMISSION/10_DOCUMENTATION/submission_documents/zip_contents.md, outputs/final_submission/zip_contents.md",REVIEW
+A,Repeated filename,audit_data_consistency.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/audit_data_consistency.csv, outputs/tables/audit_data_consistency.csv",REVIEW
+A,Repeated filename,audit_findings.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/audit_findings.csv, outputs/tables/audit_findings.csv",REVIEW
+A,Repeated filename,audit_integration.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/audit_integration.csv, outputs/tables/audit_integration.csv",REVIEW
+A,Repeated filename,audit_models.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/audit_models.csv, outputs/tables/audit_models.csv",REVIEW
+A,Repeated filename,audit_pipeline.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/audit_pipeline.csv, outputs/tables/audit_pipeline.csv",REVIEW
+A,Repeated filename,audit_structure.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/audit_structure.csv, outputs/tables/audit_structure.csv",REVIEW
+A,Repeated filename,audit_summary.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/audit_summary.csv, outputs/tables/audit_summary.csv",REVIEW
+A,Repeated filename,business_insights.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/business_insights.csv, outputs/tables/business_insights.csv",REVIEW
+A,Repeated filename,business_questions.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/business_questions.csv, outputs/tables/business_questions.csv",REVIEW
+A,Repeated filename,category_summary.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/category_summary.csv, outputs/tables/category_summary.csv",REVIEW
+A,Repeated filename,city_summary.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/city_summary.csv, outputs/tables/city_summary.csv",REVIEW
+A,Repeated filename,cleaning_accuracy_vs_ground_truth.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/cleaning_accuracy_vs_ground_truth.csv, outputs/tables/cleaning_accuracy_vs_ground_truth.csv",REVIEW
+A,Repeated filename,cleaning_category_standardisation.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/cleaning_category_standardisation.csv, outputs/tables/cleaning_category_standardisation.csv",REVIEW
+A,Repeated filename,cleaning_corrections_applied.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/cleaning_corrections_applied.csv, outputs/tables/cleaning_corrections_applied.csv",REVIEW
+A,Repeated filename,cleaning_missing_value_log.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/cleaning_missing_value_log.csv, outputs/tables/cleaning_missing_value_log.csv",REVIEW
+A,Repeated filename,cleaning_rule_checks_before_after.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/cleaning_rule_checks_before_after.csv, outputs/tables/cleaning_rule_checks_before_after.csv",REVIEW
+A,Repeated filename,clv_annual_repeat_rates.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_annual_repeat_rates.csv, outputs/tables/clv_annual_repeat_rates.csv",REVIEW
+A,Repeated filename,clv_assumptions.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_assumptions.csv, outputs/tables/clv_assumptions.csv",REVIEW
+A,Repeated filename,clv_bgnbd_evaluation.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_bgnbd_evaluation.csv, outputs/tables/clv_bgnbd_evaluation.csv",REVIEW
+A,Repeated filename,clv_business_insights.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_business_insights.csv, outputs/tables/clv_business_insights.csv",REVIEW
+A,Repeated filename,clv_business_questions.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_business_questions.csv, outputs/tables/clv_business_questions.csv",REVIEW
+A,Repeated filename,clv_by_ml_cluster.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_by_ml_cluster.csv, outputs/tables/clv_by_ml_cluster.csv",REVIEW
+A,Repeated filename,clv_by_rfm_segment.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_by_rfm_segment.csv, outputs/tables/clv_by_rfm_segment.csv",REVIEW
+A,Repeated filename,clv_calibration_by_decile.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_calibration_by_decile.csv, outputs/tables/clv_calibration_by_decile.csv",REVIEW
+A,Repeated filename,clv_data_readiness.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_data_readiness.csv, outputs/tables/clv_data_readiness.csv",REVIEW
+A,Repeated filename,clv_feature_importance.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_feature_importance.csv, outputs/tables/clv_feature_importance.csv",REVIEW
+A,Repeated filename,clv_feature_selection.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_feature_selection.csv, outputs/tables/clv_feature_selection.csv",REVIEW
+A,Repeated filename,clv_future_value_correlations.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_future_value_correlations.csv, outputs/tables/clv_future_value_correlations.csv",REVIEW
+A,Repeated filename,clv_high_value_groups.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_high_value_groups.csv, outputs/tables/clv_high_value_groups.csv",REVIEW
+A,Repeated filename,clv_horizon_sensitivity.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_horizon_sensitivity.csv, outputs/tables/clv_horizon_sensitivity.csv",REVIEW
+A,Repeated filename,clv_inactivity_threshold_sensitivity.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_inactivity_threshold_sensitivity.csv, outputs/tables/clv_inactivity_threshold_sensitivity.csv",REVIEW
+A,Repeated filename,clv_interpurchase_gaps.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_interpurchase_gaps.csv, outputs/tables/clv_interpurchase_gaps.csv",REVIEW
+A,Repeated filename,clv_model_comparison.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_model_comparison.csv, outputs/tables/clv_model_comparison.csv",REVIEW
+A,Repeated filename,clv_model_cv_selection.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_model_cv_selection.csv, outputs/tables/clv_model_cv_selection.csv",REVIEW
+A,Repeated filename,clv_profit_decomposition.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_profit_decomposition.csv, outputs/tables/clv_profit_decomposition.csv",REVIEW
+A,Repeated filename,clv_single_purchase_customers.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_single_purchase_customers.csv, outputs/tables/clv_single_purchase_customers.csv",REVIEW
+A,Repeated filename,clv_test_predictions.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_test_predictions.csv, outputs/tables/clv_test_predictions.csv",REVIEW
+A,Repeated filename,clv_validation_checks.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_validation_checks.csv, outputs/tables/clv_validation_checks.csv",REVIEW
+A,Repeated filename,clv_value_concentration.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_value_concentration.csv, outputs/tables/clv_value_concentration.csv",REVIEW
+A,Repeated filename,clv_value_distribution.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_value_distribution.csv, outputs/tables/clv_value_distribution.csv",REVIEW
+A,Repeated filename,clv_value_drivers.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_value_drivers.csv, outputs/tables/clv_value_drivers.csv",REVIEW
+A,Repeated filename,clv_value_percentiles.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/clv_value_percentiles.csv, outputs/tables/clv_value_percentiles.csv",REVIEW
+A,Repeated filename,correlation_pairs.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/correlation_pairs.csv, outputs/tables/correlation_pairs.csv",REVIEW
+A,Repeated filename,customer_characteristic_tests.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/customer_characteristic_tests.csv, outputs/tables/customer_characteristic_tests.csv",REVIEW
+A,Repeated filename,customer_revenue_by_attribute.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/customer_revenue_by_attribute.csv, outputs/tables/customer_revenue_by_attribute.csv",REVIEW
+A,Repeated filename,customer_revenue_concentration.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/customer_revenue_concentration.csv, outputs/tables/customer_revenue_concentration.csv",REVIEW
+A,Repeated filename,customer_segment_sql_analysis.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/customer_segment_sql_analysis.csv, outputs/tables/customer_segment_sql_analysis.csv",REVIEW
+A,Repeated filename,customer_summary.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/customer_summary.csv, outputs/tables/customer_summary.csv",REVIEW
+A,Repeated filename,customer_validation_stats.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/customer_validation_stats.csv, outputs/tables/customer_validation_stats.csv",REVIEW
+A,Repeated filename,day_of_week_summary.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/day_of_week_summary.csv, outputs/tables/day_of_week_summary.csv",REVIEW
+A,Repeated filename,discount_correlations.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/discount_correlations.csv, outputs/tables/discount_correlations.csv",REVIEW
+A,Repeated filename,discount_margin_by_category.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/discount_margin_by_category.csv, outputs/tables/discount_margin_by_category.csv",REVIEW
+A,Repeated filename,discount_summary.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/discount_summary.csv, outputs/tables/discount_summary.csv",REVIEW
+A,Repeated filename,eda_descriptive_statistics.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/eda_descriptive_statistics.csv, outputs/tables/eda_descriptive_statistics.csv",REVIEW
+A,Repeated filename,eda_kpis.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/eda_kpis.csv, outputs/tables/eda_kpis.csv",REVIEW
+A,Repeated filename,eda_order_definition_checks.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/eda_order_definition_checks.csv, outputs/tables/eda_order_definition_checks.csv",REVIEW
+A,Repeated filename,eda_outlier_classes.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/eda_outlier_classes.csv, outputs/tables/eda_outlier_classes.csv",REVIEW
+A,Repeated filename,eda_outlier_summary.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/eda_outlier_summary.csv, outputs/tables/eda_outlier_summary.csv",REVIEW
+A,Repeated filename,eda_quality_checks.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/eda_quality_checks.csv, outputs/tables/eda_quality_checks.csv",REVIEW
+A,Repeated filename,feature_usage_leakage_check.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/feature_usage_leakage_check.csv, outputs/tables/feature_usage_leakage_check.csv",REVIEW
+A,Repeated filename,forecast_acf_pacf.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_acf_pacf.csv, outputs/tables/forecast_acf_pacf.csv",REVIEW
+A,Repeated filename,forecast_adf_tests.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_adf_tests.csv, outputs/tables/forecast_adf_tests.csv",REVIEW
+A,Repeated filename,forecast_backtest_by_horizon.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_backtest_by_horizon.csv, outputs/tables/forecast_backtest_by_horizon.csv",REVIEW
+A,Repeated filename,forecast_backtest_folds.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_backtest_folds.csv, outputs/tables/forecast_backtest_folds.csv",REVIEW
+A,Repeated filename,forecast_backtest_summary.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_backtest_summary.csv, outputs/tables/forecast_backtest_summary.csv",REVIEW
+A,Repeated filename,forecast_business_interpretation.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_business_interpretation.csv, outputs/tables/forecast_business_interpretation.csv",REVIEW
+A,Repeated filename,forecast_by_dimension.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_by_dimension.csv, outputs/tables/forecast_by_dimension.csv",REVIEW
+A,Repeated filename,forecast_by_dimension_evaluation.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_by_dimension_evaluation.csv, outputs/tables/forecast_by_dimension_evaluation.csv",REVIEW
+A,Repeated filename,forecast_data_quality.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_data_quality.csv, outputs/tables/forecast_data_quality.csv",REVIEW
+A,Repeated filename,forecast_future.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_future.csv, outputs/tables/forecast_future.csv",REVIEW
+A,Repeated filename,forecast_model_comparison.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_model_comparison.csv, outputs/tables/forecast_model_comparison.csv",REVIEW
+A,Repeated filename,forecast_model_selection.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_model_selection.csv, outputs/tables/forecast_model_selection.csv",REVIEW
+A,Repeated filename,forecast_quality_checklist.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_quality_checklist.csv, outputs/tables/forecast_quality_checklist.csv",REVIEW
+A,Repeated filename,forecast_rolling_statistics.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_rolling_statistics.csv, outputs/tables/forecast_rolling_statistics.csv",REVIEW
+A,Repeated filename,forecast_seasonal_index.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_seasonal_index.csv, outputs/tables/forecast_seasonal_index.csv",REVIEW
+A,Repeated filename,forecast_split_summary.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_split_summary.csv, outputs/tables/forecast_split_summary.csv",REVIEW
+A,Repeated filename,forecast_stl_decomposition.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_stl_decomposition.csv, outputs/tables/forecast_stl_decomposition.csv",REVIEW
+A,Repeated filename,forecast_validation_tuning.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_validation_tuning.csv, outputs/tables/forecast_validation_tuning.csv",REVIEW
+A,Repeated filename,forecast_yearly_summary.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/forecast_yearly_summary.csv, outputs/tables/forecast_yearly_summary.csv",REVIEW
+A,Repeated filename,ml_business_questions.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/ml_business_questions.csv, outputs/tables/ml_business_questions.csv",REVIEW
+A,Repeated filename,ml_cluster_centroids.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/ml_cluster_centroids.csv, outputs/tables/ml_cluster_centroids.csv",REVIEW
+A,Repeated filename,ml_cluster_insights.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/ml_cluster_insights.csv, outputs/tables/ml_cluster_insights.csv",REVIEW
+A,Repeated filename,ml_cluster_label_mapping.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/ml_cluster_label_mapping.csv, outputs/tables/ml_cluster_label_mapping.csv",REVIEW
+A,Repeated filename,ml_cluster_summary.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/ml_cluster_summary.csv, outputs/tables/ml_cluster_summary.csv",REVIEW
+A,Repeated filename,ml_data_quality_checks.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/ml_data_quality_checks.csv, outputs/tables/ml_data_quality_checks.csv",REVIEW
+A,Repeated filename,ml_feature_distribution_check.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/ml_feature_distribution_check.csv, outputs/tables/ml_feature_distribution_check.csv",REVIEW
+A,Repeated filename,ml_feature_selection.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/ml_feature_selection.csv, outputs/tables/ml_feature_selection.csv",REVIEW
+A,Repeated filename,ml_feature_set_comparison.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/ml_feature_set_comparison.csv, outputs/tables/ml_feature_set_comparison.csv",REVIEW
+A,Repeated filename,ml_final_model_metrics.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/ml_final_model_metrics.csv, outputs/tables/ml_final_model_metrics.csv",REVIEW
+A,Repeated filename,ml_k_evaluation.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/ml_k_evaluation.csv, outputs/tables/ml_k_evaluation.csv",REVIEW
+A,Repeated filename,ml_pca_summary.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/ml_pca_summary.csv, outputs/tables/ml_pca_summary.csv",REVIEW
+A,Repeated filename,ml_silhouette_by_cluster.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/ml_silhouette_by_cluster.csv, outputs/tables/ml_silhouette_by_cluster.csv",REVIEW
+A,Repeated filename,ml_validation_checks.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/ml_validation_checks.csv, outputs/tables/ml_validation_checks.csv",REVIEW
+A,Repeated filename,monthly_summary.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/monthly_summary.csv, outputs/tables/monthly_summary.csv",REVIEW
+A,Repeated filename,order_status_summary.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/order_status_summary.csv, outputs/tables/order_status_summary.csv",REVIEW
+A,Repeated filename,outlier_interpretation.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/outlier_interpretation.csv, outputs/tables/outlier_interpretation.csv",REVIEW
+A,Repeated filename,outlier_summary.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/outlier_summary.csv, outputs/tables/outlier_summary.csv",REVIEW
+A,Repeated filename,payment_summary.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/payment_summary.csv, outputs/tables/payment_summary.csv",REVIEW
+A,Repeated filename,powerbi_cross_step_consistency.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/powerbi_cross_step_consistency.csv, outputs/tables/powerbi_cross_step_consistency.csv",REVIEW
+A,Repeated filename,powerbi_measure_catalog.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/powerbi_measure_catalog.csv, outputs/tables/powerbi_measure_catalog.csv",REVIEW
+A,Repeated filename,powerbi_measure_validation.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/powerbi_measure_validation.csv, outputs/tables/powerbi_measure_validation.csv",REVIEW
+A,Repeated filename,powerbi_relationships.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/powerbi_relationships.csv, outputs/tables/powerbi_relationships.csv",REVIEW
+A,Repeated filename,powerbi_table_catalog.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/powerbi_table_catalog.csv, outputs/tables/powerbi_table_catalog.csv",REVIEW
+A,Repeated filename,powerbi_validation_checklist.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/powerbi_validation_checklist.csv, outputs/tables/powerbi_validation_checklist.csv",REVIEW
+A,Repeated filename,product_profitability.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/product_profitability.csv, outputs/tables/product_profitability.csv",REVIEW
+A,Repeated filename,product_revenue_profit_quadrants.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/product_revenue_profit_quadrants.csv, outputs/tables/product_revenue_profit_quadrants.csv",REVIEW
+A,Repeated filename,product_summary.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/product_summary.csv, outputs/tables/product_summary.csv",REVIEW
+A,Repeated filename,purchase_frequency.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/purchase_frequency.csv, outputs/tables/purchase_frequency.csv",REVIEW
+A,Repeated filename,quarterly_summary.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/quarterly_summary.csv, outputs/tables/quarterly_summary.csv",REVIEW
+A,Repeated filename,regional_summary.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/regional_summary.csv, outputs/tables/regional_summary.csv",REVIEW
+A,Repeated filename,report_facts.json,"FINAL_SUBMISSION/11_OUTPUT_TABLES/report_facts.json, outputs/tables/report_facts.json",REVIEW
+A,Repeated filename,revenue_business_questions.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_business_questions.csv, outputs/tables/revenue_business_questions.csv",REVIEW
+A,Repeated filename,revenue_categorical_drivers.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_categorical_drivers.csv, outputs/tables/revenue_categorical_drivers.csv",REVIEW
+A,Repeated filename,revenue_concentration.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_concentration.csv, outputs/tables/revenue_concentration.csv",REVIEW
+A,Repeated filename,revenue_cutoff_timing.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_cutoff_timing.csv, outputs/tables/revenue_cutoff_timing.csv",REVIEW
+A,Repeated filename,revenue_data_checks.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_data_checks.csv, outputs/tables/revenue_data_checks.csv",REVIEW
+A,Repeated filename,revenue_driver_analysis.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_driver_analysis.csv, outputs/tables/revenue_driver_analysis.csv",REVIEW
+A,Repeated filename,revenue_error_by_category.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_error_by_category.csv, outputs/tables/revenue_error_by_category.csv",REVIEW
+A,Repeated filename,revenue_error_by_quarter.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_error_by_quarter.csv, outputs/tables/revenue_error_by_quarter.csv",REVIEW
+A,Repeated filename,revenue_error_by_region.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_error_by_region.csv, outputs/tables/revenue_error_by_region.csv",REVIEW
+A,Repeated filename,revenue_error_by_revenue_range.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_error_by_revenue_range.csv, outputs/tables/revenue_error_by_revenue_range.csv",REVIEW
+A,Repeated filename,revenue_feature_catalog.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_feature_catalog.csv, outputs/tables/revenue_feature_catalog.csv",REVIEW
+A,Repeated filename,revenue_feature_importance.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_feature_importance.csv, outputs/tables/revenue_feature_importance.csv",REVIEW
+A,Repeated filename,revenue_feature_selection.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_feature_selection.csv, outputs/tables/revenue_feature_selection.csv",REVIEW
+A,Repeated filename,revenue_leakage_audit.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_leakage_audit.csv, outputs/tables/revenue_leakage_audit.csv",REVIEW
+A,Repeated filename,revenue_level_feature_check.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_level_feature_check.csv, outputs/tables/revenue_level_feature_check.csv",REVIEW
+A,Repeated filename,revenue_linear_coefficients.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_linear_coefficients.csv, outputs/tables/revenue_linear_coefficients.csv",REVIEW
+A,Repeated filename,revenue_model_comparison.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_model_comparison.csv, outputs/tables/revenue_model_comparison.csv",REVIEW
+A,Repeated filename,revenue_model_selection.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_model_selection.csv, outputs/tables/revenue_model_selection.csv",REVIEW
+A,Repeated filename,revenue_model_validation_results.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_model_validation_results.csv, outputs/tables/revenue_model_validation_results.csv",REVIEW
+A,Repeated filename,revenue_prediction_by_cluster.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_prediction_by_cluster.csv, outputs/tables/revenue_prediction_by_cluster.csv",REVIEW
+A,Repeated filename,revenue_prediction_by_rfm.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_prediction_by_rfm.csv, outputs/tables/revenue_prediction_by_rfm.csv",REVIEW
+A,Repeated filename,revenue_prediction_design.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_prediction_design.csv, outputs/tables/revenue_prediction_design.csv",REVIEW
+A,Repeated filename,revenue_predictions.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_predictions.csv, outputs/tables/revenue_predictions.csv",REVIEW
+A,Repeated filename,revenue_quarterly_totals.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_quarterly_totals.csv, outputs/tables/revenue_quarterly_totals.csv",REVIEW
+A,Repeated filename,revenue_scenarios.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_scenarios.csv, outputs/tables/revenue_scenarios.csv",REVIEW
+A,Repeated filename,revenue_split_summary.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_split_summary.csv, outputs/tables/revenue_split_summary.csv",REVIEW
+A,Repeated filename,revenue_tuning_results.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_tuning_results.csv, outputs/tables/revenue_tuning_results.csv",REVIEW
+A,Repeated filename,revenue_validation_checks.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/revenue_validation_checks.csv, outputs/tables/revenue_validation_checks.csv",REVIEW
+A,Repeated filename,rfm_business_insights.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_business_insights.csv, outputs/tables/rfm_business_insights.csv",REVIEW
+A,Repeated filename,rfm_business_questions.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_business_questions.csv, outputs/tables/rfm_business_questions.csv",REVIEW
+A,Repeated filename,rfm_concentration_stats.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_concentration_stats.csv, outputs/tables/rfm_concentration_stats.csv",REVIEW
+A,Repeated filename,rfm_descriptive_statistics.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_descriptive_statistics.csv, outputs/tables/rfm_descriptive_statistics.csv",REVIEW
+A,Repeated filename,rfm_excluded_customers.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_excluded_customers.csv, outputs/tables/rfm_excluded_customers.csv",REVIEW
+A,Repeated filename,rfm_headline_metrics.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_headline_metrics.csv, outputs/tables/rfm_headline_metrics.csv",REVIEW
+A,Repeated filename,rfm_high_value_at_risk.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_high_value_at_risk.csv, outputs/tables/rfm_high_value_at_risk.csv",REVIEW
+A,Repeated filename,rfm_high_value_at_risk_rule.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_high_value_at_risk_rule.csv, outputs/tables/rfm_high_value_at_risk_rule.csv",REVIEW
+A,Repeated filename,rfm_log_transform_check.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_log_transform_check.csv, outputs/tables/rfm_log_transform_check.csv",REVIEW
+A,Repeated filename,rfm_most_recent_customers.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_most_recent_customers.csv, outputs/tables/rfm_most_recent_customers.csv",REVIEW
+A,Repeated filename,rfm_qcut_feasibility.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_qcut_feasibility.csv, outputs/tables/rfm_qcut_feasibility.csv",REVIEW
+A,Repeated filename,rfm_revenue_concentration.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_revenue_concentration.csv, outputs/tables/rfm_revenue_concentration.csv",REVIEW
+A,Repeated filename,rfm_score_bins.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_score_bins.csv, outputs/tables/rfm_score_bins.csv",REVIEW
+A,Repeated filename,rfm_score_grid_R_by_F.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_score_grid_R_by_F.csv, outputs/tables/rfm_score_grid_R_by_F.csv",REVIEW
+A,Repeated filename,rfm_segment_profile.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_segment_profile.csv, outputs/tables/rfm_segment_profile.csv",REVIEW
+A,Repeated filename,rfm_segment_rules.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_segment_rules.csv, outputs/tables/rfm_segment_rules.csv",REVIEW
+A,Repeated filename,rfm_segment_summary.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_segment_summary.csv, outputs/tables/rfm_segment_summary.csv",REVIEW
+A,Repeated filename,rfm_top_customers_frequency.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_top_customers_frequency.csv, outputs/tables/rfm_top_customers_frequency.csv",REVIEW
+A,Repeated filename,rfm_top_customers_monetary.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_top_customers_monetary.csv, outputs/tables/rfm_top_customers_monetary.csv",REVIEW
+A,Repeated filename,rfm_validation_checks.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_validation_checks.csv, outputs/tables/rfm_validation_checks.csv",REVIEW
+A,Repeated filename,rfm_value_activity_groups.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_value_activity_groups.csv, outputs/tables/rfm_value_activity_groups.csv",REVIEW
+A,Repeated filename,rfm_vs_ml_agreement.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_vs_ml_agreement.csv, outputs/tables/rfm_vs_ml_agreement.csv",REVIEW
+A,Repeated filename,rfm_vs_ml_by_cluster.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_vs_ml_by_cluster.csv, outputs/tables/rfm_vs_ml_by_cluster.csv",REVIEW
+A,Repeated filename,rfm_vs_ml_by_segment.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_vs_ml_by_segment.csv, outputs/tables/rfm_vs_ml_by_segment.csv",REVIEW
+A,Repeated filename,rfm_vs_ml_cluster.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_vs_ml_cluster.csv, outputs/tables/rfm_vs_ml_cluster.csv",REVIEW
+A,Repeated filename,rfm_vs_ml_cluster_col_pct.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_vs_ml_cluster_col_pct.csv, outputs/tables/rfm_vs_ml_cluster_col_pct.csv",REVIEW
+A,Repeated filename,rfm_vs_ml_cluster_row_pct.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/rfm_vs_ml_cluster_row_pct.csv, outputs/tables/rfm_vs_ml_cluster_row_pct.csv",REVIEW
+A,Repeated filename,seasonal_index.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/seasonal_index.csv, outputs/tables/seasonal_index.csv",REVIEW
+A,Repeated filename,BQ01.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ01.csv, outputs/tables/sql/BQ01.csv",REVIEW
+A,Repeated filename,BQ02.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ02.csv, outputs/tables/sql/BQ02.csv",REVIEW
+A,Repeated filename,BQ03.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ03.csv, outputs/tables/sql/BQ03.csv",REVIEW
+A,Repeated filename,BQ04.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ04.csv, outputs/tables/sql/BQ04.csv",REVIEW
+A,Repeated filename,BQ05.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ05.csv, outputs/tables/sql/BQ05.csv",REVIEW
+A,Repeated filename,BQ06.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ06.csv, outputs/tables/sql/BQ06.csv",REVIEW
+A,Repeated filename,BQ07.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ07.csv, outputs/tables/sql/BQ07.csv",REVIEW
+A,Repeated filename,BQ08.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ08.csv, outputs/tables/sql/BQ08.csv",REVIEW
+A,Repeated filename,BQ09.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ09.csv, outputs/tables/sql/BQ09.csv",REVIEW
+A,Repeated filename,BQ10.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ10.csv, outputs/tables/sql/BQ10.csv",REVIEW
+A,Repeated filename,BQ11.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ11.csv, outputs/tables/sql/BQ11.csv",REVIEW
+A,Repeated filename,BQ12.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ12.csv, outputs/tables/sql/BQ12.csv",REVIEW
+A,Repeated filename,BQ13.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ13.csv, outputs/tables/sql/BQ13.csv",REVIEW
+A,Repeated filename,BQ14.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ14.csv, outputs/tables/sql/BQ14.csv",REVIEW
+A,Repeated filename,BQ15.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ15.csv, outputs/tables/sql/BQ15.csv",REVIEW
+A,Repeated filename,BQ16.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ16.csv, outputs/tables/sql/BQ16.csv",REVIEW
+A,Repeated filename,BQ17.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ17.csv, outputs/tables/sql/BQ17.csv",REVIEW
+A,Repeated filename,BQ18.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ18.csv, outputs/tables/sql/BQ18.csv",REVIEW
+A,Repeated filename,BQ19.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ19.csv, outputs/tables/sql/BQ19.csv",REVIEW
+A,Repeated filename,BQ20.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/BQ20.csv, outputs/tables/sql/BQ20.csv",REVIEW
+A,Repeated filename,cust_acquired_by_year.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/cust_acquired_by_year.csv, outputs/tables/sql/cust_acquired_by_year.csv",REVIEW
+A,Repeated filename,cust_concentration_summary.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/cust_concentration_summary.csv, outputs/tables/sql/cust_concentration_summary.csv",REVIEW
+A,Repeated filename,cust_frequency_distribution.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/cust_frequency_distribution.csv, outputs/tables/sql/cust_frequency_distribution.csv",REVIEW
+A,Repeated filename,cust_highest_aov.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/cust_highest_aov.csv, outputs/tables/sql/cust_highest_aov.csv",REVIEW
+A,Repeated filename,cust_inactive.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/cust_inactive.csv, outputs/tables/sql/cust_inactive.csv",REVIEW
+A,Repeated filename,cust_most_frequent.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/cust_most_frequent.csv, outputs/tables/sql/cust_most_frequent.csv",REVIEW
+A,Repeated filename,cust_new_vs_existing.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/cust_new_vs_existing.csv, outputs/tables/sql/cust_new_vs_existing.csv",REVIEW
+A,Repeated filename,cust_revenue_concentration.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/cust_revenue_concentration.csv, outputs/tables/sql/cust_revenue_concentration.csv",REVIEW
+A,Repeated filename,cust_top_profit.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/cust_top_profit.csv, outputs/tables/sql/cust_top_profit.csv",REVIEW
+A,Repeated filename,cust_top_revenue.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/cust_top_revenue.csv, outputs/tables/sql/cust_top_revenue.csv",REVIEW
+A,Repeated filename,prod_avg_selling_price.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/prod_avg_selling_price.csv, outputs/tables/sql/prod_avg_selling_price.csv",REVIEW
+A,Repeated filename,prod_category_performance.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/prod_category_performance.csv, outputs/tables/sql/prod_category_performance.csv",REVIEW
+A,Repeated filename,prod_discount_bands.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/prod_discount_bands.csv, outputs/tables/sql/prod_discount_bands.csv",REVIEW
+A,Repeated filename,prod_investigate.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/prod_investigate.csv, outputs/tables/sql/prod_investigate.csv",REVIEW
+A,Repeated filename,prod_profitability.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/prod_profitability.csv, outputs/tables/sql/prod_profitability.csv",REVIEW
+A,Repeated filename,prod_subcategory_performance.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/prod_subcategory_performance.csv, outputs/tables/sql/prod_subcategory_performance.csv",REVIEW
+A,Repeated filename,prod_top_profit.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/prod_top_profit.csv, outputs/tables/sql/prod_top_profit.csv",REVIEW
+A,Repeated filename,prod_top_quantity.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/prod_top_quantity.csv, outputs/tables/sql/prod_top_quantity.csv",REVIEW
+A,Repeated filename,prod_top_revenue.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/prod_top_revenue.csv, outputs/tables/sql/prod_top_revenue.csv",REVIEW
+A,Repeated filename,reg_category_matrix.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/reg_category_matrix.csv, outputs/tables/sql/reg_category_matrix.csv",REVIEW
+A,Repeated filename,reg_customers_without_orders.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/reg_customers_without_orders.csv, outputs/tables/sql/reg_customers_without_orders.csv",REVIEW
+A,Repeated filename,reg_performance.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/reg_performance.csv, outputs/tables/sql/reg_performance.csv",REVIEW
+A,Repeated filename,reg_top_states.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/reg_top_states.csv, outputs/tables/sql/reg_top_states.csv",REVIEW
+A,Repeated filename,rev_by_quarter.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/rev_by_quarter.csv, outputs/tables/sql/rev_by_quarter.csv",REVIEW
+A,Repeated filename,rev_by_year.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/rev_by_year.csv, outputs/tables/sql/rev_by_year.csv",REVIEW
+A,Repeated filename,rev_kpi_summary.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/rev_kpi_summary.csv, outputs/tables/sql/rev_kpi_summary.csv",REVIEW
+A,Repeated filename,rev_margin_by_year_category.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/rev_margin_by_year_category.csv, outputs/tables/sql/rev_margin_by_year_category.csv",REVIEW
+A,Repeated filename,rev_order_status.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/rev_order_status.csv, outputs/tables/sql/rev_order_status.csv",REVIEW
+A,Repeated filename,seg_ml_cluster_summary.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/seg_ml_cluster_summary.csv, outputs/tables/sql/seg_ml_cluster_summary.csv",REVIEW
+A,Repeated filename,seg_rfm_summary.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/seg_rfm_summary.csv, outputs/tables/sql/seg_rfm_summary.csv",REVIEW
+A,Repeated filename,seg_rfm_vs_cluster.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/seg_rfm_vs_cluster.csv, outputs/tables/sql/seg_rfm_vs_cluster.csv",REVIEW
+A,Repeated filename,seg_value_activity_groups.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/seg_value_activity_groups.csv, outputs/tables/sql/seg_value_activity_groups.csv",REVIEW
+A,Repeated filename,seg_value_by_cluster.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/seg_value_by_cluster.csv, outputs/tables/sql/seg_value_by_cluster.csv",REVIEW
+A,Repeated filename,time_best_worst_months.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/time_best_worst_months.csv, outputs/tables/sql/time_best_worst_months.csv",REVIEW
+A,Repeated filename,time_month_of_year.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/time_month_of_year.csv, outputs/tables/sql/time_month_of_year.csv",REVIEW
+A,Repeated filename,time_monthly.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/time_monthly.csv, outputs/tables/sql/time_monthly.csv",REVIEW
+A,Repeated filename,time_ytd_running_total.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql/time_ytd_running_total.csv, outputs/tables/sql/time_ytd_running_total.csv",REVIEW
+A,Repeated filename,sql_key_findings.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql_key_findings.csv, outputs/tables/sql_key_findings.csv",REVIEW
+A,Repeated filename,sql_quality_checklist.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql_quality_checklist.csv, outputs/tables/sql_quality_checklist.csv",REVIEW
+A,Repeated filename,sql_query_catalog.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql_query_catalog.csv, outputs/tables/sql_query_catalog.csv",REVIEW
+A,Repeated filename,sql_table_catalog.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql_table_catalog.csv, outputs/tables/sql_table_catalog.csv",REVIEW
+A,Repeated filename,sql_technique_coverage.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql_technique_coverage.csv, outputs/tables/sql_technique_coverage.csv",REVIEW
+A,Repeated filename,sql_validation_checks.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/sql_validation_checks.csv, outputs/tables/sql_validation_checks.csv",REVIEW
+A,Repeated filename,state_summary.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/state_summary.csv, outputs/tables/state_summary.csv",REVIEW
+A,Repeated filename,streamlit_page_load_times.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/streamlit_page_load_times.csv, outputs/tables/streamlit_page_load_times.csv",REVIEW
+A,Repeated filename,streamlit_quality_checklist.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/streamlit_quality_checklist.csv, outputs/tables/streamlit_quality_checklist.csv",REVIEW
+A,Repeated filename,streamlit_test_results.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/streamlit_test_results.csv, outputs/tables/streamlit_test_results.csv",REVIEW
+A,Repeated filename,subcategory_summary.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/subcategory_summary.csv, outputs/tables/subcategory_summary.csv",REVIEW
+A,Repeated filename,top_customers_profit.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/top_customers_profit.csv, outputs/tables/top_customers_profit.csv",REVIEW
+A,Repeated filename,top_customers_revenue.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/top_customers_revenue.csv, outputs/tables/top_customers_revenue.csv",REVIEW
+A,Repeated filename,unusual_customers.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/unusual_customers.csv, outputs/tables/unusual_customers.csv",REVIEW
+A,Repeated filename,yearly_summary.csv,"FINAL_SUBMISSION/11_OUTPUT_TABLES/yearly_summary.csv, outputs/tables/yearly_summary.csv",REVIEW
+A,Placeholder file,FINAL_SUBMISSION/04_DATA/processed/.gitkeep,Intentional: keeps an otherwise empty directory in version control.,INFO
+A,Placeholder file,assets/images/.gitkeep,Intentional: keeps an otherwise empty directory in version control.,INFO
+A,Placeholder file,data/processed/.gitkeep,Intentional: keeps an otherwise empty directory in version control.,INFO

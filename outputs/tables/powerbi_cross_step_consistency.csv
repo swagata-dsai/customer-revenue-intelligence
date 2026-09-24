@@ -1,0 +1,33 @@
+Area,Check,Star_Schema_Value,Reference_Value,Reference_Source,Status
+Revenue,Total Revenue,60056569.15,60056569.15,Step 4 outputs/tables/eda_kpis.csv,PASS
+Revenue,Total Profit,14022551.58,14022551.58,Step 4 eda_kpis.csv,PASS
+Revenue,Total Cost,46034017.57,46034017.57,Step 4 eda_kpis.csv,PASS
+Orders,Total Orders,12212.0,12212.0,Step 4 eda_kpis.csv,PASS
+Customers,Purchasing customers,1984.0,1984.0,Step 4 eda_kpis.csv,PASS
+Orders,Average order value,4917.8324,4917.8324,Step 4 eda_kpis.csv,PASS
+Quantity,Units sold,22772.0,22772.0,Step 4 eda_kpis.csv,PASS
+Segmentation,Champions revenue,32330090.4,32330090.4,Step 5 rfm_segment_summary.csv,PASS
+Segmentation,Champions customers,334.0,334.0,Step 5 rfm_segment_summary.csv,PASS
+Segmentation,"High-Value, Active cluster revenue",33433867.35,33433867.35,Step 6 ml_cluster_summary.csv,PASS
+Segmentation,"High-Value, Active cluster customers",364.0,364.0,Step 6 ml_cluster_summary.csv,PASS
+Customer value,Historical profit CLV total,14022551.58,14022551.58,Step 7 data/processed/customer_clv.csv,PASS
+Customer value,Estimated 12M future profit total,7397326.55,7397326.55,Step 7 customer_clv.csv,PASS
+Forecast,Historical monthly actuals total,60056569.15,60056569.15,Step 9 data/processed/monthly_sales_timeseries.csv,PASS
+Forecast,Historical monthly actuals = delivered revenue,60056569.15,60056569.15,FactSales delivered lines,PASS
+Forecast,Future 6-month forecast total,15798158.4,15798158.3991,Step 9 outputs/tables/forecast_future.csv,PASS
+Prediction,Test actual revenue (customer x quarter),12892558.9,12892558.9,Step 8 revenue_quarterly_totals.csv,PASS
+Prediction,Test predicted revenue,13037238.409,13037238.4084,Step 8 revenue_quarterly_totals.csv,PASS
+Prediction,Test MAE,5657.5669,5657.5669,Step 8 revenue_model_comparison.csv,PASS
+Model integrity,FactSales[Customer_ID] all present in DimCustomer,0.0,0.0,Star-schema extract,PASS
+Model integrity,FactSales[Product_ID] all present in DimProduct,0.0,0.0,Star-schema extract,PASS
+Model integrity,FactSales[Location_ID] all present in DimGeography,0.0,0.0,Star-schema extract,PASS
+Model integrity,FactSales[Order_Date] all present in DimDate,0.0,0.0,Star-schema extract,PASS
+Model integrity,DimCustomer[RFM_Segment] all present in DimRFMSegment,0.0,0.0,Star-schema extract,PASS
+Model integrity,DimCustomer[Cluster_ID] all present in DimCluster,0.0,0.0,Star-schema extract,PASS
+Model integrity,DimCustomer[Customer_ID] is unique,0.0,0.0,Star-schema extract,PASS
+Model integrity,DimProduct[Product_ID] is unique,0.0,0.0,Star-schema extract,PASS
+Model integrity,DimGeography[Location_ID] is unique,0.0,0.0,Star-schema extract,PASS
+Model integrity,DimDate[Date] is unique,0.0,0.0,Star-schema extract,PASS
+Model integrity,DimRFMSegment[RFM_Segment] is unique,0.0,0.0,Star-schema extract,PASS
+Model integrity,DimCluster[Cluster_ID] is unique,0.0,0.0,Star-schema extract,PASS
+Privacy,DimCustomer contains no customer-name column,0.0,0.0,Step 11 privacy rule (Customer_ID only),PASS

@@ -1,0 +1,62 @@
+{
+  "dataset": "SYNTHETIC DATA - generated for academic demonstration only",
+  "prediction_unit": "customer x quarter (customers active in the 12 months before the cutoff)",
+  "target": "Next_Quarter_Revenue = Delivered Sales (Rs) in the 3 months after the cutoff",
+  "numeric_features": [
+    "Recency_Days",
+    "Rev_3M",
+    "Rev_Same_Quarter_Last_Year",
+    "Profit_Margin_12M",
+    "Orders_3M",
+    "Orders_12M",
+    "AOV_12M",
+    "Avg_Discount_12M",
+    "Return_Rate_12M",
+    "Tenure_Days_Capped",
+    "Categories_12M",
+    "Avg_Unit_Price_12M",
+    "Product_Demand_Index",
+    "Main_Category_Trend",
+    "Share_Home_Kitchen",
+    "Share_Beauty",
+    "Share_Books",
+    "Share_Sports",
+    "Region_Rev_Trend"
+  ],
+  "categorical_features": [
+    "Region",
+    "Main_Category",
+    "Main_Payment_Method",
+    "Acquisition_Status",
+    "Target_Quarter"
+  ],
+  "training_period": "features 2023-01-01..2024-09-30 -> targets 2024-01-01..2024-12-31",
+  "validation_period": "targets 2025-01-01..2025-06-30",
+  "test_period": "targets 2025-07-01..2025-12-31",
+  "final_fit": "train + validation (7,480 rows)",
+  "model_type": "Linear regression",
+  "parameters": {
+    "copy_X": true,
+    "fit_intercept": true,
+    "n_jobs": null,
+    "positive": false,
+    "tol": 1e-06
+  },
+  "selection_rule": "simplest model within 2% of the best validation RMSE (fixed in advance)",
+  "validation_metrics": {
+    "RMSE": 9436.42,
+    "MAE": 4522.8,
+    "R2": 0.0375
+  },
+  "test_metrics": {
+    "MAE": 5657.5669,
+    "RMSE": 11232.4199,
+    "R2": 0.0557,
+    "WAPE_%": 127.8295,
+    "Spearman": 0.1751,
+    "Total_Bias_%": 1.1222
+  },
+  "random_seed": 42,
+  "sklearn_version": "1.8.0",
+  "usage": "import joblib, pandas as pd; m = joblib.load('models/revenue_prediction_model.pkl'); X = pd.read_csv('data/processed/revenue_modeling_dataset.csv'); pred = m.predict(X[m.feature_names_in_])"
+}

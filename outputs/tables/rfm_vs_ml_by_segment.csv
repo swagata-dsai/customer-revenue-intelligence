@@ -1,0 +1,12 @@
+﻿RFM_Segment,Customers,Dominant_Cluster,Dominant_Cluster_Label,Share_in_Dominant_%,Clusters_with_>=10%,Pattern
+Champions,334,Cluster 0,"High-Value, Active",97.0,1,Mostly one cluster
+Loyal Customers,240,Cluster 2,"Mid-Value, Lapsing",83.8,2,Mostly one cluster
+Potential Loyalists,152,Cluster 1,"Low-Value, Active",67.1,2,Splits across 2 clusters
+Recent Customers,91,Cluster 1,"Low-Value, Active",100.0,1,Mostly one cluster
+Promising,110,Cluster 1,"Low-Value, Active",100.0,1,Mostly one cluster
+Needs Attention,123,Cluster 2,"Mid-Value, Lapsing",77.2,2,Splits across 2 clusters
+About to Sleep,143,Cluster 1,"Low-Value, Active",82.5,2,Mostly one cluster
+Can't Lose Them,79,Cluster 2,"Mid-Value, Lapsing",98.7,1,Mostly one cluster
+At Risk,263,Cluster 2,"Mid-Value, Lapsing",97.3,1,Mostly one cluster
+Hibernating,148,Cluster 3,"Low-Value, Inactive",62.2,2,Splits across 2 clusters
+Lost,301,Cluster 3,"Low-Value, Inactive",96.3,1,Mostly one cluster

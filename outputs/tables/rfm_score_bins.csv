@@ -1,0 +1,16 @@
+﻿Metric,Score,Customers,Min_Value,Max_Value,Median_Value,Share_of_Customers,Method
+Recency,1,393,255.0,1096.0,691.0,0.19808467741935484,pd.qcut(q=5) quintiles
+Recency,2,398,163.0,254.0,201.0,0.2006048387096774,pd.qcut(q=5) quintiles
+Recency,3,396,84.0,162.0,121.0,0.19959677419354838,pd.qcut(q=5) quintiles
+Recency,4,388,39.0,83.0,57.0,0.19556451612903225,pd.qcut(q=5) quintiles
+Recency,5,409,1.0,38.0,21.0,0.2061491935483871,pd.qcut(q=5) quintiles
+Frequency,1,477,1.0,2.0,2.0,0.2404233870967742,pd.qcut(q=5) quintiles
+Frequency,2,321,3.0,3.0,3.0,0.1617943548387097,pd.qcut(q=5) quintiles
+Frequency,3,526,4.0,6.0,5.0,0.2651209677419355,pd.qcut(q=5) quintiles
+Frequency,4,272,7.0,9.0,8.0,0.13709677419354838,pd.qcut(q=5) quintiles
+Frequency,5,388,10.0,29.0,12.0,0.19556451612903225,pd.qcut(q=5) quintiles
+Monetary,1,397,237.75,4692.8,2630.0,0.2001008064516129,pd.qcut(q=5) quintiles
+Monetary,2,397,4716.3,9515.9,6779.25,0.2001008064516129,pd.qcut(q=5) quintiles
+Monetary,3,396,9545.0,19905.3,13513.325,0.19959677419354838,pd.qcut(q=5) quintiles
+Monetary,4,397,19912.2,43249.15,29900.05,0.2001008064516129,pd.qcut(q=5) quintiles
+Monetary,5,397,43321.85,417800.45,75012.8,0.2001008064516129,pd.qcut(q=5) quintiles

@@ -1,0 +1,11 @@
+﻿product_id,product_name,category,revenue,profit_margin_pct,category_margin_pct,return_cancel_rate_pct,overall_return_cancel_rate_pct,reason
+ELE-002,Nova X7 Pro Smartphone 256GB,Electronics,5737729.15,4.69,10.85,6.29,9.69,margin < half of category margin
+ELE-005,AeroBook Pro 16 Laptop,Electronics,2906412.5,2.16,10.85,8.57,9.69,margin < half of category margin
+ELE-006,43-inch 4K Smart TV,Electronics,2498330.65,-1.67,10.85,6.74,9.69,margin < half of category margin
+FAS-004,Women's Cotton Saree,Fashion,1371889.8,39.68,42.77,14.58,9.69,return/cancel rate > 1.5x overall
+FAS-002,Men's Slim Fit Jeans,Fashion,1245899.95,42.47,42.77,14.76,9.69,return/cancel rate > 1.5x overall
+FAS-001,Men's Cotton Casual Shirt,Fashion,1211754.1,46.68,42.77,15.03,9.69,return/cancel rate > 1.5x overall
+FAS-003,Women's Printed Kurta,Fashion,1171038.2,49.36,42.77,14.65,9.69,return/cancel rate > 1.5x overall
+FAS-008,Leather Formal Shoes,Fashion,1034515.0,34.27,42.77,15.92,9.69,return/cancel rate > 1.5x overall
+SPO-004,Hybrid Bicycle 21-Speed,Sports,1007011.2,11.9,25.56,6.35,9.69,margin < half of category margin
+FAS-005,Women's Western Dress,Fashion,890284.75,44.93,42.77,16.71,9.69,return/cancel rate > 1.5x overall

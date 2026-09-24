@@ -1,0 +1,5 @@
+﻿Series,Observations,ADF_Statistic,p_value,Lags_Used,Critical_5%,Conclusion
+Revenue (level),36,-2.2132,0.2015,0,-2.9485,non-stationary (cannot reject unit root at 5%)
+log(Revenue),36,-2.2457,0.1901,1,-2.9512,non-stationary (cannot reject unit root at 5%)
+First difference,35,-3.5306,0.0072,10,-2.9922,stationary (reject unit root at 5%)
+Seasonal difference (lag 12),24,-2.4195,0.1363,3,-3.0216,non-stationary (cannot reject unit root at 5%)

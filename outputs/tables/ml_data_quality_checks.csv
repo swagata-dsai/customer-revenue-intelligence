@@ -1,0 +1,13 @@
+﻿Check,Value,Pass,Note
+Rows (customers),1984,True,Input population
+Duplicate Customer_ID,0,True,Each customer must occur exactly once
+Missing values in candidate features,0,True,
+Infinite values,0,True,
+Non-numeric candidate features,0,True,
+Recency < 1 day,0,True,"Reference date is max date + 1, so minimum is 1"
+Frequency < 1 order,0,True,Only customers with a delivered purchase were scored
+Monetary <= 0,0,True,log1p needs >= 0
+Average_Discount outside 0-0.40,0,True,
+Extreme values in Recency (> Q3 + 3 IQR),176,True,Kept: genuine customers; log1p limits their pull on the centroids
+Extreme values in Frequency (> Q3 + 3 IQR),49,True,Kept: genuine customers; log1p limits their pull on the centroids
+Extreme values in Monetary (> Q3 + 3 IQR),91,True,Kept: genuine customers; log1p limits their pull on the centroids

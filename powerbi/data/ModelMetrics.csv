@@ -1,0 +1,26 @@
+Model_Area,Step,Model,Split,Metric,Value,Unit,Note
+Revenue prediction (ML),Step 8,Linear regression,Validation (2025 Q1-Q2),MAE,4522.8,INR,Per customer-quarter; MAPE is not reported because many actuals are 0
+Revenue prediction (ML),Step 8,Linear regression,Validation (2025 Q1-Q2),RMSE,9436.42,INR,Per customer-quarter; MAPE is not reported because many actuals are 0
+Revenue prediction (ML),Step 8,Linear regression,Validation (2025 Q1-Q2),R2,0.0375,ratio,Per customer-quarter; MAPE is not reported because many actuals are 0
+Revenue prediction (ML),Step 8,Linear regression,Test (2025 Q3-Q4),MAE,5657.5669,INR,Per customer-quarter; MAPE is not reported because many actuals are 0
+Revenue prediction (ML),Step 8,Linear regression,Test (2025 Q3-Q4),RMSE,11232.4199,INR,Per customer-quarter; MAPE is not reported because many actuals are 0
+Revenue prediction (ML),Step 8,Linear regression,Test (2025 Q3-Q4),R2,0.0557,ratio,Per customer-quarter; MAPE is not reported because many actuals are 0
+Revenue prediction (ML),Step 8,Linear regression,Test (2025 Q3-Q4),WAPE_%,127.8295,%,Per customer-quarter; MAPE is not reported because many actuals are 0
+Revenue prediction (ML),Step 8,Linear regression,Test (2025 Q3-Q4),Spearman,0.1751,ratio,Per customer-quarter; MAPE is not reported because many actuals are 0
+Revenue prediction (ML),Step 8,Linear regression,Test (2025 Q3-Q4),Total_Bias_%,1.1222,%,Per customer-quarter; MAPE is not reported because many actuals are 0
+Revenue prediction (ML),Step 8,Baseline: 12-month quarterly mean,Test (2025 Q3-Q4),MAE,5436.1488,INR,"Best baseline on test MAE, shown for comparison"
+Revenue prediction (ML),Step 8,Baseline: 12-month quarterly mean,Test (2025 Q3-Q4),RMSE,11466.315,INR,"Best baseline on test MAE, shown for comparison"
+Revenue prediction (ML),Step 8,Baseline: 12-month quarterly mean,Test (2025 Q3-Q4),R2,0.016,ratio,"Best baseline on test MAE, shown for comparison"
+Revenue forecast (time series),Step 9,Theta: Theta (seasonality auto-tested),Validation (2025-01..06),MAE,262706.591,INR,Monthly company revenue
+Revenue forecast (time series),Step 9,Theta: Theta (seasonality auto-tested),Validation (2025-01..06),RMSE,373634.907,INR,Monthly company revenue
+Revenue forecast (time series),Step 9,Theta: Theta (seasonality auto-tested),Validation (2025-01..06),MAPE_%,15.55,%,Monthly company revenue
+Revenue forecast (time series),Step 9,Theta: Theta (seasonality auto-tested),Validation (2025-01..06),sMAPE_%,13.42,%,Monthly company revenue
+Revenue forecast (time series),Step 9,Theta: Theta (seasonality auto-tested),Validation (2025-01..06),WAPE_%,12.94,%,Monthly company revenue
+Revenue forecast (time series),Step 9,Theta: Theta (seasonality auto-tested),Test (2025-07..12),MAE,213178.662,INR,Monthly company revenue
+Revenue forecast (time series),Step 9,Theta: Theta (seasonality auto-tested),Test (2025-07..12),RMSE,310713.292,INR,Monthly company revenue
+Revenue forecast (time series),Step 9,Theta: Theta (seasonality auto-tested),Test (2025-07..12),MAPE_%,7.768,%,Monthly company revenue
+Revenue forecast (time series),Step 9,Theta: Theta (seasonality auto-tested),Test (2025-07..12),sMAPE_%,8.243,%,Monthly company revenue
+Revenue forecast (time series),Step 9,Theta: Theta (seasonality auto-tested),Test (2025-07..12),WAPE_%,8.502,%,Monthly company revenue
+Revenue forecast (time series),Step 9,Theta: Theta (seasonality auto-tested),Rolling backtest (6 folds),MAPE_%,14.561,%,Mean across backtest folds; the selection metric
+Revenue forecast (time series),Step 9,Naive (last month),Test (2025-07..12),MAE,258480.7167,INR,Baseline the selected model had to beat
+Revenue forecast (time series),Step 9,Naive (last month),Test (2025-07..12),MAPE_%,10.1449,%,Baseline the selected model had to beat

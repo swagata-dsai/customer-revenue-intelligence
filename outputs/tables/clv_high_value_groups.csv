@@ -1,0 +1,6 @@
+﻿Group,Definition,Customers,Customer_%,Historical_Profit,Historical_Profit_Share_%,Estimated_12M_Value,Estimated_12M_Share_%,Median_Recency_Days,Median_Orders,Top_RFM_Segments,Top_Clusters
+High historical value,"Historical profit CLV >= P80 (₹10,469)",397,20.0101,8308795.22,59.2531,3062392.4163,41.3986,39.0,12.0,Champions 72%; Loyal Customers 12%; Can't Lose Them 11%,"High-Value, Active 75%; Mid-Value, Lapsing 25%"
+High estimated future value,"Estimated 12-month profit >= P80 (₹5,063)",397,20.0101,7335547.99,52.3125,3425508.1348,46.3074,36.0,12.0,Champions 66%; Loyal Customers 17%; At Risk 7%,"High-Value, Active 70%; Mid-Value, Lapsing 26%"
+High value + high engagement,High historical value AND F_Score >= 4 AND R_Score >= 4 (Step 5 scores),300,15.121,6872419.68,49.0098,2594212.6134,35.0696,29.0,13.0,Champions 95%; Loyal Customers 5%,"High-Value, Active 97%; Mid-Value, Lapsing 3%"
+Potentially at-risk high-value,High historical value AND no purchase for >= 180 days (not 'churned'),52,2.621,713812.92,5.0905,214793.1916,2.9037,228.5,10.0,Can't Lose Them 67%; At Risk 33%,"Mid-Value, Lapsing 100%"
+Future value opportunity,High estimated future value but NOT high historical value,119,5.998,853883.26,6.0894,800804.6776,10.8256,69.0,7.0,Loyal Customers 39%; Champions 22%; At Risk 18%,"Mid-Value, Lapsing 60%; High-Value, Active 29%"

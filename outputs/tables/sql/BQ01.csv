@@ -1,0 +1,11 @@
+﻿revenue_rank,customer_id,revenue,pct_of_total_revenue,profit,orders,last_order,rfm_segment,cluster_label
+1,CUST-1128,417800.45,0.696,51829.47,27,2025-12-19,Champions,"High-Value, Active"
+2,CUST-1724,400151.7,0.666,67098.23,28,2025-12-02,Champions,"High-Value, Active"
+3,CUST-0669,314818.65,0.524,36558.33,16,2025-12-23,Champions,"High-Value, Active"
+4,CUST-0908,307090.05,0.511,58919.91,26,2025-12-03,Champions,"High-Value, Active"
+5,CUST-1172,272866.6,0.454,45823.36,25,2025-12-07,Champions,"High-Value, Active"
+6,CUST-0941,263670.35,0.439,50340.99,27,2025-12-19,Champions,"High-Value, Active"
+7,CUST-1969,261877.0,0.436,42321.9,25,2025-11-25,Champions,"High-Value, Active"
+8,CUST-1044,258231.3,0.43,39819.88,29,2025-12-15,Champions,"High-Value, Active"
+9,CUST-1416,255399.2,0.425,26676.39,22,2025-12-06,Champions,"High-Value, Active"
+10,CUST-1489,255128.0,0.425,49175.91,28,2025-12-17,Champions,"High-Value, Active"

@@ -1,0 +1,6 @@
+Cluster_ID,Cluster_Label,Cluster_Order,Model
+0,"High-Value, Active",1,"KMeans(n_clusters=4, random_state=42, n_init='auto')"
+2,"Mid-Value, Lapsing",2,"KMeans(n_clusters=4, random_state=42, n_init='auto')"
+1,"Low-Value, Active",3,"KMeans(n_clusters=4, random_state=42, n_init='auto')"
+3,"Low-Value, Inactive",4,"KMeans(n_clusters=4, random_state=42, n_init='auto')"
+-1,No delivered order,99,Not clustered

@@ -1,0 +1,7 @@
+﻿Component,Explained_Variance_%,Loading_of,PC1,PC2
+PC1,71.499,,,
+PC2,23.589,,,
+Total (PC1+PC2),95.089,,,
+,,log_Recency,-0.453,0.888
+,,log_Frequency,0.638,0.264
+,,log_Monetary,0.622,0.376

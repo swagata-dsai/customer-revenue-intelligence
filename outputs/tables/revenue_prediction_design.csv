@@ -1,0 +1,11 @@
+﻿Item,Definition
+Prediction unit,Customer x quarter: each customer with >= 1 Delivered order in the 12 months before a quarter start
+Target variable,Next_Quarter_Revenue: Delivered Sales (Rs) in the 3 months after the cutoff (0 if no purchase)
+Feature period,12 months before each cutoff (3-month sub-window for recent activity)
+Prediction period,the calendar quarter starting at the cutoff
+Cutoffs,"2024-01-01, 2024-04-01, 2024-07-01, 2024-10-01, 2025-01-01, 2025-04-01, 2025-07-01, 2025-10-01"
+Training period (targets),2024-01-01 to 2024-12-31
+Validation period (targets),2025-01-01 to 2025-06-30
+Test period (targets),2025-07-01 to 2025-12-31
+Business purpose,Plan next-quarter revenue from the existing customer base and identify the measurable characteristics the model associates with it
+Not covered,Revenue from customers with no order in the prior 12 months (new or reactivated)

@@ -1,0 +1,21 @@
+﻿product_rank,product_id,product_name,category,revenue,pct_of_revenue,cumulative_pct
+1,ELE-002,Nova X7 Pro Smartphone 256GB,Electronics,5737729.15,9.55,9.55
+2,ELE-001,Nova X5 Smartphone 128GB,Electronics,5264715.85,8.77,18.32
+3,ELE-004,AeroBook 14 Laptop,Electronics,3414957.25,5.69,24.01
+4,ELE-003,Pulse Lite Smartphone 64GB,Electronics,3080617.25,5.13,29.14
+5,ELE-005,AeroBook Pro 16 Laptop,Electronics,2906412.5,4.84,33.98
+6,HOM-002,Air Fryer 4L,Home & Kitchen,2563348.3,4.27,38.24
+7,ELE-006,43-inch 4K Smart TV,Electronics,2498330.65,4.16,42.4
+8,ELE-008,Noise-Cancelling Headphones,Electronics,2181427.75,3.63,46.04
+9,FAS-006,Running Shoes,Fashion,1901564.15,3.17,49.2
+10,HOM-004,Microwave Oven 20L,Home & Kitchen,1694728.4,2.82,52.02
+11,HOM-001,Mixer Grinder 750W,Home & Kitchen,1614276.3,2.69,54.71
+12,ELE-010,FitPulse Smartwatch,Electronics,1435487.9,2.39,57.1
+13,FAS-004,Women's Cotton Saree,Fashion,1371889.8,2.28,59.39
+14,FAS-007,Casual Sneakers,Fashion,1358042.4,2.26,61.65
+15,FAS-002,Men's Slim Fit Jeans,Fashion,1245899.95,2.07,63.72
+16,FAS-001,Men's Cotton Casual Shirt,Fashion,1211754.1,2.02,65.74
+17,FAS-003,Women's Printed Kurta,Fashion,1171038.2,1.95,67.69
+18,ELE-007,Wireless Earbuds Air,Electronics,1086701.25,1.81,69.5
+19,FAS-008,Leather Formal Shoes,Fashion,1034515.0,1.72,71.22
+20,SPO-004,Hybrid Bicycle 21-Speed,Sports,1007011.2,1.68,72.9

@@ -1,0 +1,12 @@
+﻿Table,Layer,Rows,Columns,Primary_Key,Foreign_Keys,Column_Types
+locations,Transactional,35,4,location_id,-,"location_id INTEGER, city TEXT, state TEXT, region TEXT"
+customers,Transactional,2000,5,customer_id,location_id -> locations.location_id,"customer_id TEXT, customer_name TEXT, customer_age INTEGER, gender TEXT, location_id INTEGER"
+products,Transactional,61,4,product_id,-,"product_id TEXT, product_name TEXT, category TEXT, sub_category TEXT"
+orders,Transactional,13251,5,order_id,customer_id -> customers.customer_id,"order_id TEXT, customer_id TEXT, order_date DATE, payment_method TEXT, customer_type TEXT"
+order_items,Transactional,18670,10,order_line_id,product_id -> products.product_id; order_id -> orders.order_id,"order_line_id TEXT, order_id TEXT, product_id TEXT, quantity INTEGER, unit_price REAL, discount REAL, sales REAL, cost REAL, profit REAL, order_status TEXT"
+rfm_segment_definitions,Analytics,11,5,segment_name,-,"segment_name TEXT, priority INTEGER, rule_text TEXT, business_meaning TEXT, value_activity_group TEXT"
+customer_rfm,Analytics,1984,15,customer_id,rfm_segment -> rfm_segment_definitions.segment_name; customer_id -> customers.customer_id,"customer_id TEXT, reference_date DATE, recency_days INTEGER, frequency_orders INTEGER, monetary_revenue REAL, r_score INTEGER, f_score INTEGER, m_score INTEGER, rfm_cell TEXT, rfm_score INTEGER, fm_score REAL, rfm_segment TEXT, first_purchase_date DATE, last_purchase_date DATE, acquisition_status TEXT"
+ml_clusters,Analytics,4,3,cluster_id,-,"cluster_id INTEGER, cluster_label TEXT, model TEXT"
+customer_segments,Analytics,1984,5,customer_id,cluster_id -> ml_clusters.cluster_id; customer_id -> customers.customer_id,"customer_id TEXT, cluster_id INTEGER, silhouette REAL, pc1 REAL, pc2 REAL"
+customer_value,Analytics,1984,12,customer_id,customer_id -> customers.customer_id,"customer_id TEXT, historical_revenue_clv REAL, historical_profit_clv REAL, estimated_12m_future_profit REAL, estimate_method TEXT, simplified_12m_estimate REAL, illustrative_3y_value REAL, high_historical_value INTEGER, high_estimated_future_value INTEGER, high_value_high_engagement INTEGER, potentially_at_risk_high_value INTEGER, future_value_opportunity INTEGER"
+revenue_forecasts,Analytics,54,9,"month, record_type",-,"month TEXT, record_type TEXT, actual_revenue REAL, forecast_revenue REAL, lower_80 REAL, upper_80 REAL, lower_95 REAL, upper_95 REAL, model TEXT"

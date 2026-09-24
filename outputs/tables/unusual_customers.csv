@@ -1,0 +1,242 @@
+﻿Customer_ID,Customer_Name,Total_Customer_Orders,Total_Customer_Revenue,Return_Rate,Reason
+CUST-0008,Imran Mishra,11.0,87405.8,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-0018,Gaurav Fernandes,24.0,210470.5,0.106,"Revenue above IQR fence (INR 80,607)"
+CUST-0030,Vivaan Tiwari,24.0,148472.55,0.026,"Revenue above IQR fence (INR 80,607)"
+CUST-0034,Riya Pandey,27.0,148419.75,0.151,"Revenue above IQR fence (INR 80,607)"
+CUST-0039,Pranav Kumar,20.0,160831.9,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-0048,Vaishnavi Agarwal,24.0,151999.1,0.031,"Revenue above IQR fence (INR 80,607)"
+CUST-0090,Nisha Ghosh,11.0,158889.95,0.1,"Revenue above IQR fence (INR 80,607)"
+CUST-0100,Ankita Kumar,3.0,91822.15,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-0110,Simran Das,7.0,82539.45,0.1,"Revenue above IQR fence (INR 80,607)"
+CUST-0129,Simran Sen,3.0,102834.9,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-0132,Pooja Sen,22.0,178261.85,0.1,"Revenue above IQR fence (INR 80,607)"
+CUST-0140,Sanjay Mukherjee,14.0,169583.3,0.048,"Revenue above IQR fence (INR 80,607)"
+CUST-0171,Rajesh Kumar,24.0,104908.85,0.122,"Revenue above IQR fence (INR 80,607)"
+CUST-0175,Kavya Agarwal,9.0,84350.2,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-0180,Simran Sharma,11.0,82238.5,0.043,"Revenue above IQR fence (INR 80,607)"
+CUST-0195,Rakesh Kapoor,24.0,133819.7,0.095,"Revenue above IQR fence (INR 80,607)"
+CUST-0223,Aditya Chatterjee,27.0,251996.6,0.073,"Revenue above IQR fence (INR 80,607)"
+CUST-0285,Ishaan Verma,20.0,113319.5,0.032,"Revenue above IQR fence (INR 80,607)"
+CUST-0290,Siddharth Roy,10.0,95785.1,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-0314,Arnab Rao,24.0,108733.85,0.026,"Revenue above IQR fence (INR 80,607)"
+CUST-0317,Rahul Sethi,20.0,123537.75,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-0319,Sandeep Pandey,20.0,130782.65,0.139,"Revenue above IQR fence (INR 80,607)"
+CUST-0325,Sakshi Das,26.0,209683.15,0.026,"Revenue above IQR fence (INR 80,607)"
+CUST-0332,Radhika Iyer,12.0,157453.15,0.087,"Revenue above IQR fence (INR 80,607)"
+CUST-0342,Sneha Verma,27.0,168837.4,0.045,"Revenue above IQR fence (INR 80,607)"
+CUST-0345,Nitin Joshi,5.0,134737.95,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-0349,Nandini Shah,25.0,240636.3,0.024,"Revenue above IQR fence (INR 80,607)"
+CUST-0356,Neha Iyer,12.0,82961.8,0.059,"Revenue above IQR fence (INR 80,607)"
+CUST-0357,Mohit Kapoor,21.0,193665.45,0.045,"Revenue above IQR fence (INR 80,607)"
+CUST-0372,Abhishek Qureshi,18.0,81450.15,0.062,"Revenue above IQR fence (INR 80,607)"
+CUST-0389,Ishita Banerjee,14.0,97035.0,0.087,"Revenue above IQR fence (INR 80,607)"
+CUST-0394,Divyashree Rao,15.0,90987.5,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-0395,Rakesh Khanna,11.0,83354.5,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-0416,Aarav Mehta,23.0,204275.8,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-0428,Pooja Singh,23.0,99490.0,0.028,"Revenue above IQR fence (INR 80,607)"
+CUST-0431,Aarav Hazarika,23.0,133430.55,0.024,"Revenue above IQR fence (INR 80,607)"
+CUST-0441,Ishaan Singh,28.0,110666.8,0.024,"Revenue above IQR fence (INR 80,607)"
+CUST-0445,Ritwik Khan,22.0,97987.9,0.031,"Revenue above IQR fence (INR 80,607)"
+CUST-0446,Sakshi Gupta,18.0,138627.25,0.029,"Revenue above IQR fence (INR 80,607)"
+CUST-0469,Suresh Menon,27.0,153211.35,0.085,"Revenue above IQR fence (INR 80,607)"
+CUST-0471,Rohan Desai,23.0,145269.45,0.043,"Revenue above IQR fence (INR 80,607)"
+CUST-0473,Vikram Gill,28.0,208319.2,0.065,"Revenue above IQR fence (INR 80,607)"
+CUST-0475,Arjun Khanna,14.0,84509.2,0.034,"Revenue above IQR fence (INR 80,607)"
+CUST-0505,Mary Bose,14.0,93970.9,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-0529,Gurpreet Qureshi,26.0,109960.4,0.028,"Revenue above IQR fence (INR 80,607)"
+CUST-0532,Sandeep Kulkarni,24.0,220760.4,0.188,"Revenue above IQR fence (INR 80,607)"
+CUST-0537,Karan Chauhan,14.0,109335.95,0.105,"Revenue above IQR fence (INR 80,607)"
+CUST-0543,Kavya Bose,22.0,178130.25,0.085,"Revenue above IQR fence (INR 80,607)"
+CUST-0545,Tanvi Krishnan,18.0,107541.65,0.03,"Revenue above IQR fence (INR 80,607)"
+CUST-0569,Zoya Yadav,23.0,253954.8,0.05,"Revenue above IQR fence (INR 80,607)"
+CUST-0572,Sandeep Panda,12.0,95579.25,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-0575,Aishwarya Bhatia,20.0,249756.7,0.049,"Revenue above IQR fence (INR 80,607)"
+CUST-0597,Shreya Gill,11.0,87311.45,0.071,"Revenue above IQR fence (INR 80,607)"
+CUST-0604,Yash Tiwari,6.0,100705.2,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-0606,Deepak Roy,22.0,122149.5,0.031,"Revenue above IQR fence (INR 80,607)"
+CUST-0608,Rimjhim Patil,21.0,110030.0,0.054,"Revenue above IQR fence (INR 80,607)"
+CUST-0615,Vivaan D'Souza,22.0,107034.95,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-0627,Pooja Sethi,22.0,160565.6,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-0634,Varun Shah,21.0,115000.1,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-0641,Diya Malhotra,16.0,98247.75,0.075,"Revenue above IQR fence (INR 80,607)"
+CUST-0642,Ananya Ghosh,13.0,114875.5,0.062,"Revenue above IQR fence (INR 80,607)"
+CUST-0652,Kunal Desai,7.0,111193.25,0.111,"Revenue above IQR fence (INR 80,607)"
+CUST-0667,Sakshi Gill,26.0,127320.25,0.02,"Revenue above IQR fence (INR 80,607)"
+CUST-0669,Madhuri Sen,16.0,314818.65,0.03,"Revenue above IQR fence (INR 80,607)"
+CUST-0691,Abhishek Desai,28.0,168046.05,0.044,"Revenue above IQR fence (INR 80,607)"
+CUST-0698,Rajesh Patel,10.0,84529.15,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-0699,Tanmay Saikia,24.0,188579.25,0.024,"Revenue above IQR fence (INR 80,607)"
+CUST-0712,Farhan Mishra,3.0,109688.0,0.25,"Revenue above IQR fence (INR 80,607)"
+CUST-0745,Abhishek Roy,23.0,96080.7,0.056,"Revenue above IQR fence (INR 80,607)"
+CUST-0750,Imran Chauhan,22.0,116803.95,0.075,"Revenue above IQR fence (INR 80,607)"
+CUST-0760,Vivaan Iyer,11.0,118651.0,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-0765,Vaishnavi Khanna,1.0,85064.7,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-0782,Tanya Patil,17.0,130970.3,0.062,"Revenue above IQR fence (INR 80,607)"
+CUST-0808,Prakash Kulkarni,25.0,96233.55,0.049,"Revenue above IQR fence (INR 80,607)"
+CUST-0813,Rakesh D'Souza,21.0,153055.65,0.083,"Revenue above IQR fence (INR 80,607)"
+CUST-0814,Tanmay Krishnan,18.0,115567.4,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-0821,Vaishnavi Agarwal,12.0,120082.95,0.105,"Revenue above IQR fence (INR 80,607)"
+CUST-0836,Moumita Iyer,27.0,130408.35,0.087,"Revenue above IQR fence (INR 80,607)"
+CUST-0840,Sai Panda,25.0,163469.6,0.048,"Revenue above IQR fence (INR 80,607)"
+CUST-0841,Rohan Kumar,19.0,104120.65,0.107,"Revenue above IQR fence (INR 80,607)"
+CUST-0855,Moumita Sharma,5.0,104118.4,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-0865,Rohan Bhatia,18.0,116270.7,0.125,"Revenue above IQR fence (INR 80,607)"
+CUST-0876,Vaishnavi Hazarika,23.0,93788.35,0.024,"Revenue above IQR fence (INR 80,607)"
+CUST-0885,Moumita Sharma,19.0,120046.7,0.083,"Revenue above IQR fence (INR 80,607)"
+CUST-0895,Zoya D'Souza,25.0,149346.05,0.024,"Revenue above IQR fence (INR 80,607)"
+CUST-0908,Aditya Malhotra,26.0,307090.05,0.023,"Revenue above IQR fence (INR 80,607)"
+CUST-0916,Divya Dutta,26.0,168910.2,0.047,"Revenue above IQR fence (INR 80,607)"
+CUST-0924,Sayani Bose,13.0,84450.7,0.095,"Revenue above IQR fence (INR 80,607)"
+CUST-0941,Arnab Panda,27.0,263670.35,0.091,"Revenue above IQR fence (INR 80,607)"
+CUST-0958,Ritwik Bhatia,4.0,90650.45,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-0966,Karthik Verma,10.0,90605.95,0.059,"Revenue above IQR fence (INR 80,607)"
+CUST-0990,Imran Hazarika,25.0,181105.25,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-0997,Arnab Panda,3.0,87909.55,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-1003,Diya Panda,14.0,190249.05,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-1014,Suresh Mishra,19.0,154350.35,0.026,"Revenue above IQR fence (INR 80,607)"
+CUST-1039,Rakesh Sharma,7.0,83259.9,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-1044,Gurpreet Saikia,29.0,258231.3,0.047,"Revenue above IQR fence (INR 80,607)"
+CUST-1050,Urvashi Rao,24.0,208274.05,0.054,"Revenue above IQR fence (INR 80,607)"
+CUST-1054,Lakshmi Khanna,24.0,118032.05,0.091,"Revenue above IQR fence (INR 80,607)"
+CUST-1079,Pranav Sharma,13.0,103745.1,0.048,"Revenue above IQR fence (INR 80,607)"
+CUST-1096,Pallavi Singh,22.0,223567.95,0.03,"Revenue above IQR fence (INR 80,607)"
+CUST-1098,Aditya Banerjee,14.0,89885.75,0.042,"Revenue above IQR fence (INR 80,607)"
+CUST-1104,Shreya Krishnan,9.0,84203.65,0.056,"Revenue above IQR fence (INR 80,607)"
+CUST-1127,Rohan Kulkarni,9.0,87410.9,0.059,"Revenue above IQR fence (INR 80,607)"
+CUST-1128,Fatima Pillai,27.0,417800.45,0.038,"Revenue above IQR fence (INR 80,607)"
+CUST-1137,Aarav Sethi,13.0,89884.75,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-1150,Nisha Chauhan,14.0,97277.85,0.048,"Revenue above IQR fence (INR 80,607)"
+CUST-1172,Nikhil Rao,25.0,272866.6,0.058,"Revenue above IQR fence (INR 80,607)"
+CUST-1173,Lakshmi Banerjee,12.0,104314.0,0.05,"Revenue above IQR fence (INR 80,607)"
+CUST-1186,Bhavna Sethi,11.0,200635.4,0.133,"Revenue above IQR fence (INR 80,607)"
+CUST-1208,Tanmay Desai,23.0,110678.95,0.053,"Revenue above IQR fence (INR 80,607)"
+CUST-1209,Pranav Sethi,7.0,96571.15,0.077,"Revenue above IQR fence (INR 80,607)"
+CUST-1228,Simran Yadav,14.0,91606.0,0.045,"Revenue above IQR fence (INR 80,607)"
+CUST-1230,Sayani Saikia,12.0,152444.5,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-1231,Omkar Verma,24.0,139058.4,0.081,"Revenue above IQR fence (INR 80,607)"
+CUST-1236,Arnab Menon,22.0,129593.35,0.171,"Revenue above IQR fence (INR 80,607)"
+CUST-1240,Ananya Fernandes,21.0,93148.75,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-1247,Manish Chauhan,11.0,132434.9,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-1249,Arjun Yadav,28.0,151511.8,0.05,"Revenue above IQR fence (INR 80,607)"
+CUST-1254,Aniket Sharma,21.0,254834.65,0.029,"Revenue above IQR fence (INR 80,607)"
+CUST-1255,Ankita Rathore,12.0,82746.75,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-1271,Sanjay Gupta,15.0,89681.7,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-1291,Tushar Mishra,19.0,82427.3,0.125,"Revenue above IQR fence (INR 80,607)"
+CUST-1309,Ishaan Sen,24.0,228862.95,0.024,"Revenue above IQR fence (INR 80,607)"
+CUST-1320,Rahul Roy,5.0,84805.55,0.167,"Revenue above IQR fence (INR 80,607)"
+CUST-1343,Rahul Reddy,9.0,106972.4,0.056,"Revenue above IQR fence (INR 80,607)"
+CUST-1345,Sanjay Verma,13.0,84719.5,0.05,"Revenue above IQR fence (INR 80,607)"
+CUST-1354,Neha Mehta,27.0,119739.9,0.043,"Revenue above IQR fence (INR 80,607)"
+CUST-1375,Sayani Nair,19.0,97881.05,0.088,"Revenue above IQR fence (INR 80,607)"
+CUST-1416,Moumita Chauhan,22.0,255399.2,0.057,"Revenue above IQR fence (INR 80,607)"
+CUST-1441,Urvashi Roy,21.0,150476.8,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-1465,Jasleen D'Souza,21.0,172352.0,0.075,"Revenue above IQR fence (INR 80,607)"
+CUST-1484,Imran Mukherjee,8.0,88452.2,0.111,"Revenue above IQR fence (INR 80,607)"
+CUST-1489,Yash Iyer,28.0,255128.0,0.043,"Revenue above IQR fence (INR 80,607)"
+CUST-1498,Vignesh Saikia,8.0,125764.5,0.062,"Revenue above IQR fence (INR 80,607)"
+CUST-1501,Arjun Das,26.0,131999.1,0.075,"Revenue above IQR fence (INR 80,607)"
+CUST-1522,Neha Mishra,4.0,80789.75,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-1527,Subhajit Menon,28.0,223486.5,0.045,"Revenue above IQR fence (INR 80,607)"
+CUST-1532,Karan Naidu,22.0,151894.0,0.098,"Revenue above IQR fence (INR 80,607)"
+CUST-1542,Arnab Iyengar,10.0,129498.75,0.059,"Revenue above IQR fence (INR 80,607)"
+CUST-1549,Kritika Joshi,15.0,181647.3,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-1598,Shreya Gupta,14.0,129572.3,0.042,"Revenue above IQR fence (INR 80,607)"
+CUST-1610,Deepika Ahmed,28.0,119368.85,0.05,"Revenue above IQR fence (INR 80,607)"
+CUST-1616,Aarav Sen,23.0,146221.6,0.049,"Revenue above IQR fence (INR 80,607)"
+CUST-1619,Swati Kulkarni,27.0,188494.9,0.146,"Revenue above IQR fence (INR 80,607)"
+CUST-1652,Divya Malhotra,5.0,112684.15,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-1655,Tushar Nair,18.0,155182.2,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-1663,Suresh Kulkarni,22.0,165669.4,0.051,"Revenue above IQR fence (INR 80,607)"
+CUST-1703,Karthik Khan,12.0,103538.6,0.111,"Revenue above IQR fence (INR 80,607)"
+CUST-1708,Karthik Pillai,27.0,236155.2,0.085,"Revenue above IQR fence (INR 80,607)"
+CUST-1716,Sayani Krishnan,14.0,85750.2,0.192,"Revenue above IQR fence (INR 80,607)"
+CUST-1724,Sandeep Gill,28.0,400151.7,0.022,"Revenue above IQR fence (INR 80,607)"
+CUST-1729,Mary Chatterjee,9.0,99866.15,0.111,"Revenue above IQR fence (INR 80,607)"
+CUST-1736,Vikram Deshpande,8.0,92051.55,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-1756,Sourav Patel,4.0,82314.2,0.2,"Revenue above IQR fence (INR 80,607)"
+CUST-1759,Simran Reddy,9.0,83187.7,0.077,"Revenue above IQR fence (INR 80,607)"
+CUST-1760,Suresh Malhotra,13.0,84169.8,0.08,"Revenue above IQR fence (INR 80,607)"
+CUST-1765,Harpreet Tiwari,6.0,87389.25,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-1772,Nitin Hazarika,12.0,95846.5,0.059,"Revenue above IQR fence (INR 80,607)"
+CUST-1776,Sandeep Deshpande,21.0,116183.15,0.071,"Revenue above IQR fence (INR 80,607)"
+CUST-1794,Amit Patel,18.0,245162.85,0.034,"Revenue above IQR fence (INR 80,607)"
+CUST-1804,Deepak Gupta,19.0,140442.4,0.086,"Revenue above IQR fence (INR 80,607)"
+CUST-1817,Rimjhim Singh,19.0,169429.6,0.097,"Revenue above IQR fence (INR 80,607)"
+CUST-1822,Nitin Sandhu,13.0,127187.05,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-1825,Sakshi Pillai,7.0,105965.8,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-1831,Deepika Mehta,22.0,232868.75,0.2,"Revenue above IQR fence (INR 80,607)"
+CUST-1839,Ishita Yadav,26.0,179794.45,0.116,"Revenue above IQR fence (INR 80,607)"
+CUST-1846,Vivaan Fernandes,26.0,231034.2,0.049,"Revenue above IQR fence (INR 80,607)"
+CUST-1857,Diya Kulkarni,22.0,168125.25,0.143,"Revenue above IQR fence (INR 80,607)"
+CUST-1877,Karthik Kulkarni,12.0,100163.0,0.053,"Revenue above IQR fence (INR 80,607)"
+CUST-1892,Farhan D'Souza,13.0,115961.05,0.048,"Revenue above IQR fence (INR 80,607)"
+CUST-1894,Deepika Sandhu,14.0,130400.15,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-1899,Sandeep Pillai,17.0,177275.5,0.062,"Revenue above IQR fence (INR 80,607)"
+CUST-1911,Ananya Mohanty,18.0,97095.2,0.067,"Revenue above IQR fence (INR 80,607)"
+CUST-1918,Pallavi Krishnan,25.0,135257.2,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-1923,Nandini Ahmed,28.0,132315.7,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-1931,Sneha Mukherjee,12.0,107123.05,0.048,"Revenue above IQR fence (INR 80,607)"
+CUST-1960,Anjali Kulkarni,8.0,127023.8,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-1964,Sneha Roy,13.0,154794.3,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-1969,Urvashi Khanna,25.0,261877.0,0.045,"Revenue above IQR fence (INR 80,607)"
+CUST-1973,Divyashree Agarwal,14.0,146145.95,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-1975,Manish Shah,18.0,158453.5,0.083,"Revenue above IQR fence (INR 80,607)"
+CUST-1977,Neha Khanna,19.0,181897.75,0.093,"Revenue above IQR fence (INR 80,607)"
+CUST-1980,Subhajit Iyengar,28.0,229505.4,0.0,"Revenue above IQR fence (INR 80,607)"
+CUST-0038,Vaishnavi Chatterjee,0.0,0.0,1.0,No delivered order (all cancelled/returned)
+CUST-0193,Rohan Naidu,0.0,0.0,0.0,No delivered order (all cancelled/returned)
+CUST-0272,Gurpreet D'Souza,0.0,0.0,0.333,No delivered order (all cancelled/returned)
+CUST-0666,Tanmay Menon,0.0,0.0,1.0,No delivered order (all cancelled/returned)
+CUST-0772,Mary Shah,0.0,0.0,0.0,No delivered order (all cancelled/returned)
+CUST-0791,Varun Banerjee,0.0,0.0,1.0,No delivered order (all cancelled/returned)
+CUST-0934,Rimjhim Reddy,0.0,0.0,0.0,No delivered order (all cancelled/returned)
+CUST-1101,Harpreet Rathore,0.0,0.0,0.0,No delivered order (all cancelled/returned)
+CUST-1138,Vikram Qureshi,0.0,0.0,1.0,No delivered order (all cancelled/returned)
+CUST-1221,Bhavna Banerjee,0.0,0.0,0.0,No delivered order (all cancelled/returned)
+CUST-1392,Tushar Krishnan,0.0,0.0,1.0,No delivered order (all cancelled/returned)
+CUST-1433,Amit Bose,0.0,0.0,1.0,No delivered order (all cancelled/returned)
+CUST-1474,Kunal Yadav,0.0,0.0,0.0,No delivered order (all cancelled/returned)
+CUST-1809,Sneha Joshi,0.0,0.0,0.0,No delivered order (all cancelled/returned)
+CUST-1850,Subhajit Shah,0.0,0.0,1.0,No delivered order (all cancelled/returned)
+CUST-1966,Ananya Sandhu,0.0,0.0,1.0,No delivered order (all cancelled/returned)
+CUST-0038,Vaishnavi Chatterjee,0.0,0.0,1.0,Return rate >= 50%
+CUST-0053,Deepika Chauhan,1.0,1024.1,0.5,Return rate >= 50%
+CUST-0107,Karthik Ghosh,1.0,2269.0,0.5,Return rate >= 50%
+CUST-0122,Riya Mukherjee,1.0,2935.05,0.5,Return rate >= 50%
+CUST-0173,Aishwarya Agarwal,2.0,3716.25,0.6,Return rate >= 50%
+CUST-0207,Siddharth Sen,1.0,2056.8,0.5,Return rate >= 50%
+CUST-0262,Joseph Sharma,2.0,5509.4,0.5,Return rate >= 50%
+CUST-0510,Kunal Kapoor,1.0,1235.7,0.5,Return rate >= 50%
+CUST-0561,Rimjhim Hazarika,1.0,515.95,0.5,Return rate >= 50%
+CUST-0643,Zoya Shah,1.0,991.1,0.5,Return rate >= 50%
+CUST-0666,Tanmay Menon,0.0,0.0,1.0,Return rate >= 50%
+CUST-0677,Moumita Gill,1.0,1195.1,0.5,Return rate >= 50%
+CUST-0720,Priya Kapoor,1.0,1393.0,0.5,Return rate >= 50%
+CUST-0741,Karan Qureshi,1.0,2653.2,0.667,Return rate >= 50%
+CUST-0791,Varun Banerjee,0.0,0.0,1.0,Return rate >= 50%
+CUST-0820,Vignesh Sethi,1.0,388.0,0.5,Return rate >= 50%
+CUST-0822,Fatima Bose,1.0,1877.4,0.5,Return rate >= 50%
+CUST-0907,Anjali Rao,1.0,5149.5,0.5,Return rate >= 50%
+CUST-0923,Ritwik Patil,1.0,8404.8,0.5,Return rate >= 50%
+CUST-1081,Madhuri Mehta,1.0,2636.0,0.75,Return rate >= 50%
+CUST-1135,Subhajit Patil,1.0,610.5,0.5,Return rate >= 50%
+CUST-1138,Vikram Qureshi,0.0,0.0,1.0,Return rate >= 50%
+CUST-1166,Shreya Ghosh,2.0,3721.3,0.5,Return rate >= 50%
+CUST-1182,Aniket Kapoor,1.0,2195.2,0.5,Return rate >= 50%
+CUST-1237,Gaurav Gill,1.0,1237.6,0.5,Return rate >= 50%
+CUST-1334,Aniket Nair,1.0,826.0,0.5,Return rate >= 50%
+CUST-1378,Abhishek Mohanty,2.0,2040.0,0.5,Return rate >= 50%
+CUST-1384,Trisha Fernandes,2.0,2017.8,0.5,Return rate >= 50%
+CUST-1386,Nitin Verma,1.0,1977.0,0.5,Return rate >= 50%
+CUST-1392,Tushar Krishnan,0.0,0.0,1.0,Return rate >= 50%
+CUST-1396,Sai Tiwari,1.0,1609.3,0.5,Return rate >= 50%
+CUST-1433,Amit Bose,0.0,0.0,1.0,Return rate >= 50%
+CUST-1533,Zoya Sandhu,1.0,1309.0,0.667,Return rate >= 50%
+CUST-1563,Urvashi Panda,1.0,4046.0,0.5,Return rate >= 50%
+CUST-1743,Arnab Rathore,1.0,377.25,0.5,Return rate >= 50%
+CUST-1816,Tanya Deshpande,1.0,5944.55,0.5,Return rate >= 50%
+CUST-1850,Subhajit Shah,0.0,0.0,1.0,Return rate >= 50%
+CUST-1861,Vivaan Khan,1.0,448.4,0.5,Return rate >= 50%
+CUST-1907,Pallavi Patil,1.0,237.75,0.667,Return rate >= 50%
+CUST-1936,Rahul Patil,1.0,8831.25,0.5,Return rate >= 50%
+CUST-1966,Ananya Sandhu,0.0,0.0,1.0,Return rate >= 50%

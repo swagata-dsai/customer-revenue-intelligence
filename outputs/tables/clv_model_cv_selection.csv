@@ -1,0 +1,4 @@
+﻿Model,CV_RMSE,CV_RMSE_Std,CV_MAE,CV_R2,Selected
+Ridge regression (baseline),3792.5049,340.6124,2537.7485,0.1908,False
+Random forest,3696.6782,254.2664,2414.0399,0.2243,True
+Gradient boosting,3765.6118,270.3304,2450.523,0.1897,False

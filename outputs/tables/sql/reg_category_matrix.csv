@@ -1,0 +1,31 @@
+﻿region,category,revenue,profit_margin_pct,pct_of_region_revenue,rank_in_region
+Central,Electronics,3514393.3,12.16,46.04,1
+Central,Fashion,1606237.85,42.94,21.04,2
+Central,Home & Kitchen,1472601.15,30.55,19.29,3
+Central,Beauty,471559.05,45.63,6.18,4
+Central,Sports,349316.75,23.84,4.58,5
+Central,Books,219564.35,28.5,2.88,6
+East,Electronics,3564106.65,11.98,47.91,1
+East,Fashion,1625251.9,43.35,21.85,2
+East,Home & Kitchen,1251292.45,28.12,16.82,3
+East,Beauty,455935.4,47.32,6.13,4
+East,Sports,402869.8,25.83,5.42,5
+East,Books,139742.95,28.6,1.88,6
+North,Electronics,7421476.6,10.02,51.54,1
+North,Fashion,2582836.0,42.15,17.94,2
+North,Home & Kitchen,2509745.25,27.99,17.43,3
+North,Sports,832810.35,25.01,5.78,4
+North,Beauty,804612.4,46.84,5.59,5
+North,Books,249132.75,28.49,1.73,6
+South,Electronics,8400533.35,10.51,51.77,1
+South,Fashion,3176625.65,42.84,19.58,2
+South,Home & Kitchen,2762152.2,28.23,17.02,3
+South,Beauty,865676.8,46.15,5.34,4
+South,Sports,734635.0,26.24,4.53,5
+South,Books,286315.4,29.43,1.76,6
+West,Electronics,7190142.65,10.92,50.08,1
+West,Fashion,3066789.6,42.83,21.36,2
+West,Home & Kitchen,2381591.75,26.97,16.59,3
+West,Beauty,804179.8,46.53,5.6,4
+West,Sports,672116.5,26.24,4.68,5
+West,Books,242325.5,28.39,1.69,6

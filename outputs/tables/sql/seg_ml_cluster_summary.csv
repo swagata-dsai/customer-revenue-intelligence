@@ -1,0 +1,5 @@
+﻿cluster_id,cluster_label,customer_count,customer_pct,revenue,profit,profit_margin_pct,revenue_contribution_pct,revenue_per_customer
+0,"High-Value, Active",364,18.35,33433867.35,7410971.15,22.17,55.67,91851.28
+1,"Low-Value, Active",453,22.83,3016273.3,954476.26,31.64,5.02,6658.44
+2,"Mid-Value, Lapsing",753,37.95,21256257.95,4987670.74,23.46,35.39,28228.76
+3,"Low-Value, Inactive",414,20.87,2350170.55,669433.43,28.48,3.91,5676.74

@@ -1,0 +1,5 @@
+﻿Scenario,Change_Applied,Total_Predicted_Revenue,Change_vs_Current_%,Rows_Outside_Training_Range_%,Label
+Current (actual test features),none,13037238.4084,0.0,0.0,"Model-based scenario (association, not a guaranteed outcome)"
+Purchase frequency +10%,"orders (12m, 3m) and recent revenue history x 1.10 (AOV unchanged)",13759950.4559,5.5434,0.2746,"Model-based scenario (association, not a guaranteed outcome)"
+Average order value +10%,"AOV, unit price and recent revenue history x 1.10 (orders unchanged)",13111938.4848,0.573,0.0343,"Model-based scenario (association, not a guaranteed outcome)"
+Average discount -2 percentage points,Avg_Discount_12M - 0.02 (floored at 0); nothing else,13208639.9701,1.3147,0.0,"Model-based scenario (association, not a guaranteed outcome)"

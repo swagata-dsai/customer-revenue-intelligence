@@ -1,0 +1,16 @@
+﻿Check,Value,Pass
+Dataset is the Step 3 cleaned file,customer_sales_cleaned.csv,True
+No duplicate Order_Line_ID (no double counting),0,True
+Order_Date parsed as datetime,datetime64[us],True
+Dates within 2023-01-01 .. 2025-12-31,2023-01-01 .. 2025-12-31,True
+"Only Delivered lines in revenue (Revenue column = Sales for Delivered, 0 otherwise)",₹0,True
+Monthly revenue sums to total revenue,₹6.01 Cr,True
+Category revenue sums to total revenue,₹6.01 Cr,True
+Product revenue sums to total revenue,₹6.01 Cr,True
+Region revenue sums to total revenue,₹6.01 Cr,True
+Customer-level revenue sums to total revenue,₹6.01 Cr,True
+Customer-level orders sum to order count,12212,True
+Profit = Revenue - Cost at total level,₹1.40 Cr,True
+Every line passes Sales and Profit formula checks,0,True
+Status analysis reconciles to gross booked sales,₹6.63 Cr,True
+Outliers kept (rows = Step 3 cleaned rows),18670,True

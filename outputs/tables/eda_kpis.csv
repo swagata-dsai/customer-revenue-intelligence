@@ -1,0 +1,16 @@
+﻿KPI,Value,Display,Formula
+Total Revenue,60056569.15,₹6.01 Cr,"Sum of Sales, Delivered lines"
+Total Cost,46034017.57,₹4.60 Cr,"Sum of Cost, Delivered lines"
+Total Profit,14022551.58,₹1.40 Cr,"Sum of Profit, Delivered lines"
+Overall Profit Margin,0.2334890550436979,23.3%,Total Profit / Total Revenue
+Total Quantity Sold,22772.0,"22,772 units","Sum of Quantity, Delivered lines"
+Number of Orders,12212.0,"12,212",Distinct Order_ID with >= 1 Delivered line
+Purchasing Customers,1984.0,"1,984",Distinct Customer_ID with >= 1 Delivered line
+Average Order Value (AOV),4917.832390271864,"₹4,918",Total Revenue / Number of Orders
+Average Revenue per Customer,30270.448160282256,"₹30,270",Total Revenue / Purchasing Customers
+Average Profit per Order,1148.2600376678677,"₹1,148",Total Profit / Number of Orders
+Average Quantity per Order,1.8647232230592858,1.86 units,Total Quantity / Number of Orders
+Average Orders per Customer,6.155241935483871,6.16,Number of Orders / Purchasing Customers
+Gross Booked Sales (all statuses),66312002.349999994,₹6.63 Cr,"Sum of Sales, all lines"
+Revenue Lost to Cancellations & Returns,6255433.1999999955,₹62.55 L,Gross Booked Sales - Total Revenue
+Share of Booked Sales Not Realised,0.09433334808657001,9.4%,1 - Total Revenue / Gross Booked Sales

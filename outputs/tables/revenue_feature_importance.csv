@@ -1,0 +1,25 @@
+﻿Feature,Group,Permutation_MAE_Increase,Permutation_Std,Impurity_Importance,Rank
+Orders_12M,Customer history,236.4471,17.2379,,1
+Main_Category,Product,41.4308,7.1709,,2
+Share_Books,Product,40.7484,8.5257,,3
+AOV_12M,Customer history,18.9557,2.9653,,4
+Categories_12M,Product,12.5682,3.6319,,5
+Acquisition_Status,Customer history,8.8211,3.1986,,6
+Profit_Margin_12M,Customer history,5.6195,2.7584,,7
+Share_Home_Kitchen,Product,5.4282,1.9454,,8
+Share_Sports,Product,4.9395,1.6142,,9
+Avg_Discount_12M,Customer history,4.4856,1.9627,,10
+Main_Payment_Method,Customer history,4.4149,3.2788,,11
+Recency_Days,Customer history,3.8368,0.829,,12
+Share_Beauty,Product,3.3613,0.5552,,13
+Tenure_Days_Capped,Customer history,2.0368,3.3832,,14
+Return_Rate_12M,Customer history,1.2335,2.5817,,15
+Region,Regional,1.1872,4.1046,,16
+Rev_Same_Quarter_Last_Year,Customer history,-0.0552,0.0883,,17
+Main_Category_Trend,Product,-0.0987,0.1558,,18
+Region_Rev_Trend,Regional,-0.1991,0.2399,,19
+Avg_Unit_Price_12M,Product,-0.2676,0.8625,,20
+Product_Demand_Index,Product,-2.4907,0.964,,21
+Rev_3M,Customer history,-3.3733,0.6419,,22
+Orders_3M,Customer history,-5.5235,3.6189,,23
+Target_Quarter,Time / company,-12.5314,12.7737,,24

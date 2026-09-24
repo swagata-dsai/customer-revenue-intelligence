@@ -1,0 +1,9 @@
+﻿Check,Value,Meaning
+Order lines (rows),18670,One row = one product in one order
+Duplicate Order_Line_ID,0,Must be 0 - no double counting
+Distinct Order_ID,13251,Candidate order count
+"Distinct (Customer, Date) pairs",13251,Equals Order_ID count -> one checkout per customer per day
+Order_IDs with >1 customer / date / payment,0,Must be 0 - Order_ID is a single checkout
+Orders with >1 line (multi-product),4214,Why rows != orders
+Orders with >= 1 Delivered line,12212,Order count used for AOV and order KPIs
+Orders with no Delivered line,1039,Fully cancelled / returned - excluded from realised KPIs

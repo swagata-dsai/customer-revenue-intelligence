@@ -1,0 +1,12 @@
+﻿Metric,Value
+Selected K,4
+Inertia (within-cluster sum of squares),1780.25
+Inertia with n_init=10 (check),1779.84
+Silhouette score,0.3534
+Calinski-Harabasz score,1546.6
+Davies-Bouldin score,0.951
+"Seed stability (mean ARI, 10 seeds)",0.95
+Smallest cluster share,0.1835
+Customers with negative silhouette,40
+PC1 + PC2 explained variance (%),95.09
+scikit-learn version,1.8.0

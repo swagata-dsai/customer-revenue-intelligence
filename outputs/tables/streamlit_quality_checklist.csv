@@ -1,0 +1,28 @@
+Checklist_Item,Status,Evidence
+app.py created,Done,"Entry point with page config, theme, header, st.navigation routing and footer."
+Application launches successfully,Verified,`streamlit run app.py` served HTTP 200 and /_stcore/health = ok; AppTest runs it with 0 exceptions.
+Futuristic professional UI created,Done,"Dark glassmorphism theme (assets/css/style.css + .streamlit/config.toml): faint data-grid background, gradient header, rounded KPI cards, subtle shadows, pulse status dot."
+Home page created,Done,"pages/home.py - animated DATA → INSIGHT → PREDICTION → DECISION pipeline, six live stat cards, trend chart, page directory."
+Executive Overview created,Done,"pages/executive.py - 6 KPI cards, revenue/profit trend, category, region, segment contribution."
+Revenue Intelligence created,Done,"pages/revenue.py - growth, margin, sub-categories, discount vs margin, drivers from the Step 10 SQL findings."
+Customer Intelligence created,Done,"pages/customers.py - distributions, Pareto, top customers, per-customer lookup."
+Customer Segmentation created,Done,"pages/segmentation.py - RFM, K-Means, PCA scatter, RFM-vs-K-Means comparison."
+Product Analytics created,Done,"pages/products.py - category and product performance, revenue-vs-profit scatter, sortable matrix."
+Regional Analytics created,Done,pages/regional.py - ranked bars and a region x category matrix; no map forced on insufficient geography.
+Revenue Prediction created,Done,"pages/prediction.py - Step 8 model info, real metrics, error analysis, model-backed what-if tool."
+Sales Forecast created,Done,"pages/forecasting.py - historical + back-forecast + forecast with 80%/95% intervals, accuracy, CSV download."
+Business Recommendations created,Done,"pages/recommendations.py - 18 cards, Finding → Implication → Action, each naming its source."
+Data Explorer created,Done,"pages/data_explorer.py - project tables and CSV upload, profiling, quality scorecard, downloads."
+About page created,Done,"pages/about.py - objective, methodology, stack, models, limitations, document index."
+KPI cards implemented,Done,Reusable create_kpi_card() / kpi_row() in src/dashboard_utils.py; used on every page.
+Plotly charts implemented,Done,"All charts are Plotly with hover, zoom, pan, legend toggling and PNG export; one shared dark template."
+Filters implemented,Done,"sales_filters() gives date, region, category, sub-category and segment filters, keyed per page so one page's filters never move another's."
+Model loading implemented,Done,load_models() loads all 7 saved artefacts with per-model status; the what-if tool calls the saved Step 8 pipeline directly.
+Error handling implemented,Verified,"Missing model, missing data file, unparseable upload and empty selections all tested by breaking them - readable messages, no stack traces."
+CSV upload/download implemented,Verified,"Upload profiled end-to-end in the test suite; download buttons on the forecast table, product matrix, segment matrix, regional table, recommendations and both explorer tabs."
+Caching implemented where appropriate,Verified,"@st.cache_data for data, @st.cache_resource for models and the DB connection; rerun 0.23s vs 1.54s cold. A sidebar button clears both."
+Requirements updated,Done,"requirements.txt lists only what the project uses, with streamlit>=1.36 (st.navigation)."
+Application tested,Verified,"40 headless checks, all passing, plus a live server run captured page by page."
+Testing report created,Done,"outputs/reports/streamlit_testing_report.md, generated from the actual results."
+README updated,Done,"Streamlit section: purpose, features, pages, install, run, required files, model dependencies."
+No fabricated results,Verified,Every KPI and metric is read from the project's outputs at page load; test asserts the validated totals appear; MAPE is withheld where undefined; a missing model disables its feature instead of substituting one.

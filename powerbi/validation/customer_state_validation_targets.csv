@@ -1,0 +1,13 @@
+Measure,Definition,Value,Power_BI_Value
+Registered Customers,Row count of DimCustomer,2000.0,
+Customers with a delivered order,DimCustomer[Has_Delivered_Order] = 1,1984.0,
+Active Customers (< 180 days at 2026-01-01),DimCustomer[Recency_Days] < 180,1288.0,
+Inactive 180+ days,DimCustomer[Recency_Days] >= 180,696.0,
+Inactive 365+ days,DimCustomer[Recency_Days] >= 365,268.0,
+Repeat Customers (2+ delivered orders),DimCustomer[Frequency_Orders] >= 2,1774.0,
+Single-purchase Customers,DimCustomer[Frequency_Orders] = 1,210.0,
+Potentially at-risk high-value customers,DimCustomer[Potentially_At_Risk_High_Value] = 1,52.0,
+Avg Recency (days),AVERAGE(DimCustomer[Recency_Days]),209.2893,
+Avg Frequency (orders),AVERAGE(DimCustomer[Frequency_Orders]),6.1552,
+Avg Monetary (INR),AVERAGE(DimCustomer[Monetary_Revenue]),30270.4482,
+Total Estimated 12M Future Profit,SUM(DimCustomer[Estimated_12M_Future_Profit]),7397326.55,

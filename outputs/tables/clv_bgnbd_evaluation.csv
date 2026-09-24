@@ -1,0 +1,13 @@
+﻿Item,Result
+Calibration period,2023-01-01 to 2024-12-31
+Hold-out period,2025-01-01 to 2025-12-31
+Customers in calibration,"1,635"
+"Fitted parameters (r, alpha, a, b)","1.866, 32.10, 0.0817, 0.854"
+Optimiser converged,True
+Hold-out orders: predicted vs actual,"4,022 vs 4,575 (87.9% of actual)"
+Hold-out orders per customer: MAE,1.54
+Hold-out orders per customer: R²,0.381
+Hold-out orders: Spearman rank correlation,0.611
+"Gamma-Gamma check: Pearson r(frequency, avg order value), repeat customers","0.225 (p = 1.2e-16, n = 1,321)"
+Gamma-Gamma check: Spearman rho,0.394 (p = 2.3e-50)
+Gamma-Gamma usable?,No - absolute correlation > 0.1: frequency and spend are NOT independent

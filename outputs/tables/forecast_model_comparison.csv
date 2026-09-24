@@ -1,0 +1,6 @@
+﻿Model,Family,Specification,Val_MAE,Val_RMSE,Val_MAPE_%,Val_sMAPE_%,Val_WAPE_%,Val_Bias_%,Test_MAE,Test_RMSE,Test_MAPE_%,Test_sMAPE_%,Test_WAPE_%,Test_Bias_%,Test_95%_Interval_Coverage_%
+Naive: Naive (last month),Naive,Naive (last month),315309.4667,360427.2085,16.442,15.9508,15.5307,-2.2374,258480.7167,301872.1259,10.1449,10.0987,10.3086,1.4985,100.0
+Seasonal naive: Seasonal naive (same month last year),Seasonal naive,Seasonal naive (same month last year),696640.2417,752385.7682,32.8159,39.5645,34.3133,-30.7044,619327.275,682872.7434,25.6261,30.7203,24.6997,-24.6997,66.6667
+"Exponential smoothing: Damped Holt (A,Ad,N)",Exponential smoothing,"Damped Holt (A,Ad,N)",274906.806,330824.1317,15.1821,14.0014,13.5407,2.165,273434.3234,396364.9158,9.8227,10.848,10.905,-10.905,83.3333
+"ARIMA / SARIMA: ARIMA(1,1,1) + drift",ARIMA / SARIMA,"ARIMA(1,1,1) + drift",240961.1538,340530.9996,14.2289,12.4363,11.8687,6.7093,261440.0643,307178.3543,10.5081,10.129,10.4266,4.6641,100.0
+Theta: Theta (seasonality auto-tested),Theta,Theta (seasonality auto-tested),262706.5912,373634.9071,15.5503,13.42,12.9397,8.4519,213178.6619,310713.2925,7.7679,8.243,8.5019,-4.6502,100.0

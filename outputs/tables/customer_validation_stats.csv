@@ -1,0 +1,11 @@
+﻿Metric,Value
+Unique customers,"2,000"
+Customers with >= 1 delivered order,"1,984"
+Median delivered orders per customer,4
+Mean delivered orders per customer,6.11
+Max delivered orders per customer,29
+Median revenue per customer (INR),"13,335.95"
+Mean revenue per customer (INR),"30,028.28"
+Median customer AOV (INR),"3,093.35"
+Median purchase frequency (orders / 30 days),0.232
+Single-order customers,173

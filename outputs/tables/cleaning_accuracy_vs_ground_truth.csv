@@ -1,0 +1,23 @@
+﻿Column,Matching_Values,Mismatches,Accuracy_%,Mismatch_Examples
+Order_ID,18670,0,100.0,
+Order_Date,18670,0,100.0,
+Customer_ID,18670,0,100.0,
+Customer_Name,18670,0,100.0,
+Customer_Age,18669,1,99.995,34 (true: 21)
+Gender,18669,1,99.995,Unknown (true: Female)
+City,18669,1,99.995,Unknown (true: Indore)
+State,18670,0,100.0,
+Region,18670,0,100.0,
+Product_ID,18670,0,100.0,
+Product_Name,18670,0,100.0,
+Category,18670,0,100.0,
+Sub_Category,18670,0,100.0,
+Quantity,18651,19,99.898,34 (true: 1); 50 (true: 3); 50 (true: 1)
+Unit_Price,18670,0,100.0,
+Discount,18670,0,100.0,
+Sales,18651,19,99.898,30736.0 (true: 904.0); 69777.5 (true: 4186.65); 78120.0 (true: 1562.4)
+Cost,18651,19,99.898,16684.48 (true: 490.72); 51971.83 (true: 3118.31); 45435.5 (true: 908.71)
+Profit,18651,19,99.898,14051.52 (true: 413.28); 17805.67 (true: 1068.34); 32684.5 (true: 653.69)
+Payment_Method,18581,89,99.523,Unknown (true: COD); Unknown (true: Card); Unknown (true: Net Banking)
+Order_Status,18670,0,100.0,
+Customer_Type,18670,0,100.0,

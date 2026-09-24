@@ -1,0 +1,16 @@
+﻿Check,Value,Pass
+Each Customer_ID appears once in the RFM table,0,True
+Scored + excluded customers = all customers,1984 + 16 = 2000 (of 2000),True
+Frequency = distinct delivered Order_IDs (recomputed),match,True
+Frequency differs from row count for multi-product orders,1290 customers have more lines than orders,True
+Monetary total = delivered Sales total,₹6.01 Cr vs ₹6.01 Cr,True
+Cancelled/Returned lines excluded from Monetary,₹62.55 L,True
+Recency >= 0 for all customers,"min 1, max 1096",True
+Reference date = max Order_Date + 1 day,2026-01-01,True
+R/F/M scores are integers 1-5,all in {1..5},True
+Tied values share one score,checked on Frequency and Monetary,True
+RFM_Score = R + F + M (3-15),range 3-15,True
+Every customer has exactly one segment,0,True
+Segment customer counts sum to scored customers,1984,True
+Sum of segment revenue = total customer revenue,₹6.01 Cr,True
+Monetary ties to Step 4 total revenue,₹6.01 Cr,True

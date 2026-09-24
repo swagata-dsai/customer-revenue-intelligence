@@ -1,0 +1,9 @@
+﻿Feature,Skewness,Max_abs_Spearman_with_core_RFM,Most_correlated_core_feature,Decision,Reason
+Recency,2.05,0.38,Frequency,Include,Core RFM: how recently the customer bought (activity / churn signal)
+Frequency,1.9,0.84,Monetary,Include,Core RFM: how often the customer buys (loyalty)
+Monetary,3.21,0.84,Frequency,Include,Core RFM: how much the customer spends (value)
+Average_Order_Value,6.7,0.81,Monetary,"Exclude from model, keep for profiling","= Monetary / Frequency, so it is a function of two included features; adding it lowered separation (see feature-set comparison)"
+Total_Quantity,2.35,0.94,Frequency,Exclude,Near-duplicate of Frequency (Spearman rho shown) - would double-weight frequency
+Average_Discount,0.62,0.3,Monetary,"Exclude from model, keep for profiling","Weakly related to RFM, but adding it lowered separation at every K compared (3-5); used to describe clusters instead"
+Categories_Bought,0.04,0.86,Frequency,Exclude,Near-duplicate of Frequency (buying more often = more categories)
+Tenure_Days,-0.67,0.43,Frequency,Exclude,"Measured from Jan 2023 for customers who existed earlier (truncated), so not a true tenure"

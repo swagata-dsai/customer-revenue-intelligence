@@ -1,0 +1,12 @@
+﻿Dimension,Level,Monthly_Mean_Revenue,CV_%,Selected_Test_MAPE_%,Naive_Test_MAPE_%,Seasonal_Naive_Test_MAPE_%,Selected_Test_MAE,Naive_Test_MAE,Seasonal_Naive_Test_MAE,Published,Status
+Category,Beauty,94498.9847,41.2587,12.8702,14.757,23.89,18938.684,22666.2583,33635.7167,True,forecast published
+Category,Books,31585.5819,51.2893,30.7579,28.7947,34.6358,15333.3901,14246.425,16919.2667,False,not published: test MAPE > 20% or does not beat both baselines
+Category,Electronics,835851.4597,41.8746,10.3104,25.6707,26.0728,140792.7396,299495.975,323697.475,True,forecast published
+Category,Fashion,334937.25,41.2419,13.8552,17.6804,30.9302,73104.2921,98164.4917,157585.1917,True,forecast published
+Category,Home & Kitchen,288260.6333,36.1318,14.3392,13.923,23.0252,50089.9708,51053.55,86410.075,True,forecast published
+Category,Sports,83104.1222,58.5767,35.108,56.5935,41.8054,58545.4876,88218.9833,61196.9833,False,not published: test MAPE > 20% or does not beat both baselines
+Region,Central,212046.4569,47.3442,20.6346,22.3077,21.2485,70415.8816,70484.5,82615.9583,False,not published: test MAPE > 20% or does not beat both baselines
+Region,East,206644.4208,50.0353,25.1325,28.587,37.0114,98884.5121,111982.2667,139242.1833,False,not published: test MAPE > 20% or does not beat both baselines
+Region,North,400017.0375,42.3087,22.0717,24.1138,18.4017,111630.3596,117560.7833,100760.6417,False,not published: test MAPE > 20% or does not beat both baselines
+Region,South,450720.5111,41.3348,15.3347,15.8546,28.9238,110034.9069,92282.875,189877.0583,False,not published: test MAPE > 20% or does not beat both baselines
+Region,West,398809.6056,41.1878,14.558,17.0375,31.7692,86049.6766,98461.9583,189369.1833,True,forecast published

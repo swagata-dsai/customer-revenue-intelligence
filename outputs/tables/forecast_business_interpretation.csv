@@ -1,0 +1,7 @@
+﻿Area,Evidence,Planning interpretation
+Revenue direction,Revenue grew 51% in 2024 and 38% in 2025; the 6-month forecast totals ₹1.58 Cr vs ₹1.22 Cr in the same months of 2025 (+30%).,"Plan for continued growth, but the forecast is a model extrapolation of 3 years of history."
+Seasonality,"Highest month each year: 2023: month 10, 2024: month 10, 2025: month 10. Mean seasonal index for October 1.59 (range 1.37-1.70); Q4 share of annual revenue 2023: 37%, 2024: 35%, 2025: 30%. Kruskal-Wallis across months p = 0.017.",A recurring Q4/October peak is supported; other month-to-month differences are not consistent across years.
+Volatility,"Average absolute month-on-month change 24%; largest rise +89% (2023-10), largest fall -29% (2025-02).",Single-month targets need buffers; quarterly totals are more stable.
+Forecast accuracy,"Selected model: backtest mean MAPE 14.6% (7 folds), test MAPE 7.8%.","Expect monthly errors of roughly this size; use the intervals, not only the point forecast."
+Uncertainty,The 95% interval is on average 111% of the point forecast wide.,"Useful for cash-flow and inventory buffers: plan ranges, not single numbers."
+Planning implications,Last 6 actual months ₹1.50 Cr vs previous 6 ₹1.22 Cr.,"Inventory, staffing and marketing budgets can be phased to the forecast path and to the Q4 peak; specific actions are for the recommendation step."

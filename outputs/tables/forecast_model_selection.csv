@@ -1,0 +1,6 @@
+﻿Family,Mean_MAPE_pct,Std_MAPE_pct,Mean_MAE,Specification,Val_MAPE_%,Test_MAPE_%,Test_MAE,Beats_Both_Baselines_on_Test,Complexity,Within_5%_of_Best_Backtest_MAPE,Selected
+Exponential smoothing,13.1143,2.358,299376.5044,"Damped Holt (A,Ad,N)",15.1821,9.8227,273434.3234,False,1,True,False
+ARIMA / SARIMA,13.4721,3.6162,299471.7878,"ARIMA(1,1,1) + drift",14.2289,10.5081,261440.0643,False,2,True,False
+Theta,14.561,3.8437,329036.2029,Theta (seasonality auto-tested),15.5503,7.7679,213178.6619,True,1,True,True
+Naive,18.468,9.3762,422932.281,Naive (last month),16.442,10.1449,258480.7167,True,0,False,False
+Seasonal naive,33.3763,4.2232,763546.3738,Seasonal naive (same month last year),32.8159,25.6261,619327.275,True,0,False,False

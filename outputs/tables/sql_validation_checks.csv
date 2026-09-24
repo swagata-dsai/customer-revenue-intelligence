@@ -1,0 +1,57 @@
+﻿Area,Check,SQL,Python / source,Pass
+Row counts,locations rows,35,35,True
+Row counts,customers rows,2000,2000,True
+Row counts,products rows,61,61,True
+Row counts,orders rows,13251,13251,True
+Row counts,order_items rows,18670,18670,True
+Row counts,rfm_segment_definitions rows,11,11,True
+Row counts,customer_rfm rows,1984,1984,True
+Row counts,ml_clusters rows,4,4,True
+Row counts,customer_segments rows,1984,1984,True
+Row counts,customer_value rows,1984,1984,True
+Row counts,revenue_forecasts rows,54,54,True
+Row counts,vw_sales_flat rows = cleaned CSV rows,18670,18670,True
+Uniqueness,Unique customers with a Delivered order,1984,1984,True
+Uniqueness,Unique products,61,61,True
+Totals,Total revenue (Delivered Sales),60056569.15,60056569.15,True
+Totals,Total profit (Delivered),14022551.58,14022551.58,True
+Totals,Total cost (Delivered),46034017.57,46034017.57,True
+Totals,Total quantity (Delivered),22772,22772.0,True
+Totals,Delivered orders,12212,12212,True
+Totals,All orders,13251,13251,True
+Nulls,locations: NULLs in NOT NULL / key columns,0,0,True
+Nulls,customers: NULLs in NOT NULL / key columns,0,0,True
+Nulls,products: NULLs in NOT NULL / key columns,0,0,True
+Nulls,orders: NULLs in NOT NULL / key columns,0,0,True
+Nulls,order_items: NULLs in NOT NULL / key columns,0,0,True
+Nulls,rfm_segment_definitions: NULLs in NOT NULL / key columns,0,0,True
+Nulls,customer_rfm: NULLs in NOT NULL / key columns,0,0,True
+Nulls,ml_clusters: NULLs in NOT NULL / key columns,0,0,True
+Nulls,customer_segments: NULLs in NOT NULL / key columns,0,0,True
+Nulls,customer_value: NULLs in NOT NULL / key columns,0,0,True
+Nulls,revenue_forecasts: NULLs in NOT NULL / key columns,0,0,True
+Primary keys,locations: duplicate (location_id),0,0,True
+Primary keys,customers: duplicate (customer_id),0,0,True
+Primary keys,products: duplicate (product_id),0,0,True
+Primary keys,orders: duplicate (order_id),0,0,True
+Primary keys,order_items: duplicate (order_line_id),0,0,True
+Primary keys,rfm_segment_definitions: duplicate (segment_name),0,0,True
+Primary keys,customer_rfm: duplicate (customer_id),0,0,True
+Primary keys,ml_clusters: duplicate (cluster_id),0,0,True
+Primary keys,customer_segments: duplicate (customer_id),0,0,True
+Primary keys,customer_value: duplicate (customer_id),0,0,True
+Primary keys,"revenue_forecasts: duplicate (month, record_type)",0,0,True
+Foreign keys,customers.location_id -> locations.location_id: orphans,0,0,True
+Foreign keys,orders.customer_id -> customers.customer_id: orphans,0,0,True
+Foreign keys,order_items.order_id -> orders.order_id: orphans,0,0,True
+Foreign keys,order_items.product_id -> products.product_id: orphans,0,0,True
+Foreign keys,customer_rfm.customer_id -> customers.customer_id: orphans,0,0,True
+Foreign keys,customer_rfm.rfm_segment -> rfm_segment_definitions.segment_name: orphans,0,0,True
+Foreign keys,customer_segments.customer_id -> customers.customer_id: orphans,0,0,True
+Foreign keys,customer_segments.cluster_id -> ml_clusters.cluster_id: orphans,0,0,True
+Foreign keys,customer_value.customer_id -> customers.customer_id: orphans,0,0,True
+Foreign keys,PRAGMA foreign_key_check violations,0,0,True
+Cross-step,Step 5 Monetary / Frequency = SQL recomputation (per customer),0,0,True
+Cross-step,Step 7 historical profit CLV = SQL recomputation (per customer),0,0,True
+Cross-step,Step 9 monthly actuals = SQL monthly revenue,0,0,True
+Cross-step,Step 6 cluster revenue = SQL revenue by cluster,4 clusters,ml_cluster_summary.csv,True

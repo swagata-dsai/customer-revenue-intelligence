@@ -1,0 +1,13 @@
+RFM_Segment,Segment_Order,Value_Activity_Group,Group_Order,Segment_Rule,Business_Meaning
+Champions,1,Active high value,1,R 4-5 and FM >= 4.5,"Bought recently, buy often and spend the most"
+Loyal Customers,2,Active high value,1,R 3-5 and FM 3.5-4 (or R 3 and FM >= 4.5),"Regular, valuable buyers; strong relationship"
+Potential Loyalists,3,Developing,2,R 4-5 and FM 2.5-3,Recent buyers with average frequency and spend
+Recent Customers,4,Developing,2,R 5 and FM < 2.5,Bought very recently but only a little so far
+Promising,5,Developing,2,R 4 and FM < 2.5,"Fairly recent, low frequency and spend"
+Needs Attention,6,Slipping,3,R 3 and FM 2.5-3,Average customers whose recency is slipping
+About to Sleep,7,Slipping,3,R 3 and FM < 2.5,Below-average value and going quiet
+Can't Lose Them,8,Slipping,3,R 1-2 and FM >= 4.5,Were among the best customers; have not bought for a long time
+At Risk,9,Slipping,3,R 1-2 and FM 3-4,"Valuable in the past, now inactive"
+Hibernating,10,Inactive,4,R 2 and FM < 3,Low value and long inactive
+Lost,11,Inactive,4,R 1 and FM < 3,"Lowest recency, frequency and spend"
+No delivered order,12,No delivered order,5,Registered customer with no Delivered order line (not scored by RFM),Not part of the RFM or K-Means analysis

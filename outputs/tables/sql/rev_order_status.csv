@@ -1,0 +1,4 @@
+﻿order_status,order_lines,pct_of_lines,booked_value
+Delivered,16860,90.31,60056569.15
+Returned,1101,5.9,3511838.9
+Cancelled,709,3.8,2743594.3

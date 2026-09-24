@@ -1,0 +1,17 @@
+﻿Assumption,Detail
+Revenue rule,"Only Delivered lines count as revenue, cost and profit (Step 3 rule); Returned/Cancelled = 0."
+Customer population,"1,984 customers with >= 1 Delivered order; the 16 customers with no Delivered order have no value to measure (same population as Step 5)."
+Reference date,"2026-01-01 (latest order date + 1 day, Step 5)."
+Historical CLV,"Observed 2023-2025 totals. Not a forecast; tenure is left-censored for customers who existed before 2023, so their historical value is a minimum."
+Future-value target,Future_Profit_12M: Delivered profit in the 12 months after a cutoff.
+Feature window,12 months before the cutoff (same length at every cutoff so the training and test features are comparable).
+Tenure feature,Capped at 365 days because the training cutoff only has 12 months of history.
+Model population,Customers with >= 1 Delivered order in the 12 months before the cutoff.
+Model features,"8 features after removing exact identities and VIF > 5: Recency_Days, Frequency, AOV, Profit_Margin, Avg_Discount, Categories, Tenure_Days_Capped, Return_Rate."
+Customers outside the model population,"Given the observed average next-12-month profit of the equivalent group at the 2025 cutoff (₹830, n = 307); a group-level estimate, not customer-specific."
+Stationarity,"The estimate assumes next year behaves like the training years. Activity grew in 2025, and the out-of-time test shows the model under-estimates totals (see bias ratio)."
+Illustrative 3-year value,12-month estimate x (1 + r + r^2) with r = pooled observed annual repeat rate 0.839; no discounting (no cost of capital is available for the company); NOT validated.
+Inactivity,">= 180 days without a purchase = 'potentially at-risk', never 'churned' (many such customers bought again - see sensitivity table)."
+Probabilistic models,BG/NBD fitted and tested as a benchmark; Gamma-Gamma rejected because spend and frequency are correlated.
+Predictions floored at zero,Negative model outputs are set to ₹0 (a customer's expected purchases cannot be negative).
+Synthetic data,SYNTHETIC DATA - generated for academic demonstration only

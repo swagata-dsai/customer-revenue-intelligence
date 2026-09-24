@@ -1,0 +1,34 @@
+﻿Feature,Group,Type,Source_Window,Uses_Data_After_Cutoff,In_Final_Model
+Recency_Days,Customer history,numeric,last Delivered order before cutoff,No,Yes
+Rev_3M,Customer history,numeric,Sales in the 3 months before cutoff,No,Yes
+Rev_12M,Customer history,numeric,Sales in the 12 months before cutoff,No,No (see feature selection)
+Rev_Same_Quarter_Last_Year,Customer history,numeric,"Sales in [cutoff-12m, cutoff-9m)",No,Yes
+Profit_12M,Customer history,numeric,"Profit, 12 months before cutoff",No,No (see feature selection)
+Profit_Margin_12M,Customer history,numeric,Profit_12M / Rev_12M,No,Yes
+Orders_3M,Customer history,numeric,"orders, 3 months before cutoff",No,Yes
+Orders_12M,Customer history,numeric,"orders, 12 months before cutoff",No,Yes
+Quantity_12M,Customer history,numeric,"units, 12 months before cutoff",No,No (see feature selection)
+AOV_12M,Customer history,numeric,Rev_12M / Orders_12M,No,Yes
+Avg_Discount_12M,Customer history,numeric,"mean line discount, 12 months before cutoff",No,Yes
+Return_Rate_12M,Customer history,numeric,"share of lines Returned/Cancelled, 12 months before cutoff",No,Yes
+Tenure_Days_Capped,Customer history,numeric,cutoff - first Delivered order (capped at 365),No,Yes
+RFM_Score_at_Cutoff,Customer history,numeric,"quintiles of the three pre-cutoff features above, within the cutoff",No,No (see feature selection)
+Categories_12M,Product,numeric,"distinct categories, 12 months before cutoff",No,Yes
+Avg_Unit_Price_12M,Product,numeric,"mean unit price paid, 12 months before cutoff",No,Yes
+Product_Demand_Index,Product,numeric,"units sold of the customer's products (all customers), 12 months before cutoff",No,Yes
+Main_Category_Trend,Product,numeric,"category Sales last 3m / previous 3m, before cutoff",No,Yes
+Share_Fashion,Product,numeric,share of pre-cutoff Sales in Fashion,No,No (see feature selection)
+Share_Home_Kitchen,Product,numeric,share of pre-cutoff Sales in Home & Kitchen,No,Yes
+Share_Electronics,Product,numeric,share of pre-cutoff Sales in Electronics,No,No (see feature selection)
+Share_Beauty,Product,numeric,share of pre-cutoff Sales in Beauty,No,Yes
+Share_Books,Product,numeric,share of pre-cutoff Sales in Books,No,Yes
+Share_Sports,Product,numeric,share of pre-cutoff Sales in Sports,No,Yes
+Region_Revenue_Share_3M,Regional,numeric,"region's share of company Sales, 3 months before cutoff",No,No (see feature selection)
+Region_Customer_Share_12M,Regional,numeric,"region's share of active customers, 12 months before cutoff",No,No (see feature selection)
+Region_Rev_Trend,Regional,numeric,"regional Sales last 3m / previous 3m, before cutoff",No,Yes
+Company_Rev_Trend,Time / company,numeric,"company Sales last 3m / previous 3m, before cutoff",No,No (see feature selection)
+Region,Regional,categorical,customer's region on last pre-cutoff order,No,Yes
+Main_Category,Product,categorical,largest category by pre-cutoff Sales,No,Yes
+Main_Payment_Method,Customer history,categorical,"most used payment method, 12 months before cutoff",No,Yes
+Acquisition_Status,Customer history,categorical,Customer_Type on the customer's first order (known at first purchase),No,Yes
+Target_Quarter,Time / company,categorical,calendar quarter being predicted (known in advance),No,Yes

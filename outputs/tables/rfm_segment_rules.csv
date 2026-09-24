@@ -1,0 +1,12 @@
+﻿Segment,RFM Characteristics (rule),Business Meaning,Value-Activity Group
+Champions,R 4-5 and FM >= 4.5,"Bought recently, buy often and spend the most",Active high value
+Loyal Customers,R 3-5 and FM 3.5-4 (or R 3 and FM >= 4.5),"Regular, valuable buyers; strong relationship",Active high value
+Potential Loyalists,R 4-5 and FM 2.5-3,Recent buyers with average frequency and spend,Developing
+Recent Customers,R 5 and FM < 2.5,Bought very recently but only a little so far,Developing
+Promising,R 4 and FM < 2.5,"Fairly recent, low frequency and spend",Developing
+Needs Attention,R 3 and FM 2.5-3,Average customers whose recency is slipping,Slipping
+About to Sleep,R 3 and FM < 2.5,Below-average value and going quiet,Slipping
+Can't Lose Them,R 1-2 and FM >= 4.5,Were among the best customers; have not bought for a long time,Slipping
+At Risk,R 1-2 and FM 3-4,"Valuable in the past, now inactive",Slipping
+Hibernating,R 2 and FM < 3,Low value and long inactive,Inactive
+Lost,R 1 and FM < 3,"Lowest recency, frequency and spend",Inactive

@@ -1,0 +1,21 @@
+﻿Check,Evidence,Pass
+Relational database created,data/customer_revenue_intelligence.db,True
+Primary keys defined,11/11 tables,True
+Foreign keys defined,9 foreign keys,True
+Source data loaded successfully,11 tables,True
+Row counts validated,Row counts area,True
+SQL totals reconciled with Python,Totals area,True
+"Keys, nulls and orphans checked",PK / FK / Nulls areas,True
+"Cross-step consistency (Steps 5, 6, 7, 9)",Cross-step area,True
+Customer analytics completed,10 queries,True
+Product analytics completed,9 queries,True
+Regional analytics completed,4 queries,True
+Time-based analytics completed,4 queries,True
+RFM analysis integrated,"seg_rfm_summary, BQ02, BQ06",True
+ML segmentation integrated,"seg_ml_cluster_summary, BQ11",True
+Advanced SQL demonstrated,14/14 techniques used,True
+Window functions used,35 queries,True
+15-20 business questions documented,20 questions,True
+All queries executed without error,57 queries,True
+SQL visualizations created,12 figures,True
+No fabricated results,every number in outputs/report is read from a SQL result set,True

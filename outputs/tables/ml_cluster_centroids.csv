@@ -1,0 +1,5 @@
+﻿Cluster_ID,Recency_scaled_centre,Recency_centre_original_units,Recency_cluster_median,Frequency_scaled_centre,Frequency_centre_original_units,Frequency_cluster_median,Monetary_scaled_centre,Monetary_centre_original_units,Monetary_cluster_median,Recency_Profile,Frequency_Profile,Monetary_Profile
+0,-1.156,24.0,28.0,1.458,13.9,13.0,1.277,72914.4,71548.875,very recent (~24 days),very high (~13.9 orders),"very high (~₹72,914)"
+1,-0.622,47.8,57.0,-0.72,2.6,3.0,-0.771,5152.0,5944.55,recent (~48 days),low (~2.6 orders),"low (~₹5,152)"
+2,0.274,148.7,168.0,0.289,5.9,6.0,0.377,22743.8,22205.0,average (~149 days),average (~5.9 orders),"high (~₹22,744)"
+3,1.202,476.8,623.5,-1.021,1.9,2.0,-0.965,4010.7,4392.3,very long ago (~477 days),very low (~1.9 orders),"low (~₹4,011)"

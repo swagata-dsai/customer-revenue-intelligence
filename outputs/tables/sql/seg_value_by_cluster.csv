@@ -1,0 +1,5 @@
+﻿cluster_label,customers,avg_historical_profit,avg_estimated_12m_profit,total_estimated_12m_profit,potentially_at_risk_high_value
+"High-Value, Active",364,20359.81,8127.74,2958497.89,0
+"Low-Value, Active",453,2107.01,2621.44,1187513.7,0
+"Mid-Value, Lapsing",753,6623.73,3620.99,2726603.95,52
+"Low-Value, Inactive",414,1616.99,1267.42,524711.01,0

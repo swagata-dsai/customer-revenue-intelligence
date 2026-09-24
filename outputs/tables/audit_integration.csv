@@ -1,0 +1,7 @@
+area,check,result,status,detail
+Reproducibility,Step 5 (RFM) re-run is deterministic,4/4 outputs byte-identical after re-run (2s),PASS,[]
+Reproducibility,Step 11 (Power BI layer) re-run is deterministic,21/21 outputs byte-identical after re-run (2s),PASS,[]
+Integration,Step 10 database rebuild and validation,"exit 0, 56/56 checks pass (2s)",PASS,
+Integration,Application falls back to the processed CSVs without the database,"exceptions 0, headline KPI still correct: True",PASS,
+Integration,Streamlit application test suite,40/40 checks pass (23s),PASS,
+Code quality,pyflakes across every Python file,"34 files, 0 findings",PASS,

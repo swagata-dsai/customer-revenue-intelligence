@@ -1,0 +1,140 @@
+{
+  "dataset": "SYNTHETIC DATA - generated for academic demonstration only",
+  "seed": 42,
+  "clean_rows_before_injection": 18670,
+  "raw_rows_after_injection": 18819,
+  "issues": [
+    {
+      "issue_type": "outlier",
+      "column": "Quantity",
+      "rows_affected": 19,
+      "description": "Genuine bulk orders (20-50 units); Sales/Cost/Profit recomputed, so values are valid but extreme."
+    },
+    {
+      "issue_type": "invalid_value",
+      "column": "Quantity",
+      "rows_affected": 9,
+      "description": "Quantity entered as -1 (data-entry error); Sales left unchanged, so the row fails the revenue check."
+    },
+    {
+      "issue_type": "invalid_value",
+      "column": "Customer_Age",
+      "rows_affected": 19,
+      "description": "Impossible ages (0, 5, 150, 999); the true age exists on the customer's other rows."
+    },
+    {
+      "issue_type": "invalid_value",
+      "column": "Discount",
+      "rows_affected": 37,
+      "description": "Discount stored as a percentage (e.g. 15 instead of 0.15)."
+    },
+    {
+      "issue_type": "invalid_value",
+      "column": "Unit_Price",
+      "rows_affected": 9,
+      "description": "Unit price with an extra zero (x10 typo); Sales unchanged, so the row fails the revenue check."
+    },
+    {
+      "issue_type": "missing_value",
+      "column": "Customer_Age",
+      "rows_affected": 280,
+      "description": "Recoverable from the same customer's other rows."
+    },
+    {
+      "issue_type": "missing_value",
+      "column": "Gender",
+      "rows_affected": 187,
+      "description": "Recoverable from the same customer's other rows."
+    },
+    {
+      "issue_type": "missing_value",
+      "column": "City",
+      "rows_affected": 149,
+      "description": "State and Region still present; recoverable from the customer's other rows."
+    },
+    {
+      "issue_type": "missing_value",
+      "column": "Payment_Method",
+      "rows_affected": 187,
+      "description": "Not recoverable; to be labelled 'Unknown'."
+    },
+    {
+      "issue_type": "missing_value",
+      "column": "Discount",
+      "rows_affected": 93,
+      "description": "Recoverable from Sales / (Quantity x Unit_Price)."
+    },
+    {
+      "issue_type": "missing_value",
+      "column": "Sales",
+      "rows_affected": 56,
+      "description": "Recoverable from Quantity x Unit_Price x (1 - Discount)."
+    },
+    {
+      "issue_type": "inconsistent_category",
+      "column": "Category",
+      "rows_affected": 280,
+      "description": "Case, whitespace and '&' vs 'and' variants."
+    },
+    {
+      "issue_type": "inconsistent_category",
+      "column": "Gender",
+      "rows_affected": 187,
+      "description": "Abbreviations and case variants (M/F/male...)."
+    },
+    {
+      "issue_type": "inconsistent_category",
+      "column": "Payment_Method",
+      "rows_affected": 187,
+      "description": "Alternative spellings and case variants."
+    },
+    {
+      "issue_type": "inconsistent_category",
+      "column": "City",
+      "rows_affected": 93,
+      "description": "Old city names (Bangalore, Bombay, Gurgaon...)."
+    },
+    {
+      "issue_type": "inconsistent_category",
+      "column": "State",
+      "rows_affected": 75,
+      "description": "Old or informal state names (Orissa, UP...)."
+    },
+    {
+      "issue_type": "inconsistent_category",
+      "column": "Region",
+      "rows_affected": 149,
+      "description": "Case and whitespace variants."
+    },
+    {
+      "issue_type": "format",
+      "column": "Order_Date",
+      "rows_affected": 373,
+      "description": "Date written as DD-MM-YYYY instead of YYYY-MM-DD."
+    },
+    {
+      "issue_type": "format",
+      "column": "Order_Date",
+      "rows_affected": 187,
+      "description": "Date written as DD/MM/YYYY."
+    },
+    {
+      "issue_type": "format",
+      "column": "Unit_Price",
+      "rows_affected": 93,
+      "description": "Price stored as text with rupee symbol and comma, e.g. '₹1,299'."
+    },
+    {
+      "issue_type": "format",
+      "column": "Customer_Name",
+      "rows_affected": 93,
+      "description": "Upper/lower case and leading/trailing spaces."
+    },
+    {
+      "issue_type": "duplicate",
+      "column": "ALL",
+      "rows_affected": 149,
+      "description": "Exact duplicate rows (double ingestion), including Order_Line_ID."
+    }
+  ]
+}

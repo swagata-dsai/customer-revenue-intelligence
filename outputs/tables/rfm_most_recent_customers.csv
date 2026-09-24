@@ -1,0 +1,21 @@
+﻿Customer_ID,Region,Recency,Frequency,Monetary,Average_Order_Value,R_Score,F_Score,M_Score,RFM_Cell,RFM_Segment
+CUST-0813,West,1,21,153055.65,7288.36,5,5,5,555,Champions
+CUST-1894,South,1,14,130400.15,9314.3,5,5,5,555,Champions
+CUST-1240,South,1,21,93148.75,4435.65,5,5,5,555,Champions
+CUST-0636,East,1,10,27805.8,2780.58,5,5,4,554,Champions
+CUST-0033,West,1,7,19459.75,2779.96,5,4,3,543,Loyal Customers
+CUST-0182,West,1,4,8802.8,2200.7,5,3,2,532,Potential Loyalists
+CUST-0520,West,1,3,7393.85,2464.62,5,2,2,522,Recent Customers
+CUST-0658,South,1,2,3906.05,1953.02,5,1,1,511,Recent Customers
+CUST-1838,South,1,4,3298.45,824.61,5,3,1,531,Recent Customers
+CUST-1441,Central,2,21,150476.8,7165.56,5,5,5,555,Champions
+CUST-1598,East,2,14,129572.3,9255.16,5,5,5,555,Champions
+CUST-1608,West,2,19,79654.85,4192.36,5,5,5,555,Champions
+CUST-0002,Central,2,11,43213.65,3928.51,5,5,4,554,Champions
+CUST-0839,South,2,2,9230.25,4615.12,5,1,2,512,Recent Customers
+CUST-0101,South,2,5,4597.2,919.44,5,3,1,531,Recent Customers
+CUST-1053,Central,2,2,2226.2,1113.1,5,1,1,511,Recent Customers
+CUST-0075,South,2,2,2111.2,1055.6,5,1,1,511,Recent Customers
+CUST-1700,West,2,2,1535.05,767.52,5,1,1,511,Recent Customers
+CUST-1606,North,2,2,1368.8,684.4,5,1,1,511,Recent Customers
+CUST-0532,North,3,24,220760.4,9198.35,5,5,5,555,Champions

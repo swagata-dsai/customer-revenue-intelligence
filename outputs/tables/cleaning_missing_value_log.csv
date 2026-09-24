@@ -1,0 +1,16 @@
+﻿Column,Missing_Before,Missing_After,Recovered,Method
+Customer_Name,0,0,0,Customer's modal value from their other transactions
+Customer_Age,299,1,298,Customer's modal value from their other transactions
+Gender,187,1,186,Customer's modal value from their other transactions
+City,149,1,148,Customer's modal value from their other transactions
+Customer_Age,1,0,1,Median age (no other record for the customer)
+Gender,1,0,1,Labelled 'Unknown' (customer has no other record)
+City,1,0,1,Labelled 'Unknown' (customer has no other record; State/Region kept)
+State,0,0,0,Derived from City (reference hierarchy)
+Region,0,0,0,Derived from State (reference hierarchy)
+Payment_Method,187,0,187,Copied from same order's other lines; else 'Unknown'
+Sales,56,0,56,Sales = Cost + Profit (exact accounting identity)
+Quantity,9,0,9,"Quantity = Sales / (Unit_Price x (1 - Discount)), accepted only if a whole number"
+Discount,93,0,93,Discount = 1 - Sales / (Quantity x Unit_Price)
+Unit_Price,0,0,0,Unit_Price = Sales / (Quantity x (1 - Discount))
+Transaction amounts,0,0,0,Rows removed: 0 (amount could not be recovered)

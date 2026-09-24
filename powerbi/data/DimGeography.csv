@@ -1,0 +1,36 @@
+Location_ID,City,State,Region,Country
+1,Raipur,Chhattisgarh,Central,India
+2,Bhopal,Madhya Pradesh,Central,India
+3,Indore,Madhya Pradesh,Central,India
+4,Jabalpur,Madhya Pradesh,Central,India
+5,Unknown,Madhya Pradesh,Central,India
+6,Guwahati,Assam,East,India
+7,Patna,Bihar,East,India
+8,Ranchi,Jharkhand,East,India
+9,Bhubaneswar,Odisha,East,India
+10,Kolkata,West Bengal,East,India
+11,Siliguri,West Bengal,East,India
+12,Chandigarh,Chandigarh,North,India
+13,New Delhi,Delhi,North,India
+14,Gurugram,Haryana,North,India
+15,Amritsar,Punjab,North,India
+16,Ludhiana,Punjab,North,India
+17,Jaipur,Rajasthan,North,India
+18,Kanpur,Uttar Pradesh,North,India
+19,Lucknow,Uttar Pradesh,North,India
+20,Noida,Uttar Pradesh,North,India
+21,Visakhapatnam,Andhra Pradesh,South,India
+22,Bengaluru,Karnataka,South,India
+23,Mysuru,Karnataka,South,India
+24,Kochi,Kerala,South,India
+25,Thiruvananthapuram,Kerala,South,India
+26,Chennai,Tamil Nadu,South,India
+27,Coimbatore,Tamil Nadu,South,India
+28,Hyderabad,Telangana,South,India
+29,Panaji,Goa,West,India
+30,Ahmedabad,Gujarat,West,India
+31,Surat,Gujarat,West,India
+32,Vadodara,Gujarat,West,India
+33,Mumbai,Maharashtra,West,India
+34,Nagpur,Maharashtra,West,India
+35,Pune,Maharashtra,West,India

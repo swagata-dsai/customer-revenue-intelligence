@@ -1,0 +1,8 @@
+﻿Model,Type,MAE,RMSE,R2,WAPE_%,Spearman,Total_Bias_%,Selected
+Baseline: previous quarter (naive),Baseline,6422.6945,14483.3365,-0.57,145.1171,0.1293,4.311,False
+Baseline: same quarter last year (seasonal naive),Baseline,5880.3443,13557.1518,-0.3756,132.863,0.1579,-12.1309,False
+Baseline: 12-month quarterly mean,Baseline,5436.1488,11466.315,0.016,122.8267,0.224,-3.7839,False
+Linear regression,ML model,5657.5669,11232.4199,0.0557,127.8295,0.1751,1.1222,True
+Random forest,ML model,5762.3101,11264.9749,0.0502,130.1961,0.1714,8.0122,False
+Gradient boosting,ML model,5845.2917,11382.9265,0.0302,132.071,0.1577,10.1485,False
+Random forest (tuned),ML model,5553.9759,11148.3996,0.0698,125.4889,0.2013,2.3026,False

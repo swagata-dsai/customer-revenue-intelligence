@@ -1,0 +1,5 @@
+﻿Measure,Value
+Adjusted Rand Index (RFM segment vs cluster),0.39521467496345075
+Normalized Mutual Information,0.5788263126736519
+ARI (RFM value-activity group vs cluster),0.4490926318420069
+Customers compared,1984.0

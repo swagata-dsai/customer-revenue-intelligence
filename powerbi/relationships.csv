@@ -1,0 +1,10 @@
+From_Table,From_Column,To_Table,To_Column,Cardinality,Cross_Filter_Direction,Active,Notes
+DimDate,Date,FactSales,Order_Date,One-to-many,Single,Yes,Date table marked in Power BI; drives every time intelligence measure
+DimCustomer,Customer_ID,FactSales,Customer_ID,One-to-many,Single,Yes,
+DimProduct,Product_ID,FactSales,Product_ID,One-to-many,Single,Yes,
+DimGeography,Location_ID,FactSales,Location_ID,One-to-many,Single,Yes,Customer home location; one location per customer in this dataset
+DimRFMSegment,RFM_Segment,DimCustomer,RFM_Segment,One-to-many,Single,Yes,"Snowflake on the customer dimension: segment attributes filter customers, which filter sales"
+DimCluster,Cluster_ID,DimCustomer,Cluster_ID,One-to-many,Single,Yes,Snowflake on the customer dimension
+DimDate,Date,FactForecast,Month_Date,One-to-many,Single,Yes,Forecast rows join on the first day of the month
+DimDate,Date,FactRevenuePrediction,Target_Quarter_Start,One-to-many,Single,No,"INACTIVE by design: the prediction grain is a quarter, so a date filter would silently drop rows. Activate with USERELATIONSHIP only if a quarter-level date filter is wanted."
+DimCustomer,Customer_ID,FactRevenuePrediction,Customer_ID,One-to-many,Single,Yes,Lets the prediction page respond to the customer and segment slicers

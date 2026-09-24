@@ -1,0 +1,121 @@
+// =============================================================================
+// Power BI validation query (STEP 11)
+// SYNTHETIC DATA. Run in DAX Studio (or Performance Analyzer > Copy query) against
+// the finished report and compare the results with
+//   powerbi/validation/measure_validation_targets.csv
+// which holds the same measures recomputed in pandas AND in SQL.
+// Type the Power BI result into the Power_BI_Value column of that file.
+//
+// A difference of more than 1 rupee (or 0.01 for a ratio) means the DAX does not
+// match the SQL and must be corrected before the dashboard is presented.
+// =============================================================================
+
+// ---- 1. Headline KPIs, no filters -------------------------------------------
+EVALUATE
+ROW (
+    "Total Revenue", [Total Revenue],
+    "Total Profit", [Total Profit],
+    "Profit Margin %", [Profit Margin %],
+    "Total Orders", [Total Orders],
+    "Total Customers", [Total Customers],
+    "Average Order Value", [Average Order Value],
+    "Total Quantity", [Total Quantity],
+    "Avg Monthly Revenue", [Avg Monthly Revenue],
+    "Booked Value", [Booked Value]
+)
+
+// ---- 2. By year --------------------------------------------------------------
+EVALUATE
+SUMMARIZECOLUMNS (
+    DimDate[Year],
+    "Total Revenue", [Total Revenue],
+    "Total Profit", [Total Profit],
+    "Profit Margin %", [Profit Margin %],
+    "Total Orders", [Total Orders],
+    "Total Customers", [Total Customers],
+    "Revenue Growth %", [Revenue Growth %]
+)
+ORDER BY DimDate[Year]
+
+// ---- 3. By region ------------------------------------------------------------
+EVALUATE
+SUMMARIZECOLUMNS (
+    DimGeography[Region],
+    "Total Revenue", [Total Revenue],
+    "Total Profit", [Total Profit],
+    "Profit Margin %", [Profit Margin %],
+    "Total Orders", [Total Orders],
+    "Total Customers", [Total Customers],
+    "Average Order Value", [Average Order Value]
+)
+ORDER BY [Total Revenue] DESC
+
+// ---- 4. By category ----------------------------------------------------------
+EVALUATE
+SUMMARIZECOLUMNS (
+    DimProduct[Category],
+    "Total Revenue", [Total Revenue],
+    "Total Profit", [Total Profit],
+    "Profit Margin %", [Profit Margin %],
+    "Category Revenue Contribution %", [Category Revenue Contribution %]
+)
+ORDER BY [Total Revenue] DESC
+
+// ---- 5. By RFM segment -------------------------------------------------------
+EVALUATE
+SUMMARIZECOLUMNS (
+    DimRFMSegment[RFM_Segment],
+    "Customers", [Segment Customers],
+    "Total Revenue", [Total Revenue],
+    "Total Profit", [Total Profit],
+    "Avg Recency", [Avg Recency (days)],
+    "Avg Frequency", [Avg Frequency (orders)],
+    "Segment Revenue Contribution %", [Segment Revenue Contribution %]
+)
+ORDER BY [Total Revenue] DESC
+
+// ---- 6. By K-Means cluster ---------------------------------------------------
+EVALUATE
+SUMMARIZECOLUMNS (
+    DimCluster[Cluster_Label],
+    "Customers", [Segment Customers],
+    "Total Revenue", [Total Revenue],
+    "Cluster Revenue Contribution %", [Cluster Revenue Contribution %]
+)
+ORDER BY [Total Revenue] DESC
+
+// ---- 7. Customer-state snapshot (reference date 2026-01-01) ------------------
+EVALUATE
+ROW (
+    "Registered Customers", [Registered Customers],
+    "Active Customers", [Active Customers],
+    "Inactive 180+", [Inactive Customers (180+ days)],
+    "Repeat Customers", [Repeat Customers],
+    "At-Risk High-Value", [At-Risk High-Value Customers],
+    "Avg Recency", [Avg Recency (days)],
+    "Avg Frequency", [Avg Frequency (orders)],
+    "Estimated 12M Future Profit", [Estimated 12M Future Profit]
+)
+
+// ---- 8. A single month, to prove the Date relationship filters the fact ------
+EVALUATE
+CALCULATETABLE (
+    ROW (
+        "Total Revenue", [Total Revenue],
+        "Total Orders", [Total Orders],
+        "Total Customers", [Total Customers],
+        "Average Order Value", [Average Order Value]
+    ),
+    DimDate[Year_Month] = "2025-10"
+)
+
+// ---- 9. Prediction and forecast, kept apart ---------------------------------
+EVALUATE
+ROW (
+    "Prediction MAE", [Prediction MAE],
+    "Prediction RMSE", [Prediction RMSE],
+    "Prediction R2", [Prediction R2],
+    "Prediction Bias %", [Prediction Bias %],
+    "Forecast Total next 6 months", [Forecast Total (next 6 months)],
+    "Forecast Horizon", [Forecast Horizon (months)]
+)

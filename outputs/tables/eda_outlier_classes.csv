@@ -1,0 +1,5 @@
+﻿Class,Lines,Share_of_Revenue,Assessment
+Genuine high-value transactions,1777,0.5182592252691145,Premium items at list price; all pass the Sales formula
+"Unusual purchases (bulk, >= 10 units)",18,0.013703855575639388,Formula-consistent; plausible gifting / institutional orders
+Loss-making lines (Profit < 0),249,0.09668491361032068,"Business issue (discount on thin margin), not a data error"
+Data errors (formula failures),0,0.0,None remain after Step 3

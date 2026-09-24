@@ -1,0 +1,14 @@
+﻿Variable,Why it is available,Decision / reason,Section
+Next_Quarter_Revenue / Next_Quarter_Orders,Target-period values,Future information - target only,Excluded variable
+Future Sales / Profit / Quantity / Discount / activity,Any line dated >= cutoff,Would reveal the answer; all feature windows end the day before the cutoff,Excluded variable
+"RFM_Segment, R/F/M scores (Step 5)",Computed on 2023-2025 incl. target quarters,Look-ahead; replaced by RFM_Score_at_Cutoff; used only to group errors,Excluded variable
+Cluster_ID (Step 6),K-Means fitted on 2023-2025 incl. target quarters,Look-ahead; used only to group errors,Excluded variable
+Historical_Profit_CLV / Estimated CLV (Step 7),Full-period totals and a model fitted on 2024-2025 targets,Look-ahead,Excluded variable
+Sales = Quantity x Unit_Price x (1 - Discount) of the same order,Same-period identity,"Trivial, not a planning problem",Excluded variable
+"Customer_Name, Customer_ID",Identifiers,No predictive meaning; privacy,Excluded variable
+"Gender, Customer_Age, City, State",Demographics / high-cardinality location,Not needed for planning; Region carries location; avoids demographic profiling,Excluded variable
+Max feature date < cutoff at every cutoff,,True,Automated check
+Min target date >= cutoff at every cutoff,,True,Automated check
+Target window <= 3 months after cutoff,,True,Automated check
+No target / future / full-period label column among model features,,True,Automated check
+Correlation check: no feature has |Spearman| > 0.95 with the target (training rows),,True,Automated check

@@ -1,0 +1,19 @@
+﻿month,record_type,actual_revenue,forecast_revenue,error_pct,lower_95,upper_95
+2025-01,Validation forecast (fit on train),2058026.15,2131991.8,3.59,1394818.17,2869165.42
+2025-02,Validation forecast (fit on train),1456402.75,2159925.09,48.31,1061316.61,3258533.57
+2025-03,Validation forecast (fit on train),2184197.4,2187858.38,0.17,820212.14,3555504.62
+2025-04,Validation forecast (fit on train),1703556.8,2215791.67,30.07,623946.24,3807637.11
+2025-05,Validation forecast (fit on train),2234210.0,2243724.96,0.43,455572.98,4031876.95
+2025-06,Validation forecast (fit on train),2544999.0,2271658.26,-10.74,306714.7,4236601.81
+2025-07,Test forecast (fit on train + validation),2323566.2,2327379.35,0.16,1558626.74,3096131.95
+2025-08,Test forecast (fit on train + validation),2194859.35,2352757.59,7.19,1193026.02,3512489.15
+2025-09,Test forecast (fit on train + validation),2447160.2,2378135.83,-2.82,929352.19,3826919.47
+2025-10,Test forecast (fit on train + validation),3097837.75,2403514.07,-22.41,714440.13,4092588.01
+2025-11,Test forecast (fit on train + validation),2654877.85,2428892.32,-8.51,529690.51,4328094.13
+2025-12,Test forecast (fit on train + validation),2326243.55,2454270.56,5.5,365978.38,4542562.74
+2026-01,Future forecast (fit on all 36 months),,2566832.91,,1819351.47,3314314.36
+2026-02,Future forecast (fit on all 36 months),,2593310.31,,1466289.61,3720331.0
+2026-03,Future forecast (fit on all 36 months),,2619787.7,,1212086.47,4027488.94
+2026-04,Future forecast (fit on all 36 months),,2646265.1,,1005207.54,4287322.65
+2026-05,Future forecast (fit on all 36 months),,2672742.49,,827609.16,4517875.83
+2026-06,Future forecast (fit on all 36 months),,2699219.89,,670435.98,4728003.8

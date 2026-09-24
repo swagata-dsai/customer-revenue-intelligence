@@ -1,0 +1,15 @@
+﻿Area,Finding (computed by SQL),Source query
+Revenue,"Delivered revenue ₹6.01 Cr, profit ₹1.40 Cr (23.35% margin), 12,212 orders, 1,984 customers, AOV ₹4,918.",rev_kpi_summary
+Growth,"Revenue growth 2024: +51.4%, 2025: +37.7%; margin 22.65% -> 23.05% -> 23.90%.",rev_by_year
+Customer concentration,Top 20% of customers = 64.33% of revenue; top 1% = 9.05%.,cust_concentration_summary
+Repeat purchasing,Repeat customers are 89.4% of customers and 98.6% of revenue.,BQ12
+Retention,"Retained / active last year: 2024: 73.0%, 2025: 93.3%; new customers per year 2023: 1,137, 2024: 498, 2025: 349.",BQ15
+RFM segments,"Champions: 16.8% of customers, 53.8% of revenue; At Risk + Can't Lose Them: 18.4% of revenue.",seg_rfm_summary
+ML clusters,"High-Value, Active: 18.35% of customers, 55.67% of revenue; Low-Value, Active: 22.83% of customers, 5.02% of revenue; Mid-Value, Lapsing: 37.95% of customers, 35.39% of revenue; Low-Value, Inactive: 20.87% of customers, 3.91% of revenue.",seg_ml_cluster_summary
+Potentially at-risk value,52 high-historical-value customers have not bought for >= 180 days (lifetime revenue ₹26.51 L).,BQ06
+Categories,Electronics: 50.1% of revenue at 10.8% margin; Fashion 36.8% of profit at 42.8% margin; highest margin Beauty (46.5%).,prod_category_performance
+Products to investigate,"10 products flagged; high-revenue low-margin examples: Nova X7 Pro Smartphone 256GB, Nova X5 Smartphone 128GB, AeroBook 14 Laptop.","prod_investigate, BQ03"
+Discounts,"Margin by discount band: 0% 29.3%, 1-10% 19.4%, 11-20% 21.6%, 21-30% 21.4%, 31-40% 20.4%; within categories, the 0% band has the highest margin in 6/6 categories and the highest band the lowest margin in 6/6 (BQ08) - an association, not proof of cause.","prod_discount_bands, BQ08"
+Returns / cancellations,Fashion loses the largest share of booked value to returns/cancellations (14.4%); COD has the highest cancellation rate (6.2% of lines).,"BQ14, BQ13"
+Regions,South leads revenue (27.0%); margins range 22.2-25.3%; 0 region-category pairs are > 2 pp below the national category margin (largest gap -1.7 pp).,"reg_performance, BQ16"
+Seasonality,"Highest month 2025-10 (₹30.98 L); the same calendar month tops every year: yes (2023-10, 2024-10, 2025-10).","time_best_worst_months, BQ09"

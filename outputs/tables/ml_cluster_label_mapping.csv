@@ -1,0 +1,5 @@
+﻿Cluster_ID,Value_Level,Activity_Level,Business_Label,Basis
+0,High-Value,Active,"High-Value, Active","median Monetary ₹71,549 (terciles ₹7,552 / ₹26,089); median Recency 28 days (Active <= 83, Inactive >= 255); median 13 orders"
+1,Low-Value,Active,"Low-Value, Active","median Monetary ₹5,945 (terciles ₹7,552 / ₹26,089); median Recency 57 days (Active <= 83, Inactive >= 255); median 3 orders"
+2,Mid-Value,Lapsing,"Mid-Value, Lapsing","median Monetary ₹22,205 (terciles ₹7,552 / ₹26,089); median Recency 168 days (Active <= 83, Inactive >= 255); median 6 orders"
+3,Low-Value,Inactive,"Low-Value, Inactive","median Monetary ₹4,392 (terciles ₹7,552 / ₹26,089); median Recency 624 days (Active <= 83, Inactive >= 255); median 2 orders"

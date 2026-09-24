@@ -1,0 +1,18 @@
+﻿Area,Check,Value,Pass
+Target,Target = Delivered Sales in the 3 months after each cutoff (recomputed independently),"10,393 rows",True
+Target,"Target dates only inside [cutoff, cutoff + 3 months)",2024-01-01 .. 2025-12-31,True
+Leakage,No feature uses data on/after its cutoff,max feature date < cutoff at all 8 cutoffs,True
+Leakage,Preprocessor fitted on training rows only (validation step); final refit on train+validation only,"final fit rows 7,480 = train 4,788 + validation 2,692",True
+Time,Training targets end before validation targets start; validation before test,2024-12-31 < 2025-01-01; 2025-06-30 < 2025-07-01,True
+Time,Test split unused during selection/tuning,selection table uses Val_* columns only,True
+Model,Feature selection (training rows) reproduces the model feature list; non-protected VIF <= 10,"19 numeric features, max VIF 10.0 (protected above 10: Avg_Unit_Price_12M 13.5)",True
+Model,Baselines exist,3 baselines,True
+Model,Multiple ML models evaluated,4 models,True
+Model,Reported test metrics recomputed from the saved prediction table,R² 0.0557,True
+Predictions,Predicted values finite,2913,True
+Predictions,"Prediction table reconciles with the test split (rows, customers, actual total)","2,913 rows, ₹1.29 Cr",True
+Predictions,Errors correctly calculated (error = predicted - actual; % only where actual > 0),"1,543 rows with actual = 0 have no %",True
+Predictions,"No duplicate (customer, cutoff) keys in the panel",0,True
+Predictions,Error-analysis merges keep row counts (many_to_one),"2,913",True
+Reproducibility,Refit with fixed random_state gives identical test predictions,random_state=42,True
+Reproducibility,Saved pipeline (reloaded from models/) reproduces the test predictions; metadata saved,"revenue_prediction_model.pkl, revenue_model_metadata.json",True

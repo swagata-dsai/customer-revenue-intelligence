@@ -1,0 +1,12 @@
+﻿RFM_Segment,Customers,Share_Existing_Before_2023_%,Median_Age,Median_Tenure_Days,Avg_Categories_Bought,Avg_Discount_%,Return_Lines_per_Customer,Top_Region,Top_Region_Share_%
+Champions,334,64.37,36.0,957.5,5.3,10.59,1.35,West,24.85
+Loyal Customers,240,48.75,34.0,845.5,4.3,12.44,0.6,South,30.42
+Potential Loyalists,152,32.24,29.5,651.5,3.22,14.86,0.25,South,30.26
+Recent Customers,91,6.59,30.0,77.0,2.12,15.1,0.16,West,24.18
+Promising,110,10.0,27.0,122.5,2.15,16.1,0.25,South,26.36
+Needs Attention,123,33.33,30.0,746.0,3.54,14.67,0.39,West,26.02
+About to Sleep,143,18.18,29.0,276.0,2.06,18.3,0.21,South,27.27
+Can't Lose Them,79,40.51,35.0,876.0,4.91,12.82,0.58,North,35.44
+At Risk,263,41.83,33.0,791.0,3.89,12.38,0.59,South,28.9
+Hibernating,148,25.0,29.0,590.5,2.61,15.31,0.36,South,30.41
+Lost,301,40.86,30.0,877.0,2.05,14.04,0.27,South,27.57

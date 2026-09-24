@@ -1,0 +1,9 @@
+﻿Characteristic,Spearman_with_Historical_Profit,p_value
+Number of orders,0.8731,0.0
+Average order value,0.5855,0.0
+Categories bought,0.7755,0.0
+Tenure (days),0.3633,0.0
+Recency (days since last purchase),-0.3638,0.0
+Average discount,-0.3921,0.0
+Return/cancel rate,0.1392,0.0
+Profit margin,-0.1862,0.0

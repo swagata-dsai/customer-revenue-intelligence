@@ -1,0 +1,47 @@
+# Customer Revenue Intelligence - Python dependencies
+# Tested on Python 3.11.
+#
+# This list was derived from an AST scan of every .py file and notebook in the
+# repository; it contains only packages the project actually imports.
+# Regenerate the audit with: python scripts/build_packaging.py
+
+# --- Core data handling -----------------------------------------------------
+pandas>=2.0
+numpy>=1.24
+scipy>=1.10               # statistical tests; the BG/NBD likelihood in src/clv.py
+
+# --- Modelling --------------------------------------------------------------
+scikit-learn>=1.3         # K-Means, customer value and revenue models
+                          # The saved .pkl pipelines were written with scikit-learn 1.8.0
+                          # (recorded in models/*_metadata.json). Loading them under an
+                          # older minor version may warn or fail; pin ==1.8.0 to
+                          # reproduce exactly.
+statsmodels>=0.14         # ETS, ARIMA/SARIMA, Theta, ADF, STL
+joblib>=1.3               # model persistence and reloading
+
+# --- Figures ----------------------------------------------------------------
+matplotlib>=3.7           # static figures in the pipeline and notebooks
+seaborn>=0.13             # used in src/eda.py, src/clv.py, src/segmentation.py
+plotly>=5.0               # interactive charts in the Streamlit application
+
+# --- Application ------------------------------------------------------------
+streamlit>=1.36           # needs st.navigation, introduced in 1.36
+
+# --- Notebooks --------------------------------------------------------------
+jupyter>=1.0              # to open / re-run the nine notebooks
+
+# --- Document generation (only needed to REBUILD the report, deck and audit) -
+# The generated .docx, .pptx and .pdf files are already committed, so these are
+# not required to run the analysis or the application.
+python-docx>=1.1          # scripts/build_report.py
+python-pptx>=0.6.23       # scripts/build_presentation.py
+pypdf>=4.0                # page-number resolution in scripts/report_builder.py
+Pillow>=10.0              # image sizing in scripts/build_presentation.py
+
+# SQLite is Python's built-in sqlite3 - nothing to install.
+# Power BI is a separate Windows desktop application; the Python side only
+# writes the CSV extracts, DAX and Power Query scripts, so it needs nothing
+# beyond pandas.
+# PDF conversion of the report and deck uses LibreOffice (soffice), which is a
+# system package, not a pip package. Without it the .docx and .pptx are still
+# produced and the build script reports that the PDF step was skipped.

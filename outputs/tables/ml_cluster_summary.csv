@@ -1,0 +1,5 @@
+﻿Cluster_ID,Business_Label,Customer_Count,Customer_%,Average_Recency,Median_Recency,Average_Frequency,Median_Frequency,Average_Monetary,Median_Monetary,Total_Revenue,Revenue_%,Average_Order_Value,Average_Quantity,Average_Discount,Profit_Margin,Average_Categories,Average_Returned_Lines,Median_Age,Average_RFM_Score,Share_Existing_Before_2023,Share_Recency_over_180d,Revenue_to_Customer_Ratio,Total_Profit
+0,"High-Value, Active",364,18.3468,31.6951,28.0,14.8819,13.0,91851.2839,71548.875,33433867.35,55.6706,6172.0265,29.1593,0.1061,0.2217,5.25,1.3214,36.0,14.206,0.6593,0.0,3.0344,7410971.15
+1,"Low-Value, Active",453,22.8327,63.8565,57.0,2.7506,3.0,6658.44,5944.55,3016273.3,5.0224,2420.7651,4.4967,0.1649,0.3164,2.4481,0.2296,29.0,7.6269,0.181,0.0,0.22,954476.26
+2,"Mid-Value, Lapsing",753,37.9536,172.992,168.0,6.2377,6.0,28228.7622,22205.0,21256257.95,35.3937,4525.4967,11.5657,0.1316,0.2346,3.9827,0.5179,33.0,9.591,0.3997,0.4396,0.9326,4987670.74
+3,"Low-Value, Inactive",414,20.8669,590.587,623.5,2.058,2.0,5676.7405,4392.3,2350170.55,3.9133,2758.4161,3.4106,0.1418,0.2848,2.0411,0.2754,30.0,4.3551,0.3478,0.872,0.1875,669433.43

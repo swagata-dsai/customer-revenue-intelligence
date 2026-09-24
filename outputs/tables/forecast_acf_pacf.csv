@@ -1,0 +1,14 @@
+﻿Lag,ACF_diff,PACF_diff,Approx_95%_Bound,ACF_Significant,PACF_Significant
+0,1.0,1.0,0.3313,True,True
+1,-0.4515,-0.4515,0.3313,True,True
+2,0.0632,-0.1766,0.3313,False,False
+3,-0.0566,-0.1332,0.3313,False,False
+4,-0.0932,-0.2233,0.3313,False,False
+5,0.1904,0.0475,0.3313,False,False
+6,-0.3684,-0.3705,0.3313,True,True
+7,0.2479,-0.15,0.3313,False,False
+8,-0.0256,-0.048,0.3313,False,False
+9,-0.1107,-0.2598,0.3313,False,False
+10,0.1206,-0.1835,0.3313,False,False
+11,-0.1596,-0.2682,0.3313,False,False
+12,0.3426,0.0081,0.3313,True,False

@@ -1,0 +1,22 @@
+Checklist_Item,Status,Evidence
+Power BI data model created,Done (files),13 tables exported to powerbi/data/ from the pbi_* SQL views; catalogue in powerbi/table_catalog.csv. Loading them into Power BI Desktop is a manual step.
+Relationships validated,Done (files) + Validated (Python),"9 relationships specified in powerbi/relationships.csv with cardinality, cross-filter direction and active flag. Key uniqueness and orphan keys checked in powerbi/validation/cross_step_consistency.csv."
+Date table created,Done (files),"DimDate: 1,277 daily rows, 2023-01-01 to 2026-06-30, with Year, Quarter, Month Number, Month Name, Year-Month, ISO week, Day, financial-year attributes and Period_Type. Marking it as the official date table and sorting Month Name by Month Number are manual steps in Power BI Desktop."
+DAX measures created,Done (files),"84 measures in powerbi/dax/measures.dax, grouped into 10 display folders, each with its format string and purpose. Pasting them into the model is manual."
+Core KPI values reconciled with SQL/Python,Validated (Python/SQL),15 measures x 8 filter contexts recomputed in pandas; the four required measures plus margin and AOV independently recomputed in SQL - 48 of 48 comparisons match. Targets for the Power BI cards: powerbi/validation/measure_validation_targets.csv.
+Executive Overview created,Specified + mockup,"Layout, visuals and measures specified; design mockup 01. Building the page in Power BI Desktop is manual."
+Revenue Intelligence created,Specified + mockup,"Layout, visuals and measures specified; design mockup 02. Building the page is manual."
+Customer Intelligence created,Specified + mockup,"Layout, visuals and measures specified; design mockup 03. Building the page is manual."
+Customer Segmentation created,Specified + mockup,"Layout, visuals and measures specified; design mockup 04. Building the page is manual."
+Product Analytics created,Specified + mockup,"Layout, visuals and measures specified; design mockup 05. Building the page is manual."
+Regional Analytics created,Specified + mockup,"Layout, visuals and measures specified; design mockup 06. Building the page is manual."
+Prediction & Forecast created,Specified + mockup,"Layout, visuals and measures specified; design mockup 07. Building the page is manual."
+Business Recommendations created,Done (content) + mockup,18 recommendations computed from the Step 4-10 outputs into powerbi/data/Recommendations.csv; design mockup 08. Placing them on the page is manual.
+Slicers configured,Specified,"Seven synced slicers specified (Date, Year, Month, Region, Category, Sub-category, Segment/Cluster) with their sync groups; see section 8 of the documentation. Configuring them is manual."
+Drill-through configured where appropriate,Specified + mockup,Customer Detail and Product Detail drill-through pages specified with their drill-through fields; Customer Detail mockup 09. Configuring them is manual.
+Tooltips configured where appropriate,Specified,"Customer and Product tooltip pages specified (320 x 240, fields listed in section 9). Configuring them is manual."
+Navigation created,Specified + mockup,"HOME plus the 8 pages, with a left navigation rail and page-navigation buttons; shown on every mockup. Adding the buttons is manual."
+Dashboard design standardized,Done (files),"Theme JSON (powerbi/theme/crm_dark_theme.json), page background PNG and palette reference; one format string per measure. Applying the theme is one manual step."
+Documentation created,Done,"outputs/reports/powerbi_dashboard_documentation.md, 14 sections."
+User guide created,Done,outputs/reports/powerbi_user_guide.md.
+No fabricated results,Verified,"Every figure in the extracts, recommendations, mockups and documentation is read from a Step 4-10 output file; cross-step consistency is checked in powerbi/validation/cross_step_consistency.csv (32 of 32 pass). No Power BI screenshot is claimed - outputs/figures/powerbi/ holds labelled design mockups and a README that says so."

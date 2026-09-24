@@ -1,0 +1,24 @@
+﻿Feature,Level,Rows,Mean_Next_Quarter_Revenue,Share_With_Purchase_%
+Region,Central,948,3426.1761,45.7806
+Region,East,950,3507.9655,46.8421
+Region,North,1679,4132.6174,46.3967
+Region,South,2020,3678.414,44.4554
+Region,West,1883,3530.0109,45.4594
+Main_Category,Beauty,759,2650.1714,39.9209
+Main_Category,Books,257,2179.6381,39.2996
+Main_Category,Electronics,2297,4904.4921,49.8476
+Main_Category,Fashion,2283,3120.3858,43.4078
+Main_Category,Home & Kitchen,1517,3608.3278,46.0778
+Main_Category,Sports,367,3165.4337,47.139
+Main_Payment_Method,COD,1074,4018.0542,48.1378
+Main_Payment_Method,Card,1464,3503.9793,45.4235
+Main_Payment_Method,Net Banking,711,3552.6542,45.5696
+Main_Payment_Method,UPI,3504,3734.5659,44.7774
+Main_Payment_Method,Unknown,41,834.672,39.0244
+Main_Payment_Method,Wallet,686,3652.1284,46.793
+Acquisition_Status,Acquired 2023-2025,3826,3304.4423,42.7601
+Acquisition_Status,Existing before 2023,3654,4092.4624,48.6043
+Target_Quarter,Q1,2465,3486.7031,43.4483
+Target_Quarter,Q2,2545,3606.5063,46.0511
+Target_Quarter,Q3,1213,3091.7524,39.1591
+Target_Quarter,Q4,1257,4831.4053,55.2108

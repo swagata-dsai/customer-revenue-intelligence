@@ -1,0 +1,17 @@
+﻿Column(s),Role,Use as ML predictor?,Reason
+Order_Line_ID,Identifier,No,Unique key; carries no behaviour
+Order_ID,Identifier,No (aggregate only),"Used to count orders, never as a raw input"
+Customer_ID,Identifier,No (grouping key),Groups rows per customer; memorising IDs = leakage
+Product_ID / Product_Name,Identifier,Via aggregates,"Use category mix, not raw IDs"
+Customer_Name,Identifier (PII),No,Personal identifier with no predictive meaning
+Order_Date,Time index,To build windows,Defines observation vs. prediction windows
+"Customer_Age, Gender, Region, State, City",Customer attribute,Yes,Known before the prediction period
+"Category, Sub_Category",Transaction attribute,Yes (observation window),As share of past spend
+"Quantity, Unit_Price, Discount",Transaction attribute,Yes (observation window),Aggregated from past orders only
+Sales / Revenue,TARGET-related,Target only in prediction window,Future-window revenue is the target; Sales = Qty x Price x (1-D) makes order-level prediction trivial (leakage)
+"Cost, Profit, Profit_Margin",Target-related,No (for revenue model),Computed from Sales - reveals the target
+Order_Status,Post-purchase outcome,Past windows only,Known only after delivery; future status unknown at prediction time
+Payment_Method,Transaction attribute,Yes (observation window),e.g. share of COD orders
+Customer_Type,Derived from history,With care,Encodes whether a prior order exists; recompute inside the window
+"Total_Customer_Revenue, Total_Customer_Orders, AOV, Purchase_Frequency, Days_Since_Last_Purchase",Full-period customer aggregates,No (as saved),Computed over ALL 36 months incl. the future window - must be recomputed on the observation window
+"DQ_Flags, *_Check_Pass, Outlier_* flags",Data-quality metadata,No,"Describe the data process, not the customer"

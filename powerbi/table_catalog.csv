@@ -1,0 +1,14 @@
+Table,Role,Source,Rows,Columns,Grain
+DimDate,Dimension,SQL view pbi_dim_date,1277,23,"One row per calendar day, 2023-01-01 to 2026-06-30"
+DimGeography,Dimension,SQL view pbi_dim_geography,35,5,One row per customer city
+DimProduct,Dimension,SQL view pbi_dim_product,61,4,One row per product
+DimRFMSegment,Dimension,SQL view pbi_dim_rfm_segment,12,6,One row per Step 5 RFM segment (+ 'No delivered order')
+DimCluster,Dimension,SQL view pbi_dim_cluster,5,4,One row per Step 6 K-Means cluster (+ 'No delivered order')
+DimCustomer,Dimension,SQL view pbi_dim_customer,2000,36,One row per registered customer (no names; Customer_ID only)
+FactSales,Fact,SQL view pbi_fact_sales,18670,19,"One row per order line, all statuses, with Is_Delivered"
+FactForecast,Fact,SQL view pbi_fact_forecast,54,13,One row per month x forecast record type (Step 9)
+FactRevenuePrediction,Fact,outputs/tables/revenue_predictions.csv (Step 8),2913,17,"One row per customer x target quarter, test split (Step 8)"
+PredictionQuarterly,Fact (aggregated),outputs/tables/revenue_quarterly_totals.csv (Step 8),8,9,One row per target quarter: actual vs predicted totals (Step 8)
+ModelMetrics,Supporting,"models/revenue_model_metadata.json, models/forecasting_metadata.json, outputs/tables/revenue_model_comparison.csv, forecast_model_comparison.csv",25,8,One row per model x split x metric (Steps 8 and 9)
+ModelInfo,Supporting,"models/revenue_model_metadata.json, models/forecasting_metadata.json",15,4,One row per model attribute (design of Steps 8 and 9)
+Recommendations,Supporting,Computed from Step 5-10 output tables by src/powerbi_prep.py,18,9,"One row per business recommendation, with its analytical basis"

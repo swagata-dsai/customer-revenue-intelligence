@@ -1,0 +1,11 @@
+﻿Question,Answer (from data)
+Q1. What percentage of customers are repeat customers?,"89.4% of scored customers (1,774) have 2+ delivered orders; 10.6% bought once."
+Q2. What percentage of customers are highly active?,"28.9% are Champions or Loyal Customers (the 'Active high value' group, 574 customers); 42.5% bought in the last 90 days."
+Q3. Which RFM segment contains the most customers?,Champions: 334 customers (16.8%).
+Q4. Which segment contributes the most revenue?,Champions: ₹3.23 Cr (53.8% of revenue) from 16.8% of customers.
+Q5. Which segment has the highest average monetary value?,"Champions: average ₹96,797 per customer vs ₹30,270 overall."
+Q6. Which customers show high monetary value but poor recency?,"229 customers meet the rule M_Score >= 4 and R_Score <= 2; together ₹95.10 L (15.8% of revenue). Largest: CUST-0821 (₹1.20 L, 183 days), CUST-0760 (₹1.19 L, 177 days), CUST-0652 (₹1.11 L, 216 days)."
+Q7. How concentrated is revenue among high-value customers?,"Top 1% -> 9.0%, top 5% -> 30.0%, top 10% -> 45.5%, top 20% -> 64.3% (Gini 0.611). 80% of revenue needs 34.1% of customers, so it is concentrated but not an 80/20 split."
+Q8. What proportion of customers appear inactive?,"'Inactive' group (Hibernating + Lost): 22.6% of customers, 4.5% of revenue. By recency alone, 34.9% have not bought for over 180 days."
+Q9. Which segments should be investigated for retention strategies?,"Slipping segments ranked by revenue at stake: At Risk (263 customers, ₹67.63 L, avg recency 259 days); Can't Lose Them (79 customers, ₹42.85 L, avg recency 228 days); Needs Attention (123 customers, ₹15.54 L, avg recency 121 days); About to Sleep (143 customers, ₹6.05 L, avg recency 115 days)."
+Q10. Which customer groups should be analysed further with ML segmentation?,"(1) Champions (334 customers) - very wide spend range (₹19,923 to ₹4.18 L), so it may hide distinct sub-groups; (2) the Loyal Customers / At Risk pair (240 and 263 customers) that differ mainly by a recency cut-off; (3) the thin-rule mid band (Potential Loyalists, Needs Attention). K-Means (Step 6) can test whether these rule boundaries match natural groupings, and whether discount-driven or premium buyers form their own clusters."

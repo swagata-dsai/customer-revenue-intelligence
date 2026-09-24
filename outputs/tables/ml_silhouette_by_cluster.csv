@@ -1,0 +1,5 @@
+﻿Cluster_ID,Mean_Silhouette,Min_Silhouette,Share_Negative_Silhouette
+0,0.4081,-0.0112,0.0082
+1,0.2623,-0.0568,0.0442
+2,0.3869,0.0187,0.0
+3,0.344,-0.0586,0.0411

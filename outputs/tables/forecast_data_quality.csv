@@ -1,0 +1,14 @@
+﻿Check,Result,OK
+Required columns present,"Order_Date, Sales, Profit, Quantity, Customer_ID, Product_ID, Category, Region",True
+Missing values in required columns,0,True
+Invalid (unparseable) Order_Date,0,True
+Duplicate Order_Line_ID,0,True
+Fully duplicated rows,0,True
+Delivered lines with Sales <= 0,0,True
+Delivered lines with Quantity <= 0,0,True
+Date range,"2023-01-01 to 2025-12-31 (1,096 days)",True
+Calendar days with no order,0,True
+Months with no Delivered sales,0,True
+Orders per day (mean / min / max),12.1 / 2 / 37,True
+Delivered lines per month (min / max),203 / 911,True
+Lines by status,"Delivered 16,860; Returned 1,101; Cancelled 709",True

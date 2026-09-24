@@ -1,0 +1,27 @@
+{
+  "dataset": "SYNTHETIC DATA - generated for academic demonstration only",
+  "input_file": "data/processed/customer_rfm_segments.csv",
+  "feature_order": [
+    "Recency",
+    "Frequency",
+    "Monetary"
+  ],
+  "preprocessing": "log1p -> StandardScaler (sklearn Pipeline saved in rfm_scaler.pkl)",
+  "model": "KMeans(n_clusters=4, random_state=42, n_init='auto')",
+  "selected_k": 4,
+  "selection_rules": {
+    "min_k": 3,
+    "min_cluster_share": 0.05,
+    "min_stability_ari": 0.9,
+    "then": "highest silhouette"
+  },
+  "cluster_labels": {
+    "0": "High-Value, Active",
+    "1": "Low-Value, Active",
+    "2": "Mid-Value, Lapsing",
+    "3": "Low-Value, Inactive"
+  },
+  "pca": "2 components on the scaled matrix - visualisation only",
+  "sklearn_version": "1.8.0",
+  "reload_example": "import joblib, pandas as pd; pre = joblib.load('models/rfm_scaler.pkl'); km = joblib.load('models/kmeans_customer_segmentation.pkl'); X = df[['Recency','Frequency','Monetary']]; clusters = km.predict(pre.transform(X))"
+}

@@ -1,0 +1,12 @@
+﻿revenue_rank,rfm_segment,customers,customer_pct,revenue,revenue_contribution_pct,revenue_per_customer
+1,Champions,334,16.83,32330090.4,53.83,96796.68
+2,Loyal Customers,240,12.1,8578897.6,14.28,35745.41
+3,At Risk,263,13.26,6763493.3,11.26,25716.7
+4,Can't Lose Them,79,3.98,4285311.3,7.14,54244.45
+5,Potential Loyalists,152,7.66,2191483.35,3.65,14417.65
+6,Lost,301,15.17,1720861.9,2.87,5717.15
+7,Needs Attention,123,6.2,1553870.95,2.59,12633.1
+8,Hibernating,148,7.46,975827.8,1.62,6593.43
+9,About to Sleep,143,7.21,605262.25,1.01,4232.6
+10,Promising,110,5.54,562907.7,0.94,5117.34
+11,Recent Customers,91,4.59,488562.6,0.81,5368.82

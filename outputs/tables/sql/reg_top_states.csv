@@ -1,0 +1,15 @@
+﻿region,state,rank_in_region,revenue,customers
+Central,Madhya Pradesh,1,6148214.55,204
+Central,Chhattisgarh,2,1485457.9,44
+East,West Bengal,1,3004708.6,108
+East,Assam,2,1498985.55,50
+East,Odisha,3,1320175.0,39
+North,Uttar Pradesh,1,3677663.55,134
+North,Punjab,2,3005594.75,94
+North,Delhi,3,2503365.65,73
+South,Tamil Nadu,1,4533463.6,139
+South,Telangana,2,4175250.4,112
+South,Karnataka,3,3993205.85,149
+West,Maharashtra,1,6864463.25,254
+West,Gujarat,2,6524555.95,203
+West,Goa,3,968126.6,33

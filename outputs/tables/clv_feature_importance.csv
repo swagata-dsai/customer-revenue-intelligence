@@ -1,0 +1,9 @@
+﻿Feature,Permutation_MAE_Increase,Permutation_Std,Ridge_Std_Coefficient,Transform
+Frequency,628.4551,41.1818,1148.8708,arcsinh + scale
+Avg_Discount,99.5106,17.4378,-276.5943,scale
+Recency_Days,97.4383,16.4349,-565.4011,arcsinh + scale
+AOV,42.6732,9.6103,453.1149,arcsinh + scale
+Tenure_Days_Capped,14.8577,6.371,-220.7012,scale
+Categories,3.8561,4.6213,377.3193,scale
+Return_Rate,0.9672,3.0548,187.7432,scale
+Profit_Margin,-1.1512,8.8565,333.7528,scale

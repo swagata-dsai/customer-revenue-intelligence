@@ -1,0 +1,345 @@
+/* =============================================================================
+   Customer Revenue Intelligence - Streamlit theme (STEP 12)
+   Dark data-intelligence interface. Colours match the Step 11 Power BI theme,
+   so the two front-ends look like one platform.
+
+   Readability first: the background pattern is deliberately faint, panels are
+   near-opaque, and body text sits well above the 4.5:1 contrast requirement.
+   ============================================================================= */
+
+:root {
+    --page:        #0B111C;
+    --page-2:      #070B12;
+    --panel:       #141C2B;
+    --panel-2:     #182134;
+    --border:      #25324A;
+    --border-soft: #1D2739;
+    --ink:         #E6EDF7;
+    --ink-strong:  #FFFFFF;
+    --muted:       #8E9BB3;
+    --grid:        #223047;
+
+    --c1: #3987E5;   /* series 1 / primary accent */
+    --c2: #D95926;   /* series 2 - predicted      */
+    --c3: #199E70;   /* series 3 - forecast       */
+    --c4: #C98500;
+    --c5: #D55181;
+    --c6: #008300;
+    --c7: #9085E9;
+    --c8: #E66767;
+
+    --good:     #0CA30C;
+    --warning:  #FAB219;
+    --serious:  #EC835A;
+    --critical: #D03B3B;
+
+    --radius: 14px;
+}
+
+/* ----------------------------------------------------------------- canvas  */
+.stApp {
+    background-color: var(--page);
+    background-image:
+        radial-gradient(900px 520px at 12% -8%, rgba(57, 135, 229, 0.10), transparent 60%),
+        radial-gradient(760px 480px at 96% 104%, rgba(25, 158, 112, 0.08), transparent 62%),
+        linear-gradient(180deg, var(--page) 0%, var(--page-2) 100%);
+    background-attachment: fixed;
+    color: var(--ink);
+}
+
+/* Faint data grid + node network. Pointer-events off so it never blocks a click,
+   and opacity low enough that charts and text stay fully readable. */
+.stApp::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.55;
+    background-image:
+        linear-gradient(rgba(37, 50, 74, 0.30) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(37, 50, 74, 0.30) 1px, transparent 1px);
+    background-size: 46px 46px, 46px 46px;
+    mask-image: radial-gradient(circle at 50% 0%, rgba(0, 0, 0, 0.85), transparent 78%);
+    -webkit-mask-image: radial-gradient(circle at 50% 0%, rgba(0, 0, 0, 0.85), transparent 78%);
+}
+
+.stApp > header,
+[data-testid="stHeader"],
+[data-testid="stToolbar"] { background: transparent !important; }
+[data-testid="stDecoration"] { display: none; }
+.block-container { padding-top: 2.1rem; padding-bottom: 3rem; max-width: 1500px; }
+
+/* Everything Streamlit draws sits above the background layer */
+.block-container, section[data-testid="stSidebar"] { position: relative; z-index: 1; }
+
+/* ---------------------------------------------------------------- typography */
+html, body, [class*="css"], .stMarkdown, .stText {
+    font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+    color: var(--ink);
+}
+h1, h2, h3, h4 { color: var(--ink-strong); font-weight: 650; letter-spacing: -0.01em; }
+h1 { font-size: 2.0rem; }
+h2 { font-size: 1.35rem; margin-top: 0.4rem; }
+h3 { font-size: 1.08rem; }
+a { color: var(--c1); }
+
+/* ------------------------------------------------------------ app header    */
+.cri-header {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 1.2rem; flex-wrap: wrap;
+    padding: 1.15rem 1.4rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background:
+        linear-gradient(120deg, rgba(57, 135, 229, 0.10) 0%, rgba(20, 28, 43, 0.86) 42%, rgba(20, 28, 43, 0.86) 100%);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+.cri-header .eyebrow {
+    font-size: 0.70rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--muted); font-weight: 700; margin-bottom: 0.30rem;
+}
+.cri-header .title {
+    font-size: 1.65rem; font-weight: 700; color: var(--ink-strong);
+    line-height: 1.15; letter-spacing: -0.015em; margin: 0;
+}
+.cri-header .subtitle { font-size: 0.92rem; color: var(--muted); margin-top: 0.30rem; }
+.cri-header .meta { text-align: right; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+
+/* status pill - only rendered when the app has really loaded its data */
+.cri-status {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.32rem 0.75rem; border-radius: 999px;
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.09em;
+    border: 1px solid rgba(12, 163, 12, 0.45);
+    background: rgba(12, 163, 12, 0.10);
+    color: #6FE06F;
+}
+.cri-status.warn {
+    border-color: rgba(250, 178, 25, 0.45);
+    background: rgba(250, 178, 25, 0.10);
+    color: var(--warning);
+}
+.cri-status .dot {
+    width: 8px; height: 8px; border-radius: 50%; background: currentColor;
+    box-shadow: 0 0 0 0 currentColor;
+    animation: cri-pulse 2.4s ease-out infinite;
+}
+@keyframes cri-pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(111, 224, 111, 0.55); }
+    70%  { box-shadow: 0 0 0 9px rgba(111, 224, 111, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(111, 224, 111, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .cri-status .dot { animation: none; }
+    .cri-kpi, .cri-flow-step { transition: none !important; }
+}
+
+/* ------------------------------------------------------------- KPI cards    */
+.cri-kpi {
+    position: relative;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: linear-gradient(160deg, rgba(24, 33, 52, 0.92) 0%, rgba(18, 25, 39, 0.92) 100%);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    padding: 0.95rem 1.05rem 0.9rem 1.15rem;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+    transition: transform 0.16s ease, border-color 0.16s ease;
+}
+.cri-kpi:hover { transform: translateY(-2px); border-color: #32425F; }
+.cri-kpi::before {
+    content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+    background: var(--accent, var(--c1));
+}
+.cri-kpi .k-title {
+    font-size: 0.68rem; letter-spacing: 0.13em; text-transform: uppercase;
+    color: var(--muted); font-weight: 700; margin-bottom: 0.45rem;
+}
+.cri-kpi .k-value {
+    font-size: 1.62rem; font-weight: 700; color: var(--ink-strong);
+    line-height: 1.1; letter-spacing: -0.02em;
+}
+.cri-kpi .k-sub { font-size: 0.72rem; color: var(--muted); margin-top: 0.42rem; line-height: 1.45; }
+.cri-kpi .k-delta { font-size: 0.75rem; font-weight: 650; margin-top: 0.35rem; }
+.cri-kpi .k-delta.up   { color: #3FC77F; }
+.cri-kpi .k-delta.down { color: var(--serious); }
+.cri-kpi .k-delta.flat { color: var(--muted); }
+
+/* ------------------------------------------------------------ glass panels  */
+.cri-panel {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: rgba(20, 28, 43, 0.86);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    padding: 1.0rem 1.15rem;
+    margin-bottom: 0.9rem;
+}
+.cri-panel h4 { margin: 0 0 0.35rem 0; font-size: 1.0rem; }
+.cri-panel p  { margin: 0.25rem 0; font-size: 0.86rem; color: var(--ink); line-height: 1.55; }
+.cri-panel .note { color: var(--muted); font-size: 0.78rem; }
+
+.cri-section {
+    display: flex; align-items: baseline; gap: 0.7rem;
+    margin: 1.35rem 0 0.55rem 0; padding-bottom: 0.45rem;
+    border-bottom: 1px solid var(--border-soft);
+}
+.cri-section .s-title { font-size: 1.12rem; font-weight: 650; color: var(--ink-strong); }
+.cri-section .s-note  { font-size: 0.78rem; color: var(--muted); }
+
+/* recommendation card */
+.cri-rec {
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent, var(--c1));
+    border-radius: var(--radius);
+    background: rgba(20, 28, 43, 0.86);
+    padding: 0.95rem 1.1rem;
+    margin-bottom: 0.8rem;
+}
+.cri-rec .r-head { font-size: 0.98rem; font-weight: 650; color: var(--ink-strong); margin-bottom: 0.6rem; }
+.cri-rec .r-label {
+    font-size: 0.64rem; letter-spacing: 0.15em; text-transform: uppercase;
+    font-weight: 700; color: var(--accent, var(--c1)); margin-top: 0.55rem;
+}
+.cri-rec .r-body { font-size: 0.85rem; color: var(--ink); line-height: 1.55; }
+.cri-rec .r-src  { font-size: 0.72rem; color: var(--muted); margin-top: 0.7rem;
+                   border-top: 1px solid var(--border-soft); padding-top: 0.5rem; }
+
+/* pipeline flow on the home page */
+.cri-flow { display: flex; align-items: stretch; gap: 0.55rem; flex-wrap: wrap; margin: 0.4rem 0 0.2rem 0; }
+.cri-flow-step {
+    flex: 1 1 130px; min-width: 120px;
+    border: 1px solid var(--border); border-radius: var(--radius);
+    background: rgba(20, 28, 43, 0.86);
+    padding: 0.85rem 0.9rem; text-align: center;
+    transition: transform 0.18s ease, border-color 0.18s ease;
+    animation: cri-rise 0.5s ease both;
+}
+.cri-flow-step:hover { transform: translateY(-3px); border-color: var(--accent, var(--c1)); }
+.cri-flow-step .f-icon  { font-size: 1.15rem; }
+.cri-flow-step .f-title { font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em;
+                          text-transform: uppercase; color: var(--ink-strong); margin-top: 0.3rem; }
+.cri-flow-step .f-note  { font-size: 0.71rem; color: var(--muted); margin-top: 0.28rem; line-height: 1.4; }
+.cri-flow-arrow { display: flex; align-items: center; color: var(--muted); font-size: 1.1rem; }
+@keyframes cri-rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+/* ----------------------------------------------------------------- sidebar  */
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #101726 0%, #0C1220 100%);
+    border-right: 1px solid var(--border);
+}
+section[data-testid="stSidebar"] .block-container { padding-top: 1.2rem; }
+.cri-side-brand {
+    padding: 0.2rem 0 0.9rem 0; margin-bottom: 0.6rem;
+    border-bottom: 1px solid var(--border-soft);
+}
+.cri-side-brand .b-mark {
+    font-size: 0.68rem; letter-spacing: 0.2em; color: var(--muted); font-weight: 700;
+}
+.cri-side-brand .b-name {
+    font-size: 1.0rem; font-weight: 700; color: var(--ink-strong); line-height: 1.25; margin-top: 0.2rem;
+}
+.cri-side-note { font-size: 0.72rem; color: var(--muted); line-height: 1.5; }
+
+/* navigation links - the default is too dim against the dark rail */
+[data-testid="stSidebarNav"] a { border-radius: 10px; }
+[data-testid="stSidebarNav"] a span,
+[data-testid="stSidebarNav"] a p {
+    color: var(--ink) !important;
+    font-size: 0.82rem !important;
+    letter-spacing: 0.02em;
+}
+[data-testid="stSidebarNav"] a:hover { background: rgba(57, 135, 229, 0.10); }
+[data-testid="stSidebarNav"] a[aria-current="page"] {
+    background: rgba(57, 135, 229, 0.16) !important;
+    box-shadow: inset 3px 0 0 0 var(--c1);
+}
+[data-testid="stSidebarNav"] a[aria-current="page"] span,
+[data-testid="stSidebarNav"] a[aria-current="page"] p {
+    color: var(--ink-strong) !important; font-weight: 650;
+}
+[data-testid="stSidebarNav"] ul + div, [data-testid="stSidebarNav"] > div > div > span {
+    color: var(--muted) !important;
+}
+
+/* ------------------------------------------------------------- components   */
+div[data-testid="stMetric"] {
+    background: rgba(20, 28, 43, 0.86);
+    border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 0.8rem 0.95rem;
+}
+div[data-testid="stMetricLabel"] p { color: var(--muted) !important; font-size: 0.74rem !important; }
+
+.stDataFrame, div[data-testid="stDataFrame"] {
+    border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;
+}
+div[data-testid="stExpander"] {
+    border: 1px solid var(--border) !important; border-radius: var(--radius) !important;
+    background: rgba(20, 28, 43, 0.70);
+}
+.stTabs [data-baseweb="tab-list"] { gap: 0.35rem; border-bottom: 1px solid var(--border-soft); }
+.stTabs [data-baseweb="tab"] {
+    background: transparent; border-radius: 10px 10px 0 0; padding: 0.45rem 0.9rem;
+    color: var(--muted); font-size: 0.88rem;
+}
+.stTabs [aria-selected="true"] { background: rgba(57, 135, 229, 0.12); color: var(--ink-strong) !important; }
+
+/* widget labels default to a dim grey on this background */
+[data-testid="stWidgetLabel"] p,
+.stRadio label p, .stCheckbox label p, .stSelectbox label p,
+.stMultiSelect label p, .stSlider label p, .stTextInput label p {
+    color: var(--ink) !important; font-size: 0.85rem !important;
+}
+[data-testid="stCaptionContainer"] p { color: var(--muted) !important; }
+
+.stButton > button, .stDownloadButton > button {
+    border: 1px solid var(--border); border-radius: 10px;
+    background: rgba(57, 135, 229, 0.12); color: var(--ink);
+    font-weight: 600; transition: border-color 0.15s ease, background 0.15s ease;
+}
+.stButton > button:hover, .stDownloadButton > button:hover {
+    border-color: var(--c1); background: rgba(57, 135, 229, 0.20); color: var(--ink-strong);
+}
+
+/* Chart titles are HTML, so the Plotly legend can never sit on top of them */
+.cri-chart-title {
+    font-size: 0.95rem; font-weight: 650; color: var(--ink-strong);
+    margin: 0.6rem 0 0.35rem 0.15rem; line-height: 1.35;
+}
+
+/* Plotly charts sit on the page background, not on a white card */
+.js-plotly-plot .plotly .main-svg { background: transparent !important; }
+div[data-testid="stPlotlyChart"] {
+    border: 1px solid var(--border); border-radius: var(--radius);
+    background: rgba(20, 28, 43, 0.72); padding: 0.35rem 0.4rem 0.1rem 0.4rem;
+}
+
+/* ------------------------------------------------------------------ footer  */
+.cri-footer {
+    margin-top: 2.2rem; padding: 1.0rem 1.2rem;
+    border-top: 1px solid var(--border-soft);
+    display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+    font-size: 0.76rem; color: var(--muted);
+}
+.cri-footer strong { color: var(--ink); font-weight: 650; }
+
+/* ------------------------------------------------------------- responsive   */
+@media (max-width: 1100px) {
+    .block-container { padding-left: 1.1rem; padding-right: 1.1rem; }
+    .cri-header .meta { text-align: left; }
+    .cri-kpi .k-value { font-size: 1.42rem; }
+}
+@media (max-width: 760px) {
+    h1 { font-size: 1.55rem; }
+    .cri-header { padding: 0.95rem 1.0rem; }
+    .cri-header .title { font-size: 1.28rem; }
+    .cri-kpi { padding: 0.8rem 0.85rem; }
+    .cri-kpi .k-value { font-size: 1.28rem; }
+    .cri-flow-arrow { display: none; }
+}

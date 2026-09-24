@@ -1,0 +1,11 @@
+﻿Metric,Value,Display
+Customers in the dataset,2000.0,"2,000"
+Customers with >= 1 delivered purchase (scored),1984.0,"1,984"
+Customers with no delivered purchase (excluded),16.0,16
+Total customer revenue (Monetary sum),60056569.150000006,₹6.01 Cr
+Average revenue per scored customer,30270.44816028226,"₹30,270"
+Median revenue per scored customer,13513.325,"₹13,513"
+Customers with exactly one order,210.0,10.6%
+Repeat customers (2+ orders),1774.0,89.4%
+Customers active in last 90 days (Recency <= 90),843.0,42.5%
+Customers inactive > 180 days (Recency > 180),692.0,34.9%

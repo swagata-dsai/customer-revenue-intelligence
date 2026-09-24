@@ -1,0 +1,15 @@
+﻿Technique,Queries_Using_It,Examples
+INNER JOIN,18,"cust_acquired_by_year, cust_concentration_summary, cust_inactive, seg_rfm_summary, seg_value_activity_groups, seg_ml_cluster_summary"
+LEFT JOIN,7,"cust_new_vs_existing, prod_profitability, reg_customers_without_orders, BQ01, BQ13, BQ15"
+CASE WHEN,19,"cust_new_vs_existing, cust_frequency_distribution, cust_concentration_summary, cust_inactive, seg_rfm_vs_cluster, prod_profitability"
+CTE (WITH),27,"rev_by_year, rev_by_quarter, cust_top_revenue, cust_new_vs_existing, cust_acquired_by_year, cust_frequency_distribution"
+Subquery,10,"cust_new_vs_existing, cust_inactive, seg_ml_cluster_summary, prod_top_revenue, prod_investigate, BQ03"
+Window function,35,"rev_order_status, rev_by_year, rev_by_quarter, cust_top_revenue, cust_new_vs_existing, cust_frequency_distribution"
+Ranking (RANK / ROW_NUMBER / NTILE),22,"cust_top_revenue, cust_new_vs_existing, cust_revenue_concentration, cust_concentration_summary, prod_category_performance, prod_subcategory_performance"
+Running total (window frame),4,"cust_revenue_concentration, time_monthly, time_ytd_running_total, BQ19"
+Percentage contribution (SUM() OVER ()),18,"cust_top_revenue, cust_frequency_distribution, cust_revenue_concentration, seg_rfm_summary, seg_value_activity_groups, prod_category_performance"
+LAG / LEAD,5,"rev_by_year, rev_by_quarter, time_monthly, BQ15, BQ17"
+GROUP BY aggregation,54,"rev_order_status, rev_by_year, rev_by_quarter, rev_margin_by_year_category, cust_top_revenue, cust_top_profit"
+HAVING,2,"cust_most_frequent, cust_highest_aov"
+Date functions,7,"rev_by_quarter, cust_most_frequent, cust_inactive, time_month_of_year, BQ06, BQ09"
+UNION ALL,1,BQ10

@@ -1,0 +1,8 @@
+﻿Variable,Count,Mean,Median,Std,Min,Q1,Q3,Max,Skewness,Kurtosis,Shape
+Quantity,16860,1.351,1.0,1.415,1.0,1.0,1.0,50.0,24.479,742.175,strongly right-skewed
+Unit_Price,16860,3343.115,1612.0,7080.692,291.0,907.0,2713.25,98119.0,6.928,63.335,strongly right-skewed
+Discount,16860,0.121,0.1,0.1,0.0,0.0,0.2,0.4,0.358,-0.751,approximately symmetric
+Sales,16860,3562.074,1706.225,7596.344,219.05,1013.9,3122.825,176942.0,7.751,88.215,strongly right-skewed
+Cost,16860,2730.369,1046.36,7153.263,127.85,554.138,1982.06,167369.26,7.888,89.4,strongly right-skewed
+Profit,16860,831.705,638.52,1113.862,-14964.8,388.538,1014.11,45435.74,10.805,304.321,strongly right-skewed
+Customer_Age (per customer),2000,32.146,32.0,8.915,18.0,26.0,38.0,61.0,0.366,-0.338,approximately symmetric

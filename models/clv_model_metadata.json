@@ -1,0 +1,44 @@
+{
+  "dataset": "SYNTHETIC DATA - generated for academic demonstration only",
+  "purpose": "Estimate each customer's Delivered PROFIT in the next 12 months (an estimate, not a guarantee)",
+  "target": "Future_Profit_12M",
+  "feature_order": [
+    "Recency_Days",
+    "Frequency",
+    "AOV",
+    "Profit_Margin",
+    "Avg_Discount",
+    "Categories",
+    "Tenure_Days_Capped",
+    "Return_Rate"
+  ],
+  "skewed_features_arcsinh": [
+    "Recency_Days",
+    "Frequency",
+    "AOV"
+  ],
+  "feature_window_months": 12,
+  "target_window_months": 12,
+  "population": "customers with >= 1 Delivered order in the 12 months before the cutoff",
+  "selected_model": "Random forest",
+  "estimator": "RandomForestRegressor(min_samples_leaf=10, n_estimators=300, n_jobs=-1,\n                      random_state=42)",
+  "selection_rule": "lowest mean 5-fold CV RMSE on the training cutoff (test year not used)",
+  "validation": {
+    "type": "out-of-time",
+    "train": "features 2023 -> target 2024",
+    "test": "features 2024 -> target 2025",
+    "MAE": 2793.3562,
+    "RMSE": 4269.3608,
+    "R2": 0.2705,
+    "WAPE_%": 68.0877,
+    "MAPE_nonzero_%": 175.5995,
+    "Spearman": 0.4869,
+    "Top20_Capture_%": 41.4552,
+    "Predicted_to_Actual_Total": 0.8993
+  },
+  "final_fit": "same specification refit on train + test panels (2,465 rows) for scoring",
+  "scoring_cutoff": "2026-01-01",
+  "predictions_floored_at_zero": true,
+  "sklearn_version": "1.8.0",
+  "reload_example": "import joblib, pandas as pd; pre = joblib.load('models/clv_preprocessor.pkl'); m = joblib.load('models/clv_model.pkl'); X = pd.read_csv('data/processed/clv_modeling_dataset.csv'); X = X[X.Role.str.startswith('scoring')]; est = m.predict(pre.transform(X[pre.feature_names_in_])).clip(0)"
+}

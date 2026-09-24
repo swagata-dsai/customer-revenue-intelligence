@@ -1,0 +1,6 @@
+area,check,result,status,detail
+Structure,Duplicate-content groups,518 groups,INFO,
+Structure,Empty files / empty dirs / stray files,3 / 0 / 0,PASS,
+References,File paths referenced in code resolve on disk,"671 referenced, 0 unresolved (plus 16 known runtime-generated names)",PASS,
+Code,Python files parse without syntax errors,"86 files, 0 errors",PASS,{}
+Code,Every src module is imported somewhere,"14 modules, 0 unused",PASS,

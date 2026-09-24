@@ -1,0 +1,5 @@
+﻿Variable,Q1,Q3,IQR,Lower_Fence,Upper_Fence,IQR_Outliers,IQR_Outlier_%,Z>3_Outliers,Min,Max,Skewness,Note
+Sales,1024.58,3111.0,2086.43,-2105.06,6240.64,1960,10.5,368,219.05,176942.0,8.07,Right-skewed: a minority of premium-product lines sit above the fence
+Profit,392.7,1019.69,627.0,-547.8,1960.18,1400,7.5,239,-14964.8,45435.74,10.47,"Both tails: large profits on premium items, losses on deep discounts"
+Quantity,1.0,1.0,0.0,1.0,1.0,4578,24.52,19,1.0,50.0,24.62,"IQR rule degenerate (Q1 = Q3 = 1, so every line with 2+ units is 'outside'); use z-score / business threshold (>= 10 units) instead"
+Unit_Price,916.0,2718.0,1802.0,-1787.0,5421.0,1936,10.37,349,291.0,98119.0,7.01,Reflects the product price list (Rs 291 - Rs 98k); extremes are premium products

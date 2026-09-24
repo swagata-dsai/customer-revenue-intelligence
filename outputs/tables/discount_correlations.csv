@@ -1,0 +1,11 @@
+﻿Pair,Pearson_r,Pearson_p,Spearman_rho,Spearman_p,Strength (Spearman)
+Discount vs Sales,-0.11120783751314503,1.5343833313677998e-47,-0.12513603261012754,8.193978227992652e-60,negligible
+Discount vs Profit,-0.25445140051425597,2.2378645926162843e-247,-0.37387466520550305,0.0,weak negative
+Discount vs Profit_Margin,-0.3172368679427456,0.0,-0.31789303080808623,0.0,weak negative
+Discount vs Quantity,0.024075677401722034,0.0017698880966477365,0.06257246337496436,4.2172598703623975e-16,negligible
+Within Beauty: Discount vs Profit_Margin,,,-0.5769218753773149,1.0944242531634132e-255,
+Within Books: Discount vs Profit_Margin,,,-0.8868340294032652,0.0,
+Within Electronics: Discount vs Profit_Margin,,,-0.36856128874101235,4.729127089399325e-103,
+Within Fashion: Discount vs Profit_Margin,,,-0.7937277589309459,0.0,
+Within Home & Kitchen: Discount vs Profit_Margin,,,-0.6276166499101966,0.0,
+Within Sports: Discount vs Profit_Margin,,,-0.6977287562614666,1.7988999197396713e-147,

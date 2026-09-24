@@ -1,0 +1,55 @@
+﻿Month,Type,Actual_Revenue,Forecast,Lower_80,Upper_80,Lower_95,Upper_95,Model
+2023-01,Historical actual,724867.15,,,,,,
+2023-02,Historical actual,572756.75,,,,,,
+2023-03,Historical actual,921616.85,,,,,,
+2023-04,Historical actual,1035094.85,,,,,,
+2023-05,Historical actual,889389.7,,,,,,
+2023-06,Historical actual,696767.45,,,,,,
+2023-07,Historical actual,1045739.0,,,,,,
+2023-08,Historical actual,1356304.8,,,,,,
+2023-09,Historical actual,975785.45,,,,,,
+2023-10,Historical actual,1847708.75,,,,,,
+2023-11,Historical actual,1413684.8,,,,,,
+2023-12,Historical actual,1581161.7,,,,,,
+2024-01,Historical actual,1379693.5,,,,,,
+2024-02,Historical actual,1676214.25,,,,,,
+2024-03,Historical actual,1448820.7,,,,,,
+2024-04,Historical actual,1168649.7,,,,,,
+2024-05,Historical actual,1366809.35,,,,,,
+2024-06,Historical actual,1400986.15,,,,,,
+2024-07,Historical actual,1226548.4,,,,,,
+2024-08,Historical actual,1575669.45,,,,,,
+2024-09,Historical actual,1564459.35,,,,,,
+2024-10,Historical actual,2795219.0,,,,,,
+2024-11,Historical actual,2181876.95,,,,,,
+2024-12,Historical actual,1984808.1,,,,,,
+2025-01,Historical actual,2058026.15,,,,,,
+2025-02,Historical actual,1456402.75,,,,,,
+2025-03,Historical actual,2184197.4,,,,,,
+2025-04,Historical actual,1703556.8,,,,,,
+2025-05,Historical actual,2234210.0,,,,,,
+2025-06,Historical actual,2544999.0,,,,,,
+2025-07,Historical actual,2323566.2,,,,,,
+2025-08,Historical actual,2194859.35,,,,,,
+2025-09,Historical actual,2447160.2,,,,,,
+2025-10,Historical actual,3097837.75,,,,,,
+2025-11,Historical actual,2654877.85,,,,,,
+2025-12,Historical actual,2326243.55,,,,,,
+2025-01,Validation forecast (fit on train),2058026.15,2131991.8,1649979.87,2614003.72,1394818.17,2869165.42,Theta: Theta (seasonality auto-tested)
+2025-02,Validation forecast (fit on train),1456402.75,2159925.09,1441583.61,2878266.56,1061316.61,3258533.57,Theta: Theta (seasonality auto-tested)
+2025-03,Validation forecast (fit on train),2184197.4,2187858.38,1293602.57,3082114.19,820212.14,3555504.62,Theta: Theta (seasonality auto-tested)
+2025-04,Validation forecast (fit on train),1703556.8,2215791.67,1174939.89,3256643.46,623946.24,3807637.11,Theta: Theta (seasonality auto-tested)
+2025-05,Validation forecast (fit on train),2234210.0,2243724.96,1074515.22,3412934.7,455572.98,4031876.95,Theta: Theta (seasonality auto-tested)
+2025-06,Validation forecast (fit on train),2544999.0,2271658.26,986850.72,3556465.79,306714.7,4236601.81,Theta: Theta (seasonality auto-tested)
+2025-07,Test forecast (fit on train + validation),2323566.2,2327379.35,1824719.03,2830039.66,1558626.74,3096131.95,Theta: Theta (seasonality auto-tested)
+2025-08,Test forecast (fit on train + validation),2194859.35,2352757.59,1594449.88,3111065.3,1193026.02,3512489.15,Theta: Theta (seasonality auto-tested)
+2025-09,Test forecast (fit on train + validation),2447160.2,2378135.83,1430827.13,3325444.54,929352.19,3826919.47,Theta: Theta (seasonality auto-tested)
+2025-10,Test forecast (fit on train + validation),3097837.75,2403514.07,1299087.99,3507940.16,714440.13,4092588.01,Theta: Theta (seasonality auto-tested)
+2025-11,Test forecast (fit on train + validation),2654877.85,2428892.32,1187071.0,3670713.63,529690.51,4328094.13,Theta: Theta (seasonality auto-tested)
+2025-12,Test forecast (fit on train + validation),2326243.55,2454270.56,1088809.7,3819731.42,365978.38,4542562.74,Theta: Theta (seasonality auto-tested)
+2026-01,Future forecast (fit on all 36 months),,2566832.91,2078081.06,3055584.76,1819351.47,3314314.36,Theta: Theta (seasonality auto-tested)
+2026-02,Future forecast (fit on all 36 months),,2593310.31,1856391.09,3330229.53,1466289.61,3720331.0,Theta: Theta (seasonality auto-tested)
+2026-03,Future forecast (fit on all 36 months),,2619787.7,1699341.34,3540234.07,1212086.47,4027488.94,Theta: Theta (seasonality auto-tested)
+2026-04,Future forecast (fit on all 36 months),,2646265.1,1573235.24,3719294.96,1005207.54,4287322.65,Theta: Theta (seasonality auto-tested)
+2026-05,Future forecast (fit on all 36 months),,2672742.49,1466274.65,3879210.33,827609.16,4517875.83,Theta: Theta (seasonality auto-tested)
+2026-06,Future forecast (fit on all 36 months),,2699219.89,1372669.39,4025770.39,670435.98,4728003.8,Theta: Theta (seasonality auto-tested)

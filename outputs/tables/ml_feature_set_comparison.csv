@@ -1,0 +1,13 @@
+﻿Feature_Set,k,Silhouette,Davies_Bouldin,Calinski_Harabasz
+"A: R, F, M (selected)",3,0.327,1.064,1434.0
+"A: R, F, M (selected)",4,0.353,0.951,1547.0
+"A: R, F, M (selected)",5,0.312,1.042,1434.0
+"B: R, F, M + Average_Order_Value",3,0.28,1.19,1146.0
+"B: R, F, M + Average_Order_Value",4,0.273,1.214,1071.0
+"B: R, F, M + Average_Order_Value",5,0.277,1.145,1008.0
+"C: R, F, M + Average_Discount",3,0.289,1.271,976.0
+"C: R, F, M + Average_Discount",4,0.286,1.157,977.0
+"C: R, F, M + Average_Discount",5,0.289,1.139,915.0
+"D: R, F, Average_Order_Value",3,0.266,1.307,913.0
+"D: R, F, Average_Order_Value",4,0.273,1.169,882.0
+"D: R, F, Average_Order_Value",5,0.279,1.076,888.0

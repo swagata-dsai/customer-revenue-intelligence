@@ -1,0 +1,12 @@
+﻿Column,Unique_Before,Unique_After,Values_After (up to 12)
+Customer_Name,1707,1621,"Aarav Agarwal, Aarav Bose, Aarav Das, Aarav Desai, Aarav Dutta, Aarav Fernandes, Aarav Ghosh, Aarav Hazarika, Aarav Kapoor, Aarav Khan, Aarav Khanna, Aarav Kumar ..."
+Gender,11,3,"Female, Male, Other"
+City,41,34,"Ahmedabad, Amritsar, Bengaluru, Bhopal, Bhubaneswar, Chandigarh, Chennai, Coimbatore, Gurugram, Guwahati, Hyderabad, Indore ..."
+State,26,21,"Andhra Pradesh, Assam, Bihar, Chandigarh, Chhattisgarh, Delhi, Goa, Gujarat, Haryana, Jharkhand, Karnataka, Kerala ..."
+Region,20,5,"Central, East, North, South, West"
+Product_Name,61,61,"20000mAh Power Bank, 43-inch 4K Smart TV, 65W Fast Charger, Adjustable Dumbbell Set 20kg, AeroBook 14 Laptop, AeroBook Pro 16 Laptop, Air Fryer 4L, Airtight Container Set, Analog Wrist Watch, Argan Oil Shampoo, Badminton Racket Pair, Beard Trimmer ..."
+Category,24,6,"Beauty, Books, Electronics, Fashion, Home & Kitchen, Sports"
+Sub_Category,26,26,"Academic, Accessories, Audio, Children, Cookware, Cycling, Fashion Accessories, Fiction, Fitness Equipment, Footwear, Grooming, Haircare ..."
+Payment_Method,15,5,"COD, Card, Net Banking, UPI, Wallet"
+Order_Status,3,3,"Cancelled, Delivered, Returned"
+Customer_Type,2,2,"New, Returning"

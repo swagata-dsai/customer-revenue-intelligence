@@ -1,0 +1,19 @@
+﻿Check,Value,Pass
+One row per customer (no duplicate IDs),0,True
+Customers = valid population (>= 1 Delivered order) = Step 5 RFM,"1,984 vs 1,984 vs 1,984",True
+Revenue reconciles with cleaned Delivered sales,₹6.01 Cr vs ₹6.01 Cr,True
+Profit reconciles with cleaned Delivered profit,₹1.40 Cr vs ₹1.40 Cr,True
+Revenue - cost = profit for every customer,all customers,True
+Orders and revenue match Step 5 Frequency / Monetary,per customer,True
+Tenure non-negative; first <= last <= reference date,min tenure 7 d,True
+No leakage: every feature date < cutoff (train & test),"train max 2023-12-31, test max 2024-12-31",True
+Time integrity: target dates >= cutoff; training target window ends before test target window,"train target from 2024-01-01, test target from 2025-01-01",True
+"No leakage: no target, RFM/cluster label or ID among model features","Recency_Days, Frequency, AOV, ...",True
+Target window exists in the data (no invented future),test target ends 2025-12-31,True
+Feature selection reproduces MODEL_FEATURES; final VIF <= 5,max VIF 3.52,True
+Reproducible: refit with fixed random_state gives identical predictions,random_state=42,True
+Reported metrics recomputed from saved test predictions,R² 0.2705,True
+Every customer has one estimate and a method label; estimates >= 0,"1,984 estimates",True
+CLV by RFM and by cluster reconcile with the customer total,₹1.40 Cr,True
+Every assumption documented,16 assumptions in clv_assumptions.csv,True
+Saved model + preprocessor (reloaded from models/) reproduce the estimates,"clv_model.pkl, clv_preprocessor.pkl",True

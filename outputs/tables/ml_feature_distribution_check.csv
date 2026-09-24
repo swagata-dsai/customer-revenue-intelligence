@@ -1,0 +1,4 @@
+﻿Feature,Min,Median,Mean,Max,Max_to_Median,Skewness_raw,Skewness_log1p,Apply_log1p,Reason
+Recency,1.0,121.0,209.289,1096.0,9.058,2.054,-0.323,True,|skew| 2.05 > 1.0 and log1p reduces it to -0.32
+Frequency,1.0,4.0,6.155,29.0,7.25,1.902,0.325,True,|skew| 1.90 > 1.0 and log1p reduces it to 0.32
+Monetary,237.75,13513.325,30270.448,417800.45,30.918,3.209,-0.069,True,|skew| 3.21 > 1.0 and log1p reduces it to -0.07

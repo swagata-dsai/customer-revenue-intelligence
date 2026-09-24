@@ -1,0 +1,49 @@
+{
+  "dataset": "SYNTHETIC DATA - generated for academic demonstration only",
+  "target": "monthly Delivered revenue (Sales, Rs), company total",
+  "model_type": "Theta: Theta (seasonality auto-tested)",
+  "model_parameters": {
+    "b0": 52954.790920205916,
+    "alpha": 0.47718796597345875,
+    "seasonality_detected_by_theta_test": false
+  },
+  "forecasting_frequency": "monthly (month start)",
+  "forecast_horizon_months": 6,
+  "forecast_months": [
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06"
+  ],
+  "training_period_final_fit": "2023-01 to 2025-12 (36 months)",
+  "evaluation_split": {
+    "train": "2023-01..2024-12",
+    "validation": "2025-01..2025-06",
+    "test": "2025-07..2025-12"
+  },
+  "selection_rule": "lowest mean backtest MAPE; must beat naive and seasonal naive on test MAE; within 5% -> simpler family",
+  "metrics": {
+    "validation": {
+      "MAE": 262706.591,
+      "RMSE": 373634.907,
+      "MAPE_%": 15.55,
+      "sMAPE_%": 13.42,
+      "WAPE_%": 12.94
+    },
+    "test": {
+      "MAE": 213178.662,
+      "RMSE": 310713.292,
+      "MAPE_%": 7.768,
+      "sMAPE_%": 8.243,
+      "WAPE_%": 8.502
+    },
+    "backtest_mean_MAPE_%": 14.561
+  },
+  "intervals": "80% and 95% prediction intervals from the model",
+  "random_seed": 42,
+  "statsmodels_version": "0.15.0",
+  "created": "2026-09-22",
+  "reload": "a = joblib.load('models/forecasting_model.pkl'); a['fitted_model'].forecast(6)"
+}

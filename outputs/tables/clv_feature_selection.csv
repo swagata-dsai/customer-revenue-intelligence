@@ -1,0 +1,14 @@
+﻿Feature,VIF_All_Candidates,Decision,Reason,VIF_Final_Set,Spearman_with_Target_(train)
+Recency_Days,2.212,Kept,value component (always kept),2.1425,-0.3296
+Frequency,416.3553,Kept,value component (always kept),3.5162,0.361
+Revenue,1590.4034,Excluded,exact identity = AOV x Frequency,,0.3186
+Profit,250.6623,Excluded,exact identity = AOV x Frequency x Profit_Margin,,0.341
+Quantity,7.3746,Excluded,VIF 7.3 > 5 (redundant with other features),,0.3393
+AOV,824.8916,Kept,value component (always kept),2.3608,0.1932
+Avg_Profit_per_Order,226.2576,Excluded,exact identity = AOV x Profit_Margin,,0.2068
+Profit_Margin,4.8677,Kept,value component (always kept),2.0085,-0.0617
+Avg_Discount,3.705,Kept,VIF <= 5,2.3836,-0.1268
+Categories,1.7406,Kept,VIF <= 5,1.4904,0.3355
+Tenure_Days_Capped,3.9748,Kept,VIF <= 5,3.3937,0.0489
+Purchase_Rate,5.2672,Excluded,VIF 5.2 > 5 (redundant with other features),,0.3044
+Return_Rate,1.0108,Kept,VIF <= 5,1.003,0.1417

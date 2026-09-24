@@ -1,0 +1,31 @@
+﻿region,category,revenue,region_margin_pct,national_margin_pct,margin_gap_pp,flag_below_2pp
+Central,Sports,349316.75,23.84,25.56,-1.72,0
+West,Home & Kitchen,2381591.75,26.97,28.2,-1.23,0
+Central,Beauty,471559.05,45.63,46.49,-0.86,0
+North,Electronics,7421476.6,10.02,10.85,-0.84,0
+North,Fashion,2582836.0,42.15,42.77,-0.62,0
+North,Sports,832810.35,25.01,25.56,-0.56,0
+South,Beauty,865676.8,46.15,46.49,-0.34,0
+South,Electronics,8400533.35,10.51,10.85,-0.34,0
+West,Books,242325.5,28.39,28.72,-0.33,0
+North,Books,249132.75,28.49,28.72,-0.23,0
+Central,Books,219564.35,28.5,28.72,-0.22,0
+North,Home & Kitchen,2509745.25,27.99,28.2,-0.21,0
+East,Books,139742.95,28.6,28.72,-0.12,0
+East,Home & Kitchen,1251292.45,28.12,28.2,-0.08,0
+South,Home & Kitchen,2762152.2,28.23,28.2,0.03,0
+West,Beauty,804179.8,46.53,46.49,0.04,0
+West,Fashion,3066789.6,42.83,42.77,0.06,0
+South,Fashion,3176625.65,42.84,42.77,0.07,0
+West,Electronics,7190142.65,10.92,10.85,0.07,0
+Central,Fashion,1606237.85,42.94,42.77,0.17,0
+East,Sports,402869.8,25.83,25.56,0.27,0
+North,Beauty,804612.4,46.84,46.49,0.35,0
+East,Fashion,1625251.9,43.35,42.77,0.58,0
+South,Sports,734635.0,26.24,25.56,0.68,0
+West,Sports,672116.5,26.24,25.56,0.68,0
+South,Books,286315.4,29.43,28.72,0.71,0
+East,Beauty,455935.4,47.32,46.49,0.83,0
+East,Electronics,3564106.65,11.98,10.85,1.13,0
+Central,Electronics,3514393.3,12.16,10.85,1.31,0
+Central,Home & Kitchen,1472601.15,30.55,28.2,2.35,0

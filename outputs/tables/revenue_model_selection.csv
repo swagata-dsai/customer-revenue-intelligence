@@ -1,0 +1,5 @@
+﻿Model,Val_RMSE,Val_MAE,Val_R2,Train_R2,Overfit_Gap_R2,Complexity_Rank,Within_2%_of_Best,Selected
+Linear regression,9436.4248,4522.7958,0.0375,0.0594,0.0219,0,True,True
+Random forest,9466.0894,5003.1593,0.0315,0.4371,0.4056,1,True,False
+Gradient boosting,9753.3564,5037.4759,-0.0282,0.4718,0.5,2,False,False
+Random forest (tuned),9340.0197,4745.1843,0.0571,0.1895,0.1324,1,True,False

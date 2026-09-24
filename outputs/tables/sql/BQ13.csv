@@ -1,0 +1,7 @@
+﻿payment_method,orders,delivered_aov,returned_lines_pct,cancelled_lines_pct
+UPI,6084,5067.52,5.44,3.66
+Card,2626,4850.53,5.81,2.83
+COD,1958,4897.74,7.69,6.19
+Net Banking,1256,4660.7,5.4,3.19
+Wallet,1238,4763.53,5.98,3.08
+Unknown,89,2726.87,4.49,7.87

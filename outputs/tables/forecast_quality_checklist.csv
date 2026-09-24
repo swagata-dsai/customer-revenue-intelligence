@@ -1,0 +1,19 @@
+﻿Check,Evidence,Pass
+Actual cleaned dataset used,data/processed/customer_sales_cleaned.csv,True
+Correct date handling (all dates parsed; monthly index regular),"36 months, freq=MS",True
+Monthly aggregation reconciles with Delivered sales,₹6.01 Cr vs ₹6.01 Cr,True
+No missing months (none filled with zero),0,True
+No random split: train < validation < test in time,2024-12 < 2025-01; 2025-06 < 2025-07,True
+No leakage: validation fits use train only; test fits use train+validation only; backtest fits use data before each origin,by construction (history slices),True
+Baselines implemented,"Naive, Seasonal naive",True
+Exponential smoothing tested,6 configurations,True
+ARIMA / SARIMA tested,6 configurations,True
+Stationarity checked (ADF),"level, log, first and seasonal differences",True
+Backtesting performed,7 expanding-window folds,True
+"MAE, RMSE, MAPE, sMAPE, WAPE calculated","no zero monthly actuals, so MAPE is defined",True
+Final model selected by the pre-set rule,Theta: Theta (seasonality auto-tested),True
+Future forecast generated with intervals,6 months,True
+Forecast values finite and intervals ordered,lower <= forecast <= upper,True
+Forecast table reconciles with actuals,48 actual values,True
+Model artefact saved and reproduces the future forecast after reload,models/forecasting_model.pkl,True
+Metadata saved,models/forecasting_metadata.json,True

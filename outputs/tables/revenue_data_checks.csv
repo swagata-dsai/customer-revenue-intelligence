@@ -1,0 +1,10 @@
+﻿Check,Value,Pass
+Order lines (cleaned),"18,670",True
+Duplicate Order_Line_ID,0,True
+"Missing values in key columns (date, customer, sales, status)",0,True
+Date range,2023-01-01 to 2025-12-31,True
+Step 5 RFM rows / duplicate Customer_ID,"1,984 / 0",True
+Step 6 cluster rows / duplicate Customer_ID,"1,984 / 0",True
+Step 7 value-history rows / duplicate Customer_ID,"1,984 / 0",True
+Label merge one-to-one (validate='one_to_one'),"1,984 rows",True
+Target period available for last test cutoff,2025-10-01 + 3 months <= 2025-12-31 + 1 day,True

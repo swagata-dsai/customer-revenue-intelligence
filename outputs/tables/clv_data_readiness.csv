@@ -1,0 +1,8 @@
+﻿Requirement,Evidence,Supported
+Repeat purchasing,89.4% of customers have 2+ delivered orders,Yes
+Purchase frequency,median 4 orders per customer (P90 12),Yes
+Time period,"2023-01-01 to 2025-12-31 (36 months) - enough for a 12-month feature window + 12-month target, twice",Yes
+Customer tenure,measurable from first observed purchase; LEFT-CENSORED for 38.7% of customers ('Existing before 2023'),Partly
+Churn / inactivity,"no churn flag in the data; of customers inactive >= 180 days, 41% (cutoff 2024-01-01), 56% (cutoff 2025-01-01) bought again within 12 months",No - churn cannot be observed
+Stationarity,"active customers per year 2023: 1,137 / 2024: 1,328 / 2025: 1,716; orders 2023: 2,811 / 2024: 4,014 / 2025: 5,387",No - activity grows year on year
+Customer-level history,"12,212 delivered orders for 1,984 customers",Yes

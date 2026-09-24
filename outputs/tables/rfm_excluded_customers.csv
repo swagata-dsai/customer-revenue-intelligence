@@ -1,0 +1,17 @@
+﻿Customer_ID,Lines,Orders,Cancelled_Lines,Returned_Lines,Last_Order_Date,Booked_Sales,Reason
+CUST-0038,1,1,0,1,2025-10-17,320.6,No delivered purchase - all lines cancelled or returned
+CUST-0193,1,1,1,0,2025-08-15,3426.75,No delivered purchase - all lines cancelled or returned
+CUST-0272,3,2,2,1,2025-12-24,2384.95,No delivered purchase - all lines cancelled or returned
+CUST-0666,1,1,0,1,2025-12-05,1716.0,No delivered purchase - all lines cancelled or returned
+CUST-0772,1,1,1,0,2025-10-21,10663.2,No delivered purchase - all lines cancelled or returned
+CUST-0791,2,2,0,2,2025-11-05,3350.25,No delivered purchase - all lines cancelled or returned
+CUST-0934,1,1,1,0,2023-02-22,3088.0,No delivered purchase - all lines cancelled or returned
+CUST-1101,1,1,1,0,2023-01-16,957.6,No delivered purchase - all lines cancelled or returned
+CUST-1138,1,1,0,1,2025-12-16,10542.0,No delivered purchase - all lines cancelled or returned
+CUST-1221,2,1,2,0,2025-06-19,4006.2000000000003,No delivered purchase - all lines cancelled or returned
+CUST-1392,1,1,0,1,2025-10-22,1323.0,No delivered purchase - all lines cancelled or returned
+CUST-1433,2,2,0,2,2025-12-23,4292.6,No delivered purchase - all lines cancelled or returned
+CUST-1474,1,1,1,0,2025-09-20,7177.6,No delivered purchase - all lines cancelled or returned
+CUST-1809,1,1,1,0,2025-07-17,2499.0,No delivered purchase - all lines cancelled or returned
+CUST-1850,2,2,0,2,2025-11-04,3222.75,No delivered purchase - all lines cancelled or returned
+CUST-1966,1,1,0,1,2025-12-03,3442.5,No delivered purchase - all lines cancelled or returned

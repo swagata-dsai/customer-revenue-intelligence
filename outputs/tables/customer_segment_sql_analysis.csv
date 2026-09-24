@@ -1,0 +1,12 @@
+﻿Segment,Value_Activity_Group,Customer_Count,Revenue,Profit,Average_Revenue_per_Customer,Average_Frequency_Orders,Average_Recency_Days,Revenue_Contribution_%,Customer_%
+Champions,Active high value,334,32330090.4,7119609.82,96796.68,15.43,32.6,53.83,16.83
+Loyal Customers,Active high value,240,8578897.6,2016201.85,35745.41,7.18,91.2,14.28,12.1
+Potential Loyalists,Developing,152,2191483.35,555607.71,14417.65,4.2,46.6,3.65,7.66
+Recent Customers,Developing,91,488562.6,169577.85,5368.82,2.23,17.8,0.81,4.59
+Promising,Developing,110,562907.7,193656.1,5117.34,2.2,59.4,0.94,5.54
+Needs Attention,Slipping,123,1553870.95,455542.73,12633.1,4.47,120.7,2.59,6.2
+About to Sleep,Slipping,143,605262.25,185225.47,4232.6,2.12,115.4,1.01,7.21
+Can't Lose Them,Slipping,79,4285311.3,872657.28,54244.45,9.8,228.3,7.14,3.98
+At Risk,Slipping,263,6763493.3,1619385.49,25716.7,5.9,259.3,11.26,13.26
+Hibernating,Inactive,148,975827.8,335890.75,6593.43,3.07,199.0,1.62,7.46
+Lost,Inactive,301,1720861.9,499196.53,5717.15,2.06,731.6,2.87,15.17

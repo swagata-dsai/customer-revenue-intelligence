@@ -1,0 +1,7 @@
+﻿Item,Value
+Rule,M_Score >= 4 (top 40% of customers by spend) AND R_Score <= 2 (bottom 40% by recency)
+M_Score >= 4 means Monetary >=,"₹19,912"
+R_Score <= 2 means Recency >=,163 days
+Customers matching,229
+Their total revenue,₹95.10 L
+Share of all revenue,15.8%

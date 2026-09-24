@@ -1,0 +1,7 @@
+﻿Model,Type,MAE,RMSE,R2,WAPE_%,MAPE_nonzero_%,Spearman,Top20_Capture_%,Predicted_to_Actual_Total,Selected
+Ridge regression (baseline),ML model,2852.8438,4468.8065,0.2007,69.5377,167.161,0.4779,41.6901,0.8024,False
+Random forest,ML model,2793.3562,4269.3608,0.2705,68.0877,175.5995,0.4869,41.4552,0.8993,True
+Gradient boosting,ML model,2982.0161,4323.1547,0.252,72.6862,208.4483,0.496,43.0459,1.0858,False
+Naive: last-12-month profit repeats,Benchmark,2946.6377,4647.8351,0.1354,71.8239,147.2279,0.4402,41.129,0.8519,False
+Simplified formula (AOV x F x margin x P(repeat)),Benchmark,2859.2712,4606.1263,0.1509,69.6943,123.319,0.4641,40.7481,0.6768,False
+BG/NBD orders x avg profit per order,Benchmark,2693.4081,4356.1344,0.2405,65.6515,137.3082,0.4899,41.7013,0.7538,False

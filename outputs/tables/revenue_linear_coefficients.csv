@@ -1,0 +1,43 @@
+﻿Encoded_Feature,Coefficient,Raw_Feature,Transform
+Main_Category_Books,2533.4693,Main_Category,one-hot
+Orders_12M,1615.5043,Orders_12M,arcsinh + standardise
+Target_Quarter_Q4,1177.7607,Target_Quarter,one-hot
+Main_Category_Home & Kitchen,-1077.0885,Main_Category,one-hot
+Main_Category_Fashion,-854.2359,Main_Category,one-hot
+Main_Payment_Method_Unknown,-789.8454,Main_Payment_Method,one-hot
+Target_Quarter_Q3,-620.0645,Target_Quarter,one-hot
+Share_Books,-579.7077,Share_Books,standardise
+Tenure_Days_Capped,-459.6822,Tenure_Days_Capped,standardise
+Categories_12M,408.2409,Categories_12M,standardise
+Region_North,397.4108,Region,one-hot
+Target_Quarter_Q1,-349.3045,Target_Quarter,one-hot
+AOV_12M,343.0288,AOV_12M,arcsinh + standardise
+Main_Payment_Method_UPI,323.4463,Main_Payment_Method,one-hot
+Main_Payment_Method_COD,295.3811,Main_Payment_Method,one-hot
+Orders_3M,266.3465,Orders_3M,arcsinh + standardise
+Avg_Discount_12M,-246.3579,Avg_Discount_12M,standardise
+Main_Category_Electronics,-246.0828,Main_Category,one-hot
+Target_Quarter_Q2,-208.3916,Target_Quarter,one-hot
+Main_Category_Sports,-205.0766,Main_Category,one-hot
+Profit_Margin_12M,204.4374,Profit_Margin_12M,standardise
+Return_Rate_12M,199.4194,Return_Rate_12M,standardise
+Region_East,-188.7669,Region,one-hot
+Acquisition_Status_Acquired 2023-2025,-181.755,Acquisition_Status,one-hot
+Acquisition_Status_Existing before 2023,181.755,Acquisition_Status,one-hot
+Share_Sports,-178.3486,Share_Sports,standardise
+Main_Payment_Method_Wallet,177.7101,Main_Payment_Method,one-hot
+Region_Central,-167.4734,Region,one-hot
+Share_Home_Kitchen,161.6159,Share_Home_Kitchen,standardise
+Main_Category_Beauty,-150.9854,Main_Category,one-hot
+Avg_Unit_Price_12M,-94.9993,Avg_Unit_Price_12M,arcsinh + standardise
+Product_Demand_Index,-63.3996,Product_Demand_Index,standardise
+Share_Beauty,-57.942,Share_Beauty,standardise
+Recency_Days,57.6346,Recency_Days,arcsinh + standardise
+Main_Category_Trend,47.3975,Main_Category_Trend,standardise
+Rev_3M,42.3097,Rev_3M,arcsinh + standardise
+Region_Rev_Trend,-38.9959,Region_Rev_Trend,standardise
+Region_South,-36.0128,Region,one-hot
+Rev_Same_Quarter_Last_Year,-11.2181,Rev_Same_Quarter_Last_Year,arcsinh + standardise
+Region_West,-5.1577,Region,one-hot
+Main_Payment_Method_Net Banking,-4.8198,Main_Payment_Method,one-hot
+Main_Payment_Method_Card,-1.8723,Main_Payment_Method,one-hot

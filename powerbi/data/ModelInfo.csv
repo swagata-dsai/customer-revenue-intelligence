@@ -1,0 +1,16 @@
+Model_Area,Step,Attribute,Value
+Revenue prediction (ML),Step 8,Question answered,How much revenue is a given customer likely to generate in the next quarter?
+Revenue prediction (ML),Step 8,Prediction unit,customer x quarter (customers active in the 12 months before the cutoff)
+Revenue prediction (ML),Step 8,Target,Next_Quarter_Revenue = Delivered Sales (Rs) in the 3 months after the cutoff
+Revenue prediction (ML),Step 8,Selected model,Linear regression
+Revenue prediction (ML),Step 8,Selection rule,simplest model within 2% of the best validation RMSE (fixed in advance)
+Revenue prediction (ML),Step 8,Train period,features 2023-01-01..2024-09-30 -> targets 2024-01-01..2024-12-31
+Revenue prediction (ML),Step 8,Validation period,targets 2025-01-01..2025-06-30
+Revenue prediction (ML),Step 8,Test period,targets 2025-07-01..2025-12-31
+Revenue forecast (time series),Step 9,Question answered,What is total company revenue likely to be in each of the next 6 months?
+Revenue forecast (time series),Step 9,Target,"monthly Delivered revenue (Sales, Rs), company total"
+Revenue forecast (time series),Step 9,Selected model,Theta: Theta (seasonality auto-tested)
+Revenue forecast (time series),Step 9,Selection rule,lowest mean backtest MAPE; must beat naive and seasonal naive on test MAE; within 5% -> simpler family
+Revenue forecast (time series),Step 9,Horizon,6 months (2026-01 to 2026-06)
+Revenue forecast (time series),Step 9,Final fit,2023-01 to 2025-12 (36 months)
+Revenue forecast (time series),Step 9,Intervals,80% and 95% prediction intervals from the model

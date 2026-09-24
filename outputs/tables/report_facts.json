@@ -1,0 +1,5849 @@
+{
+ "dataset": {
+  "raw_rows": 18819,
+  "raw_cols": 23,
+  "clean_rows": 18670,
+  "clean_cols": 51,
+  "duplicates_removed": 149,
+  "customers_registered": 2000,
+  "customers_purchasing": 1984,
+  "products": 61,
+  "categories": 6,
+  "sub_categories": 26,
+  "cities": 35,
+  "states": 21,
+  "regions": 5,
+  "region_names": [
+   "Central",
+   "East",
+   "North",
+   "South",
+   "West"
+  ],
+  "category_names": [
+   "Beauty",
+   "Books",
+   "Electronics",
+   "Fashion",
+   "Home & Kitchen",
+   "Sports"
+  ],
+  "payment_methods": [
+   "COD",
+   "Card",
+   "Net Banking",
+   "UPI",
+   "Unknown",
+   "Wallet"
+  ],
+  "start": "01 January 2023",
+  "end": "31 December 2025",
+  "months": 36,
+  "orders_all": 13251,
+  "seed": 42,
+  "statuses": {
+   "Delivered": 16860,
+   "Returned": 1101,
+   "Cancelled": 709
+  }
+ },
+ "kpi": {
+  "revenue": 60056569.15,
+  "profit": 14022551.58,
+  "cost": 46034017.57,
+  "margin": 0.2334890550436979,
+  "orders": 12212,
+  "customers": 1984,
+  "units": 22772,
+  "aov": 4917.832390271864,
+  "revenue_per_customer": 30270.448160282256,
+  "profit_per_order": 1148.2600376678677,
+  "qty_per_order": 1.8647232230592856,
+  "orders_per_customer": 6.155241935483871,
+  "booked": 66312002.35,
+  "lost": 6255433.199999996,
+  "lost_share": 0.09433334808657
+ },
+ "quality": {
+  "report": [
+   {
+    "Issue": "Missing value",
+    "Column": "Customer_Age",
+    "Affected_Records": 285,
+    "Percent_Affected": 1.51,
+    "Treatment": "Restore from the same customer's other rows (one profile per customer); median only as last resort"
+   },
+   {
+    "Issue": "Missing value",
+    "Column": "Gender",
+    "Affected_Records": 188,
+    "Percent_Affected": 1.0,
+    "Treatment": "Restore from the same customer's other rows"
+   },
+   {
+    "Issue": "Missing value",
+    "Column": "City",
+    "Affected_Records": 149,
+    "Percent_Affected": 0.79,
+    "Treatment": "Restore from the same customer's other rows"
+   },
+   {
+    "Issue": "Missing value",
+    "Column": "Discount",
+    "Affected_Records": 93,
+    "Percent_Affected": 0.49,
+    "Treatment": "Back-calculate: 1 - Sales / (Quantity x Unit_Price)"
+   },
+   {
+    "Issue": "Missing value",
+    "Column": "Sales",
+    "Affected_Records": 56,
+    "Percent_Affected": 0.3,
+    "Treatment": "Recompute exactly as Cost + Profit, then confirm against Qty x Price x (1 - Discount)"
+   },
+   {
+    "Issue": "Missing value",
+    "Column": "Payment_Method",
+    "Affected_Records": 189,
+    "Percent_Affected": 1.0,
+    "Treatment": "Copy from other lines of the same order; otherwise label 'Unknown'"
+   },
+   {
+    "Issue": "Exact duplicate row",
+    "Column": "All columns",
+    "Affected_Records": 149,
+    "Percent_Affected": 0.79,
+    "Treatment": "Remove (keep first occurrence)"
+   },
+   {
+    "Issue": "Duplicate Order_Line_ID with different content",
+    "Column": "Order_Line_ID",
+    "Affected_Records": 0,
+    "Percent_Affected": 0.0,
+    "Treatment": "No action needed (check passed)"
+   },
+   {
+    "Issue": "Order_ID repeated across rows (multi-product orders)",
+    "Column": "Order_ID",
+    "Affected_Records": 9633,
+    "Percent_Affected": 51.19,
+    "Treatment": "Keep - legitimate: one order can contain several products"
+   },
+   {
+    "Issue": "Customer profile differs across rows",
+    "Column": "Customer_ID",
+    "Affected_Records": 319,
+    "Percent_Affected": 1.7,
+    "Treatment": "Harmonise to the customer's most frequent (modal) value"
+   },
+   {
+    "Issue": "Non-ISO date format (DD-MM-YYYY or DD/MM/YYYY)",
+    "Column": "Order_Date",
+    "Affected_Records": 566,
+    "Percent_Affected": 3.01,
+    "Treatment": "Parse each format explicitly (day-first)"
+   },
+   {
+    "Issue": "Unparseable date",
+    "Column": "Order_Date",
+    "Affected_Records": 0,
+    "Percent_Affected": 0.0,
+    "Treatment": "No action needed (check passed)"
+   },
+   {
+    "Issue": "Numeric value stored as text (e.g. '\u20b91,299')",
+    "Column": "Unit_Price",
+    "Affected_Records": 93,
+    "Percent_Affected": 0.49,
+    "Treatment": "Strip \u20b9 symbol and commas, convert to float"
+   },
+   {
+    "Issue": "Negative or zero quantity",
+    "Column": "Quantity",
+    "Affected_Records": 9,
+    "Percent_Affected": 0.05,
+    "Treatment": "Recover true quantity from Sales / (Unit_Price x (1 - Discount)) when it is a whole number"
+   },
+   {
+    "Issue": "Negative or zero unit price",
+    "Column": "Unit_Price",
+    "Affected_Records": 0,
+    "Percent_Affected": 0.0,
+    "Treatment": "No action needed (check passed)"
+   },
+   {
+    "Issue": "Discount > 1 (stored as percentage)",
+    "Column": "Discount",
+    "Affected_Records": 38,
+    "Percent_Affected": 0.2,
+    "Treatment": "Divide by 100 when value is between 1 and 100"
+   },
+   {
+    "Issue": "Discount < 0",
+    "Column": "Discount",
+    "Affected_Records": 0,
+    "Percent_Affected": 0.0,
+    "Treatment": "No action needed (check passed)"
+   },
+   {
+    "Issue": "Negative sales",
+    "Column": "Sales",
+    "Affected_Records": 0,
+    "Percent_Affected": 0.0,
+    "Treatment": "No action needed (check passed)"
+   },
+   {
+    "Issue": "Invalid order status",
+    "Column": "Order_Status",
+    "Affected_Records": 0,
+    "Percent_Affected": 0.0,
+    "Treatment": "No action needed (check passed)"
+   },
+   {
+    "Issue": "Negative cost",
+    "Column": "Cost",
+    "Affected_Records": 0,
+    "Percent_Affected": 0.0,
+    "Treatment": "No action needed (check passed)"
+   },
+   {
+    "Issue": "Sales != Qty x Price x (1 - Discount)",
+    "Column": "Sales",
+    "Affected_Records": 56,
+    "Percent_Affected": 0.3,
+    "Treatment": "Identify the wrong component (quantity, discount or price) and correct it; flag the row"
+   },
+   {
+    "Issue": "Profit != Sales - Cost",
+    "Column": "Profit",
+    "Affected_Records": 0,
+    "Percent_Affected": 0.0,
+    "Treatment": "No action needed (check passed)"
+   },
+   {
+    "Issue": "Impossible age (outside 18-100)",
+    "Column": "Customer_Age",
+    "Affected_Records": 19,
+    "Percent_Affected": 0.1,
+    "Treatment": "Treat as missing, then restore from the customer's other rows"
+   },
+   {
+    "Issue": "Non-integer age",
+    "Column": "Customer_Age",
+    "Affected_Records": 0,
+    "Percent_Affected": 0.0,
+    "Treatment": "No action needed (check passed)"
+   },
+   {
+    "Issue": "Non-standard categorical value",
+    "Column": "Category",
+    "Affected_Records": 280,
+    "Percent_Affected": 1.49,
+    "Treatment": "Trim, fix case, map spelling variants to the standard value"
+   },
+   {
+    "Issue": "Non-standard categorical value",
+    "Column": "Region",
+    "Affected_Records": 151,
+    "Percent_Affected": 0.8,
+    "Treatment": "Trim, fix case, map spelling variants to the standard value"
+   },
+   {
+    "Issue": "Non-standard categorical value",
+    "Column": "Gender",
+    "Affected_Records": 189,
+    "Percent_Affected": 1.0,
+    "Treatment": "Trim, fix case, map spelling variants to the standard value"
+   },
+   {
+    "Issue": "Non-standard categorical value",
+    "Column": "Payment_Method",
+    "Affected_Records": 187,
+    "Percent_Affected": 0.99,
+    "Treatment": "Trim, fix case, map spelling variants to the standard value"
+   },
+   {
+    "Issue": "Non-standard categorical value",
+    "Column": "Customer_Type",
+    "Affected_Records": 0,
+    "Percent_Affected": 0.0,
+    "Treatment": "No action needed (check passed)"
+   },
+   {
+    "Issue": "Former / informal city name",
+    "Column": "City",
+    "Affected_Records": 94,
+    "Percent_Affected": 0.5,
+    "Treatment": "Map to current official name"
+   },
+   {
+    "Issue": "Former / informal state name",
+    "Column": "State",
+    "Affected_Records": 75,
+    "Percent_Affected": 0.4,
+    "Treatment": "Map to official state name"
+   },
+   {
+    "Issue": "Name casing / spacing inconsistent",
+    "Column": "Customer_Name",
+    "Affected_Records": 93,
+    "Percent_Affected": 0.49,
+    "Treatment": "Trim and title-case"
+   },
+   {
+    "Issue": "Inconsistent City-State pair",
+    "Column": "City/State",
+    "Affected_Records": 75,
+    "Percent_Affected": 0.4,
+    "Treatment": "Resolved by standardising state names; re-checked after cleaning"
+   },
+   {
+    "Issue": "Inconsistent State-Region pair",
+    "Column": "State/Region",
+    "Affected_Records": 151,
+    "Percent_Affected": 0.8,
+    "Treatment": "Resolved by standardising region labels; re-checked after cleaning"
+   }
+  ],
+  "rules": [
+   {
+    "Validation_Rule": "missing_value",
+    "Rows_Before": 941,
+    "Rows_After": 0
+   },
+   {
+    "Validation_Rule": "non_iso_or_invalid_date",
+    "Rows_Before": 566,
+    "Rows_After": 0
+   },
+   {
+    "Validation_Rule": "non_numeric_value",
+    "Rows_Before": 93,
+    "Rows_After": 0
+   },
+   {
+    "Validation_Rule": "quantity_not_positive",
+    "Rows_Before": 9,
+    "Rows_After": 0
+   },
+   {
+    "Validation_Rule": "price_not_positive",
+    "Rows_Before": 0,
+    "Rows_After": 0
+   },
+   {
+    "Validation_Rule": "discount_out_of_range",
+    "Rows_Before": 38,
+    "Rows_After": 0
+   },
+   {
+    "Validation_Rule": "negative_sales_or_cost",
+    "Rows_Before": 0,
+    "Rows_After": 0
+   },
+   {
+    "Validation_Rule": "revenue_mismatch",
+    "Rows_Before": 56,
+    "Rows_After": 0
+   },
+   {
+    "Validation_Rule": "profit_mismatch",
+    "Rows_Before": 0,
+    "Rows_After": 0
+   },
+   {
+    "Validation_Rule": "age_out_of_range",
+    "Rows_Before": 19,
+    "Rows_After": 0
+   },
+   {
+    "Validation_Rule": "invalid_category_value",
+    "Rows_Before": 794,
+    "Rows_After": 0
+   }
+  ],
+  "accuracy": [
+   {
+    "Column": "Order_ID",
+    "Matching_Values": 18670,
+    "Mismatches": 0,
+    "Accuracy_%": 100.0,
+    "Mismatch_Examples": NaN
+   },
+   {
+    "Column": "Order_Date",
+    "Matching_Values": 18670,
+    "Mismatches": 0,
+    "Accuracy_%": 100.0,
+    "Mismatch_Examples": NaN
+   },
+   {
+    "Column": "Customer_ID",
+    "Matching_Values": 18670,
+    "Mismatches": 0,
+    "Accuracy_%": 100.0,
+    "Mismatch_Examples": NaN
+   },
+   {
+    "Column": "Customer_Name",
+    "Matching_Values": 18670,
+    "Mismatches": 0,
+    "Accuracy_%": 100.0,
+    "Mismatch_Examples": NaN
+   },
+   {
+    "Column": "Customer_Age",
+    "Matching_Values": 18669,
+    "Mismatches": 1,
+    "Accuracy_%": 99.995,
+    "Mismatch_Examples": "34 (true: 21)"
+   },
+   {
+    "Column": "Gender",
+    "Matching_Values": 18669,
+    "Mismatches": 1,
+    "Accuracy_%": 99.995,
+    "Mismatch_Examples": "Unknown (true: Female)"
+   },
+   {
+    "Column": "City",
+    "Matching_Values": 18669,
+    "Mismatches": 1,
+    "Accuracy_%": 99.995,
+    "Mismatch_Examples": "Unknown (true: Indore)"
+   },
+   {
+    "Column": "State",
+    "Matching_Values": 18670,
+    "Mismatches": 0,
+    "Accuracy_%": 100.0,
+    "Mismatch_Examples": NaN
+   },
+   {
+    "Column": "Region",
+    "Matching_Values": 18670,
+    "Mismatches": 0,
+    "Accuracy_%": 100.0,
+    "Mismatch_Examples": NaN
+   },
+   {
+    "Column": "Product_ID",
+    "Matching_Values": 18670,
+    "Mismatches": 0,
+    "Accuracy_%": 100.0,
+    "Mismatch_Examples": NaN
+   },
+   {
+    "Column": "Product_Name",
+    "Matching_Values": 18670,
+    "Mismatches": 0,
+    "Accuracy_%": 100.0,
+    "Mismatch_Examples": NaN
+   },
+   {
+    "Column": "Category",
+    "Matching_Values": 18670,
+    "Mismatches": 0,
+    "Accuracy_%": 100.0,
+    "Mismatch_Examples": NaN
+   },
+   {
+    "Column": "Sub_Category",
+    "Matching_Values": 18670,
+    "Mismatches": 0,
+    "Accuracy_%": 100.0,
+    "Mismatch_Examples": NaN
+   },
+   {
+    "Column": "Quantity",
+    "Matching_Values": 18651,
+    "Mismatches": 19,
+    "Accuracy_%": 99.898,
+    "Mismatch_Examples": "34 (true: 1); 50 (true: 3); 50 (true: 1)"
+   },
+   {
+    "Column": "Unit_Price",
+    "Matching_Values": 18670,
+    "Mismatches": 0,
+    "Accuracy_%": 100.0,
+    "Mismatch_Examples": NaN
+   },
+   {
+    "Column": "Discount",
+    "Matching_Values": 18670,
+    "Mismatches": 0,
+    "Accuracy_%": 100.0,
+    "Mismatch_Examples": NaN
+   },
+   {
+    "Column": "Sales",
+    "Matching_Values": 18651,
+    "Mismatches": 19,
+    "Accuracy_%": 99.898,
+    "Mismatch_Examples": "30736.0 (true: 904.0); 69777.5 (true: 4186.65); 78120.0 (true: 1562.4)"
+   },
+   {
+    "Column": "Cost",
+    "Matching_Values": 18651,
+    "Mismatches": 19,
+    "Accuracy_%": 99.898,
+    "Mismatch_Examples": "16684.48 (true: 490.72); 51971.83 (true: 3118.31); 45435.5 (true: 908.71)"
+   },
+   {
+    "Column": "Profit",
+    "Matching_Values": 18651,
+    "Mismatches": 19,
+    "Accuracy_%": 99.898,
+    "Mismatch_Examples": "14051.52 (true: 413.28); 17805.67 (true: 1068.34); 32684.5 (true: 653.69)"
+   },
+   {
+    "Column": "Payment_Method",
+    "Matching_Values": 18581,
+    "Mismatches": 89,
+    "Accuracy_%": 99.523,
+    "Mismatch_Examples": "Unknown (true: COD); Unknown (true: Card); Unknown (true: Net Banking)"
+   },
+   {
+    "Column": "Order_Status",
+    "Matching_Values": 18670,
+    "Mismatches": 0,
+    "Accuracy_%": 100.0,
+    "Mismatch_Examples": NaN
+   },
+   {
+    "Column": "Customer_Type",
+    "Matching_Values": 18670,
+    "Mismatches": 0,
+    "Accuracy_%": 100.0,
+    "Mismatch_Examples": NaN
+   }
+  ],
+  "missing_before": 941,
+  "rules_failing_after": 0
+ },
+ "eda": {
+  "by_year": [
+   {
+    "order_year": 2023,
+    "revenue": 13060877.25,
+    "profit": 2957857.43,
+    "profit_margin_pct": 22.65,
+    "orders": 2811,
+    "customers": 1137,
+    "average_order_value": 4646.35,
+    "revenue_yoy_growth_pct": NaN,
+    "profit_yoy_growth_pct": NaN
+   },
+   {
+    "order_year": 2024,
+    "revenue": 19769754.9,
+    "profit": 4557848.19,
+    "profit_margin_pct": 23.05,
+    "orders": 4014,
+    "customers": 1328,
+    "average_order_value": 4925.2,
+    "revenue_yoy_growth_pct": 51.37,
+    "profit_yoy_growth_pct": 54.09
+   },
+   {
+    "order_year": 2025,
+    "revenue": 27225937.0,
+    "profit": 6506845.96,
+    "profit_margin_pct": 23.9,
+    "orders": 5387,
+    "customers": 1716,
+    "average_order_value": 5054.01,
+    "revenue_yoy_growth_pct": 37.72,
+    "profit_yoy_growth_pct": 42.76
+   }
+  ],
+  "by_category": [
+   {
+    "category": "Electronics",
+    "products": 13,
+    "units": 3488,
+    "revenue": 30090652.55,
+    "profit": 3265843.69,
+    "profit_margin_pct": 10.85,
+    "revenue_share_pct": 50.1,
+    "profit_share_pct": 23.29,
+    "margin_rank": 6
+   },
+   {
+    "category": "Fashion",
+    "products": 11,
+    "units": 7154,
+    "revenue": 12057741.0,
+    "profit": 5157592.42,
+    "profit_margin_pct": 42.77,
+    "revenue_share_pct": 20.08,
+    "profit_share_pct": 36.78,
+    "margin_rank": 2
+   },
+   {
+    "category": "Home & Kitchen",
+    "products": 11,
+    "units": 4294,
+    "revenue": 10377382.8,
+    "profit": 2926231.02,
+    "profit_margin_pct": 28.2,
+    "revenue_share_pct": 17.28,
+    "profit_share_pct": 20.87,
+    "margin_rank": 4
+   },
+   {
+    "category": "Beauty",
+    "products": 9,
+    "units": 4653,
+    "revenue": 3401963.45,
+    "profit": 1581571.2,
+    "profit_margin_pct": 46.49,
+    "revenue_share_pct": 5.66,
+    "profit_share_pct": 11.28,
+    "margin_rank": 1
+   },
+   {
+    "category": "Sports",
+    "products": 9,
+    "units": 1168,
+    "revenue": 2991748.4,
+    "profit": 764740.99,
+    "profit_margin_pct": 25.56,
+    "revenue_share_pct": 4.98,
+    "profit_share_pct": 5.45,
+    "margin_rank": 5
+   },
+   {
+    "category": "Books",
+    "products": 8,
+    "units": 2015,
+    "revenue": 1137080.95,
+    "profit": 326572.26,
+    "profit_margin_pct": 28.72,
+    "revenue_share_pct": 1.89,
+    "profit_share_pct": 2.33,
+    "margin_rank": 3
+   }
+  ],
+  "by_region": [
+   {
+    "region": "South",
+    "revenue": 16225938.4,
+    "profit": 3700176.94,
+    "profit_margin_pct": 22.8,
+    "orders": 3296,
+    "customers": 540,
+    "average_order_value": 4922.92,
+    "revenue_per_customer": 30048.03,
+    "revenue_share_pct": 27.02
+   },
+   {
+    "region": "North",
+    "revenue": 14400613.35,
+    "profit": 3190656.81,
+    "profit_margin_pct": 22.16,
+    "orders": 2819,
+    "customers": 444,
+    "average_order_value": 5108.41,
+    "revenue_per_customer": 32433.81,
+    "revenue_share_pct": 23.98
+   },
+   {
+    "region": "West",
+    "revenue": 14357145.8,
+    "profit": 3360503.4,
+    "profit_margin_pct": 23.41,
+    "orders": 2971,
+    "customers": 490,
+    "average_order_value": 4832.43,
+    "revenue_per_customer": 29300.3,
+    "revenue_share_pct": 23.91
+   },
+   {
+    "region": "Central",
+    "revenue": 7633672.45,
+    "profit": 1928071.03,
+    "profit_margin_pct": 25.26,
+    "orders": 1551,
+    "customers": 248,
+    "average_order_value": 4921.77,
+    "revenue_per_customer": 30780.94,
+    "revenue_share_pct": 12.71
+   },
+   {
+    "region": "East",
+    "revenue": 7439199.15,
+    "profit": 1843143.4,
+    "profit_margin_pct": 24.78,
+    "orders": 1575,
+    "customers": 262,
+    "average_order_value": 4723.3,
+    "revenue_per_customer": 28393.89,
+    "revenue_share_pct": 12.39
+   }
+  ],
+  "concentration": [
+   {
+    "top_pct": 1,
+    "customers": 20,
+    "pct_of_revenue": 9.05
+   },
+   {
+    "top_pct": 5,
+    "customers": 99,
+    "pct_of_revenue": 29.85
+   },
+   {
+    "top_pct": 10,
+    "customers": 198,
+    "pct_of_revenue": 45.39
+   },
+   {
+    "top_pct": 20,
+    "customers": 397,
+    "pct_of_revenue": 64.33
+   },
+   {
+    "top_pct": 50,
+    "customers": 992,
+    "pct_of_revenue": 89.96
+   }
+  ],
+  "frequency_bands": [
+   {
+    "frequency_band": "1 order",
+    "band_min": 1,
+    "customers": 210,
+    "pct_of_customers": 10.58,
+    "revenue": 843923.2,
+    "pct_of_revenue": 1.41
+   },
+   {
+    "frequency_band": "2-3 orders",
+    "band_min": 2,
+    "customers": 588,
+    "pct_of_customers": 29.64,
+    "revenue": 5637978.25,
+    "pct_of_revenue": 9.39
+   },
+   {
+    "frequency_band": "4-6 orders",
+    "band_min": 4,
+    "customers": 526,
+    "pct_of_customers": 26.51,
+    "revenue": 9777482.05,
+    "pct_of_revenue": 16.28
+   },
+   {
+    "frequency_band": "7-10 orders",
+    "band_min": 7,
+    "customers": 339,
+    "pct_of_customers": 17.09,
+    "revenue": 12498573.35,
+    "pct_of_revenue": 20.81
+   },
+   {
+    "frequency_band": "11+ orders",
+    "band_min": 11,
+    "customers": 321,
+    "pct_of_customers": 16.18,
+    "revenue": 31298612.3,
+    "pct_of_revenue": 52.12
+   }
+  ],
+  "month_of_year": [
+   {
+    "month_number": 1,
+    "revenue_2023": 724867.15,
+    "revenue_2024": 1379693.5,
+    "revenue_2025": 2058026.15,
+    "avg_revenue": 1387528.93,
+    "rank_by_total": 10
+   },
+   {
+    "month_number": 2,
+    "revenue_2023": 572756.75,
+    "revenue_2024": 1676214.25,
+    "revenue_2025": 1456402.75,
+    "avg_revenue": 1235124.58,
+    "rank_by_total": 12
+   },
+   {
+    "month_number": 3,
+    "revenue_2023": 921616.85,
+    "revenue_2024": 1448820.7,
+    "revenue_2025": 2184197.4,
+    "avg_revenue": 1518211.65,
+    "rank_by_total": 8
+   },
+   {
+    "month_number": 4,
+    "revenue_2023": 1035094.85,
+    "revenue_2024": 1168649.7,
+    "revenue_2025": 1703556.8,
+    "avg_revenue": 1302433.78,
+    "rank_by_total": 11
+   },
+   {
+    "month_number": 5,
+    "revenue_2023": 889389.7,
+    "revenue_2024": 1366809.35,
+    "revenue_2025": 2234210.0,
+    "avg_revenue": 1496803.02,
+    "rank_by_total": 9
+   },
+   {
+    "month_number": 6,
+    "revenue_2023": 696767.45,
+    "revenue_2024": 1400986.15,
+    "revenue_2025": 2544999.0,
+    "avg_revenue": 1547584.2,
+    "rank_by_total": 6
+   },
+   {
+    "month_number": 7,
+    "revenue_2023": 1045739.0,
+    "revenue_2024": 1226548.4,
+    "revenue_2025": 2323566.2,
+    "avg_revenue": 1531951.2,
+    "rank_by_total": 7
+   },
+   {
+    "month_number": 8,
+    "revenue_2023": 1356304.8,
+    "revenue_2024": 1575669.45,
+    "revenue_2025": 2194859.35,
+    "avg_revenue": 1708944.53,
+    "rank_by_total": 4
+   },
+   {
+    "month_number": 9,
+    "revenue_2023": 975785.45,
+    "revenue_2024": 1564459.35,
+    "revenue_2025": 2447160.2,
+    "avg_revenue": 1662468.33,
+    "rank_by_total": 5
+   },
+   {
+    "month_number": 10,
+    "revenue_2023": 1847708.75,
+    "revenue_2024": 2795219.0,
+    "revenue_2025": 3097837.75,
+    "avg_revenue": 2580255.17,
+    "rank_by_total": 1
+   },
+   {
+    "month_number": 11,
+    "revenue_2023": 1413684.8,
+    "revenue_2024": 2181876.95,
+    "revenue_2025": 2654877.85,
+    "avg_revenue": 2083479.87,
+    "rank_by_total": 2
+   },
+   {
+    "month_number": 12,
+    "revenue_2023": 1581161.7,
+    "revenue_2024": 1984808.1,
+    "revenue_2025": 2326243.55,
+    "avg_revenue": 1964071.12,
+    "rank_by_total": 3
+   }
+  ],
+  "best_worst_months": [
+   {
+    "position": "Top 1",
+    "order_month": "2025-10",
+    "revenue": 3097837.75
+   },
+   {
+    "position": "Top 2",
+    "order_month": "2024-10",
+    "revenue": 2795219.0
+   },
+   {
+    "position": "Top 3",
+    "order_month": "2025-11",
+    "revenue": 2654877.85
+   },
+   {
+    "position": "Bottom 3",
+    "order_month": "2023-01",
+    "revenue": 724867.15
+   },
+   {
+    "position": "Bottom 2",
+    "order_month": "2023-06",
+    "revenue": 696767.45
+   },
+   {
+    "position": "Bottom 1",
+    "order_month": "2023-02",
+    "revenue": 572756.75
+   }
+  ],
+  "discount_bands": [
+   {
+    "discount_band": "0%",
+    "band_min": 0.0,
+    "order_lines": 4548,
+    "revenue": 19351670.0,
+    "profit": 5671055.27,
+    "profit_margin_pct": 29.31,
+    "avg_revenue_per_line": 4254.98,
+    "loss_making_lines_pct": 0.0
+   },
+   {
+    "discount_band": "1-10%",
+    "band_min": 0.05,
+    "order_lines": 4145,
+    "revenue": 18842475.2,
+    "profit": 3652045.08,
+    "profit_margin_pct": 19.38,
+    "avg_revenue_per_line": 4545.83,
+    "loss_making_lines_pct": 0.55
+   },
+   {
+    "discount_band": "11-20%",
+    "band_min": 0.15,
+    "order_lines": 5429,
+    "revenue": 15824580.2,
+    "profit": 3411465.29,
+    "profit_margin_pct": 21.56,
+    "avg_revenue_per_line": 2914.82,
+    "loss_making_lines_pct": 2.93
+   },
+   {
+    "discount_band": "21-30%",
+    "band_min": 0.25,
+    "order_lines": 2346,
+    "revenue": 5355815.6,
+    "profit": 1148631.3,
+    "profit_margin_pct": 21.45,
+    "avg_revenue_per_line": 2282.96,
+    "loss_making_lines_pct": 2.26
+   },
+   {
+    "discount_band": "31-40%",
+    "band_min": 0.35,
+    "order_lines": 392,
+    "revenue": 682028.15,
+    "profit": 139354.64,
+    "profit_margin_pct": 20.43,
+    "avg_revenue_per_line": 1739.87,
+    "loss_making_lines_pct": 3.57
+   }
+  ],
+  "repeat": [
+   {
+    "customer_group": "Repeat (2+ orders)",
+    "customers": 1774,
+    "pct_of_customers": 89.42,
+    "revenue": 59212645.95,
+    "pct_of_revenue": 98.59,
+    "avg_revenue_per_customer": 33378.04
+   },
+   {
+    "customer_group": "Single purchase",
+    "customers": 210,
+    "pct_of_customers": 10.58,
+    "revenue": 843923.2,
+    "pct_of_revenue": 1.41,
+    "avg_revenue_per_customer": 4018.68
+   }
+  ],
+  "payment": [
+   {
+    "payment_method": "UPI",
+    "orders": 6084,
+    "delivered_aov": 5067.52,
+    "returned_lines_pct": 5.44,
+    "cancelled_lines_pct": 3.66
+   },
+   {
+    "payment_method": "Card",
+    "orders": 2626,
+    "delivered_aov": 4850.53,
+    "returned_lines_pct": 5.81,
+    "cancelled_lines_pct": 2.83
+   },
+   {
+    "payment_method": "COD",
+    "orders": 1958,
+    "delivered_aov": 4897.74,
+    "returned_lines_pct": 7.69,
+    "cancelled_lines_pct": 6.19
+   },
+   {
+    "payment_method": "Net Banking",
+    "orders": 1256,
+    "delivered_aov": 4660.7,
+    "returned_lines_pct": 5.4,
+    "cancelled_lines_pct": 3.19
+   },
+   {
+    "payment_method": "Wallet",
+    "orders": 1238,
+    "delivered_aov": 4763.53,
+    "returned_lines_pct": 5.98,
+    "cancelled_lines_pct": 3.08
+   },
+   {
+    "payment_method": "Unknown",
+    "orders": 89,
+    "delivered_aov": 2726.87,
+    "returned_lines_pct": 4.49,
+    "cancelled_lines_pct": 7.87
+   }
+  ],
+  "lost_by_category": [
+   {
+    "category": "Electronics",
+    "booked_value": 32936710.6,
+    "lost_value": 2846058.05,
+    "lost_pct_of_booked": 8.64,
+    "returned_lines_pct": 4.14
+   },
+   {
+    "category": "Fashion",
+    "booked_value": 14093330.35,
+    "lost_value": 2035589.35,
+    "lost_pct_of_booked": 14.44,
+    "returned_lines_pct": 10.94
+   },
+   {
+    "category": "Home & Kitchen",
+    "booked_value": 11212721.45,
+    "lost_value": 835338.65,
+    "lost_pct_of_booked": 7.45,
+    "returned_lines_pct": 3.64
+   },
+   {
+    "category": "Sports",
+    "booked_value": 3222143.3,
+    "lost_value": 230394.9,
+    "lost_pct_of_booked": 7.15,
+    "returned_lines_pct": 3.89
+   },
+   {
+    "category": "Beauty",
+    "booked_value": 3624848.2,
+    "lost_value": 222884.75,
+    "lost_pct_of_booked": 6.15,
+    "returned_lines_pct": 2.86
+   },
+   {
+    "category": "Books",
+    "booked_value": 1222248.45,
+    "lost_value": 85167.5,
+    "lost_pct_of_booked": 6.97,
+    "returned_lines_pct": 2.15
+   }
+  ],
+  "retention": [
+   {
+    "order_year": 2023,
+    "active_customers": 1137,
+    "new_customers": 1137,
+    "retained_customers": 0,
+    "reactivated_customers": 0,
+    "retention_rate_pct": NaN
+   },
+   {
+    "order_year": 2024,
+    "active_customers": 1328,
+    "new_customers": 498,
+    "retained_customers": 830,
+    "reactivated_customers": 0,
+    "retention_rate_pct": 73.0
+   },
+   {
+    "order_year": 2025,
+    "active_customers": 1716,
+    "new_customers": 349,
+    "retained_customers": 1239,
+    "reactivated_customers": 128,
+    "retention_rate_pct": 93.3
+   }
+  ],
+  "region_category_gap": 0,
+  "region_category_pairs": 30,
+  "interpurchase": {
+   "repeat_intervals": 10228,
+   "mean_gap_days": 95.1,
+   "p25_gap_days": 20.0,
+   "median_gap_days": 54.0,
+   "p75_gap_days": 124.0,
+   "p90_gap_days": 232.0
+  },
+  "products_flagged": 10,
+  "flagged_products": [
+   {
+    "product_id": "ELE-002",
+    "product_name": "Nova X7 Pro Smartphone 256GB",
+    "category": "Electronics",
+    "revenue": 5737729.15,
+    "profit_margin_pct": 4.69,
+    "category_margin_pct": 10.85,
+    "return_cancel_rate_pct": 6.29,
+    "overall_return_cancel_rate_pct": 9.69,
+    "reason": "margin < half of category margin"
+   },
+   {
+    "product_id": "ELE-005",
+    "product_name": "AeroBook Pro 16 Laptop",
+    "category": "Electronics",
+    "revenue": 2906412.5,
+    "profit_margin_pct": 2.16,
+    "category_margin_pct": 10.85,
+    "return_cancel_rate_pct": 8.57,
+    "overall_return_cancel_rate_pct": 9.69,
+    "reason": "margin < half of category margin"
+   },
+   {
+    "product_id": "ELE-006",
+    "product_name": "43-inch 4K Smart TV",
+    "category": "Electronics",
+    "revenue": 2498330.65,
+    "profit_margin_pct": -1.67,
+    "category_margin_pct": 10.85,
+    "return_cancel_rate_pct": 6.74,
+    "overall_return_cancel_rate_pct": 9.69,
+    "reason": "margin < half of category margin"
+   },
+   {
+    "product_id": "FAS-004",
+    "product_name": "Women's Cotton Saree",
+    "category": "Fashion",
+    "revenue": 1371889.8,
+    "profit_margin_pct": 39.68,
+    "category_margin_pct": 42.77,
+    "return_cancel_rate_pct": 14.58,
+    "overall_return_cancel_rate_pct": 9.69,
+    "reason": "return/cancel rate > 1.5x overall"
+   },
+   {
+    "product_id": "FAS-002",
+    "product_name": "Men's Slim Fit Jeans",
+    "category": "Fashion",
+    "revenue": 1245899.95,
+    "profit_margin_pct": 42.47,
+    "category_margin_pct": 42.77,
+    "return_cancel_rate_pct": 14.76,
+    "overall_return_cancel_rate_pct": 9.69,
+    "reason": "return/cancel rate > 1.5x overall"
+   },
+   {
+    "product_id": "FAS-001",
+    "product_name": "Men's Cotton Casual Shirt",
+    "category": "Fashion",
+    "revenue": 1211754.1,
+    "profit_margin_pct": 46.68,
+    "category_margin_pct": 42.77,
+    "return_cancel_rate_pct": 15.03,
+    "overall_return_cancel_rate_pct": 9.69,
+    "reason": "return/cancel rate > 1.5x overall"
+   },
+   {
+    "product_id": "FAS-003",
+    "product_name": "Women's Printed Kurta",
+    "category": "Fashion",
+    "revenue": 1171038.2,
+    "profit_margin_pct": 49.36,
+    "category_margin_pct": 42.77,
+    "return_cancel_rate_pct": 14.65,
+    "overall_return_cancel_rate_pct": 9.69,
+    "reason": "return/cancel rate > 1.5x overall"
+   },
+   {
+    "product_id": "FAS-008",
+    "product_name": "Leather Formal Shoes",
+    "category": "Fashion",
+    "revenue": 1034515.0,
+    "profit_margin_pct": 34.27,
+    "category_margin_pct": 42.77,
+    "return_cancel_rate_pct": 15.92,
+    "overall_return_cancel_rate_pct": 9.69,
+    "reason": "return/cancel rate > 1.5x overall"
+   },
+   {
+    "product_id": "SPO-004",
+    "product_name": "Hybrid Bicycle 21-Speed",
+    "category": "Sports",
+    "revenue": 1007011.2,
+    "profit_margin_pct": 11.9,
+    "category_margin_pct": 25.56,
+    "return_cancel_rate_pct": 6.35,
+    "overall_return_cancel_rate_pct": 9.69,
+    "reason": "margin < half of category margin"
+   },
+   {
+    "product_id": "FAS-005",
+    "product_name": "Women's Western Dress",
+    "category": "Fashion",
+    "revenue": 890284.75,
+    "profit_margin_pct": 44.93,
+    "category_margin_pct": 42.77,
+    "return_cancel_rate_pct": 16.71,
+    "overall_return_cancel_rate_pct": 9.69,
+    "reason": "return/cancel rate > 1.5x overall"
+   }
+  ],
+  "zero_discount_best_in": 6,
+  "categories_tested": 6,
+  "monthly_min": 572756.75,
+  "monthly_max": 3097837.75
+ },
+ "rfm": {
+  "reference_date": "2026-01-01",
+  "customers_scored": 1984,
+  "segments": 11,
+  "summary": [
+   {
+    "RFM_Segment": "Champions",
+    "Value_Activity_Group": "Active high value",
+    "Customer_Count": 334,
+    "Customer_%": 16.835,
+    "Total_Revenue": 32330090.4,
+    "Revenue_%": 53.833,
+    "Average_Revenue": 96796.678,
+    "Average_Recency": 32.59,
+    "Median_Recency": 29.5,
+    "Average_Frequency": 15.425,
+    "Average_Monetary": 96796.678,
+    "Median_Monetary": 74370.825,
+    "Average_Order_Value": 6275.25,
+    "Profit_Margin": 0.22,
+    "Revenue_to_Customer_Ratio": 3.198,
+    "Average_R_Score": 4.644,
+    "Average_F_Score": 4.901,
+    "Average_M_Score": 4.814
+   },
+   {
+    "RFM_Segment": "Loyal Customers",
+    "Value_Activity_Group": "Active high value",
+    "Customer_Count": 240,
+    "Customer_%": 12.097,
+    "Total_Revenue": 8578897.6,
+    "Revenue_%": 14.285,
+    "Average_Revenue": 35745.407,
+    "Average_Recency": 91.188,
+    "Median_Recency": 91.5,
+    "Average_Frequency": 7.183,
+    "Average_Monetary": 35745.407,
+    "Median_Monetary": 29369.2,
+    "Average_Order_Value": 4976.159,
+    "Profit_Margin": 0.235,
+    "Revenue_to_Customer_Ratio": 1.181,
+    "Average_R_Score": 3.638,
+    "Average_F_Score": 3.721,
+    "Average_M_Score": 4.054
+   },
+   {
+    "RFM_Segment": "Potential Loyalists",
+    "Value_Activity_Group": "Developing",
+    "Customer_Count": 152,
+    "Customer_%": 7.661,
+    "Total_Revenue": 2191483.35,
+    "Revenue_%": 3.649,
+    "Average_Revenue": 14417.654,
+    "Average_Recency": 46.632,
+    "Median_Recency": 46.0,
+    "Average_Frequency": 4.197,
+    "Average_Monetary": 14417.654,
+    "Median_Monetary": 12159.15,
+    "Average_Order_Value": 3434.927,
+    "Profit_Margin": 0.254,
+    "Revenue_to_Customer_Ratio": 0.476,
+    "Average_R_Score": 4.395,
+    "Average_F_Score": 2.724,
+    "Average_M_Score": 2.868
+   },
+   {
+    "RFM_Segment": "Recent Customers",
+    "Value_Activity_Group": "Developing",
+    "Customer_Count": 91,
+    "Customer_%": 4.587,
+    "Total_Revenue": 488562.6,
+    "Revenue_%": 0.814,
+    "Average_Revenue": 5368.82,
+    "Average_Recency": 17.791,
+    "Median_Recency": 16.0,
+    "Average_Frequency": 2.231,
+    "Average_Monetary": 5368.82,
+    "Median_Monetary": 5052.45,
+    "Average_Order_Value": 2406.712,
+    "Profit_Margin": 0.347,
+    "Revenue_to_Customer_Ratio": 0.177,
+    "Average_R_Score": 5.0,
+    "Average_F_Score": 1.374,
+    "Average_M_Score": 1.604
+   },
+   {
+    "RFM_Segment": "Promising",
+    "Value_Activity_Group": "Developing",
+    "Customer_Count": 110,
+    "Customer_%": 5.544,
+    "Total_Revenue": 562907.7,
+    "Revenue_%": 0.937,
+    "Average_Revenue": 5117.343,
+    "Average_Recency": 59.382,
+    "Median_Recency": 58.0,
+    "Average_Frequency": 2.2,
+    "Average_Monetary": 5117.343,
+    "Median_Monetary": 4541.55,
+    "Average_Order_Value": 2326.065,
+    "Profit_Margin": 0.344,
+    "Revenue_to_Customer_Ratio": 0.169,
+    "Average_R_Score": 4.0,
+    "Average_F_Score": 1.4,
+    "Average_M_Score": 1.518
+   },
+   {
+    "RFM_Segment": "Needs Attention",
+    "Value_Activity_Group": "Slipping",
+    "Customer_Count": 123,
+    "Customer_%": 6.2,
+    "Total_Revenue": 1553870.95,
+    "Revenue_%": 2.587,
+    "Average_Revenue": 12633.097,
+    "Average_Recency": 120.65,
+    "Median_Recency": 120.0,
+    "Average_Frequency": 4.472,
+    "Average_Monetary": 12633.097,
+    "Median_Monetary": 10775.3,
+    "Average_Order_Value": 2825.22,
+    "Profit_Margin": 0.293,
+    "Revenue_to_Customer_Ratio": 0.417,
+    "Average_R_Score": 3.0,
+    "Average_F_Score": 2.813,
+    "Average_M_Score": 2.772
+   },
+   {
+    "RFM_Segment": "About to Sleep",
+    "Value_Activity_Group": "Slipping",
+    "Customer_Count": 143,
+    "Customer_%": 7.208,
+    "Total_Revenue": 605262.25,
+    "Revenue_%": 1.008,
+    "Average_Revenue": 4232.603,
+    "Average_Recency": 115.357,
+    "Median_Recency": 111.0,
+    "Average_Frequency": 2.119,
+    "Average_Monetary": 4232.603,
+    "Median_Monetary": 3613.7,
+    "Average_Order_Value": 1997.565,
+    "Profit_Margin": 0.306,
+    "Revenue_to_Customer_Ratio": 0.14,
+    "Average_R_Score": 3.0,
+    "Average_F_Score": 1.462,
+    "Average_M_Score": 1.399
+   },
+   {
+    "RFM_Segment": "Can't Lose Them",
+    "Value_Activity_Group": "Slipping",
+    "Customer_Count": 79,
+    "Customer_%": 3.982,
+    "Total_Revenue": 4285311.3,
+    "Revenue_%": 7.135,
+    "Average_Revenue": 54244.447,
+    "Average_Recency": 228.291,
+    "Median_Recency": 226.0,
+    "Average_Frequency": 9.797,
+    "Average_Monetary": 54244.447,
+    "Median_Monetary": 51946.25,
+    "Average_Order_Value": 5536.578,
+    "Profit_Margin": 0.204,
+    "Revenue_to_Customer_Ratio": 1.792,
+    "Average_R_Score": 1.734,
+    "Average_F_Score": 4.696,
+    "Average_M_Score": 4.646
+   },
+   {
+    "RFM_Segment": "At Risk",
+    "Value_Activity_Group": "Slipping",
+    "Customer_Count": 263,
+    "Customer_%": 13.256,
+    "Total_Revenue": 6763493.3,
+    "Revenue_%": 11.262,
+    "Average_Revenue": 25716.705,
+    "Average_Recency": 259.316,
+    "Median_Recency": 218.0,
+    "Average_Frequency": 5.901,
+    "Average_Monetary": 25716.705,
+    "Median_Monetary": 22178.5,
+    "Average_Order_Value": 4357.921,
+    "Profit_Margin": 0.239,
+    "Revenue_to_Customer_Ratio": 0.85,
+    "Average_R_Score": 1.73,
+    "Average_F_Score": 3.274,
+    "Average_M_Score": 3.631
+   },
+   {
+    "RFM_Segment": "Hibernating",
+    "Value_Activity_Group": "Inactive",
+    "Customer_Count": 148,
+    "Customer_%": 7.46,
+    "Total_Revenue": 975827.8,
+    "Revenue_%": 1.625,
+    "Average_Revenue": 6593.431,
+    "Average_Recency": 199.007,
+    "Median_Recency": 195.0,
+    "Average_Frequency": 3.068,
+    "Average_Monetary": 6593.431,
+    "Median_Monetary": 6103.65,
+    "Average_Order_Value": 2149.4,
+    "Profit_Margin": 0.344,
+    "Revenue_to_Customer_Ratio": 0.218,
+    "Average_R_Score": 2.0,
+    "Average_F_Score": 2.054,
+    "Average_M_Score": 1.824
+   },
+   {
+    "RFM_Segment": "Lost",
+    "Value_Activity_Group": "Inactive",
+    "Customer_Count": 301,
+    "Customer_%": 15.171,
+    "Total_Revenue": 1720861.9,
+    "Revenue_%": 2.865,
+    "Average_Revenue": 5717.149,
+    "Average_Recency": 731.551,
+    "Median_Recency": 788.0,
+    "Average_Frequency": 2.06,
+    "Average_Monetary": 5717.149,
+    "Median_Monetary": 4458.4,
+    "Average_Order_Value": 2775.584,
+    "Profit_Margin": 0.29,
+    "Revenue_to_Customer_Ratio": 0.189,
+    "Average_R_Score": 1.0,
+    "Average_F_Score": 1.365,
+    "Average_M_Score": 1.625
+   }
+  ],
+  "headline": [
+   {
+    "Metric": "Customers in the dataset",
+    "Value": 2000.0,
+    "Display": "2,000"
+   },
+   {
+    "Metric": "Customers with >= 1 delivered purchase (scored)",
+    "Value": 1984.0,
+    "Display": "1,984"
+   },
+   {
+    "Metric": "Customers with no delivered purchase (excluded)",
+    "Value": 16.0,
+    "Display": "16"
+   },
+   {
+    "Metric": "Total customer revenue (Monetary sum)",
+    "Value": 60056569.150000006,
+    "Display": "\u20b96.01 Cr"
+   },
+   {
+    "Metric": "Average revenue per scored customer",
+    "Value": 30270.44816028226,
+    "Display": "\u20b930,270"
+   },
+   {
+    "Metric": "Median revenue per scored customer",
+    "Value": 13513.325,
+    "Display": "\u20b913,513"
+   },
+   {
+    "Metric": "Customers with exactly one order",
+    "Value": 210.0,
+    "Display": "10.6%"
+   },
+   {
+    "Metric": "Repeat customers (2+ orders)",
+    "Value": 1774.0,
+    "Display": "89.4%"
+   },
+   {
+    "Metric": "Customers active in last 90 days (Recency <= 90)",
+    "Value": 843.0,
+    "Display": "42.5%"
+   },
+   {
+    "Metric": "Customers inactive > 180 days (Recency > 180)",
+    "Value": 692.0,
+    "Display": "34.9%"
+   }
+  ],
+  "rules": [
+   {
+    "Segment": "Champions",
+    "RFM Characteristics (rule)": "R 4-5 and FM >= 4.5",
+    "Business Meaning": "Bought recently, buy often and spend the most",
+    "Value-Activity Group": "Active high value"
+   },
+   {
+    "Segment": "Loyal Customers",
+    "RFM Characteristics (rule)": "R 3-5 and FM 3.5-4 (or R 3 and FM >= 4.5)",
+    "Business Meaning": "Regular, valuable buyers; strong relationship",
+    "Value-Activity Group": "Active high value"
+   },
+   {
+    "Segment": "Potential Loyalists",
+    "RFM Characteristics (rule)": "R 4-5 and FM 2.5-3",
+    "Business Meaning": "Recent buyers with average frequency and spend",
+    "Value-Activity Group": "Developing"
+   },
+   {
+    "Segment": "Recent Customers",
+    "RFM Characteristics (rule)": "R 5 and FM < 2.5",
+    "Business Meaning": "Bought very recently but only a little so far",
+    "Value-Activity Group": "Developing"
+   },
+   {
+    "Segment": "Promising",
+    "RFM Characteristics (rule)": "R 4 and FM < 2.5",
+    "Business Meaning": "Fairly recent, low frequency and spend",
+    "Value-Activity Group": "Developing"
+   },
+   {
+    "Segment": "Needs Attention",
+    "RFM Characteristics (rule)": "R 3 and FM 2.5-3",
+    "Business Meaning": "Average customers whose recency is slipping",
+    "Value-Activity Group": "Slipping"
+   },
+   {
+    "Segment": "About to Sleep",
+    "RFM Characteristics (rule)": "R 3 and FM < 2.5",
+    "Business Meaning": "Below-average value and going quiet",
+    "Value-Activity Group": "Slipping"
+   },
+   {
+    "Segment": "Can't Lose Them",
+    "RFM Characteristics (rule)": "R 1-2 and FM >= 4.5",
+    "Business Meaning": "Were among the best customers; have not bought for a long time",
+    "Value-Activity Group": "Slipping"
+   },
+   {
+    "Segment": "At Risk",
+    "RFM Characteristics (rule)": "R 1-2 and FM 3-4",
+    "Business Meaning": "Valuable in the past, now inactive",
+    "Value-Activity Group": "Slipping"
+   },
+   {
+    "Segment": "Hibernating",
+    "RFM Characteristics (rule)": "R 2 and FM < 3",
+    "Business Meaning": "Low value and long inactive",
+    "Value-Activity Group": "Inactive"
+   },
+   {
+    "Segment": "Lost",
+    "RFM Characteristics (rule)": "R 1 and FM < 3",
+    "Business Meaning": "Lowest recency, frequency and spend",
+    "Value-Activity Group": "Inactive"
+   }
+  ],
+  "groups": [
+   {
+    "Value_Activity_Group": "Active high value",
+    "Customers": 574,
+    "Revenue": 40908988.0,
+    "Average_Recency": 57.091,
+    "Average_Frequency": 11.979,
+    "Average_Monetary": 71270.014,
+    "Customer_%": 28.931,
+    "Revenue_%": 68.117
+   },
+   {
+    "Value_Activity_Group": "Developing",
+    "Customers": 353,
+    "Revenue": 3242953.65,
+    "Average_Recency": 43.17,
+    "Average_Frequency": 3.068,
+    "Average_Monetary": 9186.838,
+    "Customer_%": 17.792,
+    "Revenue_%": 5.4
+   },
+   {
+    "Value_Activity_Group": "Slipping",
+    "Customers": 608,
+    "Revenue": 13207937.8,
+    "Average_Recency": 193.373,
+    "Average_Frequency": 5.229,
+    "Average_Monetary": 21723.582,
+    "Customer_%": 30.645,
+    "Revenue_%": 21.992
+   },
+   {
+    "Value_Activity_Group": "Inactive",
+    "Customers": 449,
+    "Revenue": 2696689.7,
+    "Average_Recency": 556.013,
+    "Average_Frequency": 2.392,
+    "Average_Monetary": 6005.99,
+    "Customer_%": 22.631,
+    "Revenue_%": 4.49
+   }
+  ],
+  "median_recency": 121.0,
+  "median_frequency": 4.0,
+  "median_monetary": 13513.325,
+  "scoring": {
+   "Frequency": "pd.qcut(q=5) quintiles",
+   "Monetary": "pd.qcut(q=5) quintiles",
+   "Recency": "pd.qcut(q=5) quintiles"
+  },
+  "metadata": {
+   "dataset": "SYNTHETIC DATA - generated for academic demonstration only",
+   "source_file": "data/processed/customer_sales_cleaned.csv",
+   "reference_date": "2026-01-01",
+   "reference_date_rule": "max(Order_Date) + 1 day",
+   "latest_order_date": "2025-12-31",
+   "valid_purchase_definition": "Order_Status == 'Delivered'",
+   "recency": "reference_date - last delivered purchase date, in days",
+   "frequency": "distinct Order_ID with >= 1 Delivered line",
+   "monetary": "sum of Sales (INR, after discount) on Delivered lines",
+   "scoring": {
+    "Frequency": "pd.qcut(q=5) quintiles",
+    "Monetary": "pd.qcut(q=5) quintiles",
+    "Recency": "pd.qcut(q=5) quintiles"
+   },
+   "scoring_note": "pd.qcut quintiles, falling back to tie-aware percentile rank if edges are not unique; Recency reversed",
+   "rfm_score": "R_Score + F_Score + M_Score (equal weights, 3-15)",
+   "fm_score": "(F_Score + M_Score) / 2, used for segment rules",
+   "customers_total": 2000,
+   "customers_scored": 1984,
+   "customers_excluded_no_delivered_purchase": 16,
+   "total_monetary_inr": 60056569.15,
+   "segmentation_type": "rule-based RFM (not machine learning)"
+  }
+ },
+ "kmeans": {
+  "k": 4,
+  "metadata": {
+   "dataset": "SYNTHETIC DATA - generated for academic demonstration only",
+   "input_file": "data/processed/customer_rfm_segments.csv",
+   "feature_order": [
+    "Recency",
+    "Frequency",
+    "Monetary"
+   ],
+   "preprocessing": "log1p -> StandardScaler (sklearn Pipeline saved in rfm_scaler.pkl)",
+   "model": "KMeans(n_clusters=4, random_state=42, n_init='auto')",
+   "selected_k": 4,
+   "selection_rules": {
+    "min_k": 3,
+    "min_cluster_share": 0.05,
+    "min_stability_ari": 0.9,
+    "then": "highest silhouette"
+   },
+   "cluster_labels": {
+    "0": "High-Value, Active",
+    "1": "Low-Value, Active",
+    "2": "Mid-Value, Lapsing",
+    "3": "Low-Value, Inactive"
+   },
+   "pca": "2 components on the scaled matrix - visualisation only",
+   "sklearn_version": "1.8.0",
+   "reload_example": "import joblib, pandas as pd; pre = joblib.load('models/rfm_scaler.pkl'); km = joblib.load('models/kmeans_customer_segmentation.pkl'); X = df[['Recency','Frequency','Monetary']]; clusters = km.predict(pre.transform(X))"
+  },
+  "features": [
+   "Recency",
+   "Frequency",
+   "Monetary"
+  ],
+  "preprocessing": "log1p -> StandardScaler (sklearn Pipeline saved in rfm_scaler.pkl)",
+  "selection_rules": {
+   "min_k": 3,
+   "min_cluster_share": 0.05,
+   "min_stability_ari": 0.9,
+   "then": "highest silhouette"
+  },
+  "summary": [
+   {
+    "Cluster_ID": 0,
+    "Business_Label": "High-Value, Active",
+    "Customer_Count": 364,
+    "Customer_%": 18.3468,
+    "Average_Recency": 31.6951,
+    "Median_Recency": 28.0,
+    "Average_Frequency": 14.8819,
+    "Median_Frequency": 13.0,
+    "Average_Monetary": 91851.2839,
+    "Median_Monetary": 71548.875,
+    "Total_Revenue": 33433867.35,
+    "Revenue_%": 55.6706,
+    "Average_Order_Value": 6172.0265,
+    "Average_Quantity": 29.1593,
+    "Average_Discount": 0.1061,
+    "Profit_Margin": 0.2217,
+    "Average_Categories": 5.25,
+    "Average_Returned_Lines": 1.3214,
+    "Median_Age": 36.0,
+    "Average_RFM_Score": 14.206,
+    "Share_Existing_Before_2023": 0.6593,
+    "Share_Recency_over_180d": 0.0,
+    "Revenue_to_Customer_Ratio": 3.0344,
+    "Total_Profit": 7410971.15
+   },
+   {
+    "Cluster_ID": 1,
+    "Business_Label": "Low-Value, Active",
+    "Customer_Count": 453,
+    "Customer_%": 22.8327,
+    "Average_Recency": 63.8565,
+    "Median_Recency": 57.0,
+    "Average_Frequency": 2.7506,
+    "Median_Frequency": 3.0,
+    "Average_Monetary": 6658.44,
+    "Median_Monetary": 5944.55,
+    "Total_Revenue": 3016273.3,
+    "Revenue_%": 5.0224,
+    "Average_Order_Value": 2420.7651,
+    "Average_Quantity": 4.4967,
+    "Average_Discount": 0.1649,
+    "Profit_Margin": 0.3164,
+    "Average_Categories": 2.4481,
+    "Average_Returned_Lines": 0.2296,
+    "Median_Age": 29.0,
+    "Average_RFM_Score": 7.6269,
+    "Share_Existing_Before_2023": 0.181,
+    "Share_Recency_over_180d": 0.0,
+    "Revenue_to_Customer_Ratio": 0.22,
+    "Total_Profit": 954476.26
+   },
+   {
+    "Cluster_ID": 2,
+    "Business_Label": "Mid-Value, Lapsing",
+    "Customer_Count": 753,
+    "Customer_%": 37.9536,
+    "Average_Recency": 172.992,
+    "Median_Recency": 168.0,
+    "Average_Frequency": 6.2377,
+    "Median_Frequency": 6.0,
+    "Average_Monetary": 28228.7622,
+    "Median_Monetary": 22205.0,
+    "Total_Revenue": 21256257.95,
+    "Revenue_%": 35.3937,
+    "Average_Order_Value": 4525.4967,
+    "Average_Quantity": 11.5657,
+    "Average_Discount": 0.1316,
+    "Profit_Margin": 0.2346,
+    "Average_Categories": 3.9827,
+    "Average_Returned_Lines": 0.5179,
+    "Median_Age": 33.0,
+    "Average_RFM_Score": 9.591,
+    "Share_Existing_Before_2023": 0.3997,
+    "Share_Recency_over_180d": 0.4396,
+    "Revenue_to_Customer_Ratio": 0.9326,
+    "Total_Profit": 4987670.74
+   },
+   {
+    "Cluster_ID": 3,
+    "Business_Label": "Low-Value, Inactive",
+    "Customer_Count": 414,
+    "Customer_%": 20.8669,
+    "Average_Recency": 590.587,
+    "Median_Recency": 623.5,
+    "Average_Frequency": 2.058,
+    "Median_Frequency": 2.0,
+    "Average_Monetary": 5676.7405,
+    "Median_Monetary": 4392.3,
+    "Total_Revenue": 2350170.55,
+    "Revenue_%": 3.9133,
+    "Average_Order_Value": 2758.4161,
+    "Average_Quantity": 3.4106,
+    "Average_Discount": 0.1418,
+    "Profit_Margin": 0.2848,
+    "Average_Categories": 2.0411,
+    "Average_Returned_Lines": 0.2754,
+    "Median_Age": 30.0,
+    "Average_RFM_Score": 4.3551,
+    "Share_Existing_Before_2023": 0.3478,
+    "Share_Recency_over_180d": 0.872,
+    "Revenue_to_Customer_Ratio": 0.1875,
+    "Total_Profit": 669433.43
+   }
+  ],
+  "k_evaluation": [
+   {
+    "k": 2,
+    "inertia": 3256.3894,
+    "silhouette": 0.3777,
+    "calinski_harabasz": 1640.6822,
+    "davies_bouldin": 0.9876,
+    "min_cluster_share": 0.44,
+    "stability_ari_mean": 0.9952,
+    "stability_ari_min": 0.9839,
+    "elbow_distance": 0.0,
+    "inertia_drop_%": NaN,
+    "Rule1_K>=3": false,
+    "Rule2_min_size>=5%": true,
+    "Rule3_stable_ARI>=0.90": true,
+    "Eligible": false,
+    "Selected": false
+   },
+   {
+    "k": 3,
+    "inertia": 2431.3307,
+    "silhouette": 0.3273,
+    "calinski_harabasz": 1434.3282,
+    "davies_bouldin": 1.064,
+    "min_cluster_share": 0.1996,
+    "stability_ari_mean": 0.7899,
+    "stability_ari_min": 0.6949,
+    "elbow_distance": 0.2187,
+    "inertia_drop_%": 25.3366,
+    "Rule1_K>=3": true,
+    "Rule2_min_size>=5%": true,
+    "Rule3_stable_ARI>=0.90": false,
+    "Eligible": false,
+    "Selected": false
+   },
+   {
+    "k": 4,
+    "inertia": 1780.247,
+    "silhouette": 0.3534,
+    "calinski_harabasz": 1546.6454,
+    "davies_bouldin": 0.951,
+    "min_cluster_share": 0.1835,
+    "stability_ari_mean": 0.95,
+    "stability_ari_min": 0.9421,
+    "elbow_distance": 0.3648,
+    "inertia_drop_%": 26.7789,
+    "Rule1_K>=3": true,
+    "Rule2_min_size>=5%": true,
+    "Rule3_stable_ARI>=0.90": true,
+    "Eligible": true,
+    "Selected": true
+   },
+   {
+    "k": 5,
+    "inertia": 1526.6173,
+    "silhouette": 0.3122,
+    "calinski_harabasz": 1434.2145,
+    "davies_bouldin": 1.0424,
+    "min_cluster_share": 0.1497,
+    "stability_ari_mean": 0.6017,
+    "stability_ari_min": 0.4606,
+    "elbow_distance": 0.3455,
+    "inertia_drop_%": 14.2469,
+    "Rule1_K>=3": true,
+    "Rule2_min_size>=5%": true,
+    "Rule3_stable_ARI>=0.90": false,
+    "Eligible": false,
+    "Selected": false
+   },
+   {
+    "k": 6,
+    "inertia": 1298.2222,
+    "silhouette": 0.3253,
+    "calinski_harabasz": 1418.1197,
+    "davies_bouldin": 0.9601,
+    "min_cluster_share": 0.1174,
+    "stability_ari_mean": 0.8169,
+    "stability_ari_min": 0.5007,
+    "elbow_distance": 0.3156,
+    "inertia_drop_%": 14.9609,
+    "Rule1_K>=3": true,
+    "Rule2_min_size>=5%": true,
+    "Rule3_stable_ARI>=0.90": false,
+    "Eligible": false,
+    "Selected": false
+   },
+   {
+    "k": 7,
+    "inertia": 1141.3885,
+    "silhouette": 0.3263,
+    "calinski_harabasz": 1388.7537,
+    "davies_bouldin": 0.9717,
+    "min_cluster_share": 0.0751,
+    "stability_ari_mean": 0.8717,
+    "stability_ari_min": 0.5927,
+    "elbow_distance": 0.2559,
+    "inertia_drop_%": 12.0807,
+    "Rule1_K>=3": true,
+    "Rule2_min_size>=5%": true,
+    "Rule3_stable_ARI>=0.90": false,
+    "Eligible": false,
+    "Selected": false
+   },
+   {
+    "k": 8,
+    "inertia": 1089.0523,
+    "silhouette": 0.3062,
+    "calinski_harabasz": 1260.494,
+    "davies_bouldin": 0.9726,
+    "min_cluster_share": 0.0544,
+    "stability_ari_mean": 0.5111,
+    "stability_ari_min": 0.4325,
+    "elbow_distance": 0.1527,
+    "inertia_drop_%": 4.5853,
+    "Rule1_K>=3": true,
+    "Rule2_min_size>=5%": true,
+    "Rule3_stable_ARI>=0.90": false,
+    "Eligible": false,
+    "Selected": false
+   },
+   {
+    "k": 9,
+    "inertia": 955.7211,
+    "silhouette": 0.3101,
+    "calinski_harabasz": 1290.619,
+    "davies_bouldin": 1.0087,
+    "min_cluster_share": 0.0544,
+    "stability_ari_mean": 0.7136,
+    "stability_ari_min": 0.5188,
+    "elbow_distance": 0.0833,
+    "inertia_drop_%": 12.2429,
+    "Rule1_K>=3": true,
+    "Rule2_min_size>=5%": true,
+    "Rule3_stable_ARI>=0.90": false,
+    "Eligible": false,
+    "Selected": false
+   },
+   {
+    "k": 10,
+    "inertia": 855.554,
+    "silhouette": 0.3151,
+    "calinski_harabasz": 1306.5774,
+    "davies_bouldin": 0.9791,
+    "min_cluster_share": 0.0544,
+    "stability_ari_mean": 0.7448,
+    "stability_ari_min": 0.664,
+    "elbow_distance": 0.0,
+    "inertia_drop_%": 10.4808,
+    "Rule1_K>=3": true,
+    "Rule2_min_size>=5%": true,
+    "Rule3_stable_ARI>=0.90": false,
+    "Eligible": false,
+    "Selected": false
+   }
+  ],
+  "silhouette_by_cluster": [
+   {
+    "Cluster_ID": 0,
+    "Mean_Silhouette": 0.4081,
+    "Min_Silhouette": -0.0112,
+    "Share_Negative_Silhouette": 0.0082
+   },
+   {
+    "Cluster_ID": 1,
+    "Mean_Silhouette": 0.2623,
+    "Min_Silhouette": -0.0568,
+    "Share_Negative_Silhouette": 0.0442
+   },
+   {
+    "Cluster_ID": 2,
+    "Mean_Silhouette": 0.3869,
+    "Min_Silhouette": 0.0187,
+    "Share_Negative_Silhouette": 0.0
+   },
+   {
+    "Cluster_ID": 3,
+    "Mean_Silhouette": 0.344,
+    "Min_Silhouette": -0.0586,
+    "Share_Negative_Silhouette": 0.0411
+   }
+  ],
+  "pca": [
+   {
+    "Component": "PC1",
+    "Explained_Variance_%": 71.499,
+    "Loading_of": NaN,
+    "PC1": NaN,
+    "PC2": NaN
+   },
+   {
+    "Component": "PC2",
+    "Explained_Variance_%": 23.589,
+    "Loading_of": NaN,
+    "PC1": NaN,
+    "PC2": NaN
+   },
+   {
+    "Component": "Total (PC1+PC2)",
+    "Explained_Variance_%": 95.089,
+    "Loading_of": NaN,
+    "PC1": NaN,
+    "PC2": NaN
+   },
+   {
+    "Component": NaN,
+    "Explained_Variance_%": NaN,
+    "Loading_of": "log_Recency",
+    "PC1": -0.453,
+    "PC2": 0.888
+   },
+   {
+    "Component": NaN,
+    "Explained_Variance_%": NaN,
+    "Loading_of": "log_Frequency",
+    "PC1": 0.638,
+    "PC2": 0.264
+   },
+   {
+    "Component": NaN,
+    "Explained_Variance_%": NaN,
+    "Loading_of": "log_Monetary",
+    "PC1": 0.622,
+    "PC2": 0.376
+   }
+  ],
+  "agreement": [
+   {
+    "Measure": "Adjusted Rand Index (RFM segment vs cluster)",
+    "Value": 0.3952146749634507
+   },
+   {
+    "Measure": "Normalized Mutual Information",
+    "Value": 0.5788263126736519
+   },
+   {
+    "Measure": "ARI (RFM value-activity group vs cluster)",
+    "Value": 0.4490926318420069
+   },
+   {
+    "Measure": "Customers compared",
+    "Value": 1984.0
+   }
+  ],
+  "overall_silhouette": 0.35340408266129036
+ },
+ "clv": {
+  "metadata": {
+   "dataset": "SYNTHETIC DATA - generated for academic demonstration only",
+   "purpose": "Estimate each customer's Delivered PROFIT in the next 12 months (an estimate, not a guarantee)",
+   "target": "Future_Profit_12M",
+   "feature_order": [
+    "Recency_Days",
+    "Frequency",
+    "AOV",
+    "Profit_Margin",
+    "Avg_Discount",
+    "Categories",
+    "Tenure_Days_Capped",
+    "Return_Rate"
+   ],
+   "skewed_features_arcsinh": [
+    "Recency_Days",
+    "Frequency",
+    "AOV"
+   ],
+   "feature_window_months": 12,
+   "target_window_months": 12,
+   "population": "customers with >= 1 Delivered order in the 12 months before the cutoff",
+   "selected_model": "Random forest",
+   "estimator": "RandomForestRegressor(min_samples_leaf=10, n_estimators=300, n_jobs=-1,\n                      random_state=42)",
+   "selection_rule": "lowest mean 5-fold CV RMSE on the training cutoff (test year not used)",
+   "validation": {
+    "type": "out-of-time",
+    "train": "features 2023 -> target 2024",
+    "test": "features 2024 -> target 2025",
+    "MAE": 2793.3562,
+    "RMSE": 4269.3608,
+    "R2": 0.2705,
+    "WAPE_%": 68.0877,
+    "MAPE_nonzero_%": 175.5995,
+    "Spearman": 0.4869,
+    "Top20_Capture_%": 41.4552,
+    "Predicted_to_Actual_Total": 0.8993
+   },
+   "final_fit": "same specification refit on train + test panels (2,465 rows) for scoring",
+   "scoring_cutoff": "2026-01-01",
+   "predictions_floored_at_zero": true,
+   "sklearn_version": "1.8.0",
+   "reload_example": "import joblib, pandas as pd; pre = joblib.load('models/clv_preprocessor.pkl'); m = joblib.load('models/clv_model.pkl'); X = pd.read_csv('data/processed/clv_modeling_dataset.csv'); X = X[X.Role.str.startswith('scoring')]; est = m.predict(pre.transform(X[pre.feature_names_in_])).clip(0)"
+  },
+  "historical_revenue_total": 60056569.150000006,
+  "historical_profit_total": 14022551.580000002,
+  "mean_historical_profit": 7067.818336693549,
+  "median_historical_profit": 3893.3,
+  "estimated_12m_total": 7397326.55,
+  "mean_estimated_12m": 3728.491204637097,
+  "illustrative_3y_total": 18817772.29,
+  "at_risk": 52,
+  "at_risk_revenue": 2651488.4499999997,
+  "high_value": 397,
+  "by_segment": [
+   {
+    "RFM_Segment": "Champions",
+    "Customer_Count": 334,
+    "Avg_Historical_Revenue": 96796.6778,
+    "Avg_Historical_Profit_CLV": 21316.1971,
+    "Median_Historical_Profit_CLV": 17009.375,
+    "Total_Historical_Profit_CLV": 7119609.82,
+    "Avg_Estimated_12M_Value": 8441.5072,
+    "Total_Estimated_12M_Value": 2819463.3897,
+    "Avg_Illustrative_3Y_Value": 21474.0197,
+    "Avg_AOV": 6102.9191,
+    "Avg_Frequency": 15.4251,
+    "Avg_Recency_Days": 32.5898,
+    "Historical_Profit_Margin": 0.2202,
+    "Avg_Tenure_Months": 30.0545,
+    "Share_Scored_by_Model": 1.0,
+    "Customer_%": 16.8347,
+    "Historical_Profit_Share_%": 50.7726,
+    "Estimated_12M_Value_Share_%": 38.1146,
+    "Avg_Historical_Annual_Profit_Rate": 8650.0981,
+    "Est_12M_to_Historical_Annual_Rate": 0.9759
+   },
+   {
+    "RFM_Segment": "Loyal Customers",
+    "Customer_Count": 240,
+    "Avg_Historical_Revenue": 35745.4067,
+    "Avg_Historical_Profit_CLV": 8400.841,
+    "Median_Historical_Profit_CLV": 7645.87,
+    "Total_Historical_Profit_CLV": 2016201.85,
+    "Avg_Estimated_12M_Value": 4549.5439,
+    "Total_Estimated_12M_Value": 1091890.5375,
+    "Avg_Illustrative_3Y_Value": 11573.4067,
+    "Avg_AOV": 5559.7376,
+    "Avg_Frequency": 7.1833,
+    "Avg_Recency_Days": 91.1875,
+    "Historical_Profit_Margin": 0.235,
+    "Avg_Tenure_Months": 25.948,
+    "Share_Scored_by_Model": 1.0,
+    "Customer_%": 12.0968,
+    "Historical_Profit_Share_%": 14.3783,
+    "Estimated_12M_Value_Share_%": 14.7606,
+    "Avg_Historical_Annual_Profit_Rate": 4317.4225,
+    "Est_12M_to_Historical_Annual_Rate": 1.0538
+   },
+   {
+    "RFM_Segment": "Potential Loyalists",
+    "Customer_Count": 152,
+    "Avg_Historical_Revenue": 14417.6536,
+    "Avg_Historical_Profit_CLV": 3655.3139,
+    "Median_Historical_Profit_CLV": 3787.585,
+    "Total_Historical_Profit_CLV": 555607.71,
+    "Avg_Estimated_12M_Value": 3365.2201,
+    "Total_Estimated_12M_Value": 511513.4561,
+    "Avg_Illustrative_3Y_Value": 8560.6517,
+    "Avg_AOV": 4400.692,
+    "Avg_Frequency": 4.1974,
+    "Avg_Recency_Days": 46.6316,
+    "Historical_Profit_Margin": 0.2535,
+    "Avg_Tenure_Months": 20.7652,
+    "Share_Scored_by_Model": 1.0,
+    "Customer_%": 7.6613,
+    "Historical_Profit_Share_%": 3.9622,
+    "Estimated_12M_Value_Share_%": 6.9148,
+    "Avg_Historical_Annual_Profit_Rate": 2279.6525,
+    "Est_12M_to_Historical_Annual_Rate": 1.4762
+   },
+   {
+    "RFM_Segment": "Recent Customers",
+    "Customer_Count": 91,
+    "Avg_Historical_Revenue": 5368.8198,
+    "Avg_Historical_Profit_CLV": 1863.4929,
+    "Median_Historical_Profit_CLV": 1784.99,
+    "Total_Historical_Profit_CLV": 169577.85,
+    "Avg_Estimated_12M_Value": 3068.7703,
+    "Total_Estimated_12M_Value": 279258.0932,
+    "Avg_Illustrative_3Y_Value": 7806.5246,
+    "Avg_AOV": 2752.5172,
+    "Avg_Frequency": 2.2308,
+    "Avg_Recency_Days": 17.7912,
+    "Historical_Profit_Margin": 0.3471,
+    "Avg_Tenure_Months": 6.5509,
+    "Share_Scored_by_Model": 1.0,
+    "Customer_%": 4.5867,
+    "Historical_Profit_Share_%": 1.2093,
+    "Estimated_12M_Value_Share_%": 3.7751,
+    "Avg_Historical_Annual_Profit_Rate": 1709.6411,
+    "Est_12M_to_Historical_Annual_Rate": 1.795
+   },
+   {
+    "RFM_Segment": "Promising",
+    "Customer_Count": 110,
+    "Avg_Historical_Revenue": 5117.3427,
+    "Avg_Historical_Profit_CLV": 1760.51,
+    "Median_Historical_Profit_CLV": 1500.02,
+    "Total_Historical_Profit_CLV": 193656.1,
+    "Avg_Estimated_12M_Value": 2355.8122,
+    "Total_Estimated_12M_Value": 259139.3449,
+    "Avg_Illustrative_3Y_Value": 5992.8585,
+    "Avg_AOV": 2510.8701,
+    "Avg_Frequency": 2.2,
+    "Avg_Recency_Days": 59.3818,
+    "Historical_Profit_Margin": 0.344,
+    "Avg_Tenure_Months": 10.0966,
+    "Share_Scored_by_Model": 1.0,
+    "Customer_%": 5.5444,
+    "Historical_Profit_Share_%": 1.381,
+    "Estimated_12M_Value_Share_%": 3.5031,
+    "Avg_Historical_Annual_Profit_Rate": 1476.0043,
+    "Est_12M_to_Historical_Annual_Rate": 1.5961
+   },
+   {
+    "RFM_Segment": "Needs Attention",
+    "Customer_Count": 123,
+    "Avg_Historical_Revenue": 12633.0972,
+    "Avg_Historical_Profit_CLV": 3703.5994,
+    "Median_Historical_Profit_CLV": 3683.84,
+    "Total_Historical_Profit_CLV": 455542.73,
+    "Avg_Estimated_12M_Value": 3117.2764,
+    "Total_Estimated_12M_Value": 383425.0023,
+    "Avg_Illustrative_3Y_Value": 7929.9176,
+    "Avg_AOV": 3210.2028,
+    "Avg_Frequency": 4.4715,
+    "Avg_Recency_Days": 120.6504,
+    "Historical_Profit_Margin": 0.2932,
+    "Avg_Tenure_Months": 21.8882,
+    "Share_Scored_by_Model": 1.0,
+    "Customer_%": 6.1996,
+    "Historical_Profit_Share_%": 3.2486,
+    "Estimated_12M_Value_Share_%": 5.1833,
+    "Avg_Historical_Annual_Profit_Rate": 2315.1826,
+    "Est_12M_to_Historical_Annual_Rate": 1.3464
+   },
+   {
+    "RFM_Segment": "About to Sleep",
+    "Customer_Count": 143,
+    "Avg_Historical_Revenue": 4232.6031,
+    "Avg_Historical_Profit_CLV": 1295.283,
+    "Median_Historical_Profit_CLV": 1192.11,
+    "Total_Historical_Profit_CLV": 185225.47,
+    "Avg_Estimated_12M_Value": 2015.8807,
+    "Total_Estimated_12M_Value": 288270.9405,
+    "Avg_Illustrative_3Y_Value": 5128.12,
+    "Avg_AOV": 2249.9036,
+    "Avg_Frequency": 2.1189,
+    "Avg_Recency_Days": 115.3566,
+    "Historical_Profit_Margin": 0.306,
+    "Avg_Tenure_Months": 12.9147,
+    "Share_Scored_by_Model": 1.0,
+    "Customer_%": 7.2077,
+    "Historical_Profit_Share_%": 1.3209,
+    "Estimated_12M_Value_Share_%": 3.897,
+    "Avg_Historical_Annual_Profit_Rate": 993.0609,
+    "Est_12M_to_Historical_Annual_Rate": 2.03
+   },
+   {
+    "RFM_Segment": "Can't Lose Them",
+    "Customer_Count": 79,
+    "Avg_Historical_Revenue": 54244.4468,
+    "Avg_Historical_Profit_CLV": 11046.2947,
+    "Median_Historical_Profit_CLV": 10758.86,
+    "Total_Historical_Profit_CLV": 872657.28,
+    "Avg_Estimated_12M_Value": 3871.0507,
+    "Total_Estimated_12M_Value": 305813.005,
+    "Avg_Illustrative_3Y_Value": 9847.4144,
+    "Avg_AOV": 5882.1101,
+    "Avg_Frequency": 9.7975,
+    "Avg_Recency_Days": 228.2911,
+    "Historical_Profit_Margin": 0.2036,
+    "Avg_Tenure_Months": 26.7848,
+    "Share_Scored_by_Model": 1.0,
+    "Customer_%": 3.9819,
+    "Historical_Profit_Share_%": 6.2232,
+    "Estimated_12M_Value_Share_%": 4.1341,
+    "Avg_Historical_Annual_Profit_Rate": 5410.8787,
+    "Est_12M_to_Historical_Annual_Rate": 0.7154
+   },
+   {
+    "RFM_Segment": "At Risk",
+    "Customer_Count": 263,
+    "Avg_Historical_Revenue": 25716.7046,
+    "Avg_Historical_Profit_CLV": 6157.3593,
+    "Median_Historical_Profit_CLV": 5922.78,
+    "Total_Historical_Profit_CLV": 1619385.49,
+    "Avg_Estimated_12M_Value": 3113.8582,
+    "Total_Estimated_12M_Value": 818944.7158,
+    "Avg_Illustrative_3Y_Value": 7921.2221,
+    "Avg_AOV": 5202.1694,
+    "Avg_Frequency": 5.9011,
+    "Avg_Recency_Days": 259.3156,
+    "Historical_Profit_Margin": 0.2394,
+    "Avg_Tenure_Months": 24.9625,
+    "Share_Scored_by_Model": 0.9202,
+    "Customer_%": 13.256,
+    "Historical_Profit_Share_%": 11.5484,
+    "Estimated_12M_Value_Share_%": 11.0708,
+    "Avg_Historical_Annual_Profit_Rate": 3333.9273,
+    "Est_12M_to_Historical_Annual_Rate": 0.934
+   },
+   {
+    "RFM_Segment": "Hibernating",
+    "Customer_Count": 148,
+    "Avg_Historical_Revenue": 6593.4311,
+    "Avg_Historical_Profit_CLV": 2269.5321,
+    "Median_Historical_Profit_CLV": 2289.385,
+    "Total_Historical_Profit_CLV": 335890.75,
+    "Avg_Estimated_12M_Value": 2291.5312,
+    "Total_Estimated_12M_Value": 339146.6205,
+    "Avg_Illustrative_3Y_Value": 5829.3366,
+    "Avg_AOV": 2414.0208,
+    "Avg_Frequency": 3.0676,
+    "Avg_Recency_Days": 199.0068,
+    "Historical_Profit_Margin": 0.3442,
+    "Avg_Tenure_Months": 19.8436,
+    "Share_Scored_by_Model": 1.0,
+    "Customer_%": 7.4597,
+    "Historical_Profit_Share_%": 2.3954,
+    "Estimated_12M_Value_Share_%": 4.5847,
+    "Avg_Historical_Annual_Profit_Rate": 1427.4921,
+    "Est_12M_to_Historical_Annual_Rate": 1.6053
+   },
+   {
+    "RFM_Segment": "Lost",
+    "Customer_Count": 301,
+    "Avg_Historical_Revenue": 5717.1492,
+    "Avg_Historical_Profit_CLV": 1658.4602,
+    "Median_Historical_Profit_CLV": 1426.76,
+    "Total_Historical_Profit_CLV": 499196.53,
+    "Avg_Estimated_12M_Value": 998.2132,
+    "Total_Estimated_12M_Value": 300462.1784,
+    "Avg_Illustrative_3Y_Value": 2539.3155,
+    "Avg_AOV": 2939.2286,
+    "Avg_Frequency": 2.0598,
+    "Avg_Recency_Days": 731.5515,
+    "Historical_Profit_Margin": 0.2901,
+    "Avg_Tenure_Months": 27.581,
+    "Share_Scored_by_Model": 0.1794,
+    "Customer_%": 15.1714,
+    "Historical_Profit_Share_%": 3.56,
+    "Estimated_12M_Value_Share_%": 4.0618,
+    "Avg_Historical_Annual_Profit_Rate": 781.849,
+    "Est_12M_to_Historical_Annual_Rate": 1.2767
+   }
+  ],
+  "by_cluster": [
+   {
+    "Cluster_ID": 0,
+    "Cluster_Label": "High-Value, Active",
+    "Customer_Count": 364,
+    "Avg_Historical_Revenue": 91851.2839,
+    "Avg_Historical_Profit_CLV": 20359.8109,
+    "Median_Historical_Profit_CLV": 16092.25,
+    "Total_Historical_Profit_CLV": 7410971.15,
+    "Avg_Estimated_12M_Value": 8127.7413,
+    "Total_Estimated_12M_Value": 2958497.8415,
+    "Avg_Illustrative_3Y_Value": 20675.8431,
+    "Avg_AOV": 5915.5368,
+    "Avg_Frequency": 14.8819,
+    "Avg_Recency_Days": 31.6951,
+    "Historical_Profit_Margin": 0.2217,
+    "Avg_Tenure_Months": 30.0607,
+    "Share_Scored_by_Model": 1.0,
+    "Customer_%": 18.3468,
+    "Historical_Profit_Share_%": 52.8504,
+    "Estimated_12M_Value_Share_%": 39.9941,
+    "Avg_Historical_Annual_Profit_Rate": 8223.1324,
+    "Est_12M_to_Historical_Annual_Rate": 0.9884
+   },
+   {
+    "Cluster_ID": 1,
+    "Cluster_Label": "Low-Value, Active",
+    "Customer_Count": 453,
+    "Avg_Historical_Revenue": 6658.44,
+    "Avg_Historical_Profit_CLV": 2107.0116,
+    "Median_Historical_Profit_CLV": 1855.77,
+    "Total_Historical_Profit_CLV": 954476.26,
+    "Avg_Estimated_12M_Value": 2621.4432,
+    "Total_Estimated_12M_Value": 1187513.7572,
+    "Avg_Illustrative_3Y_Value": 6668.5867,
+    "Avg_AOV": 2637.4692,
+    "Avg_Frequency": 2.7506,
+    "Avg_Recency_Days": 63.8565,
+    "Historical_Profit_Margin": 0.3164,
+    "Avg_Tenure_Months": 13.5793,
+    "Share_Scored_by_Model": 1.0,
+    "Customer_%": 22.8327,
+    "Historical_Profit_Share_%": 6.8067,
+    "Estimated_12M_Value_Share_%": 16.0533,
+    "Avg_Historical_Annual_Profit_Rate": 1564.8138,
+    "Est_12M_to_Historical_Annual_Rate": 1.6752
+   },
+   {
+    "Cluster_ID": 2,
+    "Cluster_Label": "Mid-Value, Lapsing",
+    "Customer_Count": 753,
+    "Avg_Historical_Revenue": 28228.7622,
+    "Avg_Historical_Profit_CLV": 6623.7327,
+    "Median_Historical_Profit_CLV": 5938.84,
+    "Total_Historical_Profit_CLV": 4987670.74,
+    "Avg_Estimated_12M_Value": 3620.9881,
+    "Total_Estimated_12M_Value": 2726604.0059,
+    "Avg_Illustrative_3Y_Value": 9211.2898,
+    "Avg_AOV": 4966.0084,
+    "Avg_Frequency": 6.2377,
+    "Avg_Recency_Days": 172.992,
+    "Historical_Profit_Margin": 0.2346,
+    "Avg_Tenure_Months": 24.6025,
+    "Share_Scored_by_Model": 0.9801,
+    "Customer_%": 37.9536,
+    "Historical_Profit_Share_%": 35.5689,
+    "Estimated_12M_Value_Share_%": 36.8593,
+    "Avg_Historical_Annual_Profit_Rate": 3587.8552,
+    "Est_12M_to_Historical_Annual_Rate": 1.0092
+   },
+   {
+    "Cluster_ID": 3,
+    "Cluster_Label": "Low-Value, Inactive",
+    "Customer_Count": 414,
+    "Avg_Historical_Revenue": 5676.7405,
+    "Avg_Historical_Profit_CLV": 1616.989,
+    "Median_Historical_Profit_CLV": 1480.82,
+    "Total_Historical_Profit_CLV": 669433.43,
+    "Avg_Estimated_12M_Value": 1267.4195,
+    "Total_Estimated_12M_Value": 524711.6792,
+    "Avg_Illustrative_3Y_Value": 3224.1389,
+    "Avg_AOV": 3073.1642,
+    "Avg_Frequency": 2.058,
+    "Avg_Recency_Days": 590.587,
+    "Historical_Profit_Margin": 0.2848,
+    "Avg_Tenure_Months": 24.0786,
+    "Share_Scored_by_Model": 0.3889,
+    "Customer_%": 20.8669,
+    "Historical_Profit_Share_%": 4.774,
+    "Estimated_12M_Value_Share_%": 7.0933,
+    "Avg_Historical_Annual_Profit_Rate": 878.469,
+    "Est_12M_to_Historical_Annual_Rate": 1.4428
+   }
+  ],
+  "model_comparison": [
+   {
+    "Model": "Ridge regression (baseline)",
+    "Type": "ML model",
+    "MAE": 2852.8438,
+    "RMSE": 4468.8065,
+    "R2": 0.2007,
+    "WAPE_%": 69.5377,
+    "MAPE_nonzero_%": 167.161,
+    "Spearman": 0.4779,
+    "Top20_Capture_%": 41.6901,
+    "Predicted_to_Actual_Total": 0.8024,
+    "Selected": false
+   },
+   {
+    "Model": "Random forest",
+    "Type": "ML model",
+    "MAE": 2793.3562,
+    "RMSE": 4269.3608,
+    "R2": 0.2705,
+    "WAPE_%": 68.0877,
+    "MAPE_nonzero_%": 175.5995,
+    "Spearman": 0.4869,
+    "Top20_Capture_%": 41.4552,
+    "Predicted_to_Actual_Total": 0.8993,
+    "Selected": true
+   },
+   {
+    "Model": "Gradient boosting",
+    "Type": "ML model",
+    "MAE": 2982.0161,
+    "RMSE": 4323.1547,
+    "R2": 0.252,
+    "WAPE_%": 72.6862,
+    "MAPE_nonzero_%": 208.4483,
+    "Spearman": 0.496,
+    "Top20_Capture_%": 43.0459,
+    "Predicted_to_Actual_Total": 1.0858,
+    "Selected": false
+   },
+   {
+    "Model": "Naive: last-12-month profit repeats",
+    "Type": "Benchmark",
+    "MAE": 2946.6377,
+    "RMSE": 4647.8351,
+    "R2": 0.1354,
+    "WAPE_%": 71.8239,
+    "MAPE_nonzero_%": 147.2279,
+    "Spearman": 0.4402,
+    "Top20_Capture_%": 41.129,
+    "Predicted_to_Actual_Total": 0.8519,
+    "Selected": false
+   },
+   {
+    "Model": "Simplified formula (AOV x F x margin x P(repeat))",
+    "Type": "Benchmark",
+    "MAE": 2859.2712,
+    "RMSE": 4606.1263,
+    "R2": 0.1509,
+    "WAPE_%": 69.6943,
+    "MAPE_nonzero_%": 123.319,
+    "Spearman": 0.4641,
+    "Top20_Capture_%": 40.7481,
+    "Predicted_to_Actual_Total": 0.6768,
+    "Selected": false
+   },
+   {
+    "Model": "BG/NBD orders x avg profit per order",
+    "Type": "Benchmark",
+    "MAE": 2693.4081,
+    "RMSE": 4356.1344,
+    "R2": 0.2405,
+    "WAPE_%": 65.6515,
+    "MAPE_nonzero_%": 137.3082,
+    "Spearman": 0.4899,
+    "Top20_Capture_%": 41.7013,
+    "Predicted_to_Actual_Total": 0.7538,
+    "Selected": false
+   }
+  ],
+  "feature_importance": [
+   {
+    "Feature": "Frequency",
+    "Permutation_MAE_Increase": 628.4551,
+    "Permutation_Std": 41.1818,
+    "Ridge_Std_Coefficient": 1148.8708,
+    "Transform": "arcsinh + scale"
+   },
+   {
+    "Feature": "Avg_Discount",
+    "Permutation_MAE_Increase": 99.5106,
+    "Permutation_Std": 17.4378,
+    "Ridge_Std_Coefficient": -276.5943,
+    "Transform": "scale"
+   },
+   {
+    "Feature": "Recency_Days",
+    "Permutation_MAE_Increase": 97.4383,
+    "Permutation_Std": 16.4349,
+    "Ridge_Std_Coefficient": -565.4011,
+    "Transform": "arcsinh + scale"
+   },
+   {
+    "Feature": "AOV",
+    "Permutation_MAE_Increase": 42.6732,
+    "Permutation_Std": 9.6103,
+    "Ridge_Std_Coefficient": 453.1149,
+    "Transform": "arcsinh + scale"
+   },
+   {
+    "Feature": "Tenure_Days_Capped",
+    "Permutation_MAE_Increase": 14.8577,
+    "Permutation_Std": 6.371,
+    "Ridge_Std_Coefficient": -220.7012,
+    "Transform": "scale"
+   },
+   {
+    "Feature": "Categories",
+    "Permutation_MAE_Increase": 3.8561,
+    "Permutation_Std": 4.6213,
+    "Ridge_Std_Coefficient": 377.3193,
+    "Transform": "scale"
+   },
+   {
+    "Feature": "Return_Rate",
+    "Permutation_MAE_Increase": 0.9672,
+    "Permutation_Std": 3.0548,
+    "Ridge_Std_Coefficient": 187.7432,
+    "Transform": "scale"
+   },
+   {
+    "Feature": "Profit_Margin",
+    "Permutation_MAE_Increase": -1.1512,
+    "Permutation_Std": 8.8565,
+    "Ridge_Std_Coefficient": 333.7528,
+    "Transform": "scale"
+   }
+  ],
+  "concentration": [
+   {
+    "Top_Customers_%": 1.0,
+    "Customers": 20,
+    "Revenue_Share_%": 9.0464,
+    "Profit_Share_%": 7.1199
+   },
+   {
+    "Top_Customers_%": 5.0,
+    "Customers": 99,
+    "Revenue_Share_%": 29.8519,
+    "Profit_Share_%": 26.4317
+   },
+   {
+    "Top_Customers_%": 10.0,
+    "Customers": 198,
+    "Revenue_Share_%": 45.3883,
+    "Profit_Share_%": 40.9827
+   },
+   {
+    "Top_Customers_%": 20.0,
+    "Customers": 397,
+    "Revenue_Share_%": 64.3331,
+    "Profit_Share_%": 59.2531
+   },
+   {
+    "Top_Customers_%": 50.0,
+    "Customers": 992,
+    "Revenue_Share_%": 89.9564,
+    "Profit_Share_%": 87.4841
+   }
+  ],
+  "bgnbd": [
+   {
+    "Item": "Calibration period",
+    "Result": "2023-01-01 to 2024-12-31"
+   },
+   {
+    "Item": "Hold-out period",
+    "Result": "2025-01-01 to 2025-12-31"
+   },
+   {
+    "Item": "Customers in calibration",
+    "Result": "1,635"
+   },
+   {
+    "Item": "Fitted parameters (r, alpha, a, b)",
+    "Result": "1.866, 32.10, 0.0817, 0.854"
+   },
+   {
+    "Item": "Optimiser converged",
+    "Result": "True"
+   },
+   {
+    "Item": "Hold-out orders: predicted vs actual",
+    "Result": "4,022 vs 4,575 (87.9% of actual)"
+   },
+   {
+    "Item": "Hold-out orders per customer: MAE",
+    "Result": "1.54"
+   },
+   {
+    "Item": "Hold-out orders per customer: R\u00b2",
+    "Result": "0.381"
+   },
+   {
+    "Item": "Hold-out orders: Spearman rank correlation",
+    "Result": "0.611"
+   },
+   {
+    "Item": "Gamma-Gamma check: Pearson r(frequency, avg order value), repeat customers",
+    "Result": "0.225 (p = 1.2e-16, n = 1,321)"
+   },
+   {
+    "Item": "Gamma-Gamma check: Spearman rho",
+    "Result": "0.394 (p = 2.3e-50)"
+   },
+   {
+    "Item": "Gamma-Gamma usable?",
+    "Result": "No - absolute correlation > 0.1: frequency and spend are NOT independent"
+   }
+  ],
+  "estimate_methods": {
+   "ML model (active in last 12 months)": 1716,
+   "Group average (no order in last 12 months)": 268
+  }
+ },
+ "prediction": {
+  "metadata": {
+   "dataset": "SYNTHETIC DATA - generated for academic demonstration only",
+   "prediction_unit": "customer x quarter (customers active in the 12 months before the cutoff)",
+   "target": "Next_Quarter_Revenue = Delivered Sales (Rs) in the 3 months after the cutoff",
+   "numeric_features": [
+    "Recency_Days",
+    "Rev_3M",
+    "Rev_Same_Quarter_Last_Year",
+    "Profit_Margin_12M",
+    "Orders_3M",
+    "Orders_12M",
+    "AOV_12M",
+    "Avg_Discount_12M",
+    "Return_Rate_12M",
+    "Tenure_Days_Capped",
+    "Categories_12M",
+    "Avg_Unit_Price_12M",
+    "Product_Demand_Index",
+    "Main_Category_Trend",
+    "Share_Home_Kitchen",
+    "Share_Beauty",
+    "Share_Books",
+    "Share_Sports",
+    "Region_Rev_Trend"
+   ],
+   "categorical_features": [
+    "Region",
+    "Main_Category",
+    "Main_Payment_Method",
+    "Acquisition_Status",
+    "Target_Quarter"
+   ],
+   "training_period": "features 2023-01-01..2024-09-30 -> targets 2024-01-01..2024-12-31",
+   "validation_period": "targets 2025-01-01..2025-06-30",
+   "test_period": "targets 2025-07-01..2025-12-31",
+   "final_fit": "train + validation (7,480 rows)",
+   "model_type": "Linear regression",
+   "parameters": {
+    "copy_X": true,
+    "fit_intercept": true,
+    "n_jobs": null,
+    "positive": false,
+    "tol": 1e-06
+   },
+   "selection_rule": "simplest model within 2% of the best validation RMSE (fixed in advance)",
+   "validation_metrics": {
+    "RMSE": 9436.42,
+    "MAE": 4522.8,
+    "R2": 0.0375
+   },
+   "test_metrics": {
+    "MAE": 5657.5669,
+    "RMSE": 11232.4199,
+    "R2": 0.0557,
+    "WAPE_%": 127.8295,
+    "Spearman": 0.1751,
+    "Total_Bias_%": 1.1222
+   },
+   "random_seed": 42,
+   "sklearn_version": "1.8.0",
+   "usage": "import joblib, pandas as pd; m = joblib.load('models/revenue_prediction_model.pkl'); X = pd.read_csv('data/processed/revenue_modeling_dataset.csv'); pred = m.predict(X[m.feature_names_in_])"
+  },
+  "model": "Linear regression",
+  "target": "Next_Quarter_Revenue = Delivered Sales (Rs) in the 3 months after the cutoff",
+  "unit": "customer x quarter (customers active in the 12 months before the cutoff)",
+  "selection_rule": "simplest model within 2% of the best validation RMSE (fixed in advance)",
+  "train_period": "features 2023-01-01..2024-09-30 -> targets 2024-01-01..2024-12-31",
+  "validation_period": "targets 2025-01-01..2025-06-30",
+  "test_period": "targets 2025-07-01..2025-12-31",
+  "final_fit": "train + validation (7,480 rows)",
+  "n_features": 24,
+  "numeric_features": [
+   "Recency_Days",
+   "Rev_3M",
+   "Rev_Same_Quarter_Last_Year",
+   "Profit_Margin_12M",
+   "Orders_3M",
+   "Orders_12M",
+   "AOV_12M",
+   "Avg_Discount_12M",
+   "Return_Rate_12M",
+   "Tenure_Days_Capped",
+   "Categories_12M",
+   "Avg_Unit_Price_12M",
+   "Product_Demand_Index",
+   "Main_Category_Trend",
+   "Share_Home_Kitchen",
+   "Share_Beauty",
+   "Share_Books",
+   "Share_Sports",
+   "Region_Rev_Trend"
+  ],
+  "categorical_features": [
+   "Region",
+   "Main_Category",
+   "Main_Payment_Method",
+   "Acquisition_Status",
+   "Target_Quarter"
+  ],
+  "test_metrics": {
+   "MAE": 5657.5669,
+   "RMSE": 11232.4199,
+   "R2": 0.0557,
+   "WAPE_%": 127.8295,
+   "Spearman": 0.1751,
+   "Total_Bias_%": 1.1222
+  },
+  "validation_metrics": {
+   "RMSE": 9436.42,
+   "MAE": 4522.8,
+   "R2": 0.0375
+  },
+  "comparison": [
+   {
+    "Model": "Baseline: previous quarter (naive)",
+    "Type": "Baseline",
+    "MAE": 6422.6945,
+    "RMSE": 14483.3365,
+    "R2": -0.57,
+    "WAPE_%": 145.1171,
+    "Spearman": 0.1293,
+    "Total_Bias_%": 4.311,
+    "Selected": false
+   },
+   {
+    "Model": "Baseline: same quarter last year (seasonal naive)",
+    "Type": "Baseline",
+    "MAE": 5880.3443,
+    "RMSE": 13557.1518,
+    "R2": -0.3756,
+    "WAPE_%": 132.863,
+    "Spearman": 0.1579,
+    "Total_Bias_%": -12.1309,
+    "Selected": false
+   },
+   {
+    "Model": "Baseline: 12-month quarterly mean",
+    "Type": "Baseline",
+    "MAE": 5436.1488,
+    "RMSE": 11466.315,
+    "R2": 0.016,
+    "WAPE_%": 122.8267,
+    "Spearman": 0.224,
+    "Total_Bias_%": -3.7839,
+    "Selected": false
+   },
+   {
+    "Model": "Linear regression",
+    "Type": "ML model",
+    "MAE": 5657.5669,
+    "RMSE": 11232.4199,
+    "R2": 0.0557,
+    "WAPE_%": 127.8295,
+    "Spearman": 0.1751,
+    "Total_Bias_%": 1.1222,
+    "Selected": true
+   },
+   {
+    "Model": "Random forest",
+    "Type": "ML model",
+    "MAE": 5762.3101,
+    "RMSE": 11264.9749,
+    "R2": 0.0502,
+    "WAPE_%": 130.1961,
+    "Spearman": 0.1714,
+    "Total_Bias_%": 8.0122,
+    "Selected": false
+   },
+   {
+    "Model": "Gradient boosting",
+    "Type": "ML model",
+    "MAE": 5845.2917,
+    "RMSE": 11382.9265,
+    "R2": 0.0302,
+    "WAPE_%": 132.071,
+    "Spearman": 0.1577,
+    "Total_Bias_%": 10.1485,
+    "Selected": false
+   },
+   {
+    "Model": "Random forest (tuned)",
+    "Type": "ML model",
+    "MAE": 5553.9759,
+    "RMSE": 11148.3996,
+    "R2": 0.0698,
+    "WAPE_%": 125.4889,
+    "Spearman": 0.2013,
+    "Total_Bias_%": 2.3026,
+    "Selected": false
+   }
+  ],
+  "importance": [
+   {
+    "Feature": "Orders_12M",
+    "Group": "Customer history",
+    "Permutation_MAE_Increase": 236.4471,
+    "Permutation_Std": 17.2379,
+    "Impurity_Importance": NaN,
+    "Rank": 1
+   },
+   {
+    "Feature": "Main_Category",
+    "Group": "Product",
+    "Permutation_MAE_Increase": 41.4308,
+    "Permutation_Std": 7.1709,
+    "Impurity_Importance": NaN,
+    "Rank": 2
+   },
+   {
+    "Feature": "Share_Books",
+    "Group": "Product",
+    "Permutation_MAE_Increase": 40.7484,
+    "Permutation_Std": 8.5257,
+    "Impurity_Importance": NaN,
+    "Rank": 3
+   },
+   {
+    "Feature": "AOV_12M",
+    "Group": "Customer history",
+    "Permutation_MAE_Increase": 18.9557,
+    "Permutation_Std": 2.9653,
+    "Impurity_Importance": NaN,
+    "Rank": 4
+   },
+   {
+    "Feature": "Categories_12M",
+    "Group": "Product",
+    "Permutation_MAE_Increase": 12.5682,
+    "Permutation_Std": 3.6319,
+    "Impurity_Importance": NaN,
+    "Rank": 5
+   },
+   {
+    "Feature": "Acquisition_Status",
+    "Group": "Customer history",
+    "Permutation_MAE_Increase": 8.8211,
+    "Permutation_Std": 3.1986,
+    "Impurity_Importance": NaN,
+    "Rank": 6
+   },
+   {
+    "Feature": "Profit_Margin_12M",
+    "Group": "Customer history",
+    "Permutation_MAE_Increase": 5.6195,
+    "Permutation_Std": 2.7584,
+    "Impurity_Importance": NaN,
+    "Rank": 7
+   },
+   {
+    "Feature": "Share_Home_Kitchen",
+    "Group": "Product",
+    "Permutation_MAE_Increase": 5.4282,
+    "Permutation_Std": 1.9454,
+    "Impurity_Importance": NaN,
+    "Rank": 8
+   },
+   {
+    "Feature": "Share_Sports",
+    "Group": "Product",
+    "Permutation_MAE_Increase": 4.9395,
+    "Permutation_Std": 1.6142,
+    "Impurity_Importance": NaN,
+    "Rank": 9
+   },
+   {
+    "Feature": "Avg_Discount_12M",
+    "Group": "Customer history",
+    "Permutation_MAE_Increase": 4.4856,
+    "Permutation_Std": 1.9627,
+    "Impurity_Importance": NaN,
+    "Rank": 10
+   },
+   {
+    "Feature": "Main_Payment_Method",
+    "Group": "Customer history",
+    "Permutation_MAE_Increase": 4.4149,
+    "Permutation_Std": 3.2788,
+    "Impurity_Importance": NaN,
+    "Rank": 11
+   },
+   {
+    "Feature": "Recency_Days",
+    "Group": "Customer history",
+    "Permutation_MAE_Increase": 3.8368,
+    "Permutation_Std": 0.829,
+    "Impurity_Importance": NaN,
+    "Rank": 12
+   },
+   {
+    "Feature": "Share_Beauty",
+    "Group": "Product",
+    "Permutation_MAE_Increase": 3.3613,
+    "Permutation_Std": 0.5552,
+    "Impurity_Importance": NaN,
+    "Rank": 13
+   },
+   {
+    "Feature": "Tenure_Days_Capped",
+    "Group": "Customer history",
+    "Permutation_MAE_Increase": 2.0368,
+    "Permutation_Std": 3.3832,
+    "Impurity_Importance": NaN,
+    "Rank": 14
+   },
+   {
+    "Feature": "Return_Rate_12M",
+    "Group": "Customer history",
+    "Permutation_MAE_Increase": 1.2335,
+    "Permutation_Std": 2.5817,
+    "Impurity_Importance": NaN,
+    "Rank": 15
+   },
+   {
+    "Feature": "Region",
+    "Group": "Regional",
+    "Permutation_MAE_Increase": 1.1872,
+    "Permutation_Std": 4.1046,
+    "Impurity_Importance": NaN,
+    "Rank": 16
+   },
+   {
+    "Feature": "Rev_Same_Quarter_Last_Year",
+    "Group": "Customer history",
+    "Permutation_MAE_Increase": -0.0552,
+    "Permutation_Std": 0.0883,
+    "Impurity_Importance": NaN,
+    "Rank": 17
+   },
+   {
+    "Feature": "Main_Category_Trend",
+    "Group": "Product",
+    "Permutation_MAE_Increase": -0.0987,
+    "Permutation_Std": 0.1558,
+    "Impurity_Importance": NaN,
+    "Rank": 18
+   },
+   {
+    "Feature": "Region_Rev_Trend",
+    "Group": "Regional",
+    "Permutation_MAE_Increase": -0.1991,
+    "Permutation_Std": 0.2399,
+    "Impurity_Importance": NaN,
+    "Rank": 19
+   },
+   {
+    "Feature": "Avg_Unit_Price_12M",
+    "Group": "Product",
+    "Permutation_MAE_Increase": -0.2676,
+    "Permutation_Std": 0.8625,
+    "Impurity_Importance": NaN,
+    "Rank": 20
+   },
+   {
+    "Feature": "Product_Demand_Index",
+    "Group": "Product",
+    "Permutation_MAE_Increase": -2.4907,
+    "Permutation_Std": 0.964,
+    "Impurity_Importance": NaN,
+    "Rank": 21
+   },
+   {
+    "Feature": "Rev_3M",
+    "Group": "Customer history",
+    "Permutation_MAE_Increase": -3.3733,
+    "Permutation_Std": 0.6419,
+    "Impurity_Importance": NaN,
+    "Rank": 22
+   },
+   {
+    "Feature": "Orders_3M",
+    "Group": "Customer history",
+    "Permutation_MAE_Increase": -5.5235,
+    "Permutation_Std": 3.6189,
+    "Impurity_Importance": NaN,
+    "Rank": 23
+   },
+   {
+    "Feature": "Target_Quarter",
+    "Group": "Time / company",
+    "Permutation_MAE_Increase": -12.5314,
+    "Permutation_Std": 12.7737,
+    "Impurity_Importance": NaN,
+    "Rank": 24
+   }
+  ],
+  "quarterly": [
+   {
+    "Target_Period": "2024-Q1",
+    "Split": "train (in-sample fit)",
+    "Actual_Revenue": 3689011.75,
+    "Predicted_Revenue": 3689011.75,
+    "Naive_Baseline": 4842555.25,
+    "Customers": 1137,
+    "Error_%": -0.0,
+    "Naive_Error_%": 31.2697
+   },
+   {
+    "Target_Period": "2024-Q2",
+    "Split": "train (in-sample fit)",
+    "Actual_Revenue": 3295315.6,
+    "Predicted_Revenue": 3295315.6,
+    "Naive_Baseline": 4504728.45,
+    "Customers": 1181,
+    "Error_%": -0.0,
+    "Naive_Error_%": 36.701
+   },
+   {
+    "Target_Period": "2024-Q3",
+    "Split": "train (in-sample fit)",
+    "Actual_Revenue": 3750295.7,
+    "Predicted_Revenue": 3750295.7,
+    "Naive_Baseline": 3936445.2,
+    "Customers": 1213,
+    "Error_%": -0.0,
+    "Naive_Error_%": 4.9636
+   },
+   {
+    "Target_Period": "2024-Q4",
+    "Split": "train (in-sample fit)",
+    "Actual_Revenue": 6073076.45,
+    "Predicted_Revenue": 6073076.45,
+    "Naive_Baseline": 4366677.2,
+    "Customers": 1257,
+    "Error_%": -0.0,
+    "Naive_Error_%": -28.0978
+   },
+   {
+    "Target_Period": "2025-Q1",
+    "Split": "validation (out-of-sample)",
+    "Actual_Revenue": 4905711.3,
+    "Predicted_Revenue": 4637720.2413,
+    "Naive_Baseline": 6961904.05,
+    "Customers": 1328,
+    "Error_%": -5.4628,
+    "Naive_Error_%": 41.9143
+   },
+   {
+    "Target_Period": "2025-Q2",
+    "Split": "validation (out-of-sample)",
+    "Actual_Revenue": 5883242.85,
+    "Predicted_Revenue": 3916809.5341,
+    "Naive_Baseline": 5698626.3,
+    "Customers": 1364,
+    "Error_%": -33.4243,
+    "Naive_Error_%": -3.138
+   },
+   {
+    "Target_Period": "2025-Q3",
+    "Split": "test (out-of-sample)",
+    "Actual_Revenue": 6090234.2,
+    "Predicted_Revenue": 4937971.8318,
+    "Naive_Baseline": 6482765.8,
+    "Customers": 1380,
+    "Error_%": -18.9198,
+    "Naive_Error_%": 6.4453
+   },
+   {
+    "Target_Period": "2025-Q4",
+    "Split": "test (out-of-sample)",
+    "Actual_Revenue": 6802324.7,
+    "Predicted_Revenue": 8099266.5766,
+    "Naive_Baseline": 6965585.75,
+    "Customers": 1533,
+    "Error_%": 19.0662,
+    "Naive_Error_%": 2.4001
+   }
+  ],
+  "by_segment": [
+   {
+    "RFM_Segment": "Champions",
+    "Rows": 664,
+    "Actual_Revenue": 9140817.75,
+    "Predicted_Revenue": 4402422.6612,
+    "MAE": 10985.5825,
+    "Median_Abs_Error": 5013.1619,
+    "WAPE_%": 79.8006,
+    "Bias_%": -51.8378,
+    "Avg_Actual": 13766.2918,
+    "Avg_Predicted": 6630.1546,
+    "Predicted_Share_%": 33.7681,
+    "Actual_Share_%": 70.8999
+   },
+   {
+    "RFM_Segment": "Loyal Customers",
+    "Rows": 449,
+    "Actual_Revenue": 1910458.55,
+    "Predicted_Revenue": 2097599.3924,
+    "MAE": 5436.2305,
+    "Median_Abs_Error": 4273.4728,
+    "WAPE_%": 127.7634,
+    "Bias_%": 9.7956,
+    "Avg_Actual": 4254.9188,
+    "Avg_Predicted": 4671.7136,
+    "Predicted_Share_%": 16.0893,
+    "Actual_Share_%": 14.8183
+   },
+   {
+    "RFM_Segment": "Potential Loyalists",
+    "Rows": 226,
+    "Actual_Revenue": 661466.25,
+    "Predicted_Revenue": 614122.7317,
+    "MAE": 2947.9162,
+    "Median_Abs_Error": 2007.9133,
+    "WAPE_%": 100.72,
+    "Bias_%": -7.1574,
+    "Avg_Actual": 2926.8418,
+    "Avg_Predicted": 2717.3572,
+    "Predicted_Share_%": 4.7105,
+    "Actual_Share_%": 5.1306
+   },
+   {
+    "RFM_Segment": "Recent Customers",
+    "Rows": 47,
+    "Actual_Revenue": 69639.3,
+    "Predicted_Revenue": 114711.2639,
+    "MAE": 1753.4772,
+    "Median_Abs_Error": 1386.3642,
+    "WAPE_%": 118.3433,
+    "Bias_%": 64.722,
+    "Avg_Actual": 1481.6872,
+    "Avg_Predicted": 2440.6652,
+    "Predicted_Share_%": 0.8799,
+    "Actual_Share_%": 0.5402
+   },
+   {
+    "RFM_Segment": "Promising",
+    "Rows": 69,
+    "Actual_Revenue": 136397.8,
+    "Predicted_Revenue": 149847.0585,
+    "MAE": 1551.8658,
+    "Median_Abs_Error": 1246.669,
+    "WAPE_%": 78.5047,
+    "Bias_%": 9.8603,
+    "Avg_Actual": 1976.7797,
+    "Avg_Predicted": 2171.6965,
+    "Predicted_Share_%": 1.1494,
+    "Actual_Share_%": 1.058
+   },
+   {
+    "RFM_Segment": "Needs Attention",
+    "Rows": 221,
+    "Actual_Revenue": 379278.1,
+    "Predicted_Revenue": 793806.1089,
+    "MAE": 3775.3158,
+    "Median_Abs_Error": 3375.8691,
+    "WAPE_%": 219.9823,
+    "Bias_%": 109.2939,
+    "Avg_Actual": 1716.1905,
+    "Avg_Predicted": 3591.8828,
+    "Predicted_Share_%": 6.0888,
+    "Actual_Share_%": 2.9418
+   },
+   {
+    "RFM_Segment": "About to Sleep",
+    "Rows": 170,
+    "Actual_Revenue": 111360.6,
+    "Predicted_Revenue": 497543.8002,
+    "MAE": 3171.0227,
+    "Median_Abs_Error": 3053.0802,
+    "WAPE_%": 484.0795,
+    "Bias_%": 346.7862,
+    "Avg_Actual": 655.0624,
+    "Avg_Predicted": 2926.7282,
+    "Predicted_Share_%": 3.8163,
+    "Actual_Share_%": 0.8638
+   },
+   {
+    "RFM_Segment": "Can't Lose Them",
+    "Rows": 157,
+    "Actual_Revenue": 126706.25,
+    "Predicted_Revenue": 924115.8225,
+    "MAE": 6196.9018,
+    "Median_Abs_Error": 6096.7437,
+    "WAPE_%": 767.8497,
+    "Bias_%": 629.3372,
+    "Avg_Actual": 807.0462,
+    "Avg_Predicted": 5886.088,
+    "Predicted_Share_%": 7.0883,
+    "Actual_Share_%": 0.9828
+   },
+   {
+    "RFM_Segment": "At Risk",
+    "Rows": 489,
+    "Actual_Revenue": 267756.1,
+    "Predicted_Revenue": 2285912.6629,
+    "MAE": 4769.8781,
+    "Median_Abs_Error": 4705.0317,
+    "WAPE_%": 871.1176,
+    "Bias_%": 753.7294,
+    "Avg_Actual": 547.5585,
+    "Avg_Predicted": 4674.668,
+    "Predicted_Share_%": 17.5337,
+    "Actual_Share_%": 2.0768
+   },
+   {
+    "RFM_Segment": "Hibernating",
+    "Rows": 275,
+    "Actual_Revenue": 88678.2,
+    "Predicted_Revenue": 832745.9682,
+    "MAE": 3155.4482,
+    "Median_Abs_Error": 3163.2968,
+    "WAPE_%": 978.5362,
+    "Bias_%": 839.065,
+    "Avg_Actual": 322.4662,
+    "Avg_Predicted": 3028.1672,
+    "Predicted_Share_%": 6.3874,
+    "Actual_Share_%": 0.6878
+   },
+   {
+    "RFM_Segment": "Lost",
+    "Rows": 146,
+    "Actual_Revenue": 0.0,
+    "Predicted_Revenue": 324410.938,
+    "MAE": 2348.8076,
+    "Median_Abs_Error": 2309.7641,
+    "WAPE_%": NaN,
+    "Bias_%": NaN,
+    "Avg_Actual": 0.0,
+    "Avg_Predicted": 2221.9927,
+    "Predicted_Share_%": 2.4883,
+    "Actual_Share_%": 0.0
+   }
+  ],
+  "splits": [
+   {
+    "Split": "train",
+    "Cutoffs": "2024-01-01, 2024-04-01, 2024-07-01, 2024-10-01",
+    "Feature_Data_From": "2023-01-01",
+    "Feature_Data_To": "2024-09-30",
+    "Target_Period": "2024-01-01 to 2024-12-31",
+    "Target_Quarters": "2024-Q1, 2024-Q2, 2024-Q3, 2024-Q4",
+    "Rows": 4788,
+    "Customers": 1487,
+    "Zero_Target_%": 57.6023,
+    "Mean_Target": 3510.38,
+    "Total_Target": 16807699.5
+   },
+   {
+    "Split": "validation",
+    "Cutoffs": "2025-01-01, 2025-04-01",
+    "Feature_Data_From": "2024-01-01",
+    "Feature_Data_To": "2025-03-31",
+    "Target_Period": "2025-01-01 to 2025-06-30",
+    "Target_Quarters": "2025-Q1, 2025-Q2",
+    "Rows": 2692,
+    "Customers": 1441,
+    "Zero_Target_%": 48.6627,
+    "Mean_Target": 4007.7839,
+    "Total_Target": 10788954.15
+   },
+   {
+    "Split": "test",
+    "Cutoffs": "2025-07-01, 2025-10-01",
+    "Feature_Data_From": "2024-07-01",
+    "Feature_Data_To": "2025-09-30",
+    "Target_Period": "2025-07-01 to 2025-12-31",
+    "Target_Quarters": "2025-Q3, 2025-Q4",
+    "Rows": 2913,
+    "Customers": 1560,
+    "Zero_Target_%": 52.9694,
+    "Mean_Target": 4425.8699,
+    "Total_Target": 12892558.9
+   }
+  ],
+  "feature_selection": [
+   {
+    "Feature": "Recency_Days",
+    "Group": "Customer history",
+    "VIF_All_Candidates": 4.6218,
+    "Decision": "Kept",
+    "Reason": "core measure (always kept)",
+    "Drop_Order": NaN,
+    "VIF_Final_Set": 2.9742,
+    "Spearman_with_Target_(train)": -0.1979
+   },
+   {
+    "Feature": "Rev_3M",
+    "Group": "Customer history",
+    "VIF_All_Candidates": 10.5957,
+    "Decision": "Kept",
+    "Reason": "VIF <= 10",
+    "Drop_Order": NaN,
+    "VIF_Final_Set": 9.2635,
+    "Spearman_with_Target_(train)": 0.1952
+   },
+   {
+    "Feature": "Rev_12M",
+    "Group": "Customer history",
+    "VIF_All_Candidates": 2509.5034,
+    "Decision": "Excluded",
+    "Reason": "exact identity = AOV_12M x Orders_12M",
+    "Drop_Order": NaN,
+    "VIF_Final_Set": NaN,
+    "Spearman_with_Target_(train)": 0.2096
+   },
+   {
+    "Feature": "Rev_Same_Quarter_Last_Year",
+    "Group": "Customer history",
+    "VIF_All_Candidates": 1.8618,
+    "Decision": "Kept",
+    "Reason": "VIF <= 10",
+    "Drop_Order": NaN,
+    "VIF_Final_Set": 1.8143,
+    "Spearman_with_Target_(train)": 0.0765
+   },
+   {
+    "Feature": "Profit_12M",
+    "Group": "Customer history",
+    "VIF_All_Candidates": 1.6457,
+    "Decision": "Excluded",
+    "Reason": "exact identity = AOV_12M x Orders_12M x Profit_Margin_12M",
+    "Drop_Order": NaN,
+    "VIF_Final_Set": NaN,
+    "Spearman_with_Target_(train)": 0.2366
+   },
+   {
+    "Feature": "Profit_Margin_12M",
+    "Group": "Customer history",
+    "VIF_All_Candidates": 11.0207,
+    "Decision": "Kept",
+    "Reason": "core measure (always kept)",
+    "Drop_Order": NaN,
+    "VIF_Final_Set": 8.811,
+    "Spearman_with_Target_(train)": -0.0427
+   },
+   {
+    "Feature": "Orders_3M",
+    "Group": "Customer history",
+    "VIF_All_Candidates": 10.5398,
+    "Decision": "Kept",
+    "Reason": "VIF <= 10",
+    "Drop_Order": NaN,
+    "VIF_Final_Set": 9.9648,
+    "Spearman_with_Target_(train)": 0.1862
+   },
+   {
+    "Feature": "Orders_12M",
+    "Group": "Customer history",
+    "VIF_All_Candidates": 586.064,
+    "Decision": "Kept",
+    "Reason": "core measure (always kept)",
+    "Drop_Order": NaN,
+    "VIF_Final_Set": 4.8404,
+    "Spearman_with_Target_(train)": 0.2334
+   },
+   {
+    "Feature": "Quantity_12M",
+    "Group": "Customer history",
+    "VIF_All_Candidates": 54.5948,
+    "Decision": "Excluded",
+    "Reason": "VIF 53.9 > 10",
+    "Drop_Order": 4.0,
+    "VIF_Final_Set": NaN,
+    "Spearman_with_Target_(train)": 0.2282
+   },
+   {
+    "Feature": "AOV_12M",
+    "Group": "Customer history",
+    "VIF_All_Candidates": 1207.0958,
+    "Decision": "Kept",
+    "Reason": "core measure (always kept)",
+    "Drop_Order": NaN,
+    "VIF_Final_Set": 6.1998,
+    "Spearman_with_Target_(train)": 0.1348
+   },
+   {
+    "Feature": "Avg_Discount_12M",
+    "Group": "Customer history",
+    "VIF_All_Candidates": 3.579,
+    "Decision": "Kept",
+    "Reason": "core measure (always kept)",
+    "Drop_Order": NaN,
+    "VIF_Final_Set": 2.6283,
+    "Spearman_with_Target_(train)": -0.0924
+   },
+   {
+    "Feature": "Return_Rate_12M",
+    "Group": "Customer history",
+    "VIF_All_Candidates": 1.0234,
+    "Decision": "Kept",
+    "Reason": "VIF <= 10",
+    "Drop_Order": NaN,
+    "VIF_Final_Set": 1.0217,
+    "Spearman_with_Target_(train)": 0.1021
+   },
+   {
+    "Feature": "Tenure_Days_Capped",
+    "Group": "Customer history",
+    "VIF_All_Candidates": 2.5437,
+    "Decision": "Kept",
+    "Reason": "VIF <= 10",
+    "Drop_Order": NaN,
+    "VIF_Final_Set": 2.4974,
+    "Spearman_with_Target_(train)": 0.08
+   },
+   {
+    "Feature": "RFM_Score_at_Cutoff",
+    "Group": "Customer history",
+    "VIF_All_Candidates": 27.7812,
+    "Decision": "Excluded",
+    "Reason": "VIF 18.7 > 10",
+    "Drop_Order": 5.0,
+    "VIF_Final_Set": NaN,
+    "Spearman_with_Target_(train)": 0.2461
+   },
+   {
+    "Feature": "Categories_12M",
+    "Group": "Product",
+    "VIF_All_Candidates": 4.5443,
+    "Decision": "Kept",
+    "Reason": "VIF <= 10",
+    "Drop_Order": NaN,
+    "VIF_Final_Set": 4.3483,
+    "Spearman_with_Target_(train)": 0.2194
+   },
+   {
+    "Feature": "Avg_Unit_Price_12M",
+    "Group": "Product",
+    "VIF_All_Candidates": 54.0314,
+    "Decision": "Kept",
+    "Reason": "core measure (always kept)",
+    "Drop_Order": NaN,
+    "VIF_Final_Set": 13.4797,
+    "Spearman_with_Target_(train)": 0.1093
+   },
+   {
+    "Feature": "Product_Demand_Index",
+    "Group": "Product",
+    "VIF_All_Candidates": 2.0738,
+    "Decision": "Kept",
+    "Reason": "VIF <= 10",
+    "Drop_Order": NaN,
+    "VIF_Final_Set": 1.9238,
+    "Spearman_with_Target_(train)": 0.0068
+   },
+   {
+    "Feature": "Main_Category_Trend",
+    "Group": "Product",
+    "VIF_All_Candidates": 3.0309,
+    "Decision": "Kept",
+    "Reason": "VIF <= 10",
+    "Drop_Order": NaN,
+    "VIF_Final_Set": 3.0277,
+    "Spearman_with_Target_(train)": 0.0388
+   },
+   {
+    "Feature": "Share_Fashion",
+    "Group": "Product",
+    "VIF_All_Candidates": Infinity,
+    "Decision": "Excluded",
+    "Reason": "perfectly collinear with other features",
+    "Drop_Order": 1.0,
+    "VIF_Final_Set": NaN,
+    "Spearman_with_Target_(train)": 0.0339
+   },
+   {
+    "Feature": "Share_Home_Kitchen",
+    "Group": "Product",
+    "VIF_All_Candidates": Infinity,
+    "Decision": "Kept",
+    "Reason": "VIF <= 10",
+    "Drop_Order": NaN,
+    "VIF_Final_Set": 5.5136,
+    "Spearman_with_Target_(train)": 0.0996
+   },
+   {
+    "Feature": "Share_Electronics",
+    "Group": "Product",
+    "VIF_All_Candidates": Infinity,
+    "Decision": "Excluded",
+    "Reason": "VIF 10.8 > 10",
+    "Drop_Order": 7.0,
+    "VIF_Final_Set": NaN,
+    "Spearman_with_Target_(train)": 0.0841
+   },
+   {
+    "Feature": "Share_Beauty",
+    "Group": "Product",
+    "VIF_All_Candidates": Infinity,
+    "Decision": "Kept",
+    "Reason": "VIF <= 10",
+    "Drop_Order": NaN,
+    "VIF_Final_Set": 7.1822,
+    "Spearman_with_Target_(train)": 0.0604
+   },
+   {
+    "Feature": "Share_Books",
+    "Group": "Product",
+    "VIF_All_Candidates": Infinity,
+    "Decision": "Kept",
+    "Reason": "VIF <= 10",
+    "Drop_Order": NaN,
+    "VIF_Final_Set": 7.4895,
+    "Spearman_with_Target_(train)": 0.0328
+   },
+   {
+    "Feature": "Share_Sports",
+    "Group": "Product",
+    "VIF_All_Candidates": Infinity,
+    "Decision": "Kept",
+    "Reason": "VIF <= 10",
+    "Drop_Order": NaN,
+    "VIF_Final_Set": 5.6613,
+    "Spearman_with_Target_(train)": 0.0766
+   },
+   {
+    "Feature": "Region_Revenue_Share_3M",
+    "Group": "Regional",
+    "VIF_All_Candidates": 17.6236,
+    "Decision": "Excluded",
+    "Reason": "VIF 15.8 > 10",
+    "Drop_Order": 6.0,
+    "VIF_Final_Set": NaN,
+    "Spearman_with_Target_(train)": -0.0224
+   },
+   {
+    "Feature": "Region_Customer_Share_12M",
+    "Group": "Regional",
+    "VIF_All_Candidates": 281.1984,
+    "Decision": "Excluded",
+    "Reason": "VIF 281.1 > 10",
+    "Drop_Order": 3.0,
+    "VIF_Final_Set": NaN,
+    "Spearman_with_Target_(train)": -0.0204
+   },
+   {
+    "Feature": "Region_Rev_Trend",
+    "Group": "Regional",
+    "VIF_All_Candidates": 8.2119,
+    "Decision": "Kept",
+    "Reason": "VIF <= 10",
+    "Drop_Order": NaN,
+    "VIF_Final_Set": 1.9422,
+    "Spearman_with_Target_(train)": 0.0283
+   },
+   {
+    "Feature": "Company_Rev_Trend",
+    "Group": "Time / company",
+    "VIF_All_Candidates": Infinity,
+    "Decision": "Excluded",
+    "Reason": "perfectly collinear with other features",
+    "Drop_Order": 2.0,
+    "VIF_Final_Set": NaN,
+    "Spearman_with_Target_(train)": 0.0388
+   }
+  ],
+  "panel_rows": 10393,
+  "test_rows": 2913,
+  "train_rows": 4788,
+  "val_rows": 2692,
+  "zero_actual_share": 0.5296944730518366
+ },
+ "forecast": {
+  "metadata": {
+   "dataset": "SYNTHETIC DATA - generated for academic demonstration only",
+   "target": "monthly Delivered revenue (Sales, Rs), company total",
+   "model_type": "Theta: Theta (seasonality auto-tested)",
+   "model_parameters": {
+    "b0": 52954.790920205916,
+    "alpha": 0.47718796597345875,
+    "seasonality_detected_by_theta_test": false
+   },
+   "forecasting_frequency": "monthly (month start)",
+   "forecast_horizon_months": 6,
+   "forecast_months": [
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06"
+   ],
+   "training_period_final_fit": "2023-01 to 2025-12 (36 months)",
+   "evaluation_split": {
+    "train": "2023-01..2024-12",
+    "validation": "2025-01..2025-06",
+    "test": "2025-07..2025-12"
+   },
+   "selection_rule": "lowest mean backtest MAPE; must beat naive and seasonal naive on test MAE; within 5% -> simpler family",
+   "metrics": {
+    "validation": {
+     "MAE": 262706.591,
+     "RMSE": 373634.907,
+     "MAPE_%": 15.55,
+     "sMAPE_%": 13.42,
+     "WAPE_%": 12.94
+    },
+    "test": {
+     "MAE": 213178.662,
+     "RMSE": 310713.292,
+     "MAPE_%": 7.768,
+     "sMAPE_%": 8.243,
+     "WAPE_%": 8.502
+    },
+    "backtest_mean_MAPE_%": 14.561
+   },
+   "intervals": "80% and 95% prediction intervals from the model",
+   "random_seed": 42,
+   "statsmodels_version": "0.15.0",
+   "created": "2026-09-22",
+   "reload": "a = joblib.load('models/forecasting_model.pkl'); a['fitted_model'].forecast(6)"
+  },
+  "model": "Theta: Theta (seasonality auto-tested)",
+  "horizon": 6,
+  "months": [
+   "2026-01",
+   "2026-02",
+   "2026-03",
+   "2026-04",
+   "2026-05",
+   "2026-06"
+  ],
+  "split": {
+   "train": "2023-01..2024-12",
+   "validation": "2025-01..2025-06",
+   "test": "2025-07..2025-12"
+  },
+  "selection_rule": "lowest mean backtest MAPE; must beat naive and seasonal naive on test MAE; within 5% -> simpler family",
+  "final_fit": "2023-01 to 2025-12 (36 months)",
+  "metrics": {
+   "validation": {
+    "MAE": 262706.591,
+    "RMSE": 373634.907,
+    "MAPE_%": 15.55,
+    "sMAPE_%": 13.42,
+    "WAPE_%": 12.94
+   },
+   "test": {
+    "MAE": 213178.662,
+    "RMSE": 310713.292,
+    "MAPE_%": 7.768,
+    "sMAPE_%": 8.243,
+    "WAPE_%": 8.502
+   },
+   "backtest_mean_MAPE_%": 14.561
+  },
+  "parameters": {
+   "b0": 52954.790920205916,
+   "alpha": 0.47718796597345875,
+   "seasonality_detected_by_theta_test": false
+  },
+  "comparison": [
+   {
+    "Model": "Naive: Naive (last month)",
+    "Family": "Naive",
+    "Specification": "Naive (last month)",
+    "Val_MAE": 315309.4667,
+    "Val_RMSE": 360427.2085,
+    "Val_MAPE_%": 16.442,
+    "Val_sMAPE_%": 15.9508,
+    "Val_WAPE_%": 15.5307,
+    "Val_Bias_%": -2.2374,
+    "Test_MAE": 258480.7167,
+    "Test_RMSE": 301872.1259,
+    "Test_MAPE_%": 10.1449,
+    "Test_sMAPE_%": 10.0987,
+    "Test_WAPE_%": 10.3086,
+    "Test_Bias_%": 1.4985,
+    "Test_95%_Interval_Coverage_%": 100.0
+   },
+   {
+    "Model": "Seasonal naive: Seasonal naive (same month last year)",
+    "Family": "Seasonal naive",
+    "Specification": "Seasonal naive (same month last year)",
+    "Val_MAE": 696640.2417,
+    "Val_RMSE": 752385.7682,
+    "Val_MAPE_%": 32.8159,
+    "Val_sMAPE_%": 39.5645,
+    "Val_WAPE_%": 34.3133,
+    "Val_Bias_%": -30.7044,
+    "Test_MAE": 619327.275,
+    "Test_RMSE": 682872.7434,
+    "Test_MAPE_%": 25.6261,
+    "Test_sMAPE_%": 30.7203,
+    "Test_WAPE_%": 24.6997,
+    "Test_Bias_%": -24.6997,
+    "Test_95%_Interval_Coverage_%": 66.6667
+   },
+   {
+    "Model": "Exponential smoothing: Damped Holt (A,Ad,N)",
+    "Family": "Exponential smoothing",
+    "Specification": "Damped Holt (A,Ad,N)",
+    "Val_MAE": 274906.806,
+    "Val_RMSE": 330824.1317,
+    "Val_MAPE_%": 15.1821,
+    "Val_sMAPE_%": 14.0014,
+    "Val_WAPE_%": 13.5407,
+    "Val_Bias_%": 2.165,
+    "Test_MAE": 273434.3234,
+    "Test_RMSE": 396364.9158,
+    "Test_MAPE_%": 9.8227,
+    "Test_sMAPE_%": 10.848,
+    "Test_WAPE_%": 10.905,
+    "Test_Bias_%": -10.905,
+    "Test_95%_Interval_Coverage_%": 83.3333
+   },
+   {
+    "Model": "ARIMA / SARIMA: ARIMA(1,1,1) + drift",
+    "Family": "ARIMA / SARIMA",
+    "Specification": "ARIMA(1,1,1) + drift",
+    "Val_MAE": 240961.1538,
+    "Val_RMSE": 340530.9996,
+    "Val_MAPE_%": 14.2289,
+    "Val_sMAPE_%": 12.4363,
+    "Val_WAPE_%": 11.8687,
+    "Val_Bias_%": 6.7093,
+    "Test_MAE": 261440.0643,
+    "Test_RMSE": 307178.3543,
+    "Test_MAPE_%": 10.5081,
+    "Test_sMAPE_%": 10.129,
+    "Test_WAPE_%": 10.4266,
+    "Test_Bias_%": 4.6641,
+    "Test_95%_Interval_Coverage_%": 100.0
+   },
+   {
+    "Model": "Theta: Theta (seasonality auto-tested)",
+    "Family": "Theta",
+    "Specification": "Theta (seasonality auto-tested)",
+    "Val_MAE": 262706.5912,
+    "Val_RMSE": 373634.9071,
+    "Val_MAPE_%": 15.5503,
+    "Val_sMAPE_%": 13.42,
+    "Val_WAPE_%": 12.9397,
+    "Val_Bias_%": 8.4519,
+    "Test_MAE": 213178.6619,
+    "Test_RMSE": 310713.2925,
+    "Test_MAPE_%": 7.7679,
+    "Test_sMAPE_%": 8.243,
+    "Test_WAPE_%": 8.5019,
+    "Test_Bias_%": -4.6502,
+    "Test_95%_Interval_Coverage_%": 100.0
+   }
+  ],
+  "backtest": [
+   {
+    "Family": "Exponential smoothing",
+    "Folds": 7,
+    "Mean_MAE": 299376.5044,
+    "Mean_RMSE": 366300.4935,
+    "Mean_MAPE_pct": 13.1143,
+    "Std_MAPE_pct": 2.358,
+    "Worst_MAPE_pct": 15.4606,
+    "Mean_WAPE_pct": 12.9984,
+    "Mean_Bias_pct": -7.1108,
+    "Folds_Won": 2
+   },
+   {
+    "Family": "ARIMA / SARIMA",
+    "Folds": 7,
+    "Mean_MAE": 299471.7878,
+    "Mean_RMSE": 377939.0035,
+    "Mean_MAPE_pct": 13.4721,
+    "Std_MAPE_pct": 3.6162,
+    "Worst_MAPE_pct": 17.7666,
+    "Mean_WAPE_pct": 13.0156,
+    "Mean_Bias_pct": -3.7781,
+    "Folds_Won": 4
+   },
+   {
+    "Family": "Theta",
+    "Folds": 7,
+    "Mean_MAE": 329036.2029,
+    "Mean_RMSE": 403119.5293,
+    "Mean_MAPE_pct": 14.561,
+    "Std_MAPE_pct": 3.8437,
+    "Worst_MAPE_pct": 19.9218,
+    "Mean_WAPE_pct": 14.2747,
+    "Mean_Bias_pct": -7.1269,
+    "Folds_Won": 1
+   },
+   {
+    "Family": "Naive",
+    "Folds": 7,
+    "Mean_MAE": 422932.281,
+    "Mean_RMSE": 477931.5961,
+    "Mean_MAPE_pct": 18.468,
+    "Std_MAPE_pct": 9.3762,
+    "Worst_MAPE_pct": 32.7303,
+    "Mean_WAPE_pct": 18.4637,
+    "Mean_Bias_pct": -11.5885,
+    "Folds_Won": 0
+   },
+   {
+    "Family": "Seasonal naive",
+    "Folds": 7,
+    "Mean_MAE": 763546.3738,
+    "Mean_RMSE": 814161.3414,
+    "Mean_MAPE_pct": 33.3763,
+    "Std_MAPE_pct": 4.2232,
+    "Worst_MAPE_pct": 37.7781,
+    "Mean_WAPE_pct": 33.5466,
+    "Mean_Bias_pct": -32.5265,
+    "Folds_Won": 0
+   }
+  ],
+  "future": [
+   {
+    "Month": "2026-01",
+    "Forecast": 2566832.9112,
+    "Lower_80": 2078081.0646,
+    "Upper_80": 3055584.7578,
+    "Lower_95": 1819351.4657,
+    "Upper_95": 3314314.3567
+   },
+   {
+    "Month": "2026-02",
+    "Forecast": 2593310.3067,
+    "Lower_80": 1856391.0858,
+    "Upper_80": 3330229.5275,
+    "Lower_95": 1466289.6146,
+    "Upper_95": 3720330.9988
+   },
+   {
+    "Month": "2026-03",
+    "Forecast": 2619787.7021,
+    "Lower_80": 1699341.3384,
+    "Upper_80": 3540234.0659,
+    "Lower_95": 1212086.4662,
+    "Upper_95": 4027488.938
+   },
+   {
+    "Month": "2026-04",
+    "Forecast": 2646265.0976,
+    "Lower_80": 1573235.2382,
+    "Upper_80": 3719294.9569,
+    "Lower_95": 1005207.5426,
+    "Upper_95": 4287322.6525
+   },
+   {
+    "Month": "2026-05",
+    "Forecast": 2672742.493,
+    "Lower_80": 1466274.6528,
+    "Upper_80": 3879210.3333,
+    "Lower_95": 827609.157,
+    "Upper_95": 4517875.8291
+   },
+   {
+    "Month": "2026-06",
+    "Forecast": 2699219.8885,
+    "Lower_80": 1372669.3919,
+    "Upper_80": 4025770.3851,
+    "Lower_95": 670435.9777,
+    "Upper_95": 4728003.7993
+   }
+  ],
+  "adf": [
+   {
+    "Series": "Revenue (level)",
+    "Observations": 36,
+    "ADF_Statistic": -2.2132,
+    "p_value": 0.2015,
+    "Lags_Used": 0,
+    "Critical_5%": -2.9485,
+    "Conclusion": "non-stationary (cannot reject unit root at 5%)"
+   },
+   {
+    "Series": "log(Revenue)",
+    "Observations": 36,
+    "ADF_Statistic": -2.2457,
+    "p_value": 0.1901,
+    "Lags_Used": 1,
+    "Critical_5%": -2.9512,
+    "Conclusion": "non-stationary (cannot reject unit root at 5%)"
+   },
+   {
+    "Series": "First difference",
+    "Observations": 35,
+    "ADF_Statistic": -3.5306,
+    "p_value": 0.0072,
+    "Lags_Used": 10,
+    "Critical_5%": -2.9922,
+    "Conclusion": "stationary (reject unit root at 5%)"
+   },
+   {
+    "Series": "Seasonal difference (lag 12)",
+    "Observations": 24,
+    "ADF_Statistic": -2.4195,
+    "p_value": 0.1363,
+    "Lags_Used": 3,
+    "Critical_5%": -3.0216,
+    "Conclusion": "non-stationary (cannot reject unit root at 5%)"
+   }
+  ],
+  "yearly": [
+   {
+    "Year": 2023,
+    "Revenue": 13060877.25,
+    "Months": 12,
+    "Mean_Month": 1088406.4375,
+    "Std_Month": 385313.6098,
+    "Orders": 2811,
+    "Customers_Month_Avg": 202.3333,
+    "YoY_Growth_%": NaN,
+    "CV_%": 35.4016,
+    "Q4_Share_%": 37.0768
+   },
+   {
+    "Year": 2024,
+    "Revenue": 19769754.9,
+    "Months": 12,
+    "Mean_Month": 1647479.575,
+    "Std_Month": 465805.4829,
+    "Orders": 4014,
+    "Customers_Month_Avg": 281.6667,
+    "YoY_Growth_%": 51.3662,
+    "CV_%": 28.2738,
+    "Q4_Share_%": 35.2149
+   },
+   {
+    "Year": 2025,
+    "Revenue": 27225937.0,
+    "Months": 12,
+    "Mean_Month": 2268828.0833,
+    "Std_Month": 425173.0241,
+    "Orders": 5387,
+    "Customers_Month_Avg": 369.5,
+    "YoY_Growth_%": 37.7151,
+    "CV_%": 18.7398,
+    "Q4_Share_%": 29.6738
+   }
+  ],
+  "selection": [
+   {
+    "Family": "Exponential smoothing",
+    "Mean_MAPE_pct": 13.1143,
+    "Std_MAPE_pct": 2.358,
+    "Mean_MAE": 299376.5044,
+    "Specification": "Damped Holt (A,Ad,N)",
+    "Val_MAPE_%": 15.1821,
+    "Test_MAPE_%": 9.8227,
+    "Test_MAE": 273434.3234,
+    "Beats_Both_Baselines_on_Test": false,
+    "Complexity": 1,
+    "Within_5%_of_Best_Backtest_MAPE": true,
+    "Selected": false
+   },
+   {
+    "Family": "ARIMA / SARIMA",
+    "Mean_MAPE_pct": 13.4721,
+    "Std_MAPE_pct": 3.6162,
+    "Mean_MAE": 299471.7878,
+    "Specification": "ARIMA(1,1,1) + drift",
+    "Val_MAPE_%": 14.2289,
+    "Test_MAPE_%": 10.5081,
+    "Test_MAE": 261440.0643,
+    "Beats_Both_Baselines_on_Test": false,
+    "Complexity": 2,
+    "Within_5%_of_Best_Backtest_MAPE": true,
+    "Selected": false
+   },
+   {
+    "Family": "Theta",
+    "Mean_MAPE_pct": 14.561,
+    "Std_MAPE_pct": 3.8437,
+    "Mean_MAE": 329036.2029,
+    "Specification": "Theta (seasonality auto-tested)",
+    "Val_MAPE_%": 15.5503,
+    "Test_MAPE_%": 7.7679,
+    "Test_MAE": 213178.6619,
+    "Beats_Both_Baselines_on_Test": true,
+    "Complexity": 1,
+    "Within_5%_of_Best_Backtest_MAPE": true,
+    "Selected": true
+   },
+   {
+    "Family": "Naive",
+    "Mean_MAPE_pct": 18.468,
+    "Std_MAPE_pct": 9.3762,
+    "Mean_MAE": 422932.281,
+    "Specification": "Naive (last month)",
+    "Val_MAPE_%": 16.442,
+    "Test_MAPE_%": 10.1449,
+    "Test_MAE": 258480.7167,
+    "Beats_Both_Baselines_on_Test": true,
+    "Complexity": 0,
+    "Within_5%_of_Best_Backtest_MAPE": false,
+    "Selected": false
+   },
+   {
+    "Family": "Seasonal naive",
+    "Mean_MAPE_pct": 33.3763,
+    "Std_MAPE_pct": 4.2232,
+    "Mean_MAE": 763546.3738,
+    "Specification": "Seasonal naive (same month last year)",
+    "Val_MAPE_%": 32.8159,
+    "Test_MAPE_%": 25.6261,
+    "Test_MAE": 619327.275,
+    "Beats_Both_Baselines_on_Test": true,
+    "Complexity": 0,
+    "Within_5%_of_Best_Backtest_MAPE": false,
+    "Selected": false
+   }
+  ],
+  "series_months": 36,
+  "future_total": 15798158.400000002,
+  "future_lower80": 10045992.770000001,
+  "future_upper80": 21550324.04,
+  "prev_6m_actual": 15044544.899999999,
+  "future_rows": [
+   {
+    "Month": "2026-01",
+    "Forecast": 2566832.91,
+    "Lower_80": 2078081.06,
+    "Upper_80": 3055584.76,
+    "Lower_95": 1819351.47,
+    "Upper_95": 3314314.36
+   },
+   {
+    "Month": "2026-02",
+    "Forecast": 2593310.31,
+    "Lower_80": 1856391.09,
+    "Upper_80": 3330229.53,
+    "Lower_95": 1466289.61,
+    "Upper_95": 3720331.0
+   },
+   {
+    "Month": "2026-03",
+    "Forecast": 2619787.7,
+    "Lower_80": 1699341.34,
+    "Upper_80": 3540234.07,
+    "Lower_95": 1212086.47,
+    "Upper_95": 4027488.94
+   },
+   {
+    "Month": "2026-04",
+    "Forecast": 2646265.1,
+    "Lower_80": 1573235.24,
+    "Upper_80": 3719294.96,
+    "Lower_95": 1005207.54,
+    "Upper_95": 4287322.65
+   },
+   {
+    "Month": "2026-05",
+    "Forecast": 2672742.49,
+    "Lower_80": 1466274.65,
+    "Upper_80": 3879210.33,
+    "Lower_95": 827609.16,
+    "Upper_95": 4517875.83
+   },
+   {
+    "Month": "2026-06",
+    "Forecast": 2699219.89,
+    "Lower_80": 1372669.39,
+    "Upper_80": 4025770.39,
+    "Lower_95": 670435.98,
+    "Upper_95": 4728003.8
+   }
+  ]
+ },
+ "sql": {
+  "tables": 11,
+  "views": 2,
+  "pbi_views": 8,
+  "table_catalog": [
+   {
+    "Table": "locations",
+    "Layer": "Transactional",
+    "Rows": 35,
+    "Columns": 4,
+    "Primary_Key": "location_id",
+    "Foreign_Keys": "-",
+    "Column_Types": "location_id INTEGER, city TEXT, state TEXT, region TEXT"
+   },
+   {
+    "Table": "customers",
+    "Layer": "Transactional",
+    "Rows": 2000,
+    "Columns": 5,
+    "Primary_Key": "customer_id",
+    "Foreign_Keys": "location_id -> locations.location_id",
+    "Column_Types": "customer_id TEXT, customer_name TEXT, customer_age INTEGER, gender TEXT, location_id INTEGER"
+   },
+   {
+    "Table": "products",
+    "Layer": "Transactional",
+    "Rows": 61,
+    "Columns": 4,
+    "Primary_Key": "product_id",
+    "Foreign_Keys": "-",
+    "Column_Types": "product_id TEXT, product_name TEXT, category TEXT, sub_category TEXT"
+   },
+   {
+    "Table": "orders",
+    "Layer": "Transactional",
+    "Rows": 13251,
+    "Columns": 5,
+    "Primary_Key": "order_id",
+    "Foreign_Keys": "customer_id -> customers.customer_id",
+    "Column_Types": "order_id TEXT, customer_id TEXT, order_date DATE, payment_method TEXT, customer_type TEXT"
+   },
+   {
+    "Table": "order_items",
+    "Layer": "Transactional",
+    "Rows": 18670,
+    "Columns": 10,
+    "Primary_Key": "order_line_id",
+    "Foreign_Keys": "product_id -> products.product_id; order_id -> orders.order_id",
+    "Column_Types": "order_line_id TEXT, order_id TEXT, product_id TEXT, quantity INTEGER, unit_price REAL, discount REAL, sales REAL, cost REAL, profit REAL, order_status TEXT"
+   },
+   {
+    "Table": "rfm_segment_definitions",
+    "Layer": "Analytics",
+    "Rows": 11,
+    "Columns": 5,
+    "Primary_Key": "segment_name",
+    "Foreign_Keys": "-",
+    "Column_Types": "segment_name TEXT, priority INTEGER, rule_text TEXT, business_meaning TEXT, value_activity_group TEXT"
+   },
+   {
+    "Table": "customer_rfm",
+    "Layer": "Analytics",
+    "Rows": 1984,
+    "Columns": 15,
+    "Primary_Key": "customer_id",
+    "Foreign_Keys": "rfm_segment -> rfm_segment_definitions.segment_name; customer_id -> customers.customer_id",
+    "Column_Types": "customer_id TEXT, reference_date DATE, recency_days INTEGER, frequency_orders INTEGER, monetary_revenue REAL, r_score INTEGER, f_score INTEGER, m_score INTEGER, rfm_cell TEXT, rfm_score INTEGER, fm_score REAL, rfm_segment TEXT, first_purchase_date DATE, last_purchase_date DATE, acquisition_status TEXT"
+   },
+   {
+    "Table": "ml_clusters",
+    "Layer": "Analytics",
+    "Rows": 4,
+    "Columns": 3,
+    "Primary_Key": "cluster_id",
+    "Foreign_Keys": "-",
+    "Column_Types": "cluster_id INTEGER, cluster_label TEXT, model TEXT"
+   },
+   {
+    "Table": "customer_segments",
+    "Layer": "Analytics",
+    "Rows": 1984,
+    "Columns": 5,
+    "Primary_Key": "customer_id",
+    "Foreign_Keys": "cluster_id -> ml_clusters.cluster_id; customer_id -> customers.customer_id",
+    "Column_Types": "customer_id TEXT, cluster_id INTEGER, silhouette REAL, pc1 REAL, pc2 REAL"
+   },
+   {
+    "Table": "customer_value",
+    "Layer": "Analytics",
+    "Rows": 1984,
+    "Columns": 12,
+    "Primary_Key": "customer_id",
+    "Foreign_Keys": "customer_id -> customers.customer_id",
+    "Column_Types": "customer_id TEXT, historical_revenue_clv REAL, historical_profit_clv REAL, estimated_12m_future_profit REAL, estimate_method TEXT, simplified_12m_estimate REAL, illustrative_3y_value REAL, high_historical_value INTEGER, high_estimated_future_value INTEGER, high_value_high_engagement INTEGER, potentially_at_risk_high_value INTEGER, future_value_opportunity INTEGER"
+   },
+   {
+    "Table": "revenue_forecasts",
+    "Layer": "Analytics",
+    "Rows": 54,
+    "Columns": 9,
+    "Primary_Key": "month, record_type",
+    "Foreign_Keys": "-",
+    "Column_Types": "month TEXT, record_type TEXT, actual_revenue REAL, forecast_revenue REAL, lower_80 REAL, upper_80 REAL, lower_95 REAL, upper_95 REAL, model TEXT"
+   }
+  ],
+  "validation_checks": 56,
+  "validation_passed": 56,
+  "queries": 57,
+  "analysis_queries": 37,
+  "business_queries": 20,
+  "techniques": [
+   {
+    "Technique": "INNER JOIN",
+    "Queries_Using_It": 18,
+    "Examples": "cust_acquired_by_year, cust_concentration_summary, cust_inactive, seg_rfm_summary, seg_value_activity_groups, seg_ml_cluster_summary"
+   },
+   {
+    "Technique": "LEFT JOIN",
+    "Queries_Using_It": 7,
+    "Examples": "cust_new_vs_existing, prod_profitability, reg_customers_without_orders, BQ01, BQ13, BQ15"
+   },
+   {
+    "Technique": "CASE WHEN",
+    "Queries_Using_It": 19,
+    "Examples": "cust_new_vs_existing, cust_frequency_distribution, cust_concentration_summary, cust_inactive, seg_rfm_vs_cluster, prod_profitability"
+   },
+   {
+    "Technique": "CTE (WITH)",
+    "Queries_Using_It": 27,
+    "Examples": "rev_by_year, rev_by_quarter, cust_top_revenue, cust_new_vs_existing, cust_acquired_by_year, cust_frequency_distribution"
+   },
+   {
+    "Technique": "Subquery",
+    "Queries_Using_It": 10,
+    "Examples": "cust_new_vs_existing, cust_inactive, seg_ml_cluster_summary, prod_top_revenue, prod_investigate, BQ03"
+   },
+   {
+    "Technique": "Window function",
+    "Queries_Using_It": 35,
+    "Examples": "rev_order_status, rev_by_year, rev_by_quarter, cust_top_revenue, cust_new_vs_existing, cust_frequency_distribution"
+   },
+   {
+    "Technique": "Ranking (RANK / ROW_NUMBER / NTILE)",
+    "Queries_Using_It": 22,
+    "Examples": "cust_top_revenue, cust_new_vs_existing, cust_revenue_concentration, cust_concentration_summary, prod_category_performance, prod_subcategory_performance"
+   },
+   {
+    "Technique": "Running total (window frame)",
+    "Queries_Using_It": 4,
+    "Examples": "cust_revenue_concentration, time_monthly, time_ytd_running_total, BQ19"
+   },
+   {
+    "Technique": "Percentage contribution (SUM() OVER ())",
+    "Queries_Using_It": 18,
+    "Examples": "cust_top_revenue, cust_frequency_distribution, cust_revenue_concentration, seg_rfm_summary, seg_value_activity_groups, prod_category_performance"
+   },
+   {
+    "Technique": "LAG / LEAD",
+    "Queries_Using_It": 5,
+    "Examples": "rev_by_year, rev_by_quarter, time_monthly, BQ15, BQ17"
+   },
+   {
+    "Technique": "GROUP BY aggregation",
+    "Queries_Using_It": 54,
+    "Examples": "rev_order_status, rev_by_year, rev_by_quarter, rev_margin_by_year_category, cust_top_revenue, cust_top_profit"
+   },
+   {
+    "Technique": "HAVING",
+    "Queries_Using_It": 2,
+    "Examples": "cust_most_frequent, cust_highest_aov"
+   },
+   {
+    "Technique": "Date functions",
+    "Queries_Using_It": 7,
+    "Examples": "rev_by_quarter, cust_most_frequent, cust_inactive, time_month_of_year, BQ06, BQ09"
+   },
+   {
+    "Technique": "UNION ALL",
+    "Queries_Using_It": 1,
+    "Examples": "BQ10"
+   }
+  ],
+  "key_findings": [
+   {
+    "Area": "Revenue",
+    "Finding (computed by SQL)": "Delivered revenue \u20b96.01 Cr, profit \u20b91.40 Cr (23.35% margin), 12,212 orders, 1,984 customers, AOV \u20b94,918.",
+    "Source query": "rev_kpi_summary"
+   },
+   {
+    "Area": "Growth",
+    "Finding (computed by SQL)": "Revenue growth 2024: +51.4%, 2025: +37.7%; margin 22.65% -> 23.05% -> 23.90%.",
+    "Source query": "rev_by_year"
+   },
+   {
+    "Area": "Customer concentration",
+    "Finding (computed by SQL)": "Top 20% of customers = 64.33% of revenue; top 1% = 9.05%.",
+    "Source query": "cust_concentration_summary"
+   },
+   {
+    "Area": "Repeat purchasing",
+    "Finding (computed by SQL)": "Repeat customers are 89.4% of customers and 98.6% of revenue.",
+    "Source query": "BQ12"
+   },
+   {
+    "Area": "Retention",
+    "Finding (computed by SQL)": "Retained / active last year: 2024: 73.0%, 2025: 93.3%; new customers per year 2023: 1,137, 2024: 498, 2025: 349.",
+    "Source query": "BQ15"
+   },
+   {
+    "Area": "RFM segments",
+    "Finding (computed by SQL)": "Champions: 16.8% of customers, 53.8% of revenue; At Risk + Can't Lose Them: 18.4% of revenue.",
+    "Source query": "seg_rfm_summary"
+   },
+   {
+    "Area": "ML clusters",
+    "Finding (computed by SQL)": "High-Value, Active: 18.35% of customers, 55.67% of revenue; Low-Value, Active: 22.83% of customers, 5.02% of revenue; Mid-Value, Lapsing: 37.95% of customers, 35.39% of revenue; Low-Value, Inactive: 20.87% of customers, 3.91% of revenue.",
+    "Source query": "seg_ml_cluster_summary"
+   },
+   {
+    "Area": "Potentially at-risk value",
+    "Finding (computed by SQL)": "52 high-historical-value customers have not bought for >= 180 days (lifetime revenue \u20b926.51 L).",
+    "Source query": "BQ06"
+   },
+   {
+    "Area": "Categories",
+    "Finding (computed by SQL)": "Electronics: 50.1% of revenue at 10.8% margin; Fashion 36.8% of profit at 42.8% margin; highest margin Beauty (46.5%).",
+    "Source query": "prod_category_performance"
+   },
+   {
+    "Area": "Products to investigate",
+    "Finding (computed by SQL)": "10 products flagged; high-revenue low-margin examples: Nova X7 Pro Smartphone 256GB, Nova X5 Smartphone 128GB, AeroBook 14 Laptop.",
+    "Source query": "prod_investigate, BQ03"
+   },
+   {
+    "Area": "Discounts",
+    "Finding (computed by SQL)": "Margin by discount band: 0% 29.3%, 1-10% 19.4%, 11-20% 21.6%, 21-30% 21.4%, 31-40% 20.4%; within categories, the 0% band has the highest margin in 6/6 categories and the highest band the lowest margin in 6/6 (BQ08) - an association, not proof of cause.",
+    "Source query": "prod_discount_bands, BQ08"
+   },
+   {
+    "Area": "Returns / cancellations",
+    "Finding (computed by SQL)": "Fashion loses the largest share of booked value to returns/cancellations (14.4%); COD has the highest cancellation rate (6.2% of lines).",
+    "Source query": "BQ14, BQ13"
+   },
+   {
+    "Area": "Regions",
+    "Finding (computed by SQL)": "South leads revenue (27.0%); margins range 22.2-25.3%; 0 region-category pairs are > 2 pp below the national category margin (largest gap -1.7 pp).",
+    "Source query": "reg_performance, BQ16"
+   },
+   {
+    "Area": "Seasonality",
+    "Finding (computed by SQL)": "Highest month 2025-10 (\u20b930.98 L); the same calendar month tops every year: yes (2023-10, 2024-10, 2025-10).",
+    "Source query": "time_best_worst_months, BQ09"
+   }
+  ],
+  "quality_checks": 20
+ },
+ "powerbi": {
+  "tables": 13,
+  "catalog": [
+   {
+    "Table": "DimDate",
+    "Role": "Dimension",
+    "Source": "SQL view pbi_dim_date",
+    "Rows": 1277,
+    "Columns": 23,
+    "Grain": "One row per calendar day, 2023-01-01 to 2026-06-30"
+   },
+   {
+    "Table": "DimGeography",
+    "Role": "Dimension",
+    "Source": "SQL view pbi_dim_geography",
+    "Rows": 35,
+    "Columns": 5,
+    "Grain": "One row per customer city"
+   },
+   {
+    "Table": "DimProduct",
+    "Role": "Dimension",
+    "Source": "SQL view pbi_dim_product",
+    "Rows": 61,
+    "Columns": 4,
+    "Grain": "One row per product"
+   },
+   {
+    "Table": "DimRFMSegment",
+    "Role": "Dimension",
+    "Source": "SQL view pbi_dim_rfm_segment",
+    "Rows": 12,
+    "Columns": 6,
+    "Grain": "One row per Step 5 RFM segment (+ 'No delivered order')"
+   },
+   {
+    "Table": "DimCluster",
+    "Role": "Dimension",
+    "Source": "SQL view pbi_dim_cluster",
+    "Rows": 5,
+    "Columns": 4,
+    "Grain": "One row per Step 6 K-Means cluster (+ 'No delivered order')"
+   },
+   {
+    "Table": "DimCustomer",
+    "Role": "Dimension",
+    "Source": "SQL view pbi_dim_customer",
+    "Rows": 2000,
+    "Columns": 36,
+    "Grain": "One row per registered customer (no names; Customer_ID only)"
+   },
+   {
+    "Table": "FactSales",
+    "Role": "Fact",
+    "Source": "SQL view pbi_fact_sales",
+    "Rows": 18670,
+    "Columns": 19,
+    "Grain": "One row per order line, all statuses, with Is_Delivered"
+   },
+   {
+    "Table": "FactForecast",
+    "Role": "Fact",
+    "Source": "SQL view pbi_fact_forecast",
+    "Rows": 54,
+    "Columns": 13,
+    "Grain": "One row per month x forecast record type (Step 9)"
+   },
+   {
+    "Table": "FactRevenuePrediction",
+    "Role": "Fact",
+    "Source": "outputs/tables/revenue_predictions.csv (Step 8)",
+    "Rows": 2913,
+    "Columns": 17,
+    "Grain": "One row per customer x target quarter, test split (Step 8)"
+   },
+   {
+    "Table": "PredictionQuarterly",
+    "Role": "Fact (aggregated)",
+    "Source": "outputs/tables/revenue_quarterly_totals.csv (Step 8)",
+    "Rows": 8,
+    "Columns": 9,
+    "Grain": "One row per target quarter: actual vs predicted totals (Step 8)"
+   },
+   {
+    "Table": "ModelMetrics",
+    "Role": "Supporting",
+    "Source": "models/revenue_model_metadata.json, models/forecasting_metadata.json, outputs/tables/revenue_model_comparison.csv, forecast_model_comparison.csv",
+    "Rows": 25,
+    "Columns": 8,
+    "Grain": "One row per model x split x metric (Steps 8 and 9)"
+   },
+   {
+    "Table": "ModelInfo",
+    "Role": "Supporting",
+    "Source": "models/revenue_model_metadata.json, models/forecasting_metadata.json",
+    "Rows": 15,
+    "Columns": 4,
+    "Grain": "One row per model attribute (design of Steps 8 and 9)"
+   },
+   {
+    "Table": "Recommendations",
+    "Role": "Supporting",
+    "Source": "Computed from Step 5-10 output tables by src/powerbi_prep.py",
+    "Rows": 18,
+    "Columns": 9,
+    "Grain": "One row per business recommendation, with its analytical basis"
+   }
+  ],
+  "relationships": 9,
+  "relationship_rows": [
+   {
+    "From_Table": "DimDate",
+    "From_Column": "Date",
+    "To_Table": "FactSales",
+    "To_Column": "Order_Date",
+    "Cardinality": "One-to-many",
+    "Cross_Filter_Direction": "Single",
+    "Active": "Yes",
+    "Notes": "Date table marked in Power BI; drives every time intelligence measure"
+   },
+   {
+    "From_Table": "DimCustomer",
+    "From_Column": "Customer_ID",
+    "To_Table": "FactSales",
+    "To_Column": "Customer_ID",
+    "Cardinality": "One-to-many",
+    "Cross_Filter_Direction": "Single",
+    "Active": "Yes",
+    "Notes": NaN
+   },
+   {
+    "From_Table": "DimProduct",
+    "From_Column": "Product_ID",
+    "To_Table": "FactSales",
+    "To_Column": "Product_ID",
+    "Cardinality": "One-to-many",
+    "Cross_Filter_Direction": "Single",
+    "Active": "Yes",
+    "Notes": NaN
+   },
+   {
+    "From_Table": "DimGeography",
+    "From_Column": "Location_ID",
+    "To_Table": "FactSales",
+    "To_Column": "Location_ID",
+    "Cardinality": "One-to-many",
+    "Cross_Filter_Direction": "Single",
+    "Active": "Yes",
+    "Notes": "Customer home location; one location per customer in this dataset"
+   },
+   {
+    "From_Table": "DimRFMSegment",
+    "From_Column": "RFM_Segment",
+    "To_Table": "DimCustomer",
+    "To_Column": "RFM_Segment",
+    "Cardinality": "One-to-many",
+    "Cross_Filter_Direction": "Single",
+    "Active": "Yes",
+    "Notes": "Snowflake on the customer dimension: segment attributes filter customers, which filter sales"
+   },
+   {
+    "From_Table": "DimCluster",
+    "From_Column": "Cluster_ID",
+    "To_Table": "DimCustomer",
+    "To_Column": "Cluster_ID",
+    "Cardinality": "One-to-many",
+    "Cross_Filter_Direction": "Single",
+    "Active": "Yes",
+    "Notes": "Snowflake on the customer dimension"
+   },
+   {
+    "From_Table": "DimDate",
+    "From_Column": "Date",
+    "To_Table": "FactForecast",
+    "To_Column": "Month_Date",
+    "Cardinality": "One-to-many",
+    "Cross_Filter_Direction": "Single",
+    "Active": "Yes",
+    "Notes": "Forecast rows join on the first day of the month"
+   },
+   {
+    "From_Table": "DimDate",
+    "From_Column": "Date",
+    "To_Table": "FactRevenuePrediction",
+    "To_Column": "Target_Quarter_Start",
+    "Cardinality": "One-to-many",
+    "Cross_Filter_Direction": "Single",
+    "Active": "No",
+    "Notes": "INACTIVE by design: the prediction grain is a quarter, so a date filter would silently drop rows. Activate with USERELATIONSHIP only if a quarter-level date filter is wanted."
+   },
+   {
+    "From_Table": "DimCustomer",
+    "From_Column": "Customer_ID",
+    "To_Table": "FactRevenuePrediction",
+    "To_Column": "Customer_ID",
+    "Cardinality": "One-to-many",
+    "Cross_Filter_Direction": "Single",
+    "Active": "Yes",
+    "Notes": "Lets the prediction page respond to the customer and segment slicers"
+   }
+  ],
+  "measures": 84,
+  "folders": 10,
+  "measure_rows": [
+   {
+    "Measure": "Total Revenue",
+    "Display_Folder": "01 Revenue",
+    "Format": "\"\u20b9\"#,0;-\"\u20b9\"#,0",
+    "Purpose": "Delivered revenue. The single revenue definition used by every page."
+   },
+   {
+    "Measure": "Total Cost",
+    "Display_Folder": "01 Revenue",
+    "Format": "#,0",
+    "Purpose": "Cost of the delivered lines."
+   },
+   {
+    "Measure": "Booked Value",
+    "Display_Folder": "01 Revenue",
+    "Format": "#,0",
+    "Purpose": "Value of ALL order lines including Returned and Cancelled - the gross figure revenue is measured against."
+   },
+   {
+    "Measure": "Revenue Not Realised",
+    "Display_Folder": "01 Revenue",
+    "Format": "#,0",
+    "Purpose": "Booked value lost to returns and cancellations."
+   },
+   {
+    "Measure": "Revenue Not Realised %",
+    "Display_Folder": "01 Revenue",
+    "Format": "0.0%",
+    "Purpose": "Share of booked value that never became revenue."
+   },
+   {
+    "Measure": "Revenue PY",
+    "Display_Folder": "01 Revenue",
+    "Format": "#,0",
+    "Purpose": "Revenue in the same period one year earlier."
+   },
+   {
+    "Measure": "Revenue Growth",
+    "Display_Folder": "01 Revenue",
+    "Format": "#,0",
+    "Purpose": "Year-over-year revenue change in rupees."
+   },
+   {
+    "Measure": "Revenue Growth %",
+    "Display_Folder": "01 Revenue",
+    "Format": "+0.0%;-0.0%;0.0%",
+    "Purpose": "Year-over-year revenue growth."
+   },
+   {
+    "Measure": "Revenue PM",
+    "Display_Folder": "01 Revenue",
+    "Format": "#,0",
+    "Purpose": "Revenue in the previous month."
+   },
+   {
+    "Measure": "Revenue MoM %",
+    "Display_Folder": "01 Revenue",
+    "Format": "+0.0%;-0.0%;0.0%",
+    "Purpose": "Month-over-month revenue growth."
+   },
+   {
+    "Measure": "Revenue YTD",
+    "Display_Folder": "01 Revenue",
+    "Format": "#,0",
+    "Purpose": "Calendar year-to-date revenue."
+   },
+   {
+    "Measure": "Avg Monthly Revenue",
+    "Display_Folder": "01 Revenue",
+    "Format": "#,0",
+    "Purpose": "Mean revenue per month, counting only months that have delivered revenue."
+   },
+   {
+    "Measure": "Revenue (\u20b9 lakh)",
+    "Display_Folder": "01 Revenue",
+    "Format": "#,0.0",
+    "Purpose": "Revenue rescaled for chart axes, so axis labels stay short and readable."
+   },
+   {
+    "Measure": "Revenue Label",
+    "Display_Folder": "01 Revenue",
+    "Format": "Text",
+    "Purpose": "Card label in Indian units (crore / lakh) - used on the KPI cards."
+   },
+   {
+    "Measure": "Total Profit",
+    "Display_Folder": "02 Profitability",
+    "Format": "#,0",
+    "Purpose": "Profit on delivered lines."
+   },
+   {
+    "Measure": "Profit Margin %",
+    "Display_Folder": "02 Profitability",
+    "Format": "0.0%",
+    "Purpose": "Profit as a share of revenue."
+   },
+   {
+    "Measure": "Avg Profit per Order",
+    "Display_Folder": "02 Profitability",
+    "Format": "#,0",
+    "Purpose": "Mean profit per delivered order."
+   },
+   {
+    "Measure": "Profit PY",
+    "Display_Folder": "02 Profitability",
+    "Format": "#,0",
+    "Purpose": "Profit in the same period one year earlier."
+   },
+   {
+    "Measure": "Profit Growth %",
+    "Display_Folder": "02 Profitability",
+    "Format": "+0.0%;-0.0%;0.0%",
+    "Purpose": "Year-over-year profit growth."
+   },
+   {
+    "Measure": "Margin Change PY (pp)",
+    "Display_Folder": "02 Profitability",
+    "Format": "+0.0;-0.0;0.0",
+    "Purpose": "Change in profit margin versus last year, in percentage points."
+   },
+   {
+    "Measure": "Profit Label",
+    "Display_Folder": "02 Profitability",
+    "Format": "Text",
+    "Purpose": "Profit card label in crore / lakh."
+   },
+   {
+    "Measure": "Total Orders",
+    "Display_Folder": "03 Orders",
+    "Format": "#,0",
+    "Purpose": "Orders with at least one delivered line - the Step 3 order definition."
+   },
+   {
+    "Measure": "Order Lines",
+    "Display_Folder": "03 Orders",
+    "Format": "#,0",
+    "Purpose": "Delivered order lines (the fact grain)."
+   },
+   {
+    "Measure": "Total Quantity",
+    "Display_Folder": "03 Orders",
+    "Format": "#,0",
+    "Purpose": "Units sold on delivered lines."
+   },
+   {
+    "Measure": "Average Order Value",
+    "Display_Folder": "03 Orders",
+    "Format": "#,0",
+    "Purpose": "AOV = delivered revenue / delivered orders."
+   },
+   {
+    "Measure": "Avg Quantity per Order",
+    "Display_Folder": "03 Orders",
+    "Format": "0.00",
+    "Purpose": "Mean units per delivered order."
+   },
+   {
+    "Measure": "Avg Discount %",
+    "Display_Folder": "03 Orders",
+    "Format": "0.0%",
+    "Purpose": "Value-weighted average discount: discount given / list value. Not the mean of the discount column, which would weight a \u20b9500 line like a \u20b950,000 one."
+   },
+   {
+    "Measure": "Registered Customers",
+    "Display_Folder": "04 Customers",
+    "Format": "#,0",
+    "Purpose": "Customers on file, whether or not they ever received an order."
+   },
+   {
+    "Measure": "Total Customers",
+    "Display_Folder": "04 Customers",
+    "Format": "#,0",
+    "Purpose": "Distinct customers with a delivered order in the current filter context."
+   },
+   {
+    "Measure": "Active Customers",
+    "Display_Folder": "04 Customers",
+    "Format": "#,0",
+    "Purpose": "Customers whose last delivered purchase was under 180 days before the reference date 2026-01-01 (the Step 7 inactivity threshold). A snapshot: it does not move with the Date slicer. Inactivity, not churn."
+   },
+   {
+    "Measure": "Inactive Customers (180+ days)",
+    "Display_Folder": "04 Customers",
+    "Format": "#,0",
+    "Purpose": "Snapshot count of customers inactive for 180 days or more."
+   },
+   {
+    "Measure": "New Customers",
+    "Display_Folder": "04 Customers",
+    "Format": "#,0",
+    "Purpose": "Customers whose FIRST delivered purchase falls inside the selected dates. For 2023 this counts first purchases observed in the data, which includes customers acquired earlier (see DimCustomer[Acquisition_Status])."
+   },
+   {
+    "Measure": "Repeat Customers",
+    "Display_Folder": "04 Customers",
+    "Format": "#,0",
+    "Purpose": "Snapshot count of customers with 2 or more delivered orders in total."
+   },
+   {
+    "Measure": "Repeat Customers (in period)",
+    "Display_Folder": "04 Customers",
+    "Format": "#,0",
+    "Purpose": "Customers with 2 or more delivered orders WITHIN the selected dates - the period version of the measure above."
+   },
+   {
+    "Measure": "Repeat Customer %",
+    "Display_Folder": "04 Customers",
+    "Format": "0.0%",
+    "Purpose": "Share of purchasing customers who ordered more than once."
+   },
+   {
+    "Measure": "Avg Orders per Customer",
+    "Display_Folder": "04 Customers",
+    "Format": "0.00",
+    "Purpose": "Purchase frequency in the current context."
+   },
+   {
+    "Measure": "Avg Customer Revenue",
+    "Display_Folder": "05 Customer value",
+    "Format": "#,0",
+    "Purpose": "Revenue per purchasing customer in the current context."
+   },
+   {
+    "Measure": "Customer Revenue Contribution %",
+    "Display_Folder": "05 Customer value",
+    "Format": "0.0%",
+    "Purpose": "A customer's (or customer selection's) share of revenue, against all customers with the other slicers still applied."
+   },
+   {
+    "Measure": "Segment Revenue Contribution %",
+    "Display_Folder": "05 Customer value",
+    "Format": "0.0%",
+    "Purpose": "An RFM segment's share of revenue."
+   },
+   {
+    "Measure": "Cluster Revenue Contribution %",
+    "Display_Folder": "05 Customer value",
+    "Format": "0.0%",
+    "Purpose": "A K-Means cluster's share of revenue."
+   },
+   {
+    "Measure": "Category Revenue Contribution %",
+    "Display_Folder": "05 Customer value",
+    "Format": "0.0%",
+    "Purpose": "A category's or product's share of revenue."
+   },
+   {
+    "Measure": "Region Revenue Contribution %",
+    "Display_Folder": "05 Customer value",
+    "Format": "0.0%",
+    "Purpose": "A region's share of revenue."
+   },
+   {
+    "Measure": "Historical Profit CLV",
+    "Display_Folder": "05 Customer value",
+    "Format": "#,0",
+    "Purpose": "Step 7 historical customer value: profit actually earned to date. NOT a prediction."
+   },
+   {
+    "Measure": "Historical Revenue CLV",
+    "Display_Folder": "05 Customer value",
+    "Format": "#,0",
+    "Purpose": "Step 7 historical revenue per customer, summed over the selection."
+   },
+   {
+    "Measure": "Estimated 12M Future Profit",
+    "Display_Folder": "05 Customer value",
+    "Format": "#,0",
+    "Purpose": "Step 7 model ESTIMATE of the next 12 months' profit. Always labelled as an estimate and never added to historical value."
+   },
+   {
+    "Measure": "Avg Estimated 12M Future Profit",
+    "Display_Folder": "05 Customer value",
+    "Format": "#,0",
+    "Purpose": "Mean estimated 12-month future profit per customer in the selection."
+   },
+   {
+    "Measure": "Illustrative 3Y Value",
+    "Display_Folder": "05 Customer value",
+    "Format": "#,0",
+    "Purpose": "Step 7 illustrative 3-year value (12-month estimate x (1 + r + r\u00b2), r = 0.839). Illustrative only - it assumes the observed repeat rate persists."
+   },
+   {
+    "Measure": "At-Risk High-Value Customers",
+    "Display_Folder": "05 Customer value",
+    "Format": "#,0",
+    "Purpose": "High historical value AND no delivered purchase for 180+ days (Step 7 flag). 'Potentially at risk', not churned."
+   },
+   {
+    "Measure": "High-Value Customers",
+    "Display_Folder": "05 Customer value",
+    "Format": "#,0",
+    "Purpose": "Top 20% of customers by historical profit (Step 7 flag)."
+   },
+   {
+    "Measure": "Segment Customers",
+    "Display_Folder": "06 Segmentation (RFM & clusters)",
+    "Format": "#,0",
+    "Purpose": "Customers in the selected segment or cluster (snapshot assignment)."
+   },
+   {
+    "Measure": "Segment Customer %",
+    "Display_Folder": "06 Segmentation (RFM & clusters)",
+    "Format": "0.0%",
+    "Purpose": "Share of the customer base in this segment or cluster."
+   },
+   {
+    "Measure": "Avg Recency (days)",
+    "Display_Folder": "06 Segmentation (RFM & clusters)",
+    "Format": "#,0",
+    "Purpose": "Mean days since the last delivered purchase, at the 2026-01-01 reference date."
+   },
+   {
+    "Measure": "Avg Frequency (orders)",
+    "Display_Folder": "06 Segmentation (RFM & clusters)",
+    "Format": "0.0",
+    "Purpose": "Mean lifetime delivered orders per customer."
+   },
+   {
+    "Measure": "Avg Monetary (\u20b9)",
+    "Display_Folder": "06 Segmentation (RFM & clusters)",
+    "Format": "#,0",
+    "Purpose": "Mean lifetime delivered revenue per customer."
+   },
+   {
+    "Measure": "Avg RFM Score",
+    "Display_Folder": "06 Segmentation (RFM & clusters)",
+    "Format": "0.0",
+    "Purpose": "Mean R+F+M score (3-15) of the selected customers."
+   },
+   {
+    "Measure": "Segment Revenue per Customer",
+    "Display_Folder": "06 Segmentation (RFM & clusters)",
+    "Format": "#,0",
+    "Purpose": "Revenue per customer within the segment or cluster."
+   },
+   {
+    "Measure": "Return / Cancel Rate %",
+    "Display_Folder": "07 Products & regions",
+    "Format": "0.0%",
+    "Purpose": "Share of order lines that were Returned or Cancelled."
+   },
+   {
+    "Measure": "Products Sold",
+    "Display_Folder": "07 Products & regions",
+    "Format": "#,0",
+    "Purpose": "Distinct products with delivered sales in the current context."
+   },
+   {
+    "Measure": "Revenue Rank (product)",
+    "Display_Folder": "07 Products & regions",
+    "Format": "#,0",
+    "Purpose": "Product rank by revenue, respecting the slicers - used for Top N / Bottom N."
+   },
+   {
+    "Measure": "Margin vs Category (pp)",
+    "Display_Folder": "07 Products & regions",
+    "Format": "+0.0;-0.0;0.0",
+    "Purpose": "How far a product's margin sits above or below its own category's margin, in points. This is the metric the Bottom-products visual ranks on."
+   },
+   {
+    "Measure": "Predicted Revenue (ML)",
+    "Display_Folder": "08 Prediction (Step 8 ML)",
+    "Format": "#,0",
+    "Purpose": "Step 8 model prediction of customer revenue for the target quarter. Test split only."
+   },
+   {
+    "Measure": "Actual Revenue (prediction test)",
+    "Display_Folder": "08 Prediction (Step 8 ML)",
+    "Format": "#,0",
+    "Purpose": "The matching actual revenue for those same customer-quarters, so predicted and actual are always compared on identical rows."
+   },
+   {
+    "Measure": "Naive Baseline (prediction)",
+    "Display_Folder": "08 Prediction (Step 8 ML)",
+    "Format": "#,0",
+    "Purpose": "The previous-quarter baseline the model is judged against."
+   },
+   {
+    "Measure": "Prediction MAE",
+    "Display_Folder": "08 Prediction (Step 8 ML)",
+    "Format": "#,0",
+    "Purpose": "Mean absolute error per customer-quarter."
+   },
+   {
+    "Measure": "Prediction RMSE",
+    "Display_Folder": "08 Prediction (Step 8 ML)",
+    "Format": "#,0",
+    "Purpose": "Root mean squared error per customer-quarter."
+   },
+   {
+    "Measure": "Prediction R2",
+    "Display_Folder": "08 Prediction (Step 8 ML)",
+    "Format": "0.000",
+    "Purpose": "R\u00b2 over the rows in context. On the full test split this reproduces the Step 8 figure; inside a slicer it is the R\u00b2 of that subset, which is a different quantity."
+   },
+   {
+    "Measure": "Prediction Bias %",
+    "Display_Folder": "08 Prediction (Step 8 ML)",
+    "Format": "+0.0%;-0.0%;0.0%",
+    "Purpose": "Total over- or under-prediction. MAPE is deliberately absent: many customer-quarters have an actual of 0, so a percentage error is undefined for them."
+   },
+   {
+    "Measure": "Metric Value",
+    "Display_Folder": "08 Prediction (Step 8 ML)",
+    "Format": "#,0.000",
+    "Purpose": "The reported Step 8 / Step 9 metric from the ModelMetrics table; used by the model performance matrix so no metric is ever retyped into a text box."
+   },
+   {
+    "Measure": "Historical Revenue (monthly)",
+    "Display_Folder": "09 Forecast (Step 9 time series)",
+    "Format": "#,0",
+    "Purpose": "Actual monthly revenue, 2023-01 to 2025-12. Equals [Total Revenue] by month."
+   },
+   {
+    "Measure": "Forecast Revenue",
+    "Display_Folder": "09 Forecast (Step 9 time series)",
+    "Format": "#,0",
+    "Purpose": "Future forecast, 2026-01 to 2026-06, from the model fitted on all 36 months."
+   },
+   {
+    "Measure": "Backtest Forecast",
+    "Display_Folder": "09 Forecast (Step 9 time series)",
+    "Format": "#,0",
+    "Purpose": "Validation and test forecasts produced without seeing those months - the evidence for the accuracy figures."
+   },
+   {
+    "Measure": "Forecast Lower 80",
+    "Display_Folder": "09 Forecast (Step 9 time series)",
+    "Format": "#,0",
+    "Purpose": "Lower bound of the 80% prediction interval."
+   },
+   {
+    "Measure": "Forecast Upper 80",
+    "Display_Folder": "09 Forecast (Step 9 time series)",
+    "Format": "#,0",
+    "Purpose": "Upper bound of the 80% prediction interval."
+   },
+   {
+    "Measure": "Forecast Lower 95",
+    "Display_Folder": "09 Forecast (Step 9 time series)",
+    "Format": "#,0",
+    "Purpose": "Lower bound of the 95% prediction interval."
+   },
+   {
+    "Measure": "Forecast Upper 95",
+    "Display_Folder": "09 Forecast (Step 9 time series)",
+    "Format": "#,0",
+    "Purpose": "Upper bound of the 95% prediction interval."
+   },
+   {
+    "Measure": "Forecast Interval Width 95",
+    "Display_Folder": "09 Forecast (Step 9 time series)",
+    "Format": "#,0",
+    "Purpose": "Width of the 95% interval - it widens with the horizon, which is the honest way to show that a 6-month-out month is less certain than next month."
+   },
+   {
+    "Measure": "Forecast Horizon (months)",
+    "Display_Folder": "09 Forecast (Step 9 time series)",
+    "Format": "#,0",
+    "Purpose": "Number of forecast months shown (6)."
+   },
+   {
+    "Measure": "Forecast Total (next 6 months)",
+    "Display_Folder": "09 Forecast (Step 9 time series)",
+    "Format": "#,0",
+    "Purpose": "Total forecast revenue for the whole 6-month horizon, independent of the Date slicer."
+   },
+   {
+    "Measure": "Forecast Label",
+    "Display_Folder": "09 Forecast (Step 9 time series)",
+    "Format": "Text",
+    "Purpose": "Forecast-total card label in crore / lakh."
+   },
+   {
+    "Measure": "Date Range Label",
+    "Display_Folder": "10 Labels & context",
+    "Format": "Text",
+    "Purpose": "Shows the selected date range on every page so a filtered number is never mistaken for the full-period number."
+   },
+   {
+    "Measure": "Selected Prediction Model",
+    "Display_Folder": "10 Labels & context",
+    "Format": "Text",
+    "Purpose": "The Step 8 model name, read from ModelInfo rather than typed onto the page."
+   },
+   {
+    "Measure": "Selected Forecast Model",
+    "Display_Folder": "10 Labels & context",
+    "Format": "Text",
+    "Purpose": "The Step 9 model name, read from ModelInfo."
+   },
+   {
+    "Measure": "Data Disclaimer",
+    "Display_Folder": "10 Labels & context",
+    "Format": "Text",
+    "Purpose": "Footer text shown on HOME and the Executive Overview."
+   },
+   {
+    "Measure": "Filters Applied",
+    "Display_Folder": "10 Labels & context",
+    "Format": "Text",
+    "Purpose": "Warns the reader when a page is showing a filtered subset."
+   }
+  ],
+  "validation_rows": 48,
+  "validation_matched": 48,
+  "consistency_total": 32,
+  "consistency_passed": 32,
+  "checklist": [
+   {
+    "Checklist_Item": "Power BI data model created",
+    "Status": "Done (files)",
+    "Evidence": "13 tables exported to powerbi/data/ from the pbi_* SQL views; catalogue in powerbi/table_catalog.csv. Loading them into Power BI Desktop is a manual step."
+   },
+   {
+    "Checklist_Item": "Relationships validated",
+    "Status": "Done (files) + Validated (Python)",
+    "Evidence": "9 relationships specified in powerbi/relationships.csv with cardinality, cross-filter direction and active flag. Key uniqueness and orphan keys checked in powerbi/validation/cross_step_consistency.csv."
+   },
+   {
+    "Checklist_Item": "Date table created",
+    "Status": "Done (files)",
+    "Evidence": "DimDate: 1,277 daily rows, 2023-01-01 to 2026-06-30, with Year, Quarter, Month Number, Month Name, Year-Month, ISO week, Day, financial-year attributes and Period_Type. Marking it as the official date table and sorting Month Name by Month Number are manual steps in Power BI Desktop."
+   },
+   {
+    "Checklist_Item": "DAX measures created",
+    "Status": "Done (files)",
+    "Evidence": "84 measures in powerbi/dax/measures.dax, grouped into 10 display folders, each with its format string and purpose. Pasting them into the model is manual."
+   },
+   {
+    "Checklist_Item": "Core KPI values reconciled with SQL/Python",
+    "Status": "Validated (Python/SQL)",
+    "Evidence": "15 measures x 8 filter contexts recomputed in pandas; the four required measures plus margin and AOV independently recomputed in SQL - 48 of 48 comparisons match. Targets for the Power BI cards: powerbi/validation/measure_validation_targets.csv."
+   },
+   {
+    "Checklist_Item": "Executive Overview created",
+    "Status": "Specified + mockup",
+    "Evidence": "Layout, visuals and measures specified; design mockup 01. Building the page in Power BI Desktop is manual."
+   },
+   {
+    "Checklist_Item": "Revenue Intelligence created",
+    "Status": "Specified + mockup",
+    "Evidence": "Layout, visuals and measures specified; design mockup 02. Building the page is manual."
+   },
+   {
+    "Checklist_Item": "Customer Intelligence created",
+    "Status": "Specified + mockup",
+    "Evidence": "Layout, visuals and measures specified; design mockup 03. Building the page is manual."
+   },
+   {
+    "Checklist_Item": "Customer Segmentation created",
+    "Status": "Specified + mockup",
+    "Evidence": "Layout, visuals and measures specified; design mockup 04. Building the page is manual."
+   },
+   {
+    "Checklist_Item": "Product Analytics created",
+    "Status": "Specified + mockup",
+    "Evidence": "Layout, visuals and measures specified; design mockup 05. Building the page is manual."
+   },
+   {
+    "Checklist_Item": "Regional Analytics created",
+    "Status": "Specified + mockup",
+    "Evidence": "Layout, visuals and measures specified; design mockup 06. Building the page is manual."
+   },
+   {
+    "Checklist_Item": "Prediction & Forecast created",
+    "Status": "Specified + mockup",
+    "Evidence": "Layout, visuals and measures specified; design mockup 07. Building the page is manual."
+   },
+   {
+    "Checklist_Item": "Business Recommendations created",
+    "Status": "Done (content) + mockup",
+    "Evidence": "18 recommendations computed from the Step 4-10 outputs into powerbi/data/Recommendations.csv; design mockup 08. Placing them on the page is manual."
+   },
+   {
+    "Checklist_Item": "Slicers configured",
+    "Status": "Specified",
+    "Evidence": "Seven synced slicers specified (Date, Year, Month, Region, Category, Sub-category, Segment/Cluster) with their sync groups; see section 8 of the documentation. Configuring them is manual."
+   },
+   {
+    "Checklist_Item": "Drill-through configured where appropriate",
+    "Status": "Specified + mockup",
+    "Evidence": "Customer Detail and Product Detail drill-through pages specified with their drill-through fields; Customer Detail mockup 09. Configuring them is manual."
+   },
+   {
+    "Checklist_Item": "Tooltips configured where appropriate",
+    "Status": "Specified",
+    "Evidence": "Customer and Product tooltip pages specified (320 x 240, fields listed in section 9). Configuring them is manual."
+   },
+   {
+    "Checklist_Item": "Navigation created",
+    "Status": "Specified + mockup",
+    "Evidence": "HOME plus the 8 pages, with a left navigation rail and page-navigation buttons; shown on every mockup. Adding the buttons is manual."
+   },
+   {
+    "Checklist_Item": "Dashboard design standardized",
+    "Status": "Done (files)",
+    "Evidence": "Theme JSON (powerbi/theme/crm_dark_theme.json), page background PNG and palette reference; one format string per measure. Applying the theme is one manual step."
+   },
+   {
+    "Checklist_Item": "Documentation created",
+    "Status": "Done",
+    "Evidence": "outputs/reports/powerbi_dashboard_documentation.md, 14 sections."
+   },
+   {
+    "Checklist_Item": "User guide created",
+    "Status": "Done",
+    "Evidence": "outputs/reports/powerbi_user_guide.md."
+   },
+   {
+    "Checklist_Item": "No fabricated results",
+    "Status": "Verified",
+    "Evidence": "Every figure in the extracts, recommendations, mockups and documentation is read from a Step 4-10 output file; cross-step consistency is checked in powerbi/validation/cross_step_consistency.csv (32 of 32 pass). No Power BI screenshot is claimed - outputs/figures/powerbi/ holds labelled design mockups and a README that says so."
+   }
+  ],
+  "recommendations": 18,
+  "recommendation_rows": [
+   {
+    "Area": "Customer",
+    "Recommendation_ID": 1,
+    "Recommendation": "Protect the top revenue decile before chasing new customers",
+    "Evidence": "The top 20% of customers produce 64.33% of revenue and the top 10% produce 45.39%. Losing a handful of them costs more than a month of acquisition.",
+    "Suggested_Action": "Give the top decile a named owner and review them monthly on the Customer Intelligence page, sorted by revenue with recency visible.",
+    "Supporting_Metric": "Top-20% revenue share",
+    "Metric_Value": "64.33%",
+    "Analytical_Source": "SQL cust_concentration_summary (Step 10); Step 5 concentration analysis",
+    "Area_Order": 1
+   },
+   {
+    "Area": "Customer",
+    "Recommendation_ID": 2,
+    "Recommendation": "Contact the 52 high-value customers who have not bought for 180+ days",
+    "Evidence": "52 customers are flagged potentially at risk: high historical value and no delivered order for at least 180 days at the 2026-01-01 reference date. Their lifetime revenue is \u20b926.51 L and their estimated next-12-month profit is \u20b92.15 L.",
+    "Suggested_Action": "Work the list from the Customer Segmentation page (filter Potentially_At_Risk_High_Value = 1) and record the outcome; this is an inactivity flag, not a confirmed loss.",
+    "Supporting_Metric": "Potentially at-risk high-value customers",
+    "Metric_Value": "52",
+    "Analytical_Source": "Step 7 customer_value flags; SQL BQ06",
+    "Area_Order": 1
+   },
+   {
+    "Area": "Customer",
+    "Recommendation_ID": 3,
+    "Recommendation": "Convert single-purchase buyers: they are 10.6% of customers but 1.4% of revenue",
+    "Evidence": "Repeat customers (89.42% of the base) generate 98.59% of revenue, at \u20b933,378 each against \u20b94,019 for single-purchase customers.",
+    "Suggested_Action": "Target the second order specifically: the median gap between repeat purchases is 54 days (BQ17), so a follow-up inside two months is the natural window.",
+    "Supporting_Metric": "Revenue per repeat customer vs single-purchase",
+    "Metric_Value": "\u20b933,378 vs \u20b94,019",
+    "Analytical_Source": "SQL BQ12, BQ17 (Step 10)",
+    "Area_Order": 1
+   },
+   {
+    "Area": "Customer",
+    "Recommendation_ID": 4,
+    "Recommendation": "Treat Champions as a retention job, not an acquisition one",
+    "Evidence": "Champions are 16.84% of customers and 53.83% of revenue, with average recency 33 days. The K-Means 'High-Value, Active' cluster tells the same story from unsupervised features (55.67% of revenue).",
+    "Suggested_Action": "Monitor Champions' recency monthly on the Customer Segmentation page; a rise in average recency inside this segment is an early warning that outweighs a good total-revenue month.",
+    "Supporting_Metric": "Champions revenue share",
+    "Metric_Value": "53.83%",
+    "Analytical_Source": "Step 5 rfm_segment_summary; Step 6 ml_cluster_summary",
+    "Area_Order": 1
+   },
+   {
+    "Area": "Product",
+    "Recommendation_ID": 5,
+    "Recommendation": "Stop judging Electronics on revenue alone",
+    "Evidence": "Electronics is 50.10% of revenue but only 23.29% of profit, at a 10.85% margin. Beauty and Fashion earn 46.49% and 42.77%.",
+    "Suggested_Action": "Report Electronics with revenue and margin side by side (Product Analytics page) and set category targets on profit, not turnover.",
+    "Supporting_Metric": "Electronics revenue share vs profit share",
+    "Metric_Value": "50.10% vs 23.29%",
+    "Analytical_Source": "SQL prod_category_performance, BQ04 (Step 10)",
+    "Area_Order": 2
+   },
+   {
+    "Area": "Product",
+    "Recommendation_ID": 6,
+    "Recommendation": "Review the 10 products the margin and returns rules flag",
+    "Evidence": "The flagged products fall into two groups: high-revenue items whose margin is under half their category's (Nova X7 Pro Smartphone 256GB, AeroBook Pro 16 Laptop, 43-inch 4K Smart TV), and Fashion items whose return/cancel rate is more than 1.5x the overall rate.",
+    "Suggested_Action": "Take one decision per flagged product - reprice, renegotiate cost, or accept it as a traffic driver - and record which; the Product Analytics scatter shows revenue against profit so a loss-making high-revenue product cannot hide.",
+    "Supporting_Metric": "Products flagged",
+    "Metric_Value": "10",
+    "Analytical_Source": "SQL prod_investigate, BQ03 (Step 10)",
+    "Area_Order": 2
+   },
+   {
+    "Area": "Product",
+    "Recommendation_ID": 7,
+    "Recommendation": "Treat discounting as a margin decision, not a volume lever",
+    "Evidence": "Within categories, the 0% discount band has the highest margin in 6 of 6 categories, and overall margin falls from 29.31% at 0% to 20.43% in the 31-40% band. In Electronics the 21-40% band is margin-negative (BQ08).",
+    "Suggested_Action": "Cap discounts in low-margin categories and approve deep discounts case by case. This is an association in observational data, not proof that discounting causes the loss - the products that get discounted may differ systematically.",
+    "Supporting_Metric": "Categories where the 0% band has the best margin",
+    "Metric_Value": "6 of 6",
+    "Analytical_Source": "SQL prod_discount_bands, BQ08 (Step 10)",
+    "Area_Order": 2
+   },
+   {
+    "Area": "Product",
+    "Recommendation_ID": 8,
+    "Recommendation": "Attack Fashion returns: 14.44% of booked value is lost",
+    "Evidence": "Fashion loses 14.44% of booked value to returns and cancellations (\u20b920.36 L), against 9.43% company-wide. Its returned-line rate is 10.94%.",
+    "Suggested_Action": "Work on sizing information and product photography for the Fashion sub-categories with the highest return rates; every point recovered lands on the company's second-best margin.",
+    "Supporting_Metric": "Fashion booked value lost",
+    "Metric_Value": "14.44%",
+    "Analytical_Source": "SQL BQ14 (Step 10)",
+    "Area_Order": 2
+   },
+   {
+    "Area": "Regional",
+    "Recommendation_ID": 9,
+    "Recommendation": "Grow Central and East on their margin, not on their size",
+    "Evidence": "Central and East are the two smallest regions (12.71% and 12.39% of revenue) but carry the two highest margins (25.26% and 24.78%), while South leads revenue at 27.02% on a 22.80% margin.",
+    "Suggested_Action": "Test incremental spend in Central and East where each rupee of revenue currently carries more profit, and use the Regional Analytics page to watch whether margin holds as volume grows.",
+    "Supporting_Metric": "Central margin vs South margin",
+    "Metric_Value": "25.26% vs 22.80%",
+    "Analytical_Source": "SQL reg_performance, BQ05 (Step 10)",
+    "Area_Order": 3
+   },
+   {
+    "Area": "Regional",
+    "Recommendation_ID": 10,
+    "Recommendation": "Do not build a region-specific pricing story - the differences are category mix",
+    "Evidence": "No region-category pair sits more than 2 percentage points below the national margin for that category (BQ16), so regional margin gaps come from what each region buys, not from how it is served.",
+    "Suggested_Action": "Read regional margin through the region x category matrix on the Regional Analytics page before concluding that a region is underperforming.",
+    "Supporting_Metric": "Region-category pairs more than 2pp below national margin",
+    "Metric_Value": "0 of 30",
+    "Analytical_Source": "SQL BQ16, reg_category_matrix (Step 10)",
+    "Area_Order": 3
+   },
+   {
+    "Area": "Regional",
+    "Recommendation_ID": 11,
+    "Recommendation": "Route the customer-level actions by region, because value concentration is not uniform",
+    "Evidence": "Revenue per customer ranges from \u20b928,394 to \u20b932,434 across regions, and AOV from \u20b94,723 to \u20b95,108.",
+    "Suggested_Action": "Use the Region slicer with the customer pages so retention effort is sized to where the high-value customers actually sit.",
+    "Supporting_Metric": "Revenue per customer, highest vs lowest region",
+    "Metric_Value": "\u20b932,434 vs \u20b928,394",
+    "Analytical_Source": "SQL reg_performance (Step 10)",
+    "Area_Order": 3
+   },
+   {
+    "Area": "Revenue",
+    "Recommendation_ID": 12,
+    "Recommendation": "Plan capacity around the October-December peak",
+    "Evidence": "October is the highest-revenue month in all three years and the top three months by average revenue are October, November, December; October alone carries 12.9% of an average year's revenue.",
+    "Suggested_Action": "Set inventory, staffing and campaign budgets against the monthly profile on the Revenue Intelligence page rather than a flat monthly average.",
+    "Supporting_Metric": "October share of an average year",
+    "Metric_Value": "12.9%",
+    "Analytical_Source": "SQL time_month_of_year, time_best_worst_months (Step 10)",
+    "Area_Order": 4
+   },
+   {
+    "Area": "Revenue",
+    "Recommendation_ID": 13,
+    "Recommendation": "Hold margin while growth continues",
+    "Evidence": "Revenue grew 51.37% in 2024 and 37.72% in 2025, and margin rose across the same years (22.65% -> 23.90%).",
+    "Suggested_Action": "Track revenue growth % and margin on the same page every month; growth bought by margin is visible immediately on the Revenue Intelligence page.",
+    "Supporting_Metric": "Revenue growth 2025 / margin 2025",
+    "Metric_Value": "37.72% / 23.90%",
+    "Analytical_Source": "SQL rev_by_year (Step 10)",
+    "Area_Order": 4
+   },
+   {
+    "Area": "Revenue",
+    "Recommendation_ID": 14,
+    "Recommendation": "Recover part of the 9.43% of booked value lost to returns and cancellations",
+    "Evidence": "\u20b96.63 Cr was booked and \u20b96.01 Cr was delivered; \u20b90.63 Cr never became revenue. Cash on delivery has the highest cancellation rate (6.19% of lines against 3.66% for UPI).",
+    "Suggested_Action": "Add an order-confirmation step for high-value COD orders and measure the cancelled-line rate by payment method after the change.",
+    "Supporting_Metric": "Booked value not realised",
+    "Metric_Value": "9.43%",
+    "Analytical_Source": "Step 4 eda_kpis; SQL BQ13, rev_order_status (Step 10)",
+    "Area_Order": 4
+   },
+   {
+    "Area": "Forecasting & Planning",
+    "Recommendation_ID": 15,
+    "Recommendation": "Plan the next two quarters on \u20b91.58 Cr of forecast revenue, with the interval shown",
+    "Evidence": "The Step 9 Theta model forecasts \u20b91.58 Cr for 2026-01 to 2026-06, with an 80% interval of \u20b91.00 Cr to \u20b92.16 Cr. The previous six months delivered \u20b91.50 Cr.",
+    "Suggested_Action": "Budget to the central forecast, stress-test to the lower bound, and re-fit the model as each actual month lands - the interval widens with horizon, so month 6 is not month 1.",
+    "Supporting_Metric": "6-month forecast (80% interval)",
+    "Metric_Value": "\u20b91.58 Cr (\u20b91.00 Cr - \u20b92.16 Cr)",
+    "Analytical_Source": "Step 9 forecast_future, models/forecasting_metadata.json",
+    "Area_Order": 5
+   },
+   {
+    "Area": "Forecasting & Planning",
+    "Recommendation_ID": 16,
+    "Recommendation": "Trust the monthly forecast at about \u00b17.8% and no further",
+    "Evidence": "On the held-out test months the forecast's MAPE was 7.77% (MAE \u20b92.13 L), and the mean rolling-backtest MAPE was 14.56%.",
+    "Suggested_Action": "Quote the forecast with its error band on the Prediction & Forecast page; do not set targets at a precision the model has never demonstrated.",
+    "Supporting_Metric": "Forecast test MAPE",
+    "Metric_Value": "7.77%",
+    "Analytical_Source": "Step 9 forecast_model_comparison, forecasting_metadata.json",
+    "Area_Order": 5
+   },
+   {
+    "Area": "Forecasting & Planning",
+    "Recommendation_ID": 17,
+    "Recommendation": "Use the customer-level revenue prediction for ranking, not for rupee commitments",
+    "Evidence": "The Step 8 Linear regression reaches R\u00b2 0.056 with MAE \u20b95,658 per customer-quarter on the test split - better than the best baseline on RMSE, but far from precise for an individual customer. Its total bias is +1.12%.",
+    "Suggested_Action": "Use the predictions to order customers for outreach (top predicted customers first) and take the aggregate total as a planning figure; never quote a single customer's predicted revenue as a commitment.",
+    "Supporting_Metric": "Prediction test R\u00b2 / MAE",
+    "Metric_Value": "0.056 / \u20b95,658",
+    "Analytical_Source": "Step 8 revenue_model_comparison, models/revenue_model_metadata.json",
+    "Area_Order": 5
+   },
+   {
+    "Area": "Forecasting & Planning",
+    "Recommendation_ID": 18,
+    "Recommendation": "Re-run the pipeline before each planning cycle",
+    "Evidence": "Every figure on this dashboard is a snapshot: RFM, clusters and CLV are taken at the 2026-01-01 reference date and the forecast is fitted on 2023-01 to 2025-12 (36 months).",
+    "Suggested_Action": "Re-run Steps 3-10 and refresh the extracts (see powerbi_user_guide.md) so segments and forecasts move with the data instead of ageing silently on the page.",
+    "Supporting_Metric": "Reference date / forecast fit window",
+    "Metric_Value": "2026-01-01 / 2023-01 to 2025-12 (36 months)",
+    "Analytical_Source": "Steps 5-9 metadata",
+    "Area_Order": 5
+   }
+  ]
+ },
+ "streamlit": {
+  "tests": 40,
+  "tests_passed": 40,
+  "test_rows": [
+   {
+    "test": "App launch (AppTest harness)",
+    "expected": "app.py runs with no uncaught exception",
+    "actual": "ran in 3.2s, 0 exceptions, 31 markdown elements",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Application header and status indicator",
+    "expected": "Header title plus a status pill that reflects the real load state",
+    "actual": "header present: True; 'ANALYTICS ENGINE ONLINE' shown: True",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Sidebar navigation renders",
+    "expected": "Sidebar shows branding and the cache-reload control",
+    "actual": "1 sidebar button(s) found",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Home page page loads",
+    "expected": "Page renders with no uncaught exception and no error message",
+    "actual": "loaded in 0.4s \u00b7 31 markdown, 0 tables, 0 exceptions, 0 errors",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Executive Overview page loads",
+    "expected": "Page renders with no uncaught exception and no error message",
+    "actual": "loaded in 0.6s \u00b7 18 markdown, 0 tables, 0 exceptions, 0 errors",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Revenue Intelligence page loads",
+    "expected": "Page renders with no uncaught exception and no error message",
+    "actual": "loaded in 0.7s \u00b7 25 markdown, 1 tables, 0 exceptions, 0 errors",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Customer Intelligence page loads",
+    "expected": "Page renders with no uncaught exception and no error message",
+    "actual": "loaded in 0.6s \u00b7 26 markdown, 2 tables, 0 exceptions, 0 errors",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Customer Segmentation page loads",
+    "expected": "Page renders with no uncaught exception and no error message",
+    "actual": "loaded in 0.7s \u00b7 25 markdown, 2 tables, 0 exceptions, 0 errors",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Product Analytics page loads",
+    "expected": "Page renders with no uncaught exception and no error message",
+    "actual": "loaded in 0.8s \u00b7 20 markdown, 2 tables, 0 exceptions, 0 errors",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Regional Analytics page loads",
+    "expected": "Page renders with no uncaught exception and no error message",
+    "actual": "loaded in 0.5s \u00b7 15 markdown, 1 tables, 0 exceptions, 0 errors",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Revenue Prediction page loads",
+    "expected": "Page renders with no uncaught exception and no error message",
+    "actual": "loaded in 0.6s \u00b7 26 markdown, 1 tables, 0 exceptions, 0 errors",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Sales Forecast page loads",
+    "expected": "Page renders with no uncaught exception and no error message",
+    "actual": "loaded in 0.4s \u00b7 15 markdown, 4 tables, 0 exceptions, 0 errors",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Business Recommendations page loads",
+    "expected": "Page renders with no uncaught exception and no error message",
+    "actual": "loaded in 0.4s \u00b7 26 markdown, 1 tables, 0 exceptions, 0 errors",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Data Explorer page loads",
+    "expected": "Page renders with no uncaught exception and no error message",
+    "actual": "loaded in 0.7s \u00b7 13 markdown, 4 tables, 0 exceptions, 0 errors",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "About Project page loads",
+    "expected": "Page renders with no uncaught exception and no error message",
+    "actual": "loaded in 0.4s \u00b7 36 markdown, 2 tables, 0 exceptions, 0 errors",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Executive KPI cards show the validated project totals",
+    "expected": "Revenue \u20b96.01 Cr, 12,212 orders, 1,984 customers (Step 4 / Step 10 validated figures)",
+    "actual": "found \u20b96.01 Cr: True; 12,212: True; 1,984: True",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Filters recompute every figure (Executive \u00b7 Region = South)",
+    "expected": "Revenue falls to the South region total \u20b91.62 Cr and the page stays error-free",
+    "actual": "South revenue shown: True; exceptions: 0; filter note shown: False",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Revenue Intelligence \u00b7 switch breakdown to sub-category",
+    "expected": "Chart and table redraw for sub-categories without error",
+    "actual": "exceptions: 0; sub-category text present: True",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Customer Intelligence \u00b7 rank by profit and select a customer",
+    "expected": "Ranking switches to profit and the selected Customer_ID's detail panel renders",
+    "actual": "ranked by profit without error: True; selected CUST-0908; detail shown: True",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Customer Segmentation \u00b7 RFM, clusters and the PCA scatter",
+    "expected": "Three tabs render and the Step 6 PCA cluster scatter is drawn",
+    "actual": "tabs: 3; PCA scatter text present: True; exceptions: 0",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Customer Segmentation \u00b7 RFM vs K-Means framed as different, not ranked",
+    "expected": "Page states the two methods answer different questions and does not rank one above the other",
+    "actual": "neutral comparison text present: True",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Product Analytics \u00b7 sort and filter the performance matrix",
+    "expected": "Matrix re-sorts by margin and filters to Electronics without error",
+    "actual": "exceptions: 0; tables rendered: 2",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Regional Analytics \u00b7 switch the region x category matrix to revenue",
+    "expected": "Heat table redraws in \u20b9 lakh without error",
+    "actual": "exceptions: 0",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Regional Analytics \u00b7 no map is forced on insufficient geography",
+    "expected": "Page explains why ranked bars and a matrix are used instead of a map",
+    "actual": "explanation present: True",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Revenue Prediction \u00b7 shows the real Step 8 metrics",
+    "expected": "Test MAE \u20b95,658 and R\u00b2 0.056 read from models/revenue_model_metadata.json",
+    "actual": "MAE present: True; R\u00b2 present: True",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Revenue Prediction \u00b7 MAPE is not fabricated",
+    "expected": "Page states why MAPE is not reported for this model (zero actuals)",
+    "actual": "explanation present: True",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Revenue Prediction \u00b7 what-if tool re-scores with the saved model",
+    "expected": "Moving 'Orders in the last 12 months' changes the predicted revenue",
+    "actual": "prediction card changed: True; exceptions: 0",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Sales Forecast \u00b7 horizon, expected revenue and accuracy come from Step 9",
+    "expected": "6-month horizon totalling \u20b91.58 Cr with test MAPE 7.77%",
+    "actual": "\u20b91.58 Cr present: True; 7.77% present: True",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Sales Forecast \u00b7 switch interval to 80% and hide the back-forecast",
+    "expected": "Chart redraws with the 80% band and without the back-forecast series",
+    "actual": "exceptions: 0",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Sales Forecast \u00b7 forecast table CSV download",
+    "expected": "A download button is offered for the forecast table",
+    "actual": "1 download button(s) present",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Business Recommendations \u00b7 finding \u2192 implication \u2192 action structure",
+    "expected": "Every card carries the three labels and a source line",
+    "actual": "labels present: True; cards rendered: 18",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Business Recommendations \u00b7 search filter",
+    "expected": "Searching 'discount' narrows the list without error",
+    "actual": "exceptions: 0; matches shown: True",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Data Explorer \u00b7 project data profile and quality scorecard",
+    "expected": "Project dataset profiles with row/column/missing/duplicate counts and a scorecard",
+    "actual": "tabs: 2; tables rendered: 4; exceptions: 0",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Data Explorer \u00b7 upload a CSV and profile it",
+    "expected": "Uploaded file name, row/column counts, missing values and duplicates are reported",
+    "actual": "file name shown: True; exceptions: 0; tables: 8",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Data Explorer \u00b7 download processed data",
+    "expected": "A 'Download processed data' button is offered for the uploaded file",
+    "actual": "2 download button(s) present",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Data Explorer \u00b7 invalid file is handled without a stack trace",
+    "expected": "A readable message is shown and the app keeps running",
+    "actual": "exceptions: 0; messages: ['**broken.csv could not be parsed as CSV.** The reader stopped at: Error tokenizi']",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Missing model file is handled gracefully",
+    "expected": "Prediction page still loads, explains that the what-if tool is unavailable, and does not crash or invent a model",
+    "actual": "exceptions: 0; warning shown: True; metrics still displayed: True",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Missing data file is handled gracefully",
+    "expected": "Recommendations page shows a readable error naming the missing file instead of a stack trace",
+    "actual": "exceptions: 0; error message shown: 1",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "Caching keeps reruns fast",
+    "expected": "A rerun of the same page is faster than the first load (cache_data / cache_resource)",
+    "actual": "first load 1.28s, rerun 0.21s",
+    "status": "PASS",
+    "detail": NaN
+   },
+   {
+    "test": "No personally identifying customer names are displayed",
+    "expected": "Customer pages identify customers by Customer_ID only",
+    "actual": "'Customer_Name' appears anywhere on the page: False",
+    "status": "PASS",
+    "detail": NaN
+   }
+  ],
+  "page_times": [
+   {
+    "Page": "About Project",
+    "Load_Seconds": 0.4
+   },
+   {
+    "Page": "Business Recommendations",
+    "Load_Seconds": 0.4
+   },
+   {
+    "Page": "Customer Intelligence",
+    "Load_Seconds": 0.63
+   },
+   {
+    "Page": "Customer Segmentation",
+    "Load_Seconds": 0.69
+   },
+   {
+    "Page": "Data Explorer",
+    "Load_Seconds": 0.72
+   },
+   {
+    "Page": "Executive Overview",
+    "Load_Seconds": 0.59
+   },
+   {
+    "Page": "Home page",
+    "Load_Seconds": 0.44
+   },
+   {
+    "Page": "Product Analytics",
+    "Load_Seconds": 0.75
+   },
+   {
+    "Page": "Regional Analytics",
+    "Load_Seconds": 0.55
+   },
+   {
+    "Page": "Revenue Intelligence",
+    "Load_Seconds": 0.66
+   },
+   {
+    "Page": "Revenue Prediction",
+    "Load_Seconds": 0.6
+   },
+   {
+    "Page": "Sales Forecast",
+    "Load_Seconds": 0.43
+   }
+  ],
+  "checklist": [
+   {
+    "Checklist_Item": "app.py created",
+    "Status": "Done",
+    "Evidence": "Entry point with page config, theme, header, st.navigation routing and footer."
+   },
+   {
+    "Checklist_Item": "Application launches successfully",
+    "Status": "Verified",
+    "Evidence": "`streamlit run app.py` served HTTP 200 and /_stcore/health = ok; AppTest runs it with 0 exceptions."
+   },
+   {
+    "Checklist_Item": "Futuristic professional UI created",
+    "Status": "Done",
+    "Evidence": "Dark glassmorphism theme (assets/css/style.css + .streamlit/config.toml): faint data-grid background, gradient header, rounded KPI cards, subtle shadows, pulse status dot."
+   },
+   {
+    "Checklist_Item": "Home page created",
+    "Status": "Done",
+    "Evidence": "pages/home.py - animated DATA \u2192 INSIGHT \u2192 PREDICTION \u2192 DECISION pipeline, six live stat cards, trend chart, page directory."
+   },
+   {
+    "Checklist_Item": "Executive Overview created",
+    "Status": "Done",
+    "Evidence": "pages/executive.py - 6 KPI cards, revenue/profit trend, category, region, segment contribution."
+   },
+   {
+    "Checklist_Item": "Revenue Intelligence created",
+    "Status": "Done",
+    "Evidence": "pages/revenue.py - growth, margin, sub-categories, discount vs margin, drivers from the Step 10 SQL findings."
+   },
+   {
+    "Checklist_Item": "Customer Intelligence created",
+    "Status": "Done",
+    "Evidence": "pages/customers.py - distributions, Pareto, top customers, per-customer lookup."
+   },
+   {
+    "Checklist_Item": "Customer Segmentation created",
+    "Status": "Done",
+    "Evidence": "pages/segmentation.py - RFM, K-Means, PCA scatter, RFM-vs-K-Means comparison."
+   },
+   {
+    "Checklist_Item": "Product Analytics created",
+    "Status": "Done",
+    "Evidence": "pages/products.py - category and product performance, revenue-vs-profit scatter, sortable matrix."
+   },
+   {
+    "Checklist_Item": "Regional Analytics created",
+    "Status": "Done",
+    "Evidence": "pages/regional.py - ranked bars and a region x category matrix; no map forced on insufficient geography."
+   },
+   {
+    "Checklist_Item": "Revenue Prediction created",
+    "Status": "Done",
+    "Evidence": "pages/prediction.py - Step 8 model info, real metrics, error analysis, model-backed what-if tool."
+   },
+   {
+    "Checklist_Item": "Sales Forecast created",
+    "Status": "Done",
+    "Evidence": "pages/forecasting.py - historical + back-forecast + forecast with 80%/95% intervals, accuracy, CSV download."
+   },
+   {
+    "Checklist_Item": "Business Recommendations created",
+    "Status": "Done",
+    "Evidence": "pages/recommendations.py - 18 cards, Finding \u2192 Implication \u2192 Action, each naming its source."
+   },
+   {
+    "Checklist_Item": "Data Explorer created",
+    "Status": "Done",
+    "Evidence": "pages/data_explorer.py - project tables and CSV upload, profiling, quality scorecard, downloads."
+   },
+   {
+    "Checklist_Item": "About page created",
+    "Status": "Done",
+    "Evidence": "pages/about.py - objective, methodology, stack, models, limitations, document index."
+   },
+   {
+    "Checklist_Item": "KPI cards implemented",
+    "Status": "Done",
+    "Evidence": "Reusable create_kpi_card() / kpi_row() in src/dashboard_utils.py; used on every page."
+   },
+   {
+    "Checklist_Item": "Plotly charts implemented",
+    "Status": "Done",
+    "Evidence": "All charts are Plotly with hover, zoom, pan, legend toggling and PNG export; one shared dark template."
+   },
+   {
+    "Checklist_Item": "Filters implemented",
+    "Status": "Done",
+    "Evidence": "sales_filters() gives date, region, category, sub-category and segment filters, keyed per page so one page's filters never move another's."
+   },
+   {
+    "Checklist_Item": "Model loading implemented",
+    "Status": "Done",
+    "Evidence": "load_models() loads all 7 saved artefacts with per-model status; the what-if tool calls the saved Step 8 pipeline directly."
+   },
+   {
+    "Checklist_Item": "Error handling implemented",
+    "Status": "Verified",
+    "Evidence": "Missing model, missing data file, unparseable upload and empty selections all tested by breaking them - readable messages, no stack traces."
+   },
+   {
+    "Checklist_Item": "CSV upload/download implemented",
+    "Status": "Verified",
+    "Evidence": "Upload profiled end-to-end in the test suite; download buttons on the forecast table, product matrix, segment matrix, regional table, recommendations and both explorer tabs."
+   },
+   {
+    "Checklist_Item": "Caching implemented where appropriate",
+    "Status": "Verified",
+    "Evidence": "@st.cache_data for data, @st.cache_resource for models and the DB connection; rerun 0.23s vs 1.54s cold. A sidebar button clears both."
+   },
+   {
+    "Checklist_Item": "Requirements updated",
+    "Status": "Done",
+    "Evidence": "requirements.txt lists only what the project uses, with streamlit>=1.36 (st.navigation)."
+   },
+   {
+    "Checklist_Item": "Application tested",
+    "Status": "Verified",
+    "Evidence": "40 headless checks, all passing, plus a live server run captured page by page."
+   },
+   {
+    "Checklist_Item": "Testing report created",
+    "Status": "Done",
+    "Evidence": "outputs/reports/streamlit_testing_report.md, generated from the actual results."
+   },
+   {
+    "Checklist_Item": "README updated",
+    "Status": "Done",
+    "Evidence": "Streamlit section: purpose, features, pages, install, run, required files, model dependencies."
+   },
+   {
+    "Checklist_Item": "No fabricated results",
+    "Status": "Verified",
+    "Evidence": "Every KPI and metric is read from the project's outputs at page load; test asserts the validated totals appear; MAPE is withheld where undefined; a missing model disables its feature instead of substituting one."
+   }
+  ],
+  "pages": 12
+ },
+ "audit": {
+  "total": 135,
+  "passed": 134,
+  "failed": 0,
+  "by_part": {
+   "A": 5,
+   "B": 21,
+   "C": 71,
+   "D": 38
+  }
+ },
+ "code": {
+  "python_files": 41,
+  "python_lines": 30690,
+  "sql_files": 4,
+  "notebooks": 9,
+  "figures": 144,
+  "tables": 238,
+  "reports": 13
+ }
+}

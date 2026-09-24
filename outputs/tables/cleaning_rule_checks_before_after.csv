@@ -1,0 +1,12 @@
+﻿Validation_Rule,Rows_Before,Rows_After
+missing_value,941,0
+non_iso_or_invalid_date,566,0
+non_numeric_value,93,0
+quantity_not_positive,9,0
+price_not_positive,0,0
+discount_out_of_range,38,0
+negative_sales_or_cost,0,0
+revenue_mismatch,56,0
+profit_mismatch,0,0
+age_out_of_range,19,0
+invalid_category_value,794,0

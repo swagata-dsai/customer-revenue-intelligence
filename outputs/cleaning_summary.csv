@@ -1,0 +1,14 @@
+﻿Metric,Before Cleaning,After Cleaning
+Rows,18819,18670
+Columns,23,51
+"Missing values (cells, original 23 columns)",960,0
+Duplicate rows (exact),149,0
+Records breaking >= 1 validation rule,2359,0
+Numeric columns stored as numbers,0 of 7,7 of 7
+Order_Date stored as datetime,No (text),Yes
+Unique customers,2000,2000
+Unique products,61,61
+Unique orders,13251,13251
+Distinct Category labels,24,6
+Distinct City labels,41,35
+Date range,2023-01-01 to 2025-12-31,2023-01-01 to 2025-12-31

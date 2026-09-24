@@ -1,0 +1,85 @@
+Measure,Display_Folder,Format,Purpose
+Total Revenue,01 Revenue,"""₹""#,0;-""₹""#,0",Delivered revenue. The single revenue definition used by every page.
+Total Cost,01 Revenue,"#,0",Cost of the delivered lines.
+Booked Value,01 Revenue,"#,0",Value of ALL order lines including Returned and Cancelled - the gross figure revenue is measured against.
+Revenue Not Realised,01 Revenue,"#,0",Booked value lost to returns and cancellations.
+Revenue Not Realised %,01 Revenue,0.0%,Share of booked value that never became revenue.
+Revenue PY,01 Revenue,"#,0",Revenue in the same period one year earlier.
+Revenue Growth,01 Revenue,"#,0",Year-over-year revenue change in rupees.
+Revenue Growth %,01 Revenue,+0.0%;-0.0%;0.0%,Year-over-year revenue growth.
+Revenue PM,01 Revenue,"#,0",Revenue in the previous month.
+Revenue MoM %,01 Revenue,+0.0%;-0.0%;0.0%,Month-over-month revenue growth.
+Revenue YTD,01 Revenue,"#,0",Calendar year-to-date revenue.
+Avg Monthly Revenue,01 Revenue,"#,0","Mean revenue per month, counting only months that have delivered revenue."
+Revenue (₹ lakh),01 Revenue,"#,0.0","Revenue rescaled for chart axes, so axis labels stay short and readable."
+Revenue Label,01 Revenue,Text,Card label in Indian units (crore / lakh) - used on the KPI cards.
+Total Profit,02 Profitability,"#,0",Profit on delivered lines.
+Profit Margin %,02 Profitability,0.0%,Profit as a share of revenue.
+Avg Profit per Order,02 Profitability,"#,0",Mean profit per delivered order.
+Profit PY,02 Profitability,"#,0",Profit in the same period one year earlier.
+Profit Growth %,02 Profitability,+0.0%;-0.0%;0.0%,Year-over-year profit growth.
+Margin Change PY (pp),02 Profitability,+0.0;-0.0;0.0,"Change in profit margin versus last year, in percentage points."
+Profit Label,02 Profitability,Text,Profit card label in crore / lakh.
+Total Orders,03 Orders,"#,0",Orders with at least one delivered line - the Step 3 order definition.
+Order Lines,03 Orders,"#,0",Delivered order lines (the fact grain).
+Total Quantity,03 Orders,"#,0",Units sold on delivered lines.
+Average Order Value,03 Orders,"#,0",AOV = delivered revenue / delivered orders.
+Avg Quantity per Order,03 Orders,0.00,Mean units per delivered order.
+Avg Discount %,03 Orders,0.0%,"Value-weighted average discount: discount given / list value. Not the mean of the discount column, which would weight a ₹500 line like a ₹50,000 one."
+Registered Customers,04 Customers,"#,0","Customers on file, whether or not they ever received an order."
+Total Customers,04 Customers,"#,0",Distinct customers with a delivered order in the current filter context.
+Active Customers,04 Customers,"#,0","Customers whose last delivered purchase was under 180 days before the reference date 2026-01-01 (the Step 7 inactivity threshold). A snapshot: it does not move with the Date slicer. Inactivity, not churn."
+Inactive Customers (180+ days),04 Customers,"#,0",Snapshot count of customers inactive for 180 days or more.
+New Customers,04 Customers,"#,0","Customers whose FIRST delivered purchase falls inside the selected dates. For 2023 this counts first purchases observed in the data, which includes customers acquired earlier (see DimCustomer[Acquisition_Status])."
+Repeat Customers,04 Customers,"#,0",Snapshot count of customers with 2 or more delivered orders in total.
+Repeat Customers (in period),04 Customers,"#,0",Customers with 2 or more delivered orders WITHIN the selected dates - the period version of the measure above.
+Repeat Customer %,04 Customers,0.0%,Share of purchasing customers who ordered more than once.
+Avg Orders per Customer,04 Customers,0.00,Purchase frequency in the current context.
+Avg Customer Revenue,05 Customer value,"#,0",Revenue per purchasing customer in the current context.
+Customer Revenue Contribution %,05 Customer value,0.0%,"A customer's (or customer selection's) share of revenue, against all customers with the other slicers still applied."
+Segment Revenue Contribution %,05 Customer value,0.0%,An RFM segment's share of revenue.
+Cluster Revenue Contribution %,05 Customer value,0.0%,A K-Means cluster's share of revenue.
+Category Revenue Contribution %,05 Customer value,0.0%,A category's or product's share of revenue.
+Region Revenue Contribution %,05 Customer value,0.0%,A region's share of revenue.
+Historical Profit CLV,05 Customer value,"#,0",Step 7 historical customer value: profit actually earned to date. NOT a prediction.
+Historical Revenue CLV,05 Customer value,"#,0","Step 7 historical revenue per customer, summed over the selection."
+Estimated 12M Future Profit,05 Customer value,"#,0",Step 7 model ESTIMATE of the next 12 months' profit. Always labelled as an estimate and never added to historical value.
+Avg Estimated 12M Future Profit,05 Customer value,"#,0",Mean estimated 12-month future profit per customer in the selection.
+Illustrative 3Y Value,05 Customer value,"#,0","Step 7 illustrative 3-year value (12-month estimate x (1 + r + r²), r = 0.839). Illustrative only - it assumes the observed repeat rate persists."
+At-Risk High-Value Customers,05 Customer value,"#,0","High historical value AND no delivered purchase for 180+ days (Step 7 flag). 'Potentially at risk', not churned."
+High-Value Customers,05 Customer value,"#,0",Top 20% of customers by historical profit (Step 7 flag).
+Segment Customers,06 Segmentation (RFM & clusters),"#,0",Customers in the selected segment or cluster (snapshot assignment).
+Segment Customer %,06 Segmentation (RFM & clusters),0.0%,Share of the customer base in this segment or cluster.
+Avg Recency (days),06 Segmentation (RFM & clusters),"#,0","Mean days since the last delivered purchase, at the 2026-01-01 reference date."
+Avg Frequency (orders),06 Segmentation (RFM & clusters),0.0,Mean lifetime delivered orders per customer.
+Avg Monetary (₹),06 Segmentation (RFM & clusters),"#,0",Mean lifetime delivered revenue per customer.
+Avg RFM Score,06 Segmentation (RFM & clusters),0.0,Mean R+F+M score (3-15) of the selected customers.
+Segment Revenue per Customer,06 Segmentation (RFM & clusters),"#,0",Revenue per customer within the segment or cluster.
+Return / Cancel Rate %,07 Products & regions,0.0%,Share of order lines that were Returned or Cancelled.
+Products Sold,07 Products & regions,"#,0",Distinct products with delivered sales in the current context.
+Revenue Rank (product),07 Products & regions,"#,0","Product rank by revenue, respecting the slicers - used for Top N / Bottom N."
+Margin vs Category (pp),07 Products & regions,+0.0;-0.0;0.0,"How far a product's margin sits above or below its own category's margin, in points. This is the metric the Bottom-products visual ranks on."
+Predicted Revenue (ML),08 Prediction (Step 8 ML),"#,0",Step 8 model prediction of customer revenue for the target quarter. Test split only.
+Actual Revenue (prediction test),08 Prediction (Step 8 ML),"#,0","The matching actual revenue for those same customer-quarters, so predicted and actual are always compared on identical rows."
+Naive Baseline (prediction),08 Prediction (Step 8 ML),"#,0",The previous-quarter baseline the model is judged against.
+Prediction MAE,08 Prediction (Step 8 ML),"#,0",Mean absolute error per customer-quarter.
+Prediction RMSE,08 Prediction (Step 8 ML),"#,0",Root mean squared error per customer-quarter.
+Prediction R2,08 Prediction (Step 8 ML),0.000,"R² over the rows in context. On the full test split this reproduces the Step 8 figure; inside a slicer it is the R² of that subset, which is a different quantity."
+Prediction Bias %,08 Prediction (Step 8 ML),+0.0%;-0.0%;0.0%,"Total over- or under-prediction. MAPE is deliberately absent: many customer-quarters have an actual of 0, so a percentage error is undefined for them."
+Metric Value,08 Prediction (Step 8 ML),"#,0.000",The reported Step 8 / Step 9 metric from the ModelMetrics table; used by the model performance matrix so no metric is ever retyped into a text box.
+Historical Revenue (monthly),09 Forecast (Step 9 time series),"#,0","Actual monthly revenue, 2023-01 to 2025-12. Equals [Total Revenue] by month."
+Forecast Revenue,09 Forecast (Step 9 time series),"#,0","Future forecast, 2026-01 to 2026-06, from the model fitted on all 36 months."
+Backtest Forecast,09 Forecast (Step 9 time series),"#,0",Validation and test forecasts produced without seeing those months - the evidence for the accuracy figures.
+Forecast Lower 80,09 Forecast (Step 9 time series),"#,0",Lower bound of the 80% prediction interval.
+Forecast Upper 80,09 Forecast (Step 9 time series),"#,0",Upper bound of the 80% prediction interval.
+Forecast Lower 95,09 Forecast (Step 9 time series),"#,0",Lower bound of the 95% prediction interval.
+Forecast Upper 95,09 Forecast (Step 9 time series),"#,0",Upper bound of the 95% prediction interval.
+Forecast Interval Width 95,09 Forecast (Step 9 time series),"#,0","Width of the 95% interval - it widens with the horizon, which is the honest way to show that a 6-month-out month is less certain than next month."
+Forecast Horizon (months),09 Forecast (Step 9 time series),"#,0",Number of forecast months shown (6).
+Forecast Total (next 6 months),09 Forecast (Step 9 time series),"#,0","Total forecast revenue for the whole 6-month horizon, independent of the Date slicer."
+Forecast Label,09 Forecast (Step 9 time series),Text,Forecast-total card label in crore / lakh.
+Date Range Label,10 Labels & context,Text,Shows the selected date range on every page so a filtered number is never mistaken for the full-period number.
+Selected Prediction Model,10 Labels & context,Text,"The Step 8 model name, read from ModelInfo rather than typed onto the page."
+Selected Forecast Model,10 Labels & context,Text,"The Step 9 model name, read from ModelInfo."
+Data Disclaimer,10 Labels & context,Text,Footer text shown on HOME and the Executive Overview.
+Filters Applied,10 Labels & context,Text,Warns the reader when a page is showing a filtered subset.

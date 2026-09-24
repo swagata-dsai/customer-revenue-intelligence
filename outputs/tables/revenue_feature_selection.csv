@@ -1,0 +1,29 @@
+﻿Feature,Group,VIF_All_Candidates,Decision,Reason,Drop_Order,VIF_Final_Set,Spearman_with_Target_(train)
+Recency_Days,Customer history,4.6218,Kept,core measure (always kept),,2.9742,-0.1979
+Rev_3M,Customer history,10.5957,Kept,VIF <= 10,,9.2635,0.1952
+Rev_12M,Customer history,2509.5034,Excluded,exact identity = AOV_12M x Orders_12M,,,0.2096
+Rev_Same_Quarter_Last_Year,Customer history,1.8618,Kept,VIF <= 10,,1.8143,0.0765
+Profit_12M,Customer history,1.6457,Excluded,exact identity = AOV_12M x Orders_12M x Profit_Margin_12M,,,0.2366
+Profit_Margin_12M,Customer history,11.0207,Kept,core measure (always kept),,8.811,-0.0427
+Orders_3M,Customer history,10.5398,Kept,VIF <= 10,,9.9648,0.1862
+Orders_12M,Customer history,586.064,Kept,core measure (always kept),,4.8404,0.2334
+Quantity_12M,Customer history,54.5948,Excluded,VIF 53.9 > 10,4.0,,0.2282
+AOV_12M,Customer history,1207.0958,Kept,core measure (always kept),,6.1998,0.1348
+Avg_Discount_12M,Customer history,3.579,Kept,core measure (always kept),,2.6283,-0.0924
+Return_Rate_12M,Customer history,1.0234,Kept,VIF <= 10,,1.0217,0.1021
+Tenure_Days_Capped,Customer history,2.5437,Kept,VIF <= 10,,2.4974,0.08
+RFM_Score_at_Cutoff,Customer history,27.7812,Excluded,VIF 18.7 > 10,5.0,,0.2461
+Categories_12M,Product,4.5443,Kept,VIF <= 10,,4.3483,0.2194
+Avg_Unit_Price_12M,Product,54.0314,Kept,core measure (always kept),,13.4797,0.1093
+Product_Demand_Index,Product,2.0738,Kept,VIF <= 10,,1.9238,0.0068
+Main_Category_Trend,Product,3.0309,Kept,VIF <= 10,,3.0277,0.0388
+Share_Fashion,Product,inf,Excluded,perfectly collinear with other features,1.0,,0.0339
+Share_Home_Kitchen,Product,inf,Kept,VIF <= 10,,5.5136,0.0996
+Share_Electronics,Product,inf,Excluded,VIF 10.8 > 10,7.0,,0.0841
+Share_Beauty,Product,inf,Kept,VIF <= 10,,7.1822,0.0604
+Share_Books,Product,inf,Kept,VIF <= 10,,7.4895,0.0328
+Share_Sports,Product,inf,Kept,VIF <= 10,,5.6613,0.0766
+Region_Revenue_Share_3M,Regional,17.6236,Excluded,VIF 15.8 > 10,6.0,,-0.0224
+Region_Customer_Share_12M,Regional,281.1984,Excluded,VIF 281.1 > 10,3.0,,-0.0204
+Region_Rev_Trend,Regional,8.2119,Kept,VIF <= 10,,1.9422,0.0283
+Company_Rev_Trend,Time / company,inf,Excluded,perfectly collinear with other features,2.0,,0.0388

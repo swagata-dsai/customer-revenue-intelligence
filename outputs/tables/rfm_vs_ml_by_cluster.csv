@@ -1,0 +1,5 @@
+﻿Cluster,Business_Label,Customers,RFM_Segments_with_>=10%,Composition (top 3)
+Cluster 0,"High-Value, Active",364,2,Champions 89%; Loyal Customers 11%; Can't Lose Them 0%
+Cluster 1,"Low-Value, Active",453,4,About to Sleep 26%; Promising 24%; Potential Loyalists 23%
+Cluster 2,"Mid-Value, Lapsing",753,4,At Risk 34%; Loyal Customers 27%; Needs Attention 13%
+Cluster 3,"Low-Value, Inactive",414,2,Lost 70%; Hibernating 22%; About to Sleep 6%

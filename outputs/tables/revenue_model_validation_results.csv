@@ -1,0 +1,7 @@
+﻿Model,Type,Stage,Train_MAE,Train_RMSE,Train_R2,Train_WAPE_%,Train_Spearman,Train_Total_Bias_%,Val_MAE,Val_RMSE,Val_R2,Val_WAPE_%,Val_Spearman,Val_Total_Bias_%,Overfit_Gap_R2
+Baseline: previous quarter (naive),Baseline,default,5376.7984,13166.4211,-0.8097,153.1686,0.1952,5.0138,5904.2467,12815.7679,-0.7752,147.3195,0.2318,17.3472,-0.0345
+Baseline: same quarter last year (seasonal naive),Baseline,default,4945.5273,12149.4789,-0.541,140.883,0.0765,-22.2923,5587.5491,12883.6037,-0.7941,139.4174,0.0776,-21.761,0.2531
+Baseline: 12-month quarterly mean,Baseline,default,4575.1941,10145.4184,-0.0745,130.3333,0.2096,-6.7106,4914.701,10161.2933,-0.116,122.6289,0.2596,-5.6132,0.0415
+Linear regression,ML model,default,4521.4194,9492.0171,0.0594,128.8014,0.2966,-0.0,4522.7958,9436.4248,0.0375,112.8503,0.2793,-20.7103,0.0219
+Random forest,ML model,default,3251.1449,7343.076,0.4371,92.6152,0.6468,3.4596,5003.1593,9466.0894,0.0315,124.8361,0.2579,11.2126,0.4056
+Gradient boosting,ML model,default,3682.027,7113.3349,0.4718,104.8897,0.4064,-0.0657,5037.4759,9753.3564,-0.0282,125.6923,0.2314,6.91,0.5

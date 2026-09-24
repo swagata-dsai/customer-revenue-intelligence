@@ -1,0 +1,4 @@
+﻿Metric,Skewness_raw,Skewness_log1p,Recommendation
+Recency,2.054062112135037,-0.3233587911287679,log1p reduces skew - use for charts and as model input in Step 6
+Frequency,1.9022659688297128,0.324578546480268,log1p reduces skew - use for charts and as model input in Step 6
+Monetary,3.2092038249507064,-0.06902087384553764,log1p reduces skew - use for charts and as model input in Step 6
