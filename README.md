@@ -48,6 +48,13 @@ DATA  →  INSIGHT  →  PREDICTION  →  DECISION
 The organising principle is traceability: **every number in the report, the
 presentation and this README is read at build time from the pipeline's own
 output files.** Nothing is transcribed by hand.
+# Customer Revenue Intelligence
+
+**An Interactive Data Science Platform for Customer Segmentation, Revenue Prediction and Business Growth**
+
+### 🚀 Live Demo
+
+**[▶️ Launch Customer Revenue Intelligence](https://customer-revenue-intelligence-rk6kvfigudbyjbabnnbhsv.streamlit.app/)**
 
 ## Objectives
 
