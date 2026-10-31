@@ -130,21 +130,43 @@ All eleven are implemented.
 
 ## Project Architecture
 
+## Project Architecture
+
+The platform follows an end-to-end data science workflow, transforming raw transaction data into actionable business insights.
+
 ```mermaid
 flowchart TD
-    A[Synthetic Data Generation<br/>seed 42 · 18,819 raw lines] --> B[Data Cleaning & Validation<br/>18,670 validated lines]
-    B --> C[Exploratory Data Analysis<br/>₹6.01 Cr · 23.35% margin]
-    C --> D[RFM Analysis<br/>11 rule-based segments]
-    D --> E[K-Means Segmentation<br/>K = 4 · silhouette 0.3534]
-    E --> F[Customer Lifetime Value<br/>historical + estimated forward]
-    F --> G[Revenue Prediction<br/>Linear regression · test R² 0.0557]
-    G --> H[Sales Forecasting<br/>Theta: Theta (seasonality auto-tested) · backtest MAPE 14.56%]
-    H --> I[SQL Analytics<br/>57 queries · independent reconciliation]
-    I --> J[Power BI Semantic Model<br/>84 DAX measures]
-    I --> K[Streamlit Application<br/>12 pages]
-    J --> L[Business Recommendations<br/>18 evidence-linked]
+    A["Synthetic Data Generation<br/>18,819 Raw Order Lines"]
+    --> B["Data Cleaning and Validation<br/>18,670 Cleaned Order Lines"]
+
+    B --> C["Feature Engineering<br/>28 Engineered Features"]
+    C --> D["Exploratory Data Analysis"]
+
+    D --> E["Customer Analytics"]
+    E --> F["RFM Analysis<br/>11 Customer Segments"]
+    E --> G["K-Means Clustering<br/>4 Customer Clusters"]
+
+    F --> H["Customer Lifetime Value"]
+    G --> H
+
+    H --> I["Predictive Analytics"]
+    I --> J["Customer Revenue Prediction<br/>Linear Regression"]
+    I --> K["Sales Forecasting<br/>Theta Model"]
+
+    J --> L["SQL Analytics<br/>SQLite Database"]
     K --> L
+
+    L --> M["Business Intelligence Layer"]
+
+    M --> N["Power BI<br/>84 DAX Measures"]
+    M --> O["Streamlit Application<br/>12 Interactive Pages"]
+
+    N --> P["Business Recommendations"]
+    O --> P
 ```
+
+**Outcome:** An integrated customer intelligence platform supporting customer segmentation, revenue prediction, sales forecasting and data-driven business decisions.
+
 
 Each stage is a separate module with a single entry point, reads only the
 persisted output of the stage before it, and writes its own outputs to disk —
